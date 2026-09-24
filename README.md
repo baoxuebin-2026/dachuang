@@ -16,7 +16,7 @@
 3. 阶段 2：已确定 **UCI 309 主实验＋UCI 487 独立辅助实验，UCI 322 备用**；参见 [数据方案与决策记录](docs/stage2-data-decision.md)。
 4. 阶段 3：完成 309／487 的 [EDA 报告](docs/stage3-eda-report.md)、[可复现脚本](scripts/eda_stage3.py)、诊断图与每实验／每日清单；项目组确认“实验事实与仿真风险分层”。
 5. 阶段 4：项目组确定 [可解释仿真处置优先级方案 S1](docs/stage4-risk-definition-proposal.md)，确认 [四状态矩阵、1 m 仿真缓冲及 3 s 气体软证据的敏感性试验起点](docs/stage4-s1-grading-options.md)；这些数值不是现场安全标准或设备实测参数。
-6. 阶段 5：用户回复“继续”，按 [M1 可解释多通道变化检测路线](docs/stage5-model-candidates.md)推进；已提交 [M1 实验协议决策稿](docs/stage5-m1-experiment-protocol-proposal.md)，**等待项目组确认基线校准与评价边界**。固定释放时钟可同时伪造逐窗分数和实验级检测成绩；尚未运行检测器。
+6. 阶段 5：已批准 [M1 实验协议](docs/stage5-m1-experiment-protocol-proposal.md)（A 清洁起点主实验、B 统一基线敏感性），完成 [UCI 309 文件级气体变化实验](docs/stage5-m1-pilot-results.md)与[可复现计算程序](scripts/run_m1_uci309.py)。在 60 个留出风洞实验中，A 下八通道中位汇总有 57 个于释放后 60 s 内触发、1 个于释放前触发；**这不是焦化厂事故预警效果**。固定释放时钟仍可伪造理想成绩。下一阶段的 487 辅助分析与仿真先后顺序等待项目组决策。
 
 数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)，下载方法见 [scripts/download_data.py](scripts/download_data.py)，未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 

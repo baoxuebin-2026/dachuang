@@ -1,0 +1,335 @@
+{
+  "run_id": "m1-uci309-20260924-v2",
+  "data_kind": "UCI_309_laboratory",
+  "validation_status": "exploratory_pilot_repeated_holdout_after_scoring_fix",
+  "archive_sha256": "5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e",
+  "script_sha256": "38f33bb98b07d95259a20cae5c9c878eea08af507636b31d936e0e97b5fc62f5",
+  "split_manifest_sha256": "4a880d886d343762f7478b85491f13b465e2a298426fb216869ae7470155ad5b",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "seed": 20260924,
+  "source_bins": "[n,n+1) median, emitted at n+1",
+  "baseline_A_s": [
+    5,
+    25
+  ],
+  "background_evaluation_s": [
+    25,
+    60
+  ],
+  "release_program_s": [
+    60,
+    240
+  ],
+  "consecutive_valid_seconds_for_G2": 3,
+  "release_boundary_policy": "G2 evidence seeded before release is reported separately, not credited to release detection",
+  "duration_sensitivity_seconds": [
+    1,
+    3,
+    5
+  ],
+  "quantiles_train_background": [
+    0.95,
+    0.99,
+    0.995,
+    0.999
+  ],
+  "validation_ranking": "<=1 false file; fewer false files; more within-60s detections; more total detections; less capped delay; quantile",
+  "clock_oracle": {
+    "meaning": "program-label leakage demonstration only",
+    "test_n_files": 60,
+    "detected": 60,
+    "false_files": 0,
+    "idealized_delay_s": 0
+  },
+  "frozen_gas_note": "Synthetic constant-baseline input; not a measured negative trial",
+  "conclusion_scope": "Known-clean-start laboratory detection, no site safety validation",
+  "parameters": [
+    {
+      "mode": "A",
+      "source": "gas",
+      "method": "single",
+      "sensor": 4,
+      "quantile": 0.999,
+      "threshold": 8.768379873195737,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        1.4826,
+        1.4826,
+        1.4826,
+        4.8184499999999995,
+        1.4826,
+        2.2239,
+        2.2239,
+        2.2239
+      ],
+      "cusum_reference": 0.995239219389361
+    },
+    {
+      "mode": "A",
+      "source": "gas",
+      "method": "multi",
+      "sensor": null,
+      "quantile": 0.999,
+      "threshold": 6.292830163226808,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        1.4826,
+        1.4826,
+        1.4826,
+        4.8184499999999995,
+        1.4826,
+        2.2239,
+        2.2239,
+        2.2239
+      ],
+      "cusum_reference": 0.995239219389361
+    },
+    {
+      "mode": "A",
+      "source": "gas",
+      "method": "ewma",
+      "sensor": null,
+      "quantile": 0.995,
+      "threshold": 3.362547093000543,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        1.4826,
+        1.4826,
+        1.4826,
+        4.8184499999999995,
+        1.4826,
+        2.2239,
+        2.2239,
+        2.2239
+      ],
+      "cusum_reference": 0.995239219389361
+    },
+    {
+      "mode": "A",
+      "source": "gas",
+      "method": "cusum",
+      "sensor": null,
+      "quantile": 0.99,
+      "threshold": 34.72269114462775,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        1.4826,
+        1.4826,
+        1.4826,
+        4.8184499999999995,
+        1.4826,
+        2.2239,
+        2.2239,
+        2.2239
+      ],
+      "cusum_reference": 0.995239219389361
+    },
+    {
+      "mode": "A",
+      "source": "ambient",
+      "method": "multi",
+      "sensor": null,
+      "quantile": 0.995,
+      "threshold": 3.321239184294404,
+      "global_center": [
+        21.455,
+        40.83
+      ],
+      "scale": [
+        0.021455,
+        0.051891000000005474
+      ],
+      "cusum_reference": 0.7363990926771076
+    },
+    {
+      "mode": "A",
+      "source": "ambient",
+      "method": "ewma",
+      "sensor": null,
+      "quantile": 0.999,
+      "threshold": 3.6824849395640595,
+      "global_center": [
+        21.455,
+        40.83
+      ],
+      "scale": [
+        0.021455,
+        0.051891000000005474
+      ],
+      "cusum_reference": 0.7363990926771076
+    },
+    {
+      "mode": "A",
+      "source": "ambient",
+      "method": "cusum",
+      "sensor": null,
+      "quantile": 0.999,
+      "threshold": 61.015510812434705,
+      "global_center": [
+        21.455,
+        40.83
+      ],
+      "scale": [
+        0.021455,
+        0.051891000000005474
+      ],
+      "cusum_reference": 0.7363990926771076
+    },
+    {
+      "mode": "B",
+      "source": "gas",
+      "method": "single",
+      "sensor": 2,
+      "quantile": 0.995,
+      "threshold": 2.3326138765232254,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        12.6021,
+        13.343399999999999,
+        22.238999999999997,
+        34.8411,
+        30.3933,
+        37.065,
+        31.1346,
+        35.5824
+      ],
+      "cusum_reference": 0.8783349487967647
+    },
+    {
+      "mode": "B",
+      "source": "gas",
+      "method": "multi",
+      "sensor": null,
+      "quantile": 0.99,
+      "threshold": 2.125207967984172,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        12.6021,
+        13.343399999999999,
+        22.238999999999997,
+        34.8411,
+        30.3933,
+        37.065,
+        31.1346,
+        35.5824
+      ],
+      "cusum_reference": 0.8783349487967647
+    },
+    {
+      "mode": "B",
+      "source": "gas",
+      "method": "ewma",
+      "sensor": null,
+      "quantile": 0.99,
+      "threshold": 2.0011880786400202,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        12.6021,
+        13.343399999999999,
+        22.238999999999997,
+        34.8411,
+        30.3933,
+        37.065,
+        31.1346,
+        35.5824
+      ],
+      "cusum_reference": 0.8783349487967647
+    },
+    {
+      "mode": "B",
+      "source": "gas",
+      "method": "cusum",
+      "sensor": null,
+      "quantile": 0.995,
+      "threshold": 34.413792951240126,
+      "global_center": [
+        340.75,
+        290.75,
+        538.875,
+        600.25,
+        585.75,
+        720.375,
+        643.5,
+        734.0
+      ],
+      "scale": [
+        12.6021,
+        13.343399999999999,
+        22.238999999999997,
+        34.8411,
+        30.3933,
+        37.065,
+        31.1346,
+        35.5824
+      ],
+      "cusum_reference": 0.8783349487967647
+    }
+  ]
+}
