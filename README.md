@@ -14,7 +14,7 @@
 1. 阶段 0：审查申报书，选择“气体动态预警为主、空间风险仿真验证”为研究路线。
 2. 阶段 1：确定管廊气体异常与人员靠近为主场景；不使用实体设备。
 3. 阶段 2：已确定 **UCI 309 主实验＋UCI 487 独立辅助实验，UCI 322 备用**；参见 [数据方案与决策记录](docs/stage2-data-decision.md)。
-4. 阶段 3：已制定 [EDA 拟执行清单](docs/stage3-eda-plan.md)，等待项目组确认检查范围后实施；尚无 EDA 结论。
+4. 阶段 3：完成 309／487 的 [EDA 报告](docs/stage3-eda-report.md)、[可复现脚本](scripts/eda_stage3.py)、诊断图与每实验／每日清单；下一步等待项目组选择风险标签定义。
 
 数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)，下载方法见 [scripts/download_data.py](scripts/download_data.py)，未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 
