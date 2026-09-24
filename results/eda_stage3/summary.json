@@ -1,0 +1,135 @@
+{
+  "validation_status": "diagnostic_only",
+  "script_sha256": "961122e6182c0de2d726ab0616bab45e10cc7feac2ac9b9c9f9f72b54342f1c1",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8"
+  },
+  "data_archives": {
+    "uci309_sha256": "5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e",
+    "uci487_sha256": "cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4"
+  },
+  "uci309": {
+    "dataset": "UCI 309",
+    "kind": "laboratory_measurements",
+    "raw_files": 180,
+    "downsampled_files": 180,
+    "raw_rows": 3451372,
+    "downsampled_rows": 534600,
+    "gas_groups": {
+      "CO": 90,
+      "Me": 90
+    },
+    "configuration_counts": {
+      "number": 30,
+      "minimum_repetitions": 6,
+      "maximum_repetitions": 6
+    },
+    "both_sources_zero_files": 0,
+    "missing_cells": 0,
+    "nonfinite_cells": 0,
+    "duplicate_timestamps": {
+      "raw_total": 83012,
+      "downsampled_total": 12724,
+      "downsampled_affected_files": 180
+    },
+    "maximum_gap_s": {
+      "raw": 0.9899999999999807,
+      "downsampled": 0.9899999999999807
+    },
+    "time_start_range_s": [
+      2.76,
+      3.92
+    ],
+    "time_end_range_s": [
+      299.78,
+      300.06
+    ],
+    "sensor_adc_invalid_count": 0,
+    "temperature_range_c": [
+      20.01,
+      22.48
+    ],
+    "humidity_range_pct": [
+      35.48,
+      45.41
+    ],
+    "downsampled_background_rows_range": [
+      568,
+      573
+    ],
+    "sensor1_relative_exposure_change_quantiles": {
+      "0.05": 0.03535567213854581,
+      "0.5": 0.2276827242524917,
+      "0.95": 0.38681604565290373
+    },
+    "sensor1_prerelease_drift_quantiles": {
+      "0.05": -0.006123877177341308,
+      "0.5": 0.0,
+      "0.95": 0.005766201997185271
+    }
+  },
+  "uci487": {
+    "dataset": "UCI 487",
+    "kind": "laboratory_measurements",
+    "measurement_days": 13,
+    "rows": 3843160,
+    "day_rows_range": [
+      295391,
+      295881
+    ],
+    "day_duration_hours_range": [
+      25.250479444444444,
+      25.25281388888889
+    ],
+    "missing_cells": 0,
+    "nonfinite_cells": 0,
+    "duplicate_timestamps": 0,
+    "backward_timestamps": 1,
+    "maximum_step_s": 3.790999999997439,
+    "co_range_ppm": [
+      0.0,
+      20.0
+    ],
+    "humidity_range_pct": [
+      16.34,
+      83.81
+    ],
+    "temperature_range_c": [
+      9.9032,
+      27.42
+    ],
+    "heater_range_v": [
+      0.198,
+      0.9026
+    ],
+    "flow_range_ml_min": [
+      0.0,
+      321.2093
+    ],
+    "sensor_resistance_nonpositive_cells": 0,
+    "negative_co_rows": 0,
+    "humidity_outside_0_100_rows": 0,
+    "humidity_above_protocol_75_rows": 1025,
+    "temperature_below_15_rows": 2,
+    "flow_zero_rows": 114,
+    "sensor1_absolute_heater_correlation_range_by_day": [
+      0.32660301152257515,
+      0.40015907507954
+    ],
+    "plateau_window_count_range_by_day": [
+      100,
+      100
+    ],
+    "plateau_co_level_count_range_by_day": [
+      10,
+      10
+    ],
+    "plateau_level_repetitions_range_by_day": [
+      10,
+      10
+    ]
+  }
+}
