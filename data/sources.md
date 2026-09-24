@@ -1,0 +1,24 @@
+# 数据来源候选表（阶段 2，待项目组确定使用方案）
+
+核验日期：2026-09-24。UCI 309、322、487 的压缩包已实际下载、完成 ZIP 完整性检查并记录 SHA-256；其余仅核查公开页面，**未进行文件级验证**。本表不是焦化园区现场数据清单。
+
+| 数据集与原始下载入口 | 规模、主要字段与时间信息 | 浓度／事故标签 | 与本项目关系及限制 | 许可与结论 |
+| --- | --- | --- | --- | --- |
+| [UCI 309：湍流混合气体](https://archive.ics.uci.edu/dataset/309/gas+sensor+array+exposed+to+turbulent+gas+mixtures.) · [ZIP](https://archive.ics.uci.edu/static/public/309/gas+sensor+array+exposed+to+turbulent+gas+mixtures.zip) | 180 次独立风洞实验，每次约 300 s；原始 50 Hz，另有 10 Hz 版本；时间、温度、湿度、8 路气体传感器；一组一个文件。 | 配置的乙烯＋甲烷或乙烯＋CO 释放档位，释放始于约 60 s、持续约 180 s；气体浓度仅有各档位**实验平均估计值**，无逐时刻真实浓度或事故等级标签。 | **优先主实验**：检验释放识别、背景误报、检测延迟和抗扰；风洞不是焦化现场。训练／测试须按完整实验分组，不可在同一组序列中随机拆窗口。 | UCI 标注 CC BY 4.0；推荐主实验。 |
+| [UCI 322：动态混合气体](https://archive.ics.uci.edu/dataset/322/gas+sensor+array+under+dynamic+gas+mixtures) · [ZIP](https://archive.ics.uci.edu/static/public/322/gas+sensor+array+under+dynamic+gas+mixtures.zip) | 4,178,504 行，2 条约 12 h 实验（乙烯＋甲烷、乙烯＋CO）；100 Hz；时间、两种气体浓度设定值、16 路传感器响应。 | 有**设定浓度**，不是独立焦化现场检测值；无事故等级。甲烷与 CO 不在同一条实验序列。 | 可用于浓度变化与长序列响应的**独立辅助实验**；仅两条实验序列，样本行数不等于独立实验数。 | CC BY 4.0；候选辅助，不建议与 309 直接拼接训练。 |
+| [UCI 487：CO＋温湿度](https://archive.ics.uci.edu/dataset/487/gas+sensor+array+temperature+modulation) · [ZIP](https://archive.ics.uci.edu/static/public/487/gas+sensor+array+temperature+modulation.zip) | 4,095,000 行、13 天实验；时间、CO、湿度、温度、流量、加热电压、14 路传感器；气体传感器约 3.5 Hz，温湿度参考每 5 s。 | 实验室产生并记录的 CO 浓度；无事故等级。 | **推荐独立辅助实验**：检验湿度变化下的 CO 感知；设备、工况与 309 不同，不构成同步多源数据。 | CC BY 4.0。 |
+| [UCI 1081：低浓度气体](https://archive.ics.uci.edu/dataset/1081/gas+sensor+array+low-concentration) | 90 个独立样本；六种 VOC，各 50／100／200 ppb；10 路传感器，每样本拼接 9000 点，1 Hz。 | 有气体类型与浓度档位；无事故标签。 | 不含甲烷／CO，主要验证微弱 VOC 检测，与主场景对应弱。 | CC BY 4.0；暂不使用。 |
+| [Tennessee Eastman Process 仿真数据与代码](https://github.com/camaramm/tennessee-eastman-profBraatz) | 正常与 21 类过程故障；示例训练文件各 480×52、测试文件各 960×52，变量含过程测量与控制量。 | 有**仿真过程故障类型**，不是人员暴露或园区泄漏事故标签。 | 可作为化工过程故障方法对照，但与主场景迁移跨度大。 | 原仓库附许可与署名条件；暂不使用。 |
+| [ISR RGB-D Dataset](https://github.com/hcmr-lab/ISR_RGB-D_Dataset) | 项目页面描述 10,000 帧 D435 实验室 RGB-D 序列，含 person 框标注。 | 人员类别标注；没有焦化危险区域／环境气体联合标签。 | 仅作为未来视觉模块**独立验证候选**；数据下载及再使用许可待核验。 | 暂不下载，不能写作本项目 D435 实测。 |
+
+**数据口径：**UCI 309、322、487 都是实验室采集的真实传感器数据；TEP 属过程仿真；人员危险区轨迹如由本项目生成，必须在每个实验和图表中标记“仿真”。不同来源的时间戳不可假定相同，不能凭同步表格拼接出“真实多源焦化园区记录”。风险等级须单独建立依据，不能由模型自身生成标签再据此报告准确率。
+
+## 已验证归档
+
+| UCI 编号 | 原始 ZIP 大小（字节） | SHA-256 | 文件结构及校验 |
+| --- | ---: | --- | --- |
+| 309 | 23,403,793 | `5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e` | 180 个 raw 文件＋180 个 downsampled 文件；ZIP CRC 完整 |
+| 322 | 369,001,314 | `8b6323b801363e11343ba1a5a7718e76666b715e753b3a40dbdfd1838d953fe7` | `ethylene_CO.txt` 和 `ethylene_methane.txt`；ZIP CRC 完整 |
+| 487 | 183,298,753 | `cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4` | 外层含 README 与嵌套 ZIP；13 个 CSV 在嵌套 ZIP 中；内外层 ZIP CRC 完整 |
+
+下载与校验：`python scripts/download_data.py 309`；其余编号同理。原始数据始终保存在 `data/raw/`，不提交 Git。
