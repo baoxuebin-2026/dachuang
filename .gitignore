@@ -1,0 +1,8 @@
+# Public datasets are downloaded from their original repositories.
+data/raw/
+data/processed/
+outputs/
+*.zip
+*.pyc
+__pycache__/
+.venv/
