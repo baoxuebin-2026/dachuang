@@ -15,7 +15,8 @@
 2. 阶段 1：确定管廊气体异常与人员靠近为主场景；不使用实体设备。
 3. 阶段 2：已确定 **UCI 309 主实验＋UCI 487 独立辅助实验，UCI 322 备用**；参见 [数据方案与决策记录](docs/stage2-data-decision.md)。
 4. 阶段 3：完成 309／487 的 [EDA 报告](docs/stage3-eda-report.md)、[可复现脚本](scripts/eda_stage3.py)、诊断图与每实验／每日清单；项目组确认“实验事实与仿真风险分层”。
-5. 阶段 4：项目组确定 [可解释仿真处置优先级方案 S1](docs/stage4-risk-definition-proposal.md)，已提交 [等级、场景距离与持续时间的候选规则](docs/stage4-s1-grading-options.md) 供项目组审核；尚未确定阈值或模型。
+5. 阶段 4：项目组确定 [可解释仿真处置优先级方案 S1](docs/stage4-risk-definition-proposal.md)，确认 [四状态矩阵、1 m 仿真缓冲及 3 s 气体软证据的敏感性试验起点](docs/stage4-s1-grading-options.md)；这些数值不是现场安全标准或设备实测参数。
+6. 阶段 5：已提交 [气体证据模型路线与固定释放时钟陷阱的调查报告](docs/stage5-model-candidates.md)，推荐可解释多通道变化检测；**等待项目组选择主模型路线**，尚未训练模型或确定实验性能。
 
 数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)，下载方法见 [scripts/download_data.py](scripts/download_data.py)，未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 
