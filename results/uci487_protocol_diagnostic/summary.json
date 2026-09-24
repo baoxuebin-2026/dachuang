@@ -1,0 +1,66 @@
+{
+  "validation_status": "diagnostic_only_no_model",
+  "dataset": "UCI_487_laboratory",
+  "archive_sha256": "cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4",
+  "script_sha256": "d32b871b4405a636b80131587836ad9c359546cf13fd148e7cd9835127965ffa",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "days": 13,
+  "segments": 1300,
+  "co_levels_each_day": [
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10,
+    10
+  ],
+  "repeat_min_max_across_days": [
+    10,
+    10
+  ],
+  "co_humidity_correlation_range": [
+    -0.11450078002249832,
+    -0.02053174160258513
+  ],
+  "r1_high_low_phase_abs_median_range_mohm": [
+    2.36335,
+    9.785250000000001
+  ],
+  "zero_co_r1_low_median_range_mohm": [
+    2.7384999999999997,
+    8.451450000000001
+  ],
+  "segment_humidity_pct_range": [
+    16.36,
+    74.47
+  ],
+  "heater_high_fraction_range": [
+    0.21333333333333335,
+    0.23643807574206754
+  ],
+  "time_backsteps": 1,
+  "same_co_position_count_vs_first_day_min_max": [
+    100,
+    100
+  ],
+  "co_reference_max_position_difference_vs_first_day_ppm": 0.0,
+  "humidity_sequence_pairwise_pearson_range": [
+    0.8944684022078501,
+    0.9996123088645061
+  ],
+  "clock_lookup_note": "The 100-slot first-day CO reference is an invalid but exact CO predictor for every other day at settled segments",
+  "segment_sample_count_range": [
+    905,
+    1008
+  ],
+  "target_note": "Dataset CO reference in ppm from chamber gas generation/measurement; not independent field accident labels"
+}
