@@ -1,0 +1,2 @@
+# For scripts/audit_e1_external_sources.py; use a Python 3.12 environment.
+openpyxl==3.1.5
