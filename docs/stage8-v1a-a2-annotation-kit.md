@@ -6,10 +6,10 @@
 
 - 从 Bonn 官网上[第一条](https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking.zip)与[第二条](https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking2.zip)原始 ZIP，**各按 RGB 清单的第 0、10、20… 帧**取样；实际得到第一条 58 帧，第二条 57 帧，共 115 帧，按整条序列分为开发组／相似房间留出组。RGB／深度仅按实际 ZIP 文件、最近时间戳和一对一关系配对，最大允许 17 ms。具体记录见[完整抽帧清单 CSV](../data/audits/bonn_v1a_sampling_manifest.csv)，SHA-256 为 `27f69ecb1e7742223ca82ef95dae3e2aeb5bc067a00dff5683409166e9a9ae32`。
 - 第二名标注者只标每条序列索引 0、50、100… 的 12 帧，共 24 帧；这 24 帧同时由第一名标注者标。第二名标注者标注期间不得查看第一人的框、检测器输出或评估分数。
-- [准备脚本](../scripts/prepare_bonn_v1a.py)校验两个原包 SHA，生成固定 CSV 及本地 115 张 RGB 画面；画面位于被 Git 忽略的 `data/processed/bonn_v1a/frames/`。原始压缩包与抽样图片都不在公开仓库中。[本机标注网页](../tools/annotate_bonn_v1a.html)会复制进工作区并提供拖框、显式确认无人、遮挡／截断／不确定标记、自动暂存和 JSON 导出。[完整性校验脚本](../scripts/validate_bonn_v1a_labels.py)要求两名标注员各交齐自己的 115／24 帧，并逐项检查坐标、状态和类别属性；结构检查不代表人工标注本身正确。
+- [准备脚本](../scripts/prepare_bonn_v1a.py)在缺少原包时自动从波恩大学官网下载并断点续传，校验两个原包 SHA，生成固定 CSV 及本地 115 张 RGB 画面；画面位于被 Git 忽略的 `data/processed/bonn_v1a/frames/`。原始压缩包与抽样图片都不在公开仓库中。[本机标注网页](../tools/annotate_bonn_v1a.html)会复制进工作区并提供拖框、显式确认无人、遮挡／截断／不确定标记、自动暂存和 JSON 导出。[完整性校验脚本](../scripts/validate_bonn_v1a_labels.py)要求两名标注员各交齐自己的 115／24 帧，并逐项检查坐标、状态和类别属性；结构检查不代表人工标注本身正确。
 - 无人帧**明确点“确认无人”**，不要留空；人物只框画面中实际可见的身体部分，不猜被遮挡位置，出画、遮挡另打标记。框是原 RGB 图像的 `(x1,y1,x2,y2)` 像素坐标；机器人、海报上的人物不算真人。两位标注者分别导出完整 JSON；分歧保留双方原稿，再由团队记录仲裁，不以检测器框充当裁判。
 
-本项目工作区已生成并校验了 115 张原图、115 行清单及 HTML／JSON 文件的本机可访问性。由于这些序列没有明确再分发许可，**本项目不向公开 Git 推送原图或原始 ZIP**；项目成员在自己的电脑复现时从官方链接下载两份 ZIP、放入 `data/raw/bonn_rgbd/`，按下方命令生成相同画面。当前助理执行环境的原包留在本地，不保证长期在线；CSV 与工具保存在 Git。
+本项目工作区已生成并校验了 115 张原图、115 行清单及 HTML／JSON 文件的本机可访问性。由于这些序列没有明确再分发许可，**本项目不向公开 Git 推送原图或原始 ZIP**；项目成员在自己的电脑复现时，更新仓库后直接运行准备脚本，缺少的两个 ZIP 会自动下载到 `data/raw/bonn_rgbd/`（合计约 654 MB）。若团队已下载 ZIP，也可按相同文件名手动放入该目录；程序会校验大小和 SHA，不会覆盖现有坏文件。当前助理执行环境的原包留在本地，不保证长期在线；CSV 与工具保存在 Git。
 
 ## 2. 两人标注的直接操作
 
@@ -19,6 +19,15 @@
 python scripts/prepare_bonn_v1a.py
 python -m http.server 8765 --bind 127.0.0.1 --directory data/processed/bonn_v1a
 ```
+
+**Windows PowerShell**（同样在仓库根目录）：
+
+```powershell
+py -3 scripts\prepare_bonn_v1a.py
+py -3 -m http.server 8765 --bind 127.0.0.1 --directory data\processed\bonn_v1a
+```
+
+如果官网在你们的网络无法访问，脚本会保留 `.zip.part` 文件，重运行可续传；也可自行从上面的官方链接下载两个 ZIP，放在 `data\raw\bonn_rgbd\`，名字分别为 `rgbd_bonn_person_tracking.zip` 和 `rgbd_bonn_person_tracking2.zip`。在离线环境用 `py -3 scripts\prepare_bonn_v1a.py --offline` 可获得明确的缺失文件及官方地址提示。脚本默认的原包与输出路径以**脚本所在仓库**定位，不依赖当前命令行目录；但启动 `http.server` 和下面的标注校验命令仍建议在仓库根目录运行。
 
 浏览器打开 `http://127.0.0.1:8765/annotate.html`。第一名标注者填自己的编号，选“全量 115 帧”；第二名使用另一编号，选“独立复标 24 帧”。不要在一个页面更改身份；另一个人用自己的浏览器或电脑打开页面，不共享浏览器本地存储。进度只保存在当前浏览器，务必定期点击“导出我的 JSON”备份。两份 JSON 属原始标注记录；统一保存到 `data/processed/bonn_v1a/labels/`（Git 忽略），之后运行：
 

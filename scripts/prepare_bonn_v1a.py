@@ -11,7 +11,10 @@ import csv
 import hashlib
 import json
 import shutil
+import time
 from pathlib import Path
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 from zipfile import ZipFile
 
 SOURCES = (
@@ -26,6 +29,16 @@ SOURCES = (
         "held_out_similar_room",
     ),
 )
+DOWNLOADS = {
+    "rgbd_bonn_person_tracking": (
+        "https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking.zip",
+        329_482_910,
+    ),
+    "rgbd_bonn_person_tracking2": (
+        "https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking2.zip",
+        324_262_783,
+    ),
+}
 HEADERS = (
     "sample_id",
     "sequence",
@@ -49,6 +62,64 @@ def digest(path: Path) -> str:
     return value.hexdigest()
 
 
+def ensure_archive(path: Path, expected_hash: str, url: str, size: int, *, offline: bool) -> None:
+    if path.exists():
+        if path.stat().st_size != size or digest(path) != expected_hash:
+            raise ValueError(
+                f"已有文件大小或 SHA-256 错误：{path}。请核对下载来源；不会自动覆盖它。"
+            )
+        return
+    if offline:
+        raise FileNotFoundError(f"缺少原始文件：{path}；官网地址：{url}")
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    partial = path.with_name(path.name + ".part")
+    if partial.exists() and partial.stat().st_size > size:
+        raise ValueError(f"断点文件超过官方长度：{partial}")
+    print(f"缺少 {path.name}，从官方来源下载 {size:,} 字节；中断后重新运行可续传。", flush=True)
+    for attempt in range(1, 9):
+        offset = partial.stat().st_size if partial.exists() else 0
+        if offset == size:
+            break
+        request = Request(url, headers={"Range": f"bytes={offset}-", "User-Agent": "Bonn-V1A-research/1.0"})
+        try:
+            with urlopen(request, timeout=45) as response:
+                if response.status == 206:
+                    content_range = response.headers.get("Content-Range", "")
+                    if not content_range.startswith(f"bytes {offset}-") or not content_range.endswith(f"/{size}"):
+                        raise ValueError(f"服务器返回了不一致的 Range 响应：{content_range}")
+                    mode = "ab"
+                elif response.status == 200:
+                    # Some proxies ignore Range. Restart rather than concatenate two files.
+                    mode = "wb"
+                    offset = 0
+                else:
+                    raise ValueError(f"无法确认下载响应：HTTP {response.status}")
+                with partial.open(mode) as output:
+                    next_notice = ((offset // (32 * 1024 * 1024)) + 1) * (32 * 1024 * 1024)
+                    while chunk := response.read(1024 * 1024):
+                        output.write(chunk)
+                        offset += len(chunk)
+                        if offset > size:
+                            raise ValueError(f"下载长度超过官方长度：{partial}")
+                        if offset >= next_notice:
+                            print(f"  {path.name}: {offset:,}/{size:,} 字节", flush=True)
+                            next_notice += 32 * 1024 * 1024
+        except (HTTPError, URLError, TimeoutError, OSError) as error:
+            print(f"  下载中断（第 {attempt}/8 次）：{error}", flush=True)
+            if attempt < 8:
+                time.sleep(min(attempt, 4))
+            continue
+        if partial.stat().st_size == size:
+            break
+    if not partial.exists() or partial.stat().st_size != size:
+        raise RuntimeError(f"文件尚未完整：{partial}。请重试，或手动从 {url} 下载后放到 {path}")
+    if digest(partial) != expected_hash:
+        raise ValueError(f"文件 SHA-256 不符：{partial}。保留断点文件供检查，不会使用此文件。")
+    partial.replace(path)
+    print(f"  完成并通过 SHA-256 校验：{path}", flush=True)
+
+
 def read_rows(archive: ZipFile, member: str) -> list[tuple[float, str]]:
     return [
         (float(parts[0]), parts[1])
@@ -57,14 +128,16 @@ def read_rows(archive: ZipFile, member: str) -> list[tuple[float, str]]:
     ]
 
 
-def prepare(raw_dir: Path, output_dir: Path, manifest_path: Path) -> list[dict[str, object]]:
+def prepare(
+    raw_dir: Path, output_dir: Path, manifest_path: Path, *, offline: bool = False
+) -> list[dict[str, object]]:
     # Run all eligibility checks before publishing a manifest or extracting frames.
     rows: list[dict[str, object]] = []
     images: list[tuple[Path, str, Path]] = []
     for sequence, expected_hash, split in SOURCES:
         zip_path = raw_dir / f"{sequence}.zip"
-        if digest(zip_path) != expected_hash:
-            raise ValueError(f"Original ZIP SHA-256 mismatch: {zip_path}")
+        url, size = DOWNLOADS[sequence]
+        ensure_archive(zip_path, expected_hash, url, size, offline=offline)
         with ZipFile(zip_path) as archive:
             names = set(archive.namelist())
             root = sequence + "/"
@@ -131,13 +204,15 @@ def prepare(raw_dir: Path, output_dir: Path, manifest_path: Path) -> list[dict[s
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--raw-dir", type=Path, default=Path("data/raw/bonn_rgbd"))
-    parser.add_argument("--output-dir", type=Path, default=Path("data/processed/bonn_v1a"))
+    repo_root = Path(__file__).resolve().parent.parent
+    parser.add_argument("--raw-dir", type=Path, default=repo_root / "data/raw/bonn_rgbd")
+    parser.add_argument("--output-dir", type=Path, default=repo_root / "data/processed/bonn_v1a")
     parser.add_argument(
-        "--manifest", type=Path, default=Path("data/audits/bonn_v1a_sampling_manifest.csv")
+        "--manifest", type=Path, default=repo_root / "data/audits/bonn_v1a_sampling_manifest.csv"
     )
+    parser.add_argument("--offline", action="store_true", help="只用本地文件，不自动下载缺失的官方 ZIP")
     args = parser.parse_args()
-    rows = prepare(args.raw_dir, args.output_dir, args.manifest)
+    rows = prepare(args.raw_dir, args.output_dir, args.manifest, offline=args.offline)
     print(f"Selected {len(rows)} RGB frames, including {sum(int(r['qc_double_label']) for r in rows)} independent review frames")
     print(f"Manifest: {args.manifest}; private annotation workspace: {args.output_dir}")
 

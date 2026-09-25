@@ -24,6 +24,6 @@
 11. 阶段 7B：项目组选择 A 并追问单通道漏检；先[固定事后诊断范围](configs/stage7_b_posthoc_plan.json)，后进行[事后诊断](docs/stage7-b-posthoc-diagnostic-results.md)。CO 单通道 14 个测试起点的 60 秒峰值均未达训练阈值；B1 对仅乙烯设定变化也全部报警，故不可称为 CO／甲烷气种专一检测；7B 不修改 7A 原结果。
 12. 阶段 8 前置诊断：项目组选择 B，已形成[申报目标和拟部署架构逐项核对及视觉验证备选](docs/stage8-scope-and-evidence-options.md)。项目组选择 V1、A；改用波恩大学数据并从官网核验[两条人员跟踪序列](docs/stage8-v1a-two-sequence-protocol-proposal.md)，共有 580＋567 对 RGB／深度帧，两段场景高度相似且均缺人工人员框及人员位置真值。随后项目组选择 **A2**，已冻结 115 帧[抽样清单、独立人员框标注工具及预选模型来源](docs/stage8-v1a-a2-annotation-kit.md)。**尚无人工真值或视觉成绩**，待两名成员独立标注后再执行检测和空间规则评价。
 
-数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)，下载方法见 [scripts/download_data.py](scripts/download_data.py)，未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
+数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)；UCI 下载方法见 [scripts/download_data.py](scripts/download_data.py)。**Bonn 视觉序列**运行 `python scripts/prepare_bonn_v1a.py`，缺少原包时脚本会从官网自动下载并校验；Windows 用 `py -3 scripts\prepare_bonn_v1a.py`，详见[标注操作说明](docs/stage8-v1a-a2-annotation-kit.md)。未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 
 > 本仓库为方法研究与系统拟部署设计，不代表对任何焦化园区完成现场试验或工业级安全认证。
