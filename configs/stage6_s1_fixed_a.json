@@ -1,0 +1,40 @@
+{
+  "protocol_version": "stage6_s1_a_20260925_v1",
+  "recorded_date_asia_shanghai": "2026-09-25",
+  "purpose": "Laboratory UCI309 gas evidence replayed with explicitly simulated personnel positions; exploratory, not a blind field test",
+  "data_sha256": "5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e",
+  "m1_run_id": "m1-uci309-20260924-v2",
+  "m1_setting": {"split": "test", "mode": "A", "source": "gas", "method": "multi"},
+  "laboratory_program_for_offline_scoring_only_s": {"release_start": 60, "release_stop": 240},
+  "monitor_completed_seconds_inclusive": [26, 240],
+  "coordinate_unit": "m, simulated ground plane; not mapped from wind tunnel or D435",
+  "control_zone": {"zone_id": "zone_A", "x_min": 0.0, "x_max": 2.0, "y_min": 0.0, "y_max": 2.0},
+  "coverage_zone_id_assumption": "zone_A",
+  "baseline_buffer_m": 1.0,
+  "buffer_sensitivity_m": [0.5, 1.0, 2.0],
+  "position_error_bound_sensitivity_m": [0.0, 0.2, 0.5],
+  "gas_consecutive_sensitivity_s": [1, 3, 5],
+  "time_age_tolerance_s": 1,
+  "position_noise_seed": 20260925,
+  "noise_mechanism": "same unit direction/radial fraction drawn once per trajectory/time; location offset vector multiplied by bound; unknown if signed distance interval crosses 0 or buffer boundary",
+  "time_keyframes_rule": "linear interpolation; inclusive seconds; no path depends on an observed gas trigger",
+  "keyframes_xy": {
+    "outside": [[26, -3.0, 1.0], [240, -3.0, 1.0]],
+    "early_cross": [[26, -3.0, 1.0], [32, -0.5, 1.0], [40, 0.5, 1.0], [46, 0.5, 1.0], [55, -3.0, 1.0], [240, -3.0, 1.0]],
+    "possible_overlap": [[26, -3.0, 1.0], [70, -3.0, 1.0], [88, -0.5, 1.0], [98, 0.5, 1.0], [125, 0.5, 1.0], [145, -3.0, 1.0], [240, -3.0, 1.0]]
+  },
+  "scenarios": {
+    "S0_outside": {"trajectory": "outside", "inclusive_time": [26, 240], "overlay": "none"},
+    "S1_early_background": {"trajectory": "early_cross", "inclusive_time": [26, 60], "overlay": "none"},
+    "S2_possible_overlap": {"trajectory": "possible_overlap", "inclusive_time": [26, 240], "overlay": "none"},
+    "S3_separate_events": {"trajectory": "early_cross", "inclusive_time": [26, 240], "overlay": "none"},
+    "S4_gas_dropout": {"trajectory": "possible_overlap", "inclusive_time": [26, 240], "overlay": "gas_missing_100_109"},
+    "S4_person_dropout": {"trajectory": "possible_overlap", "inclusive_time": [26, 240], "overlay": "person_missing_100_109"},
+    "S4_wrong_zone": {"trajectory": "possible_overlap", "inclusive_time": [26, 240], "overlay": "person_zone_B_100_109"},
+    "S4_stale_gas": {"trajectory": "possible_overlap", "inclusive_time": [26, 240], "overlay": "gas_age_2s_100_109"}
+  },
+  "overlay_time_half_open_s": [100, 110],
+  "nominal_duration_s": 3,
+  "allowed_claims": "Compare source preservation, rule coverage and parameter sensitivity; never use self-defined L0-L3 as independent accident labels",
+  "replay_independence": "All test trials get identical synthetic paths; this is one fixed lab program and not independent real personnel events"
+}
