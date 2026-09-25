@@ -1,0 +1,27 @@
+{
+  "status": "2d_person_box_freeze_for_exploratory_a2",
+  "frozen_at_utc": "2026-09-25T13:13:07Z",
+  "sampling_manifest_sha256": "27f69ecb1e7742223ca82ef95dae3e2aeb5bc067a00dff5683409166e9a9ae32",
+  "primary": {
+    "private_filename": "bonn_v1a_team_1_primary_rev3_assembled.json",
+    "sha256": "23a27695657334be0bec47dfd3f8ef7e0e3a7ad6e14ef96802ab60945934682e",
+    "frames": 115,
+    "person_boxes": 66
+  },
+  "independent_qc": {
+    "private_filename": "bonn_v1a_team_2_qc_rev2_assembled.json",
+    "sha256": "14ebd71d0c5dc572240895cccf66ab10c1f84d1478f7d79e6d672e85741e964d",
+    "frames": 24,
+    "person_boxes": 14
+  },
+  "provenance": "Two independent annotator identifiers and user-provided subsequent corrections; *_assembled.json is an explicitly traced composite, not a fresh browser export. Original exports and intermediate revisions are retained privately.",
+  "adjudication": "Compare the two labels on their 24 exact sequence:frame IDs; 14 person pairs have IoU >= 0.75, 10 pairs both have no person, no attribute conflict. Use latest team_1 primary boxes for all 115 evaluation frames without detector-assisted edits.",
+  "person_box_agreement_mean_iou": 0.8572,
+  "person_box_agreement_min_iou": 0.7672,
+  "detector_score_threshold": 0.5,
+  "one_to_one_iou_match_threshold": 0.5,
+  "detector_selection": "torchvision SSDLite320 MobileNetV3 Large COCO_V1, pinned in stage8_v1a_a2_preannotation.json before human labels",
+  "attribute_scope": "truncated/occluded/uncertain attributes are provenance-only in this first 2D evaluation; 15 primary boxes touch a 640x480 image edge while truncated=false, so no attribute-based stratification is permitted without further human review.",
+  "evaluation_scope": "Two brief visually similar Bonn RGB-D laboratory sequences; second sequence has been examined during human QC, so label review was not blind. No claim of cross-scene generalization, real danger-zone recognition, D435 or Jetson measurements, or early accident prediction.",
+  "revision_policy": "Any post-inference label change gets a new version, recorded reason, and a full recomputation; original frozen numbers remain auditable. Detector outputs cannot arbitrate human labels."
+}
