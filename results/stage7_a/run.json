@@ -1,0 +1,187 @@
+{
+  "status": "completed",
+  "source_safety_note": "UCI target=gas-delivery setpoint; SB112=no-manual-trigger background; neither is coke-plant accident truth",
+  "frozen_commit": "ec839cd8959df78ab30eb2ae27c08bf3d7338e83",
+  "frozen_config_sha256": "c0702e7c4f66e30239402657ecf3857d4f358b8f7ac3ae1f19f425c0cb764bb7",
+  "source_uci322_sha256": "8b6323b801363e11343ba1a5a7718e76666b715e753b3a40dbdfd1838d953fe7",
+  "audit_uci322_sha256": "2007e4edc03b50a6879984d8f6fd50e230bb28f477234c74631e3dcc612410d2",
+  "script_sha256": "14c5f5b630bd37205cb7a2a286294e5dc2cc9113e619635aa98625cc64525ad7",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "openpyxl": "3.1.5",
+  "gas_training_parameters": [
+    {
+      "file": "ethylene_CO.txt",
+      "selected_channel_0_based": 1,
+      "train_negative_s_guard60": 660,
+      "train_channel_center": [
+        1230.79,
+        81.8,
+        2036.6175,
+        2276.5225,
+        1340.1375,
+        1702.6875,
+        2234.2925,
+        2380.235,
+        591.875,
+        751.5025,
+        2276.0950000000003,
+        1814.0774999999999,
+        814.5725,
+        879.78,
+        2409.8,
+        1840.8274999999999
+      ],
+      "train_channel_mad_scale": [
+        193.28656199999983,
+        103.57443599999998,
+        256.7418420000001,
+        280.58575650000006,
+        127.56290399999993,
+        143.3377680000001,
+        251.94933749999998,
+        259.581021,
+        198.40894499999996,
+        107.2883490000001,
+        272.47964100000013,
+        200.706975,
+        70.57546650000003,
+        51.32761199999992,
+        357.3066,
+        193.9240800000001
+      ],
+      "train_channel_contrasts": [
+        3.938582134851159,
+        30.39869316787784,
+        6.95264545153493,
+        7.421233800226774,
+        7.210481818444653,
+        6.888484547910633,
+        9.913937558974531,
+        9.932322825712282,
+        -0.206001296967735,
+        0.3500613100123282,
+        5.992291732357351,
+        8.068815246704803,
+        4.372376341288511,
+        6.155166540769528,
+        5.104593645905225,
+        11.057136380381431
+      ]
+    },
+    {
+      "file": "ethylene_methane.txt",
+      "selected_channel_0_based": 5,
+      "train_negative_s_guard60": 864,
+      "train_channel_center": [
+        2221.2125,
+        1773.95,
+        1120.0100000000002,
+        1254.81,
+        674.03,
+        917.135,
+        1099.9199999999998,
+        1197.6299999999999,
+        3254.09,
+        2618.3500000000004,
+        993.6125,
+        843.915,
+        632.5649999999999,
+        622.59,
+        1027.75,
+        796.7025
+      ],
+      "train_channel_mad_scale": [
+        106.66936349999965,
+        102.09183600000019,
+        217.178661,
+        236.24489699999987,
+        124.5384,
+        121.291506,
+        145.07240999999985,
+        166.02154799999968,
+        49.70045850000005,
+        32.84700299999996,
+        150.32822699999997,
+        134.98702350000002,
+        116.47676249999999,
+        118.5042180000001,
+        92.87377049999989,
+        79.69345649999991
+      ],
+      "train_channel_contrasts": [
+        0.41745819548272234,
+        -0.23799650346184587,
+        5.708364690580718,
+        6.107973202062439,
+        18.03891410199585,
+        24.565982386268665,
+        10.21246906975628,
+        11.359218262439065,
+        0.09864094110921906,
+        0.04559015627697216,
+        2.9504272673953658,
+        6.264842931365176,
+        17.324271010709108,
+        18.950612373983162,
+        9.505132560543572,
+        10.606642466310907
+      ]
+    }
+  ],
+  "sb112_files": [
+    {
+      "sensor_file": "co_sensor.xlsx",
+      "file_sha256": "57c4caf358510dc56d850935e2a437f6b2ddf068ec8fc5f0e3998a953e0b00f9",
+      "training_day_median_ppm": 0.902684,
+      "training_day_sample_count": 2036,
+      "stimulus_day_samples_without_onset_labels": 85,
+      "stimulus_day_min_ppm": 0.560994,
+      "stimulus_day_max_ppm": 112.6995,
+      "thresholds_ppm": {
+        "primary": 0.9891511500000001,
+        "sensitivity": 0.9986161250000001
+      }
+    },
+    {
+      "sensor_file": "cng_sensor.xlsx",
+      "file_sha256": "516eff563d63eca2c79e0916b2c3a65e9bbf24886a7c687f64a976ed81fa89fa",
+      "training_day_median_ppm": 20.38702,
+      "training_day_sample_count": 2035,
+      "stimulus_day_samples_without_onset_labels": 84,
+      "stimulus_day_min_ppm": 29.48616,
+      "stimulus_day_max_ppm": 2316.778,
+      "thresholds_ppm": {
+        "primary": 23.47869,
+        "sensitivity": 23.63271
+      }
+    },
+    {
+      "sensor_file": "lpg_sensor.xlsx",
+      "file_sha256": "5524f8fe03fe52c1e5d83ccb8d6a3b5088fd09ef48a7ff73734052820368fed1",
+      "training_day_median_ppm": 23.86196,
+      "training_day_sample_count": 2035,
+      "stimulus_day_samples_without_onset_labels": 85,
+      "stimulus_day_min_ppm": 16.10371,
+      "stimulus_day_max_ppm": 1158225.0,
+      "thresholds_ppm": {
+        "primary": 25.82222,
+        "sensitivity": 25.9608
+      }
+    },
+    {
+      "sensor_file": "smoke_sensor.xlsx",
+      "file_sha256": "c962f51c62d6030bfee4c767d63737b6351a44f109fa5d04dc2cb0989a09c115",
+      "training_day_median_ppm": 16.17846,
+      "training_day_sample_count": 2036,
+      "stimulus_day_samples_without_onset_labels": 92,
+      "stimulus_day_min_ppm": 11.12063,
+      "stimulus_day_max_ppm": 1179.42,
+      "thresholds_ppm": {
+        "primary": 17.6182675,
+        "sensitivity": 17.737859250000003
+      }
+    }
+  ]
+}

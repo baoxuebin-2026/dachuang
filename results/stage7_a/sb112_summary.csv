@@ -1,0 +1,17 @@
+sensor_file,day,split,variant,training_threshold_ppm,consecutive_observations,sample_count,day_median_ppm,coverage_h,events,events_per_covered_hour,raw_transitions,first_event_local,coverage_segments
+co_sensor.xlsx,2022-03-09,validation,primary,0.98915115,2,2470,0.791353,13.776192,0,0.0,0,,1
+co_sensor.xlsx,2022-03-10,test,primary,0.98915115,2,4300,0.692789,23.995806,0,0.0,0,,1
+co_sensor.xlsx,2022-03-09,validation,sensitivity,0.99861613,3,2470,0.791353,13.776192,0,0.0,0,,1
+co_sensor.xlsx,2022-03-10,test,sensitivity,0.99861613,3,4300,0.692789,23.995806,0,0.0,0,,1
+cng_sensor.xlsx,2022-03-09,validation,primary,23.47869,2,2494,14.7028,13.917064,0,0.0,0,,1
+cng_sensor.xlsx,2022-03-10,test,primary,23.47869,2,4292,11.50384,23.996714,0,0.0,0,,1
+cng_sensor.xlsx,2022-03-09,validation,sensitivity,23.63271,3,2494,14.7028,13.917064,0,0.0,0,,1
+cng_sensor.xlsx,2022-03-10,test,sensitivity,23.63271,3,4292,11.50384,23.996714,0,0.0,0,,1
+lpg_sensor.xlsx,2022-03-09,validation,primary,25.82222,2,2492,20.05553,13.905311,0,0.0,0,,1
+lpg_sensor.xlsx,2022-03-10,test,primary,25.82222,2,4292,17.85828,23.996822,0,0.0,0,,1
+lpg_sensor.xlsx,2022-03-09,validation,sensitivity,25.9608,3,2492,20.05553,13.905311,0,0.0,0,,1
+lpg_sensor.xlsx,2022-03-10,test,sensitivity,25.9608,3,4292,17.85828,23.996822,0,0.0,0,,1
+smoke_sensor.xlsx,2022-03-09,validation,primary,17.6182675,2,2522,14.58858,14.054,2,0.142308,2,2022-03-09T22:09:01.540000+02:00,1
+smoke_sensor.xlsx,2022-03-10,test,primary,17.6182675,2,4299,12.85538,23.977644,6,0.250233,24,2022-03-10T21:01:19.660000+02:00,2
+smoke_sensor.xlsx,2022-03-09,validation,sensitivity,17.73785925,3,2522,14.58858,14.054,0,0.0,0,,1
+smoke_sensor.xlsx,2022-03-10,test,sensitivity,17.73785925,3,4299,12.85538,23.977644,3,0.125117,4,2022-03-10T21:11:59.340000+02:00,2

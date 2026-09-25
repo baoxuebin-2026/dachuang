@@ -1,0 +1,12 @@
+sensor_file,split,variant,event_start_local
+smoke_sensor.xlsx,validation,primary,2022-03-09T22:09:01.540000+02:00
+smoke_sensor.xlsx,validation,primary,2022-03-09T22:17:01.400000+02:00
+smoke_sensor.xlsx,test,primary,2022-03-10T21:01:19.660000+02:00
+smoke_sensor.xlsx,test,primary,2022-03-10T21:11:19.340000+02:00
+smoke_sensor.xlsx,test,primary,2022-03-10T22:22:02.620000+02:00
+smoke_sensor.xlsx,test,primary,2022-03-10T22:49:06.610000+02:00
+smoke_sensor.xlsx,test,primary,2022-03-10T23:00:04.760000+02:00
+smoke_sensor.xlsx,test,primary,2022-03-10T23:10:45.170000+02:00
+smoke_sensor.xlsx,test,sensitivity,2022-03-10T21:11:59.340000+02:00
+smoke_sensor.xlsx,test,sensitivity,2022-03-10T21:30:48.180000+02:00
+smoke_sensor.xlsx,test,sensitivity,2022-03-10T21:38:40.470000+02:00

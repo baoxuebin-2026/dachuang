@@ -1,0 +1,7 @@
+file,split,period_s,phase_s,label_oracle_warning,qualified_onsets,events_hit_within_60s,negative_pulses
+ethylene_CO.txt,train,200,8,not_a_sensor_detector,5,1,1
+ethylene_CO.txt,validation,200,8,not_a_sensor_detector,7,3,6
+ethylene_CO.txt,test,200,8,not_a_sensor_detector,14,8,3
+ethylene_methane.txt,train,200,18,not_a_sensor_detector,7,1,2
+ethylene_methane.txt,validation,200,18,not_a_sensor_detector,15,3,6
+ethylene_methane.txt,test,200,18,not_a_sensor_detector,13,3,8

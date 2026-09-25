@@ -20,7 +20,7 @@
 7. 阶段 5 独立辅助研究：项目组已确认 V1＋V3，完成 UCI 487 [双轴阻断下的实验室 CO 校准](docs/stage5-uci487-v3-results.md)、[计算脚本](scripts/run_uci487_v3.py)与图表。13 日各 100 个 CO 暴露段的**段位顺序完全重复**，故同时按日期与段位留出；验证选出的相位＋温湿度模型在 3 天×20 未见段位上 MAE 为 0.530 ppm。这是**完成暴露段后的实验室估计**，不是现场实时预警。
 8. 阶段 6：已选定[固定轨迹方案 A](docs/stage6-s1-scenario-design-options.md)，先[冻结配置](configs/stage6_s1_fixed_a.json)，再用既有 60 个 UCI 309 留出实验做 [S1 模拟人员场景重放](docs/stage6-s1-fixed-replay-results.md)。固定“可能重叠”的情境中 58／60 条实验出现 L3；这完全取决于人为轨迹与研究内分级规则，**不属于事故预警准确率或真实多源同步验证**。
 9. 阶段 E1：项目组选择调查新的外部证据；已下载核查 UCI 322、TADI、SB112 的[数据源候选报告](docs/stage7-e1-external-data-audit.md)，未运行新模型。此后项目组选择方案 A。
-10. 阶段 7A：项目组选择 E1 方案 A，已提交 [UCI 322 与 SB112 分离验证的待批实验协议](docs/stage7-a-two-source-experiment-protocol-proposal.md)和[候选参数](configs/stage7_a_protocol_candidate.json)。**尚未批准冻结或运行新模型**。
+10. 阶段 7A：项目组选择 E1 方案 A 并批准[分离验证协议](docs/stage7-a-two-source-experiment-protocol-proposal.md)，先[冻结参数](configs/stage7_a_protocol_candidate.json)，再用[程序](scripts/run_stage7_a.py)分别完成 UCI 322、SB112 [实验结果](docs/stage7-a-separate-validation-results.md)。CO 气室未来时段多通道检出 14／14，单通道 0／14；SB112 烟雾通道在未人工触发测试日有 6 次／约 24 h 背景报警；**两者都不是焦化厂现场测试**。下一步等待项目组决定是否再核查乙烯干扰。
 
 数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)，下载方法见 [scripts/download_data.py](scripts/download_data.py)，未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 
