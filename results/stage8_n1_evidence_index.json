@@ -1,0 +1,62 @@
+{
+  "status": "index_of_existing_separate_experiments_no_new_joint_run",
+  "recorded_date_asia_shanghai": "2026-09-25",
+  "purpose": "Public repo references to private per-frame outputs; hashes bind each run without publishing original images or assembled human labels",
+  "entries": [
+    {
+      "run_id": "stage8-bonn-2d-20260925-01",
+      "study": "frozen SSDLite 2D person boxes on two similar indoor Bonn videos",
+      "source_zip_sha256": [
+        "a4810fd91ef2ea1d630b53fe0df5d76144c1b18d86ca91fb3a035debd0c9c5f5",
+        "d3ef7898529c60dc39919ea699d00490d98a2c6ae4b165610f2955b235b939b5"
+      ],
+      "script_path": "scripts/run_bonn_a2_detector.py",
+      "script_sha256_at_run": "b534457f3fd87c4bce55abb73c5c819b6b38387ecc987a70b9b2d4e6b40d7a6e",
+      "git_head_at_run": "b070f3996380c2e7b4d48db2c693134aa541305b",
+      "private_output_path": "outputs/stage8_a2_detector/summary.json",
+      "output_sha256": "f68e6ee57157c409b651551e40d09b5c6306d135b8e3bed339080e35323d9644",
+      "report": "docs/stage8-v1a-a2-2d-detector-results.md",
+      "scope": "2D person-box agreement against assembled human labels; no site or 3D accuracy"
+    },
+    {
+      "run_id": "stage8-bonn-depth-dev-20260925-01",
+      "study": "depth ROI and validity-gate sensitivity on development sequence only",
+      "source_zip_sha256": ["a4810fd91ef2ea1d630b53fe0df5d76144c1b18d86ca91fb3a035debd0c9c5f5"],
+      "script_path": "scripts/evaluate_bonn_a2_depth_gate_dev.py",
+      "script_sha256_at_run": "fd20ff7dc6b9b456cea254d373281abdb4aa508b9b223a54f9c87f4f52aefb1c",
+      "git_head_at_run": "11336abfb1ea956226dab9183c366d06ba024b55",
+      "private_output_path": "outputs/stage8_a2_depth_gate_dev/summary.json",
+      "output_sha256": "9fed8bd73ae78fb9a3574a810d57e28525e823e744b2a5ab2967713ff3aa5a93",
+      "report": "docs/stage8-v1a-a2-depth-gate-dev-sensitivity.md",
+      "scope": "Exploratory threshold choice; second-sequence depth not inspected at run time"
+    },
+    {
+      "run_id": "stage8-bonn-region-dev-20260925-01",
+      "study": "virtual camera-relative zone definitions on development sequence only",
+      "source_zip_sha256": ["a4810fd91ef2ea1d630b53fe0df5d76144c1b18d86ca91fb3a035debd0c9c5f5"],
+      "script_path": "scripts/compare_bonn_a2_virtual_regions_dev.py",
+      "script_sha256_at_run": "cbac665fb99a6d4a2599c442b92703fda0cff7ed7721d48f874856e734580986",
+      "git_head_at_run": "17fb36d04ea45cbb7401db7910b65b034299d0f3",
+      "private_output_path": "outputs/stage8_a2_virtual_region_dev/summary.json",
+      "output_sha256": "6e3d638a6600be3c8a2dd64293193847d699fcce6d728b1ca282d8ec4fefeb85",
+      "report": "docs/stage8-v1a-a2-virtual-region-dev-options.md",
+      "scope": "Illustrative G1 boundaries selected only from development frames"
+    },
+    {
+      "run_id": "stage8-bonn-repeat-20260925-01",
+      "study": "one-pass second indoor sequence depth and virtual region check after separate A1 and G1 freezes",
+      "source_zip_sha256": ["d3ef7898529c60dc39919ea699d00490d98a2c6ae4b165610f2955b235b939b5"],
+      "script_path": "scripts/evaluate_bonn_a2_repeat_depth.py",
+      "script_sha256_at_run": "fb91962bd690cbfefdd9713b9bf680780f2e4e3a10b4dcec09bb4793815cf0fd",
+      "git_head_at_run": "efb2192856213301d6ff1754131822694e4bad9d",
+      "depth_gate_freeze_sha256": "f100f63e423911dee4c07bf49c17dada13e5729c4542ff8c0097374472654b09",
+      "virtual_region_freeze_sha256": "cc28fbe791dae7e2c9bb77d1a8520dea25e5cfafb76fbce3385f1c99250c9974",
+      "private_output_path": "outputs/stage8_a2_repeat_depth/summary.json",
+      "output_sha256": "73ab0a2de885f94badcf5dda87ac33bce78d4b94ee8db628168b50ffbd3e4cbc",
+      "report": "docs/stage8-v1a-a2-repeat-depth-results.md",
+      "scope": "Similar room repeat seen during QC; no independent person depth or real hazard-zone truth"
+    }
+  ],
+  "dataset_separation": "UCI309+simulated person S1 is not Bonn RGB-D fused with UCI322/487/SB112 measurements",
+  "public_repo_privacy": "The raw ZIPs, assembled annotation JSON files, detector frame outputs and depth per-frame results are excluded from Git."
+}
