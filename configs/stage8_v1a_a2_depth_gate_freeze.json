@@ -1,0 +1,32 @@
+{
+  "status": "approved_depth_validity_gate_frozen_before_second_sequence_depth_inspection",
+  "approval": "Project team confirmed recommended A1 on 2026-09-25T21:33:21+08:00",
+  "selection_basis": "Development-sequence sensitivity analysis at git commit 9c1f086618c178e24e121c3d3a3256a35abd2abf",
+  "development_sequence": "rgbd_bonn_person_tracking",
+  "repeat_sequence": "rgbd_bonn_person_tracking2",
+  "source_and_label_freeze": "configs/stage8_v1a_a2_label_freeze.json",
+  "primary_labels_sha256": "23a27695657334be0bec47dfd3f8ef7e0e3a7ad6e14ef96802ab60945934682e",
+  "sampling_manifest_sha256": "27f69ecb1e7742223ca82ef95dae3e2aeb5bc067a00dff5683409166e9a9ae32",
+  "detector_predictions_sha256": "de91dd98ff42ff8fd4774add5e192393b8c47a7d14fa5e19d13e1b40e2e3806d",
+  "roi_fraction_xyxy_of_person_box": [0.35, 0.25, 0.65, 0.55],
+  "roi_pixel_coordinates": "Reuse scripts/diagnose_bonn_a2_depth_dev.py:roi_pixels; detector float box corners are truncated toward zero by int(), then ROI bounds use floor/ceil and image clipping",
+  "raw_depth_png_units_per_meter": 5000,
+  "zero_depth": "missing",
+  "representative_depth_m": "median of nonzero ROI pixels; only output if valid",
+  "validity_gate": {
+    "min_nonzero_fraction_inclusive": 0.8,
+    "max_iqr_m_inclusive": 0.2,
+    "empty_roi": "unknown",
+    "failed_gate": "unknown",
+    "missed_person_detection_in_human_labeled_frame": "unknown_for_person_depth",
+    "no_person_detected": "no_detected_person; not a claim that the area is safe"
+  },
+  "scoring_plan": "Report denominators for all human-person frames and all matched detector boxes, unknown reasons, and human-versus-detector gate disagreements; keep 2D misses in end-to-end unknown count; count empty frames separately",
+  "virtual_camera_relative_region": "not_yet_frozen; no second-sequence depth inspection or inside/near/outside scoring until separately approved",
+  "limits": [
+    "No independent ground-truth person depth or measurement accuracy",
+    "IQR concentration does not establish that measured pixels belong to a person",
+    "Second indoor sequence is visually similar and was seen during annotation, so repeatability only",
+    "No real coke-plant, D435, Jetson or hazard-zone validation"
+  ]
+}
