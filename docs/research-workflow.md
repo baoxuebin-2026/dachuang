@@ -4,7 +4,7 @@
 
 ## 阶段决策
 
-阶段 0—10 按项目组已约定的研究顺序推进。每进入影响研究路线的阶段，先核查材料、提出备选与推荐、提交阶段报告；待项目组确定后开展该阶段的研究。2026-09-24 已确认阶段 2：**UCI 309 主实验、UCI 487 独立辅助实验、UCI 322 备用**；阶段 3 已完成 EDA，阶段 4 已确认 S1 模拟处置等级。阶段 5 已批准 [M1 的 A/B 基线协议](stage5-m1-experiment-protocol-proposal.md)并完成 [UCI 309 实验结果记录](stage5-m1-pilot-results.md)；仅支持风洞实验室条件下的响应检测。487 已由项目组确认 V1＋V3 并完成[双轴留出 CO 校准结果](stage5-uci487-v3-results.md)；阶段 6 已确认固定轨迹 A 并完成[探索性重放](stage6-s1-fixed-replay-results.md)，模拟人员和实验室气体来源分别标注，不构成真实联合测试。项目组选择 E1 方案 A 后先审计来源，再批准并独立提交[冻结参数](../configs/stage7_a_protocol_candidate.json)，最后运行[分离验证实验](stage7-a-separate-validation-results.md)；继而选择[阶段 7B 事后乙烯干扰和单通道失败诊断](stage7-b-posthoc-diagnostic-results.md)，两阶段均未获得焦化现场人员或事故真值。项目组选择 B，将 322 B1 限定为实验室泛气体异常证据，形成[拟部署架构与申报目标对照及视觉验证备选](stage8-scope-and-evidence-options.md)；下一步等待项目组选择视觉验证投入范围。
+阶段 0—10 按项目组已约定的研究顺序推进。每进入影响研究路线的阶段，先核查材料、提出备选与推荐、提交阶段报告；待项目组确定后开展该阶段的研究。2026-09-24 已确认阶段 2：**UCI 309 主实验、UCI 487 独立辅助实验、UCI 322 备用**；阶段 3 已完成 EDA，阶段 4 已确认 S1 模拟处置等级。阶段 5 已批准 [M1 的 A/B 基线协议](stage5-m1-experiment-protocol-proposal.md)并完成 [UCI 309 实验结果记录](stage5-m1-pilot-results.md)；仅支持风洞实验室条件下的响应检测。487 已由项目组确认 V1＋V3 并完成[双轴留出 CO 校准结果](stage5-uci487-v3-results.md)；阶段 6 已确认固定轨迹 A 并完成[探索性重放](stage6-s1-fixed-replay-results.md)，模拟人员和实验室气体来源分别标注，不构成真实联合测试。项目组选择 E1 方案 A 后先审计来源，再批准并独立提交[冻结参数](../configs/stage7_a_protocol_candidate.json)，最后运行[分离验证实验](stage7-a-separate-validation-results.md)；继而选择[阶段 7B 事后乙烯干扰和单通道失败诊断](stage7-b-posthoc-diagnostic-results.md)，两阶段均未获得焦化现场人员或事故真值。项目组选择 B，将 322 B1 限定为实验室泛气体异常证据，形成[拟部署架构与申报目标对照](stage8-scope-and-evidence-options.md)；随后选择 V1，[核查公开 RGB-D 人员数据候选](stage8-v1-rgbd-source-audit.md)，等待项目组选择具体验证目标。尚未获取视觉原始数据或视觉性能结果。
 
 ## 数据和陈述的边界
 

@@ -22,7 +22,7 @@
 9. 阶段 E1：项目组选择调查新的外部证据；已下载核查 UCI 322、TADI、SB112 的[数据源候选报告](docs/stage7-e1-external-data-audit.md)，未运行新模型。此后项目组选择方案 A。
 10. 阶段 7A：项目组选择 E1 方案 A 并批准[分离验证协议](docs/stage7-a-two-source-experiment-protocol-proposal.md)，先[冻结参数](configs/stage7_a_protocol_candidate.json)，再用[程序](scripts/run_stage7_a.py)分别完成 UCI 322、SB112 [实验结果](docs/stage7-a-separate-validation-results.md)。CO 气室未来时段多通道检出 14／14，单通道 0／14；SB112 烟雾通道在未人工触发测试日有 6 次／约 24 h 背景报警；**两者都不是焦化厂现场测试**。
 11. 阶段 7B：项目组选择 A 并追问单通道漏检；先[固定事后诊断范围](configs/stage7_b_posthoc_plan.json)，后进行[事后诊断](docs/stage7-b-posthoc-diagnostic-results.md)。CO 单通道 14 个测试起点的 60 秒峰值均未达训练阈值；B1 对仅乙烯设定变化也全部报警，故不可称为 CO／甲烷气种专一检测；7B 不修改 7A 原结果。
-12. 阶段 8 前置诊断：项目组选择 B，已形成[申报目标和拟部署架构逐项核对及视觉验证备选](docs/stage8-scope-and-evidence-options.md)。气体来源与仿真人员数据保持分离；待项目组决定是否用公开 RGB-D 数据补一项独立视觉空间验证。
+12. 阶段 8 前置诊断：项目组选择 B，已形成[申报目标和拟部署架构逐项核对及视觉验证备选](docs/stage8-scope-and-evidence-options.md)。气体来源与仿真人员数据保持分离。项目组选择 V1 后完成[公开 RGB-D 人员数据候选调查](docs/stage8-v1-rgbd-source-audit.md)；多数数据缺独立三维人员真值或存在获取门槛，尚未取得原始序列或产出视觉成绩。等待项目组决定视觉验证目标。
 
 数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)，下载方法见 [scripts/download_data.py](scripts/download_data.py)，未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 
