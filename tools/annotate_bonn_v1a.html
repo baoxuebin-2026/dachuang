@@ -31,6 +31,8 @@
     <div class="bar">
       <button id="prev">上一帧</button>
       <button id="next">下一帧</button>
+      <label>跳转帧 ID <input id="jump-id" placeholder="例如 rgbd_bonn_person_tracking2:0300" size="36" /></label>
+      <button id="jump">跳转</button>
       <button id="confirm">确认本帧人员框</button>
       <button id="empty">确认无人</button>
       <button id="undo">撤销最后一个框</button>
@@ -189,6 +191,16 @@
 
       $("prev").onclick = () => show(position - 1);
       $("next").onclick = () => show(position + 1);
+      $("jump").onclick = () => {
+        if (!task.length) return alert("先开始标注");
+        const id = $("jump-id").value.trim();
+        const index = task.findIndex((entry) => entry.sample_id === id);
+        if (index < 0) return alert("当前任务中没有该帧 ID，请输入状态栏显示的完整格式");
+        show(index);
+      };
+      $("jump-id").onkeydown = (event) => {
+        if (event.key === "Enter") $("jump").click();
+      };
       $("confirm").onclick = () => {
         if (!task.length) return;
         if (!record().boxes.length) return alert("没有人员请用“确认无人”按钮");
