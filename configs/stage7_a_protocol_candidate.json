@@ -1,0 +1,43 @@
+{
+  "status": "candidate_not_approved_do_not_run",
+  "source_report": "docs/stage7-e1-external-data-audit.md",
+  "uci322": {
+    "archive_sha256": "8b6323b801363e11343ba1a5a7718e76666b715e753b3a40dbdfd1838d953fe7",
+    "files_independent": ["ethylene_CO.txt", "ethylene_methane.txt"],
+    "intervals_s": {
+      "train": [3000, 12000],
+      "validation": [12300, 24000],
+      "test": [24300, 39000]
+    },
+    "boundary_embargo_s": 300,
+    "bin_seconds": 1,
+    "negative_both_zero_min_prior_s": 120,
+    "development_baseline_both_zero_min_prior_s": 60,
+    "positive_onset_prior_both_zero_s": 60,
+    "positive_target_dwell_min_s": 60,
+    "event_scoring_horizon_s": 60,
+    "evidence_consecutive_bins": 3,
+    "threshold_quantiles_training_only": [0.99, 0.995],
+    "primary_threshold_quantile": 0.99,
+    "test_read_once_after_freeze": true,
+    "only_sensor_columns_in_inference": true
+  },
+  "sb112": {
+    "source": "https://zenodo.org/records/6616632",
+    "columns": ["time", "data_type", "unit", "data_value"],
+    "sensors_separate": ["co_sensor.xlsx", "cng_sensor.xlsx", "lpg_sensor.xlsx", "smoke_sensor.xlsx"],
+    "day_assignment_local_plus_02": {
+      "train": "2022-03-08",
+      "validation": "2022-03-09",
+      "test": "2022-03-10",
+      "qualitative_only": "2022-03-11"
+    },
+    "gap_breaks_continuity_if_over_s": 60,
+    "episode_merge_clear_time_s": 300,
+    "primary_quantile_train_only": 0.99,
+    "sensitivity_quantile_train_only": 0.995,
+    "primary_consecutive_observations": 2,
+    "sensitivity_consecutive_observations": 3,
+    "test_day_single_once": true
+  }
+}
