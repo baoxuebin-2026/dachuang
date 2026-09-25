@@ -1,5 +1,6 @@
 {
-  "status": "candidate_not_approved_do_not_run",
+  "status": "approved_frozen_before_model_results",
+  "approval": "User confirmed continue on 2026-09-25 Asia/Shanghai after review request; no new E1 model results viewed before freeze",
   "source_report": "docs/stage7-e1-external-data-audit.md",
   "uci322": {
     "archive_sha256": "8b6323b801363e11343ba1a5a7718e76666b715e753b3a40dbdfd1838d953fe7",
