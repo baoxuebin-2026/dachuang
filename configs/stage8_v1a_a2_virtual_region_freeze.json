@@ -1,0 +1,31 @@
+{
+  "status": "approved_G1_camera_relative_region_frozen_before_second_sequence_depth_inspection",
+  "approval": "Project team selected G1 on 2026-09-25T21:41:03+08:00",
+  "development_selection_commit": "d199c0984615e2a0318889c0e18e039efc7b155c",
+  "development_region_summary_sha256": "6e3d638a6600be3c8a2dd64293193847d699fcce6d728b1ca282d8ec4fefeb85",
+  "depth_gate_freeze": "configs/stage8_v1a_a2_depth_gate_freeze.json",
+  "depth_gate_freeze_sha256": "f100f63e423911dee4c07bf49c17dada13e5729c4542ff8c0097374472654b09",
+  "development_sequence": "rgbd_bonn_person_tracking",
+  "repeat_sequence": "rgbd_bonn_person_tracking2",
+  "person_location_proxy": {
+    "u_px": "(detector box x1 + detector box x2)/2; human box version only for internal sensitivity",
+    "z_m": "median of nonzero narrow torso ROI depths, only if frozen A1 validity gate passes",
+    "x_m": "(u_px - 315.59352) * z_m / 542.822841",
+    "camera_coordinate_frame": "optical camera: X right, Z forward; approximate torso center, not ground point, body boundary or surveyed world coordinate"
+  },
+  "region_categories": {
+    "inside": "X >= 0.35 m",
+    "near": "0.15 m <= X < 0.35 m",
+    "outside": "X < 0.15 m",
+    "unknown": "a labeled person missed by the detector or ROI depth rejected by A1 gate",
+    "no_detected_person": "separate frame state; never classify as safe solely from no detection"
+  },
+  "evaluation_plan": [
+    "Use only the preselected 57 frames of rgbd_bonn_person_tracking2; report all 34 human-person frames and 23 empty frames",
+    "Report GT-box gate pass and detector-box gate pass, detection miss and failed depth gate separately",
+    "Report four region states over all 34 human-person frames and detector-vs-human-box disagreement among both valid matched pairs",
+    "Report distance to nearest virtual X boundary and count points within 0.05 m; no threshold tuning after viewing repeat sequence",
+    "Keep frame-level outputs private; archive result, script and input hashes"
+  ],
+  "interpretation": "Illustrative Bonn indoor camera-relative half-space; no independent person-location truth, hazard-zone labels, real coke-plant boundary or cross-scene generalization"
+}
