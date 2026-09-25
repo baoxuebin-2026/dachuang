@@ -1,0 +1,106 @@
+{
+  "run_status": "exploratory_lab_gas_plus_simulated_person_replay",
+  "original_uci309_sha256": "5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e",
+  "frozen_config_sha256": "f43a465afd48861643588691a86dc47504341844ddd074ffa7d9277e4b5b532e",
+  "frozen_m1_run_id": "m1-uci309-20260924-v2",
+  "gas_threshold": 6.292830163226808,
+  "script_sha256": "421c322e2c718d054b95d9210fab58581b833afdf1783710d336c9483f9d81b8",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "trial_count": 60,
+  "scenario_count": 8,
+  "synthetic_scenarios_per_gas_file": [
+    "S0_outside",
+    "S1_early_background",
+    "S2_possible_overlap",
+    "S3_separate_events",
+    "S4_gas_dropout",
+    "S4_person_dropout",
+    "S4_wrong_zone",
+    "S4_stale_gas"
+  ],
+  "example_trial_ids": [
+    "002_Et_H_CO_H",
+    "011_Et_n_Me_L"
+  ],
+  "gas_replay_matches_all_60_registered_pilot_file_scores": true,
+  "nominal_scenario_totals": [
+    {
+      "scenario": "S0_outside",
+      "trials": 60,
+      "trials_with_joint_L3": 0,
+      "total_L3_seconds_across_replays": 0,
+      "unknown_seconds_across_replays": 0,
+      "paired_seconds_across_replays": 12900,
+      "pre_release_joint_L3_seconds": 0
+    },
+    {
+      "scenario": "S1_early_background",
+      "trials": 60,
+      "trials_with_joint_L3": 0,
+      "total_L3_seconds_across_replays": 0,
+      "unknown_seconds_across_replays": 0,
+      "paired_seconds_across_replays": 2100,
+      "pre_release_joint_L3_seconds": 0
+    },
+    {
+      "scenario": "S2_possible_overlap",
+      "trials": 60,
+      "trials_with_joint_L3": 58,
+      "total_L3_seconds_across_replays": 2664,
+      "unknown_seconds_across_replays": 0,
+      "paired_seconds_across_replays": 12900,
+      "pre_release_joint_L3_seconds": 0
+    },
+    {
+      "scenario": "S3_separate_events",
+      "trials": 60,
+      "trials_with_joint_L3": 0,
+      "total_L3_seconds_across_replays": 0,
+      "unknown_seconds_across_replays": 0,
+      "paired_seconds_across_replays": 12900,
+      "pre_release_joint_L3_seconds": 0
+    },
+    {
+      "scenario": "S4_gas_dropout",
+      "trials": 60,
+      "trials_with_joint_L3": 58,
+      "total_L3_seconds_across_replays": 1997,
+      "unknown_seconds_across_replays": 600,
+      "paired_seconds_across_replays": 12300,
+      "pre_release_joint_L3_seconds": 0
+    },
+    {
+      "scenario": "S4_person_dropout",
+      "trials": 60,
+      "trials_with_joint_L3": 58,
+      "total_L3_seconds_across_replays": 2111,
+      "unknown_seconds_across_replays": 600,
+      "paired_seconds_across_replays": 12300,
+      "pre_release_joint_L3_seconds": 0
+    },
+    {
+      "scenario": "S4_stale_gas",
+      "trials": 60,
+      "trials_with_joint_L3": 58,
+      "total_L3_seconds_across_replays": 2111,
+      "unknown_seconds_across_replays": 600,
+      "paired_seconds_across_replays": 12300,
+      "pre_release_joint_L3_seconds": 0
+    },
+    {
+      "scenario": "S4_wrong_zone",
+      "trials": 60,
+      "trials_with_joint_L3": 58,
+      "total_L3_seconds_across_replays": 2111,
+      "unknown_seconds_across_replays": 600,
+      "paired_seconds_across_replays": 12300,
+      "pre_release_joint_L3_seconds": 0
+    }
+  ],
+  "sensitivity_settings": 27,
+  "unit_note": "60 laboratory gas files replayed with fixed synthetic paths; no independent real people, accidents or camera measurements",
+  "prior_holdout_note": "M1 test files were already viewed and rescored; this is not a fresh blind test",
+  "recovery_note": "0-239s source bins only; original post-release recovery 240-300s was not replayed"
+}

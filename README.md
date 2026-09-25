@@ -18,7 +18,7 @@
 5. 阶段 4：项目组确定 [可解释仿真处置优先级方案 S1](docs/stage4-risk-definition-proposal.md)，确认 [四状态矩阵、1 m 仿真缓冲及 3 s 气体软证据的敏感性试验起点](docs/stage4-s1-grading-options.md)；这些数值不是现场安全标准或设备实测参数。
 6. 阶段 5：已批准 [M1 实验协议](docs/stage5-m1-experiment-protocol-proposal.md)（A 清洁起点主实验、B 统一基线敏感性），完成 [UCI 309 文件级气体变化实验](docs/stage5-m1-pilot-results.md)与[可复现计算程序](scripts/run_m1_uci309.py)。在 60 个留出风洞实验中，A 下八通道中位汇总有 57 个于释放后 60 s 内触发、1 个于释放前触发；**这不是焦化厂事故预警效果**。固定释放时钟仍可伪造理想成绩。
 7. 阶段 5 独立辅助研究：项目组已确认 V1＋V3，完成 UCI 487 [双轴阻断下的实验室 CO 校准](docs/stage5-uci487-v3-results.md)、[计算脚本](scripts/run_uci487_v3.py)与图表。13 日各 100 个 CO 暴露段的**段位顺序完全重复**，故同时按日期与段位留出；验证选出的相位＋温湿度模型在 3 天×20 未见段位上 MAE 为 0.530 ppm。这是**完成暴露段后的实验室估计**，不是现场实时预警。下一阶段的人员轨迹仿真尚未启动。
-8. 阶段 6：已提出 [309 气体证据＋仿真人员轨迹的场景设计与路线比较](docs/stage6-s1-scenario-design-options.md)。当前等待选定固定轨迹重放／随机轨迹／规则反例研究范围；尚未生成仿真轨迹或联合结果。
+8. 阶段 6：已选定[固定轨迹方案 A](docs/stage6-s1-scenario-design-options.md)，先[冻结配置](configs/stage6_s1_fixed_a.json)，再用既有 60 个 UCI 309 留出实验做 [S1 模拟人员场景重放](docs/stage6-s1-fixed-replay-results.md)。固定“可能重叠”的情境中 58／60 条实验出现 L3；这完全取决于人为轨迹与研究内分级规则，**不属于事故预警准确率或真实多源同步验证**。目前等待下一阶段选择新的外部气体证据或只在现有局限内完善实验。
 
 数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)，下载方法见 [scripts/download_data.py](scripts/download_data.py)，未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 

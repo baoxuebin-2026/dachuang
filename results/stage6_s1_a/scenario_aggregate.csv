@@ -1,0 +1,9 @@
+scenario,trials,trials_with_joint_L3,total_L3_seconds_across_replays,unknown_seconds_across_replays,paired_seconds_across_replays,pre_release_joint_L3_seconds
+S0_outside,60,0,0,0,12900,0
+S1_early_background,60,0,0,0,2100,0
+S2_possible_overlap,60,58,2664,0,12900,0
+S3_separate_events,60,0,0,0,12900,0
+S4_gas_dropout,60,58,1997,600,12300,0
+S4_person_dropout,60,58,2111,600,12300,0
+S4_stale_gas,60,58,2111,600,12300,0
+S4_wrong_zone,60,58,2111,600,12300,0
