@@ -1,0 +1,20 @@
+{
+  "status": "approved_exploratory_diagnostic_after_stage7a_results",
+  "approval": "User chose A on 2026-09-25 Asia/Shanghai and asked why the CO single-channel result was zero",
+  "parent_stage7a_frozen_config_sha256": "c0702e7c4f66e30239402657ecf3857d4f358b8f7ac3ae1f19f425c0cb764bb7",
+  "parent_stage7a_results_commit": "492b813aee98c25382a435c458a7e0162e48eb6b",
+  "scope": ["ethylene_CO.txt", "ethylene_methane.txt"],
+  "no_refit_no_rethreshold": true,
+  "read_only_parent_run": "results/stage7_a/run.json",
+  "methods": ["B0", "B1"],
+  "main_quantile": 0.99,
+  "existing_test_interval_s": [24300, 39000],
+  "separate_event_definitions": {
+    "target_gas": "both_zero >=60 s in same block -> target gas positive >=60 s",
+    "ethylene_only": "both_zero >=60 s in same block -> target gas zero, ethylene positive >=60 s",
+    "score_within_s": 60,
+    "score_only_new_events_whose_evidence_starts_after_setpoint_onset": true
+  },
+  "single_channel_failure_diagnostic": ["frozen_channel", "training_center_and_scale", "frozen_threshold", "test_negative_score_distribution", "each_target_onset_max_score", "each_target_onset_longest_consecutive_above_threshold"],
+  "time_program_diagnostic": "count target-gas and ethylene-only test onsets having another onset of the same type about 200 s away (tolerance 2 s); no performance claim"
+}
