@@ -4,7 +4,7 @@
 
 ## 阶段决策
 
-阶段 0—10 按项目组已约定的研究顺序推进。每进入影响研究路线的阶段，先核查材料、提出备选与推荐、提交阶段报告；待项目组确定后开展该阶段的研究。2026-09-24 已确认阶段 2：**UCI 309 主实验、UCI 487 独立辅助实验、UCI 322 备用**；阶段 3 已完成 EDA，阶段 4 已确认 S1 模拟处置等级。阶段 5 已批准 [M1 的 A/B 基线协议](stage5-m1-experiment-protocol-proposal.md)并完成 [UCI 309 实验结果记录](stage5-m1-pilot-results.md)；仅支持风洞实验室条件下的响应检测。487 已由项目组确认 V1＋V3 并完成[双轴留出 CO 校准结果](stage5-uci487-v3-results.md)；阶段 6 已确认固定轨迹 A 并完成[探索性重放](stage6-s1-fixed-replay-results.md)，模拟人员和实验室气体来源分别标注，不构成真实联合测试。项目组选择 E1 方案 A 后先审计来源，再批准并独立提交[冻结参数](../configs/stage7_a_protocol_candidate.json)，最后运行[分离验证实验](stage7-a-separate-validation-results.md)；新结果只涉及气室程序响应与另一套设备的背景报警，未获得焦化现场人员或事故真值。下一阶段等待项目组确定是否核查乙烯单独设定时的干扰。
+阶段 0—10 按项目组已约定的研究顺序推进。每进入影响研究路线的阶段，先核查材料、提出备选与推荐、提交阶段报告；待项目组确定后开展该阶段的研究。2026-09-24 已确认阶段 2：**UCI 309 主实验、UCI 487 独立辅助实验、UCI 322 备用**；阶段 3 已完成 EDA，阶段 4 已确认 S1 模拟处置等级。阶段 5 已批准 [M1 的 A/B 基线协议](stage5-m1-experiment-protocol-proposal.md)并完成 [UCI 309 实验结果记录](stage5-m1-pilot-results.md)；仅支持风洞实验室条件下的响应检测。487 已由项目组确认 V1＋V3 并完成[双轴留出 CO 校准结果](stage5-uci487-v3-results.md)；阶段 6 已确认固定轨迹 A 并完成[探索性重放](stage6-s1-fixed-replay-results.md)，模拟人员和实验室气体来源分别标注，不构成真实联合测试。项目组选择 E1 方案 A 后先审计来源，再批准并独立提交[冻结参数](../configs/stage7_a_protocol_candidate.json)，最后运行[分离验证实验](stage7-a-separate-validation-results.md)；继而选择[阶段 7B 事后乙烯干扰和单通道失败诊断](stage7-b-posthoc-diagnostic-results.md)，两阶段均未获得焦化现场人员或事故真值。下一阶段由项目组选择继续气种专一数据研究，或转向泛气体异常证据与拟部署架构核对。
 
 ## 数据和陈述的边界
 
