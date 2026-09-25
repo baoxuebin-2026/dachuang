@@ -1,0 +1,34 @@
+{
+  "source_file": "rgbd_bonn_person_tracking2.zip",
+  "archive_bytes": 324262783,
+  "sha256": "d3ef7898529c60dc39919ea699d00490d98a2c6ae4b165610f2955b235b939b5",
+  "zip_crc_ok": true,
+  "sequence": "rgbd_bonn_person_tracking2",
+  "rgb_manifest_rows": 567,
+  "depth_manifest_rows": 570,
+  "camera_pose_rows": 570,
+  "rgb_files": 567,
+  "depth_files": 567,
+  "missing_rgb_manifest_paths": [],
+  "missing_depth_manifest_paths": [
+    "depth/1548265922.29681.png",
+    "depth/1548265929.87146.png",
+    "depth/1548265937.44609.png"
+  ],
+  "sample_rgb_png": {
+    "width": 640,
+    "height": 480,
+    "bit_depth": 8,
+    "png_color_type": 2
+  },
+  "sample_depth_png": {
+    "width": 640,
+    "height": 480,
+    "bit_depth": 16,
+    "png_color_type": 0
+  },
+  "rgb_duration_s": 18.96721,
+  "nearest_depth_unique_matches": 567,
+  "nearest_depth_offset_median_ms": 9.37,
+  "nearest_depth_offset_max_ms": 16.67
+}

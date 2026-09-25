@@ -1,6 +1,6 @@
 # 阶段 8 / V1-A：替代 LIRIS 的公开 RGB-D 数据实物核验
 
-核验日期：2026-09-25（北京时间）。项目组要求另找数据。本次选择[波恩大学 Bonn RGB-D Dynamic Dataset 官方页面](https://www.ipb.uni-bonn.de/data/rgbd-dynamic-dataset/)的 `rgbd_bonn_person_tracking`，**从发布方原始 ZIP 下载并实际检查**。本报告取代[原协议](stage8-v1a-visual-source-gate-and-protocol.md)中“优先取得 LIRIS D1”的**来源优先级**；实验目标和“先审数据、后确认协议、再做视觉实验”的顺序不变。
+核验日期：2026-09-25（北京时间）。项目组要求另找数据。本次选择[波恩大学 Bonn RGB-D Dynamic Dataset 官方页面](https://www.ipb.uni-bonn.de/data/rgbd-dynamic-dataset/)的 `rgbd_bonn_person_tracking`，**从发布方原始 ZIP 下载并实际检查**。本报告取代[原协议](stage8-v1a-visual-source-gate-and-protocol.md)中“优先取得 LIRIS D1”的**来源优先级**；实验目标和“先审数据、后确认协议、再做视觉实验”的顺序不变。**后续进展**：第二条序列也已取得，详见[两条序列核验与待确认协议](stage8-v1a-two-sequence-protocol-proposal.md)；下文有关“第二条尚未取得”是本报告初次提交时的历史状态。
 
 ## 已取得数据和核验结果
 

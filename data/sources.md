@@ -12,7 +12,7 @@
 | [ISR RGB-D Dataset](https://github.com/hcmr-lab/ISR_RGB-D_Dataset) | 项目页面描述 10,000 帧 D435 实验室 RGB-D 序列，含 person 框标注。 | 人员类别标注；没有焦化危险区域／环境气体联合标签。 | 仅作为未来视觉模块**独立验证候选**；数据下载及再使用许可待核验。 | 暂不下载，不能写作本项目 D435 实测。 |
 | [TADI-2019 甲烷受控释放](https://zenodo.org/records/8399829) | 6 个记录器共 38,826 行、CO2/CH4 受控释放实验中的 CH4 参考实测及多路 MOX 响应、部分温湿压、编号；行间隔主要 6/12 s，记录只覆盖已编号释放片段。 | 有参考仪器 CH4 浓度及释放编号，**无逐行阴性／精确释放起点字段**。 | 有受控现场多设备差异；没有现场长时无释放对照，缺失哨兵 `-9999.0`；不同于焦化园区。 | Zenodo API 记录 CC BY 4.0；9 个文件 MD5 已验证；条件性补充。 |
 | [SB112 建筑消防与气体记录](https://zenodo.org/records/6616632) | 4 个传感器文件、各含 8–11 日工作表；时间、类型、单位、读数，约 20 s；本项目已下载 CO/CNG/LPG/烟雾共 35,649 点。 | 作者注明 8–10 日无物理触发；11 日有近距离刺激，但**无精确开始秒标签**。 | 独立仪器内部几天阴性对照；不是焦化工况，不能未经标定套用 309 阈值。 | Zenodo API 记录 CC BY 4.0；4 个文件 MD5 已验证；仅候选。 |
-| [Bonn RGB-D Dynamic Dataset：人员跟踪序列](https://www.ipb.uni-bonn.de/data/rgbd-dynamic-dataset/) · [官方 ZIP](https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking.zip) | **原包已下载并核验**：580 张 640×480 RGB PNG、580 张 16-bit 深度 PNG，约 19.404 s；相机内参及相机轨迹。`depth.txt` 多两条无文件记录，需按实际文件和时间戳配对。 | 无人工人员框、人员三维真值或危险区标签；相机轨迹真值不可当人员位置真值。 | 阶段 V1-A 视觉来源候选；可人工标 2D 人员框，计算深度支持和虚拟区域规则响应；与实验室气体非同场、非同时间。详见[归档核验](../docs/stage8-v1a-bonn-data-audit.md)。 | 官网要求引用论文，未找到明确再分发许可；原包不进公开 Git，待项目组决定是否采用。 |
+| [Bonn RGB-D Dynamic Dataset：两条人员跟踪序列](https://www.ipb.uni-bonn.de/data/rgbd-dynamic-dataset/) · [ZIP 1](https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking.zip) · [ZIP 2](https://www.ipb.uni-bonn.de/html/projects/rgbd_dynamic2019/rgbd_bonn_person_tracking2.zip) | **两个原包都已下载并核验**：第一条 580 对、第二条 567 对 640×480 RGB／16-bit 深度 PNG，各约 19 秒；相机内参及相机轨迹。`depth.txt` 分别多 2／3 条无文件记录，需按实际文件和时间戳配对。 | 无人工人员框、人员三维真值或危险区标签；相机轨迹真值不可当人员位置真值。 | 阶段 V1-A 视觉来源；可人工标 2D 人员框，计算深度支持和虚拟区域规则响应；两段画面为非常相似的同一环境，留出另一段也**不代表跨场景泛化**。详见[第一条归档核验](../docs/stage8-v1a-bonn-data-audit.md)和[第二条核验及协议](../docs/stage8-v1a-two-sequence-protocol-proposal.md)。 | 官网要求引用论文，未找到明确再分发许可；原包不进公开 Git；正式评估协议待项目组决策。 |
 
 **数据口径：**UCI 309、322、487 都是实验室采集的真实传感器数据；TADI 是受控场地实验，SB112 是楼宇传感器实验，TEP 属过程仿真；人员危险区轨迹如由本项目生成，必须在每个实验和图表中标记“仿真”。不同来源的时间戳不可假定相同，不能凭同步表格拼接出“真实多源焦化园区记录”。风险等级须单独建立依据，不能由模型自身生成标签再据此报告准确率。
 
@@ -24,5 +24,6 @@
 | 322 | 369,001,314 | `8b6323b801363e11343ba1a5a7718e76666b715e753b3a40dbdfd1838d953fe7` | `ethylene_CO.txt` 和 `ethylene_methane.txt`；ZIP CRC 完整 |
 | 487 | 183,298,753 | `cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4` | 外层含 README 与嵌套 ZIP；13 个 CSV 在嵌套 ZIP 中；内外层 ZIP CRC 完整 |
 | Bonn `person_tracking` | 329,482,910 | `a4810fd91ef2ea1d630b53fe0df5d76144c1b18d86ca91fb3a035debd0c9c5f5` | 580 张 RGB＋580 张深度；CRC 完整；下载自原作者站点；[脚本与 JSON](audits/bonn_person_tracking.json)可复核 |
+| Bonn `person_tracking2` | 324,262,783 | `d3ef7898529c60dc39919ea699d00490d98a2c6ae4b165610f2955b235b939b5` | 567 张 RGB＋567 张深度；CRC 完整；下载自原作者站点；[脚本与 JSON](audits/bonn_person_tracking2.json)可复核 |
 
 下载与校验：`python scripts/download_data.py 309`；其余编号同理。原始数据始终保存在 `data/raw/`，不提交 Git。
