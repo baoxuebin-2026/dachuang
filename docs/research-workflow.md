@@ -10,6 +10,8 @@
 
 2026-09-25 21:51（北京时间）项目组选择 N1，已建立[阶段 8 系统接口与论文证据对照](stage8-n1-system-evidence-map.md)，将 Bonn 人员深度接口和 S1 仿真人员状态明确分开，补记[阶段 8 结果哈希索引](../results/stage8_n1_evidence_index.json)及[主张账本](../registries/claim_ledger.csv)。此后项目组确认**修订 T1** 为论文方向，并从[阶段 9 提纲与图表证据方案](stage9-t1-manuscript-outline-proposal.md)选择 **A：309＋Bonn＋S1 正文主线**，已有[投稿与预算初筛](stage9-publication-venue-options.md)；没有新增同期气体＋真实视觉实验，也未开始完整论文正文或投稿。
 
+项目组确认先进行论文证据核查；[阶段 9 证据与文献缺口报告](stage9-evidence-literature-gap-audit.md)已列出现有主张、S1 自证风险与三种后续投入方案。当前等待项目组选择补充验证路线；报告没有新增实验或改变 T1-A 正文主次。
+
 2026-09-25 晚项目组补充论文成果条件：若以该项成果方式申报，期刊为“本校认定 E 类以上”或“其他能被知网检索的期刊”，项目负责人必须列作者前五并标注大创资助；落实、候选和文章级检索凭证的具体要求见[更新后的选刊调查](stage9-publication-venue-options.md)。这不能代替指导教师与项目组核对实际发表、署名贡献、编号和结题认定。
 
 - `data/raw/` 保留原包、文件名、来源网址、版本／访问日期、SHA-256；不改写原始文件，也不提交原始大文件。解析后写入 `data/processed/` 并记录参数、单位、采样率和排除规则。
