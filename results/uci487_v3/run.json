@@ -1,0 +1,110 @@
+{
+  "run_status": "completed_lab_calibration_v3_holdout_once",
+  "dataset": "UCI487 laboratory",
+  "source_archive_sha256": "cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4",
+  "script_sha256": "de7d98bc944da7a48d15f4c54a6960a2470085125c4555612a61c1b9ac304956",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "scikit_learn": "1.8.0",
+  "seed": 20260924,
+  "alphas": [
+    0.1,
+    1.0,
+    10.0,
+    100.0
+  ],
+  "settled_window_s": 300,
+  "day_split": "chronological 8/2/3",
+  "position_split_each_co_level": "6/2/2, identical position split for every day",
+  "observation_counts": {
+    "train": 480,
+    "validation": 40,
+    "test": 60
+  },
+  "unique_test_days": 3,
+  "unique_test_positions": 20,
+  "train_only_humidity_quartile_cutoffs_pct": [
+    32.385,
+    45.625,
+    53.085
+  ],
+  "validation_selection": [
+    {
+      "model": "constant_train_median",
+      "alpha": "NA",
+      "validation_mae_ppm": 5.556
+    },
+    {
+      "model": "ambient_only",
+      "alpha": 100.0,
+      "validation_mae_ppm": 5.834105285218813
+    },
+    {
+      "model": "r1_blind",
+      "alpha": 0.1,
+      "validation_mae_ppm": 5.48998264606241
+    },
+    {
+      "model": "all14_blind",
+      "alpha": 0.1,
+      "validation_mae_ppm": 0.366652287490813
+    },
+    {
+      "model": "all14_phase",
+      "alpha": 0.1,
+      "validation_mae_ppm": 0.33094604036608977
+    },
+    {
+      "model": "all14_phase_ambient",
+      "alpha": 0.1,
+      "validation_mae_ppm": 0.2907719212590633
+    }
+  ],
+  "test_summary": [
+    {
+      "model": "all14_blind",
+      "n": 60,
+      "mae_ppm": 0.7748052696159743,
+      "rmse_ppm": 1.0466549170253052,
+      "bias_ppm": -0.21127607660526734
+    },
+    {
+      "model": "all14_phase",
+      "n": 60,
+      "mae_ppm": 0.46261704941440185,
+      "rmse_ppm": 0.6860502131730323,
+      "bias_ppm": -0.11159263500905708
+    },
+    {
+      "model": "all14_phase_ambient",
+      "n": 60,
+      "mae_ppm": 0.5303557315991865,
+      "rmse_ppm": 0.7355235089152435,
+      "bias_ppm": 0.11589926440518296
+    },
+    {
+      "model": "ambient_only",
+      "n": 60,
+      "mae_ppm": 5.4981437647843245,
+      "rmse_ppm": 6.350626509251232,
+      "bias_ppm": -0.5185081422190413
+    },
+    {
+      "model": "constant_train_median",
+      "n": 60,
+      "mae_ppm": 5.556,
+      "rmse_ppm": 6.383776311870585,
+      "bias_ppm": -2.3684757858670006e-16
+    },
+    {
+      "model": "r1_blind",
+      "n": 60,
+      "mae_ppm": 5.5733507615900795,
+      "rmse_ppm": 6.371408698637118,
+      "bias_ppm": -0.01880743020984109
+    }
+  ],
+  "input_exclusion": "CO reference, flow rate, clock, date and position absent from model input",
+  "limitation": "Same CO sequence repeated on 13 days; 60 test observations are 3 days x 20 program positions, not independent field scenarios. Completed segments only, no real-time or accident prediction."
+}

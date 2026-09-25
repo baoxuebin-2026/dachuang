@@ -1,0 +1,7 @@
+model,alpha,validation_mae_ppm
+constant_train_median,NA,5.556
+ambient_only,100.0,5.834105285218813
+r1_blind,0.1,5.48998264606241
+all14_blind,0.1,0.366652287490813
+all14_phase,0.1,0.33094604036608977
+all14_phase_ambient,0.1,0.2907719212590633
