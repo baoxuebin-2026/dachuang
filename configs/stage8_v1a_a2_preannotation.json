@@ -1,0 +1,52 @@
+{
+  "status": "approved_A2_sampling_and_preannotation_freeze",
+  "rgbd_dataset": "Bonn RGB-D Dynamic Dataset",
+  "sources": {
+    "rgbd_bonn_person_tracking": "a4810fd91ef2ea1d630b53fe0df5d76144c1b18d86ca91fb3a035debd0c9c5f5",
+    "rgbd_bonn_person_tracking2": "d3ef7898529c60dc39919ea699d00490d98a2c6ae4b165610f2955b235b939b5"
+  },
+  "sampling": {
+    "frame_index_start": 0,
+    "frame_index_step": 10,
+    "expected_frames": 115,
+    "second_annotator_step": 50,
+    "expected_qc_frames": 24,
+    "max_rgb_depth_time_offset_ms": 17.0,
+    "development_sequence": "rgbd_bonn_person_tracking",
+    "held_out_sequence": "rgbd_bonn_person_tracking2",
+    "held_out_scope": "similar_room_repeat_only"
+  },
+  "annotation": {
+    "type": "visible_person_2d_boxes",
+    "coordinate_system": "raw_640x480_rgb_pixels_xyxy",
+    "include_no_person_frames": true,
+    "require_independent_human_review": true,
+    "attributes": ["truncated", "occluded", "uncertain"]
+  },
+  "candidate_detector": {
+    "library": "torchvision",
+    "pinned_torch": "2.9.1",
+    "pinned_torchvision": "0.24.1",
+    "architecture": "ssdlite320_mobilenet_v3_large",
+    "weights_enum": "SSDLite320_MobileNet_V3_Large_Weights.COCO_V1",
+    "weights_url": "https://download.pytorch.org/models/ssdlite320_mobilenet_v3_large_coco-a79551df.pth",
+    "weights_sha256": "a79551df90c79834bcd3bb3845ef9d966b5449a3a9b2833ae8404778ca5d65d2",
+    "person_label_index": 1,
+    "candidate_score_threshold": 0.5,
+    "candidate_iou_match_threshold": 0.5,
+    "input": "official_COCO_V1_transforms",
+    "status": "source_and_weights_verified_not_run"
+  },
+  "depth_rule": {
+    "scale_png_units_per_meter": 5000,
+    "camera_intrinsics": {"fx": 542.822841, "fy": 542.57687, "cx": 315.59352, "cy": 237.756098},
+    "body_roi_fraction_and_unknown_gate": "to_freeze_on_development_only_before_held_out_scoring",
+    "virtual_camera_relative_region": "to_freeze_on_development_only_before_held_out_scoring"
+  },
+  "prohibited_claims": [
+    "independent_3d_person_accuracy",
+    "real_coke_plant_intrusion_accuracy",
+    "cross_scene_generalization",
+    "D435_or_Jetson_measured_performance"
+  ]
+}

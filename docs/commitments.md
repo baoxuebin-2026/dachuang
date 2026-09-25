@@ -16,4 +16,4 @@
 
 本项目已确认不制作完整实体样机。正式申报书写有“选用设备并接入传感器”及多类场景模型；项目实施范围调整应与指导教师和学校管理方核对，不能单凭论文措辞消除原承诺。
 
-2026-09-25 项目组选择 B：以“泛气体响应异常的独立实验室证据＋仿真人员区域处置”为主线。设备及未完成视觉任务的[逐项证据核对和下一步验证备选](stage8-scope-and-evidence-options.md)已形成；项目组随后选择 V1 开展[公开 RGB-D 候选调查](stage8-v1-rgbd-source-audit.md)，继而选择 A：人员 2D 标注、深度投影及虚拟区域接口。[来源取得核验与待批准实验协议](stage8-v1a-visual-source-gate-and-protocol.md)已提交。项目组要求更换来源并继续，现已取得并审查波恩大学[第一条](stage8-v1a-bonn-data-audit.md)及[第二条人员序列](stage8-v1a-two-sequence-protocol-proposal.md)；尚未执行人员测距或视觉性能实验。
+2026-09-25 项目组选择 B：以“泛气体响应异常的独立实验室证据＋仿真人员区域处置”为主线。设备及未完成视觉任务的[逐项证据核对和下一步验证备选](stage8-scope-and-evidence-options.md)已形成；项目组随后选择 V1、A，项目组要求更换来源后已取得并审查波恩大学[两条人员序列](stage8-v1a-two-sequence-protocol-proposal.md)。项目组选择 A2，现有 115 帧[抽样与人工标注工具](stage8-v1a-a2-annotation-kit.md)；人工人员框、检测成绩和人员测距实验仍未完成。

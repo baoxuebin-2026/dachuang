@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bonn V1-A 人员框人工标注</title>
+    <style>
+      body { max-width: 1020px; margin: 1.5rem auto; padding: 0 1rem; font: 16px/1.5 system-ui, sans-serif; color: #17212b; }
+      button, input, select { font: inherit; margin: .2rem; padding: .25rem .5rem; }
+      button { cursor: pointer; }
+      canvas { max-width: 100%; border: 1px solid #435468; touch-action: none; background: #eef0f3; }
+      .bar { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem; margin: .7rem 0; }
+      .status { background: #f3f5f8; padding: .6rem; margin: .7rem 0; }
+      .box-row { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; padding: .3rem 0; border-bottom: 1px solid #ddd; }
+      .box-row button.selected { background: #ffd25a; }
+      small { color: #52606d; }
+    </style>
+  </head>
+  <body>
+    <h1>Bonn V1-A 人员框标注</h1>
+    <p>只看 RGB 原图。鼠标拖拽画每名可见人员的紧框；看不到人员时点“确认无人”。目标框指<strong>可见人员</strong>，遮挡与出画另勾选；机器人、人物照片都不计。不要查看检测器输出。</p>
+    <div class="bar">
+      <label>标注员编号 <input id="annotator" placeholder="例如 team_member_1" /></label>
+      <label>任务 <select id="role"><option value="primary">全量 115 帧</option><option value="qc">独立复标 24 帧</option></select></label>
+      <button id="start">开始／恢复</button>
+      <button id="import">导入自己的 JSON</button>
+      <input type="file" id="import-file" accept="application/json" hidden />
+      <button id="export">导出我的 JSON</button>
+    </div>
+    <div class="status" id="status">先输入标注员编号，选择任务并点击开始。</div>
+    <div class="bar">
+      <button id="prev">上一帧</button>
+      <button id="next">下一帧</button>
+      <button id="confirm">确认本帧人员框</button>
+      <button id="empty">确认无人</button>
+      <button id="undo">撤销最后一个框</button>
+      <button id="pending">改为待审核</button>
+    </div>
+    <canvas id="frame" width="640" height="480" aria-label="待标注的 RGB 图像"></canvas>
+    <div id="boxes"></div>
+    <p><small>所有坐标是原图 640×480 像素的 [x1,y1,x2,y2]；浏览器本地自动保存，仍须点击“导出我的 JSON”并交付。两名标注员分别填写不同编号，不交换标注文件，第二名只看 24 帧。压缩包及原始帧不在公开 Git 仓库中。</small></p>
+    <script>
+      "use strict";
+
+      const $ = (id) => document.getElementById(id);
+      const canvas = $("frame");
+      const ctx = canvas.getContext("2d");
+      let manifest = [];
+      let task = [];
+      let records = {};
+      let position = 0;
+      let currentImage = null;
+      let draft = null;
+      let selected = -1;
+      let storageKey = "";
+
+      function record() {
+        const id = task[position]?.sample_id;
+        if (!records[id]) records[id] = { reviewed: false, boxes: [] };
+        return records[id];
+      }
+
+      function persist() {
+        if (storageKey) localStorage.setItem(storageKey, JSON.stringify(records));
+        render();
+      }
+
+      function locationOnImage(event) {
+        const rect = canvas.getBoundingClientRect();
+        return [
+          Math.min(639, Math.max(0, Math.round(((event.clientX - rect.left) / rect.width) * 640))),
+          Math.min(479, Math.max(0, Math.round(((event.clientY - rect.top) / rect.height) * 480))),
+        ];
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, 640, 480);
+        if (currentImage) ctx.drawImage(currentImage, 0, 0, 640, 480);
+        const boxes = record().boxes;
+        boxes.forEach((box, index) => {
+          ctx.lineWidth = index === selected ? 4 : 2;
+          ctx.strokeStyle = index === selected ? "#ffd21b" : "#e32a20";
+          ctx.strokeRect(box.x1, box.y1, box.x2 - box.x1, box.y2 - box.y1);
+          ctx.fillStyle = "#e32a20";
+          ctx.fillText(String(index + 1), box.x1 + 3, Math.max(13, box.y1 - 3));
+        });
+        if (draft) {
+          const [x1, x2] = [draft.start[0], draft.end[0]].sort((a, b) => a - b);
+          const [y1, y2] = [draft.start[1], draft.end[1]].sort((a, b) => a - b);
+          ctx.strokeStyle = "#209bf0";
+          ctx.lineWidth = 2;
+          ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+        }
+      }
+
+      function render() {
+        if (!task.length) return;
+        const item = task[position];
+        const done = task.filter((entry) => records[entry.sample_id]?.reviewed).length;
+        const entry = record();
+        $("status").textContent = `${position + 1}/${task.length} · 已确认 ${done}/${task.length} · ${item.sample_id} · ${item.split} · ${entry.reviewed ? `已确认 ${entry.boxes.length} 人` : "待审核"}`;
+        $("boxes").replaceChildren();
+        entry.boxes.forEach((box, index) => {
+          const row = document.createElement("div");
+          row.className = "box-row";
+          const choose = document.createElement("button");
+          choose.textContent = `框 ${index + 1}: (${box.x1}, ${box.y1}) → (${box.x2}, ${box.y2})`;
+          if (index === selected) choose.classList.add("selected");
+          choose.onclick = () => { selected = index; render(); };
+          row.append(choose);
+          for (const attr of ["truncated", "occluded", "uncertain"]) {
+            const label = document.createElement("label");
+            const input = document.createElement("input");
+            input.type = "checkbox";
+            input.checked = Boolean(box[attr]);
+            input.onchange = () => { box[attr] = input.checked; persist(); };
+            label.append(input, attr);
+            row.append(label);
+          }
+          $("boxes").append(row);
+        });
+        draw();
+      }
+
+      function show(index) {
+        if (!task.length) return;
+        position = (index + task.length) % task.length;
+        selected = -1;
+        draft = null;
+        const item = task[position];
+        const image = new Image();
+        image.onload = () => {
+          if (task[position]?.sample_id !== item.sample_id) return;
+          currentImage = image;
+          render();
+        };
+        image.onerror = () => { $("status").textContent = `无法打开 ${item.local_rgb_path}`; };
+        currentImage = null;
+        image.src = item.local_rgb_path;
+        render();
+      }
+
+      $("start").onclick = async () => {
+        const name = $("annotator").value.trim();
+        if (!/^[a-zA-Z0-9_-]{2,40}$/.test(name)) return alert("请填写 2–40 位英文／数字／下划线编号");
+        try {
+          if (!manifest.length) {
+            const response = await fetch("manifest.json");
+            if (!response.ok) throw new Error("manifest.json 无法读取");
+            manifest = await response.json();
+          }
+        } catch (error) {
+          return alert(`${error.message}。请按文档启动本机 HTTP 服务，不要直接打开 file:// 页面。`);
+        }
+        task = manifest.filter((entry) => $("role").value === "primary" || entry.qc_double_label === 1);
+        storageKey = `bonn_v1a_${$("role").value}_${name}`;
+        records = JSON.parse(localStorage.getItem(storageKey) || "{}");
+        $("annotator").disabled = true;
+        $("role").disabled = true;
+        $("start").disabled = true;
+        show(0);
+      };
+
+      canvas.onpointerdown = (event) => {
+        if (!task.length || !currentImage) return;
+        canvas.setPointerCapture(event.pointerId);
+        const point = locationOnImage(event);
+        draft = { start: point, end: point };
+        draw();
+      };
+      canvas.onpointermove = (event) => {
+        if (!draft) return;
+        draft.end = locationOnImage(event);
+        draw();
+      };
+      canvas.onpointerup = (event) => {
+        if (!draft) return;
+        draft.end = locationOnImage(event);
+        const [x1, x2] = [draft.start[0], draft.end[0]].sort((a, b) => a - b);
+        const [y1, y2] = [draft.start[1], draft.end[1]].sort((a, b) => a - b);
+        draft = null;
+        if (x2 - x1 >= 6 && y2 - y1 >= 6) {
+          record().boxes.push({ x1, y1, x2, y2, truncated: false, occluded: false, uncertain: false });
+          record().reviewed = false;
+          selected = record().boxes.length - 1;
+        }
+        persist();
+      };
+
+      $("prev").onclick = () => show(position - 1);
+      $("next").onclick = () => show(position + 1);
+      $("confirm").onclick = () => {
+        if (!task.length) return;
+        if (!record().boxes.length) return alert("没有人员请用“确认无人”按钮");
+        record().reviewed = true;
+        persist();
+        show(position + 1);
+      };
+      $("empty").onclick = () => {
+        if (!task.length) return;
+        if (record().boxes.length && !confirm("清除本帧所有人员框并标记无人？")) return;
+        records[task[position].sample_id] = { reviewed: true, boxes: [] };
+        persist();
+        show(position + 1);
+      };
+      $("undo").onclick = () => {
+        if (!task.length) return;
+        record().boxes.pop();
+        record().reviewed = false;
+        selected = -1;
+        persist();
+      };
+      $("pending").onclick = () => {
+        if (!task.length) return;
+        record().reviewed = false;
+        persist();
+      };
+      $("export").onclick = () => {
+        if (!task.length) return alert("先开始标注");
+        const name = $("annotator").value.trim();
+        const payload = { schema: "bonn_v1a_person_boxes_v1", annotator: name, role: $("role").value,
+          exported_at: new Date().toISOString(), records };
+        const blob = new Blob([JSON.stringify(payload, null, 2)], { type: "application/json" });
+        const anchor = document.createElement("a");
+        anchor.href = URL.createObjectURL(blob);
+        anchor.download = `bonn_v1a_${name}_${payload.role}.json`;
+        anchor.click();
+        setTimeout(() => URL.revokeObjectURL(anchor.href), 1000);
+      };
+      $("import").onclick = () => $("import-file").click();
+      $("import-file").onchange = async (event) => {
+        if (!task.length || !event.target.files[0]) return alert("先开始标注，再导入自己的 JSON");
+        try {
+          const payload = JSON.parse(await event.target.files[0].text());
+          if (payload.schema !== "bonn_v1a_person_boxes_v1" ||
+            payload.annotator !== $("annotator").value.trim() || payload.role !== $("role").value) {
+            throw new Error("标注员、任务或格式不匹配");
+          }
+          const allowed = new Set(task.map((entry) => entry.sample_id));
+          for (const [id, entry] of Object.entries(payload.records)) {
+            if (!allowed.has(id) || typeof entry.reviewed !== "boolean" || !Array.isArray(entry.boxes)) {
+              throw new Error(`无效的标注记录: ${id}`);
+            }
+            for (const box of entry.boxes) {
+              if (![box.x1, box.y1, box.x2, box.y2].every(Number.isFinite) ||
+                box.x1 < 0 || box.y1 < 0 || box.x2 > 639 || box.y2 > 479 ||
+                box.x1 >= box.x2 || box.y1 >= box.y2) throw new Error(`无效坐标: ${id}`);
+            }
+          }
+          records = payload.records;
+          persist();
+        } catch (error) {
+          alert(`导入失败：${error.message}`);
+        }
+        event.target.value = "";
+      };
+    </script>
+  </body>
+</html>
