@@ -6,6 +6,7 @@ is no true person depth or ground-truth hazard-zone label in this dataset.
 
 from __future__ import annotations
 
+import argparse
 import csv
 import io
 import json
@@ -34,6 +35,21 @@ def point(box: dict, measured: dict, cx: float, fx: float) -> dict:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--detector-predictions", type=Path,
+                        default=ROOT / "outputs/stage8_a2_detector/person_detections.csv")
+    parser.add_argument("--regenerated-predictions-sha256",
+                        help="Explicit SHA-256 of a newly regenerated detector CSV; records a new replication run")
+    parser.add_argument("--out", type=Path, default=ROOT / "outputs/stage8_a2_repeat_depth")
+    args = parser.parse_args()
+    if args.regenerated_predictions_sha256:
+        if args.out == ROOT / "outputs/stage8_a2_repeat_depth":
+            parser.error("A replication needs a distinct --out directory")
+        if not args.detector_predictions.is_file():
+            parser.error("Regenerated detector predictions are missing")
+    elif args.detector_predictions != ROOT / "outputs/stage8_a2_detector/person_detections.csv":
+        parser.error("A nonhistorical prediction file needs --regenerated-predictions-sha256")
+
     gate_path = ROOT / "configs/stage8_v1a_a2_depth_gate_freeze.json"
     region_path = ROOT / "configs/stage8_v1a_a2_virtual_region_freeze.json"
     gate = json.loads(gate_path.read_text(encoding="utf-8"))
@@ -54,11 +70,11 @@ def main() -> None:
 
     manifest_path = ROOT / "data/audits/bonn_v1a_sampling_manifest.csv"
     label_path = ROOT / "data/processed/bonn_v1a/labels/bonn_v1a_team_1_primary_rev3_assembled.json"
-    detector_path = ROOT / "outputs/stage8_a2_detector/person_detections.csv"
+    detector_path = args.detector_predictions
     zip_path = ROOT / "data/raw/bonn_rgbd/rgbd_bonn_person_tracking2.zip"
     require_hash(manifest_path, gate["sampling_manifest_sha256"])
     require_hash(label_path, gate["primary_labels_sha256"])
-    require_hash(detector_path, gate["detector_predictions_sha256"])
+    require_hash(detector_path, args.regenerated_predictions_sha256 or gate["detector_predictions_sha256"])
     require_hash(zip_path, pre["sources"][region["repeat_sequence"]])
     camera = pre["depth_rule"]["camera_intrinsics"]
     if camera != {"fx": 542.822841, "fy": 542.57687, "cx": 315.59352, "cy": 237.756098}:
@@ -137,7 +153,9 @@ def main() -> None:
     depth_difference = [abs(r["pred_point"]["z_m"] - r["gt_point"]["z_m"]) for r in both_valid]
     x_difference = [abs(r["pred_point"]["x_m"] - r["gt_point"]["x_m"]) for r in both_valid]
     summary = {
-        "status": "one_pass_similar_room_repeat_after_A1_and_G1_freeze",
+        "status": ("replication_with_regenerated_detector_predictions"
+                   if args.regenerated_predictions_sha256 else
+                   "one_pass_similar_room_repeat_after_A1_and_G1_freeze"),
         "created_utc": datetime.now(timezone.utc).isoformat(),
         "sequence": region["repeat_sequence"], "frames": len(evaluated),
         "human_person_frames": len(positive), "empty_human_label_frames": len(empty),
@@ -158,11 +176,12 @@ def main() -> None:
             "region_freeze_sha256": sha256(region_path), "depth_gate_freeze_sha256": sha256(gate_path),
             "source_zip_sha256": sha256(zip_path), "manifest_sha256": sha256(manifest_path),
             "human_labels_sha256": sha256(label_path), "detector_predictions_sha256": sha256(detector_path),
+            "original_frozen_detector_predictions_sha256": gate["detector_predictions_sha256"],
             "script_sha256": sha256(Path(__file__))
         },
         "limits": "Same-room indoor repeat, previously visible during label QC. Box agreement is not independent depth accuracy; virtual G1 boundary has no real-world intrusion ground truth. No D435, Jetson or coke-plant test."
     }
-    out = ROOT / "outputs/stage8_a2_repeat_depth"
+    out = args.out
     out.mkdir(parents=True, exist_ok=True)
     (out / "summary.json").write_text(json.dumps(summary, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     (out / "frame_details.json").write_text(json.dumps(evaluated, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

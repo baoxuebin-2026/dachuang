@@ -1,0 +1,97 @@
+{
+  "status": "exploratory_indoor_sequence_2d_detection_only",
+  "created_utc": "2026-09-26T03:29:44.742448+00:00",
+  "overall": {
+    "frames": 115,
+    "gt_boxes": 66,
+    "pred_boxes": 62,
+    "tp": 62,
+    "fp": 0,
+    "fn": 4,
+    "precision": 1.0,
+    "recall": 0.9393939393939394,
+    "f1": 0.96875,
+    "empty_frames": 49,
+    "false_positive_empty_frames": 0
+  },
+  "sequences": {
+    "rgbd_bonn_person_tracking": {
+      "frames": 58,
+      "gt_boxes": 32,
+      "pred_boxes": 30,
+      "tp": 30,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9375,
+      "f1": 0.967741935483871,
+      "empty_frames": 26,
+      "false_positive_empty_frames": 0
+    },
+    "rgbd_bonn_person_tracking2": {
+      "frames": 57,
+      "gt_boxes": 34,
+      "pred_boxes": 32,
+      "tp": 32,
+      "fp": 0,
+      "fn": 2,
+      "precision": 1.0,
+      "recall": 0.9411764705882353,
+      "f1": 0.9696969696969697,
+      "empty_frames": 23,
+      "false_positive_empty_frames": 0
+    }
+  },
+  "edge_touch_sensitivity": {
+    "with_edge_touch": {
+      "frames": 20,
+      "gt_boxes": 20,
+      "pred_boxes": 17,
+      "tp": 17,
+      "fp": 0,
+      "fn": 3,
+      "precision": 1.0,
+      "recall": 0.85,
+      "f1": 0.9189189189189189,
+      "empty_frames": 0,
+      "false_positive_empty_frames": 0
+    },
+    "without_edge_touch": {
+      "frames": 95,
+      "gt_boxes": 46,
+      "pred_boxes": 45,
+      "tp": 45,
+      "fp": 0,
+      "fn": 1,
+      "precision": 1.0,
+      "recall": 0.9782608695652174,
+      "f1": 0.989010989010989,
+      "empty_frames": 49,
+      "false_positive_empty_frames": 0
+    }
+  },
+  "timing_pc_cpu_preprocess_inference_ms": {
+    "median": 49.098,
+    "max": 83.154,
+    "threads": 4,
+    "excludes_image_read_matching_and_output": true
+  },
+  "provenance": {
+    "manifest_sha256": "27f69ecb1e7742223ca82ef95dae3e2aeb5bc067a00dff5683409166e9a9ae32",
+    "primary_sha256": "23a27695657334be0bec47dfd3f8ef7e0e3a7ad6e14ef96802ab60945934682e",
+    "qc_sha256": "14ebd71d0c5dc572240895cccf66ab10c1f84d1478f7d79e6d672e85741e964d",
+    "weights_sha256": "a79551df90c79834bcd3bb3845ef9d966b5449a3a9b2833ae8404778ca5d65d2",
+    "torch": "2.9.1+cpu",
+    "torchvision": "0.24.1+cpu",
+    "python": "3.12.14",
+    "platform": "Linux-6.18.44-x86_64-with-glibc2.39",
+    "cpu_model": "INTEL(R) XEON(R) PLATINUM 8573C",
+    "script_sha256": "b534457f3fd87c4bce55abb73c5c819b6b38387ecc987a70b9b2d4e6b40d7a6e",
+    "git_head": "1e3be2ecbd2d43a95021e0105f21e9f844a2398b",
+    "person_score_threshold": 0.5,
+    "match_iou_threshold": 0.5,
+    "person_label_index": 1,
+    "weights_enum": "COCO_V1"
+  },
+  "limits": "Bonn lab recordings in similar room; person 2D boxes only. Held-out sequence annotations were seen during human QC. No real hazard-zone truth, D435 or Jetson measurement."
+}

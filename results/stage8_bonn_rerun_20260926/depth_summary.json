@@ -1,0 +1,42 @@
+{
+  "status": "replication_with_regenerated_detector_predictions",
+  "created_utc": "2026-09-26T03:30:45.374179+00:00",
+  "sequence": "rgbd_bonn_person_tracking2",
+  "frames": 57,
+  "human_person_frames": 34,
+  "empty_human_label_frames": 23,
+  "detector_box_in_positive_frames": 32,
+  "gt_box_valid_depth": 31,
+  "detector_box_valid_depth": 32,
+  "region_states_over_34_person_frames": {
+    "outside": 29,
+    "unknown": 2,
+    "near": 1,
+    "inside": 2
+  },
+  "unknown_reasons": {
+    "missed_2d_detection": 2
+  },
+  "gt_pred_gate_disagreement_ids_among_32_matched": [
+    "rgbd_bonn_person_tracking2:0100",
+    "rgbd_bonn_person_tracking2:0170"
+  ],
+  "both_valid_matched_pairs": 30,
+  "region_disagreement_ids_among_both_valid": [],
+  "median_absolute_box_depth_difference_m": 0.01849999999999996,
+  "median_absolute_box_x_difference_m": 0.022873213281224603,
+  "valid_pred_nearest_boundary_at_most_0_05_m": 0,
+  "near_boundary_ids": [],
+  "provenance": {
+    "git_head_before_run": "1e3be2ecbd2d43a95021e0105f21e9f844a2398b",
+    "region_freeze_sha256": "cc28fbe791dae7e2c9bb77d1a8520dea25e5cfafb76fbce3385f1c99250c9974",
+    "depth_gate_freeze_sha256": "f100f63e423911dee4c07bf49c17dada13e5729c4542ff8c0097374472654b09",
+    "source_zip_sha256": "d3ef7898529c60dc39919ea699d00490d98a2c6ae4b165610f2955b235b939b5",
+    "manifest_sha256": "27f69ecb1e7742223ca82ef95dae3e2aeb5bc067a00dff5683409166e9a9ae32",
+    "human_labels_sha256": "23a27695657334be0bec47dfd3f8ef7e0e3a7ad6e14ef96802ab60945934682e",
+    "detector_predictions_sha256": "1f069794ce5bf8fa202e50f32a3d76e1ccae4ab92eaa5951ef04f7612ddf2809",
+    "original_frozen_detector_predictions_sha256": "de91dd98ff42ff8fd4774add5e192393b8c47a7d14fa5e19d13e1b40e2e3806d",
+    "script_sha256": "584c199b0a9498aa5bbc562e61f135e44262519d090661a53e5ef4a67c95c0f1"
+  },
+  "limits": "Same-room indoor repeat, previously visible during label QC. Box agreement is not independent depth accuracy; virtual G1 boundary has no real-world intrusion ground truth. No D435, Jetson or coke-plant test."
+}
