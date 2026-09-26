@@ -1,0 +1,30 @@
+{
+  "protocol_id": "b2_b_first_sustained_crossing_v1",
+  "status": "confirmed_before_prediction_window_generation",
+  "source_sha256": "405a8b27004a2e318bf213cf209398d3d58b45bb3c7a78f159e69003ff459311",
+  "source": "Mendeley Data 10.17632/yd7vw4c5mk.1; Polish underground mine, 2014",
+  "development_dates_inclusive": ["2014-03-02", "2014-04-30"],
+  "selection_dates_inclusive": ["2014-05-01", "2014-05-23"],
+  "reserved_dates_inclusive": ["2014-05-24", "2014-06-16"],
+  "primary_target": "MM256",
+  "robustness_targets": ["MM263", "MM264"],
+  "threshold_pct_ch4": 1.0,
+  "valid_reading_min_inclusive": 0.0,
+  "valid_reading_max_inclusive": 30.0,
+  "event_min_consecutive_seconds": 30,
+  "event_prior_quiet_seconds": 180,
+  "prediction_history_seconds": 600,
+  "prediction_horizon_seconds": 360,
+  "prediction_second_of_minute": 59,
+  "label_confirmation_extra_seconds": 29,
+  "primary_metrics": [
+    "new_alerts_before_evaluable_event_onsets",
+    "first_lead_time_seconds",
+    "false_new_alert_episodes_per_24_eligible_background_hours"
+  ],
+  "sensitivity_only": {
+    "event_min_consecutive_seconds": [10, 30, 60],
+    "event_prior_quiet_seconds": [60, 180, 300]
+  },
+  "interpretation": "Predict a future sustained sensor threshold crossing, not gas-release onset, an accident, a coke-plant field observation, or a four-grade risk label."
+}
