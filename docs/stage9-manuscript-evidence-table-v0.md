@@ -1,6 +1,6 @@
 # 阶段 9：论文正文证据表 v0（工作稿）
 
-日期：2026-09-26（北京时间）。基于[既定 T1-A 提纲](stage9-t1-manuscript-outline-proposal.md)和[无审阅者时的工作路径](stage9-no-reviewer-progress-and-next-steps.md)整理。**不是新实验或正式论文表格；未重跑模型，也未重新核对私有 Bonn 逐帧输出。**正式写作前逐项对应[主张账本](../registries/claim_ledger.csv)。
+日期：2026-09-26（北京时间）。基于[既定 T1-A 提纲](stage9-t1-manuscript-outline-proposal.md)和[无审阅者时的工作路径](stage9-no-reviewer-progress-and-next-steps.md)整理。**不是新实验或正式论文表格；已从项目组先前消息恢复并哈希核对 Bonn 最终人工标注，仍未重跑模型或复核私有逐帧输出。**正式写作前逐项对应[主张账本](../registries/claim_ledger.csv)。
 
 ## 数据来源与评价对象
 
@@ -20,7 +20,7 @@
 | 主张 ID | 可写的数值及分母 | 运行结果/图 | 必须同行说明的局限 |
 | --- | --- | --- | --- |
 | `m1-early-a-multi`、`m1-false-a-multi` | UCI 309 的 60 个留出风洞文件中，57 个在**供气开始之后** 60 s 内提示；释放前每文件 35 s，共 35 min 有 1 个文件曾触发 | [M1 汇总 CSV](../results/m1_uci309/summary.csv)、[运行记录](../results/m1_uci309/run.json)、[登记图](../figures/m1_uci309/m1_test_comparison.svg) | 固定供气时刻；本文件已知洁净起点；评分修订后重用留出；不称事故前预测，程序时钟“60/60”是无效泄漏对照 |
-| `stage8-a2-indoor-2d` | 115 帧、66 个人工框，IoU≥0.5 得 TP 62、FP 0、FN 4 | [二维报告](stage8-v1a-a2-2d-detector-results.md)、[私有结果索引](../results/stage8_n1_evidence_index.json) | 第二段曾用于人工质检；最终组装标签和逐帧输出未公开，当前不能独立复算 |
+| `stage8-a2-indoor-2d` | 115 帧、66 个人工框，IoU≥0.5 得 TP 62、FP 0、FN 4 | [二维报告](stage8-v1a-a2-2d-detector-results.md)、[私有结果索引](../results/stage8_n1_evidence_index.json) | 第二段曾用于人工质检；最终组装标签已按冻结哈希恢复但不公开，模型逐帧输出尚未重新生成，当前不能独立复算 TP/FP/FN |
 | `stage8-a1-repeat-depth-availability`、`stage8-g1-virtual-only` | 第二段 57 帧中 34 帧人工有人，32/34 自动框有有效深度；G1 inside 2、near 1、outside 29、unknown 2 | [深度报告](stage8-v1a-a2-repeat-depth-results.md)、[私有结果索引](../results/stage8_n1_evidence_index.json) | unknown 两例因二维漏检；30/30 相同虚拟区判断只是两框定义的内部一致性；G1 相机横向区不等于 S1 地面区 |
 | `stage6-s2-conditional-joint`、`stage6-s4-unknown-zone` | S2 预设模拟重叠 58/60 个已有文件出现 L3；S0、S1、S3 为 0/60；错区、过期和 10 s 缺测各 600 个**重放秒**不可配对 | [场景汇总 CSV](../results/stage6_s1_a/scenario_aggregate.csv)、[运行记录](../results/stage6_s1_a/run.json)、[登记图](../figures/stage6_s1_a/illustrative_s2_timeline.svg) | 同一仿真轨迹复用，L3 来自研究者规则；58/60 不是事故检出率，600=10 s×60 次重放 |
 
@@ -34,7 +34,7 @@
 
 ## 投稿前仍需补的核对
 
-1. 项目组电脑上的两段 Bonn 原始 ZIP、**最终组装版**人工框 JSON、`outputs/stage8_a2_detector` 及 `outputs/stage8_a2_repeat_depth`：核对[现有哈希索引](../results/stage8_n1_evidence_index.json)；若丢失，应重建结果并新记运行版本，不伪称既有私有输出仍在。
+1. **人工框 JSON 已从项目组先前消息恢复，哈希与冻结记录吻合，无需重传。**两段 Bonn 原始 ZIP、`outputs/stage8_a2_detector` 及 `outputs/stage8_a2_repeat_depth` 尚不在当前工作区；先按[现有哈希索引](../results/stage8_n1_evidence_index.json)寻找，找不到则从原发布方重新取得 ZIP、重跑固定脚本并新记运行版本，不伪称既有私有输出仍在。
 2. 原始研究全文、背景事实及阈值依据逐条核实；1 m 是仿真缓冲假设，不是法定距离。
 3. 用[图表登记](../registries/figure_evidence.csv)核图注、图像尺寸和单位；气体实验、室内视觉与仿真规则各自成表成图。
 4. 与导师核对原申报尚缺功能的中期/结题表述和论文资助编号；完整论文尚未写完、投稿或发表。
