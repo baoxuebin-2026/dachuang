@@ -1,0 +1,118 @@
+{
+  "status": "source_audit_only; not predictive, not an accident validation",
+  "source": "https://github.com/Amr-Khamis-84/RoboFusion-Dataset",
+  "source_commit": "d3907eda585cf202fc00c462b550d2512d5b9e6f",
+  "raw_filename": "Real_Dataset_Normal_Hazard_12 Days_ 3 Hazards.xlsx",
+  "sha256": "09c32cc594e7ae74e62e4e583623e320e9ed04e186f0987c6d5638e6cba0a428",
+  "bytes": 5598616,
+  "rows": 69120,
+  "columns": [
+    "Date",
+    "Time",
+    "Suite_ID",
+    "T1",
+    "H%",
+    "P",
+    "AL",
+    "T2",
+    "Dust",
+    "MQ2",
+    "MQ4",
+    "MQ5",
+    "MQ7",
+    "MQ8",
+    "MQ135",
+    "Condition",
+    "Status"
+  ],
+  "dates": [
+    "2025-04-10",
+    "2025-04-21"
+  ],
+  "suites": {
+    "AMR_1": 17280,
+    "AMR_2": 17280,
+    "Suite_1": 17280,
+    "Suite_2": 17280
+  },
+  "status_original_or_interpolation": {
+    "Original": 42705,
+    "Interpolation": 26415
+  },
+  "duplicate_timestamp_suite": 0,
+  "conditions": {
+    "Hazard_1": {
+      "rows": 480,
+      "unique_minutes": 120,
+      "dates": [
+        "2025-04-15"
+      ],
+      "rows_by_suite": {
+        "AMR_1": 120,
+        "AMR_2": 120,
+        "Suite_1": 120,
+        "Suite_2": 120
+      },
+      "first_timestamp": "2025-04-15 12:22:00",
+      "last_timestamp": "2025-04-15 14:21:00"
+    },
+    "Hazard_2": {
+      "rows": 292,
+      "unique_minutes": 73,
+      "dates": [
+        "2025-04-21"
+      ],
+      "rows_by_suite": {
+        "AMR_1": 73,
+        "AMR_2": 73,
+        "Suite_1": 73,
+        "Suite_2": 73
+      },
+      "first_timestamp": "2025-04-21 13:02:00",
+      "last_timestamp": "2025-04-21 14:14:00"
+    },
+    "Hazard_3": {
+      "rows": 240,
+      "unique_minutes": 60,
+      "dates": [
+        "2025-04-17"
+      ],
+      "rows_by_suite": {
+        "AMR_1": 60,
+        "AMR_2": 60,
+        "Suite_1": 60,
+        "Suite_2": 60
+      },
+      "first_timestamp": "2025-04-17 08:18:00",
+      "last_timestamp": "2025-04-17 09:17:00"
+    },
+    "Normal": {
+      "rows": 68108,
+      "unique_minutes": 17027,
+      "dates": [
+        "2025-04-10",
+        "2025-04-11",
+        "2025-04-12",
+        "2025-04-13",
+        "2025-04-14",
+        "2025-04-15",
+        "2025-04-16",
+        "2025-04-17",
+        "2025-04-18",
+        "2025-04-19",
+        "2025-04-20",
+        "2025-04-21"
+      ],
+      "rows_by_suite": {
+        "AMR_1": 17027,
+        "AMR_2": 17027,
+        "Suite_1": 17027,
+        "Suite_2": 17027
+      },
+      "first_timestamp": "2025-04-10 00:00:00",
+      "last_timestamp": "2025-04-21 23:59:00"
+    }
+  },
+  "rows_missing_by_column": {},
+  "scope": "Public 12-day file has no video, personnel coordinates, operator release log, or per-suite positions; MQ channels are sensor readings and cannot be asserted calibrated species concentrations from this spreadsheet alone."
+}
