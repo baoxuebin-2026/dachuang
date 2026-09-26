@@ -1,0 +1,106 @@
+{
+  "status": "development_proxy_labels_only; no model or reserved evaluation",
+  "protocol_id": "b2_b_first_sustained_crossing_v1",
+  "protocol_sha256": "83fa16eaef827c4d2c462bf2dc97002839a448974b2ef0b7bc1370b28e595ea9",
+  "source_archive_sha256": "405a8b27004a2e318bf213cf209398d3d58b45bb3c7a78f159e69003ff459311",
+  "targets": {
+    "MM256": {
+      "target": "MM256",
+      "development_seconds": 5180400,
+      "raw_crossing_runs": 1520,
+      "runs_at_least_30_seconds": 365,
+      "clean_sustained_proxy_events": 92,
+      "evaluable_proxy_events": 92,
+      "total_minute_anchors": 86340,
+      "anchor_status": {
+        "eligible": 83869,
+        "incomplete_future": 7,
+        "insufficient_history": 10,
+        "invalid_future": 7,
+        "invalid_history": 10,
+        "not_quiet_180": 2437
+      },
+      "positive_windows": 466,
+      "negative_windows": 83403,
+      "timestamp_discontinuities": 1,
+      "invalid_target_seconds": 0,
+      "interpretation": "Only development proxy-label coverage; not accuracy, independent accidents, or fitted-model performance."
+    },
+    "MM263": {
+      "target": "MM263",
+      "development_seconds": 5180400,
+      "raw_crossing_runs": 824,
+      "runs_at_least_30_seconds": 86,
+      "clean_sustained_proxy_events": 22,
+      "evaluable_proxy_events": 22,
+      "total_minute_anchors": 86340,
+      "anchor_status": {
+        "eligible": 77553,
+        "incomplete_future": 7,
+        "insufficient_history": 10,
+        "invalid_future": 273,
+        "invalid_history": 7545,
+        "not_quiet_180": 952
+      },
+      "positive_windows": 126,
+      "negative_windows": 77427,
+      "timestamp_discontinuities": 1,
+      "invalid_target_seconds": 290845,
+      "interpretation": "Only development proxy-label coverage; not accuracy, independent accidents, or fitted-model performance."
+    },
+    "MM264": {
+      "target": "MM264",
+      "development_seconds": 5180400,
+      "raw_crossing_runs": 3060,
+      "runs_at_least_30_seconds": 284,
+      "clean_sustained_proxy_events": 29,
+      "evaluable_proxy_events": 27,
+      "total_minute_anchors": 86340,
+      "anchor_status": {
+        "eligible": 83674,
+        "incomplete_future": 7,
+        "insufficient_history": 10,
+        "invalid_future": 19,
+        "invalid_history": 31,
+        "not_quiet_180": 2599
+      },
+      "positive_windows": 143,
+      "negative_windows": 83531,
+      "timestamp_discontinuities": 1,
+      "invalid_target_seconds": 24,
+      "interpretation": "Only development proxy-label coverage; not accuracy, independent accidents, or fitted-model performance."
+    }
+  },
+  "processed_files_ignored_by_git": [
+    {
+      "path": "data/processed/stage9_b2/development_MM256_events.csv.gz",
+      "sha256": "83098d1eb22f8e93d927c5f4ce56a5ab4160264c69e8dfece69d8c797742c664",
+      "rows": 92
+    },
+    {
+      "path": "data/processed/stage9_b2/development_MM256_windows.csv.gz",
+      "sha256": "77e64e32baef4d2776e22bdcb13fc3369d421581d30c90a31b327442ce8c65e4",
+      "rows": 83869
+    },
+    {
+      "path": "data/processed/stage9_b2/development_MM263_events.csv.gz",
+      "sha256": "faeb3a42c7896b003da8575338da5b64f505bbce17b4d94c911925ca9aaa2617",
+      "rows": 22
+    },
+    {
+      "path": "data/processed/stage9_b2/development_MM263_windows.csv.gz",
+      "sha256": "fde8e3f52fc719504a19d999f06a8276e8263799bb9ca522cb4b7058de426df2",
+      "rows": 77553
+    },
+    {
+      "path": "data/processed/stage9_b2/development_MM264_events.csv.gz",
+      "sha256": "e6e3eefac86a3747eb904f9503d5666b49c2b40f4559861f5aec8d27518f376c",
+      "rows": 29
+    },
+    {
+      "path": "data/processed/stage9_b2/development_MM264_windows.csv.gz",
+      "sha256": "15d31dc4334bf355ed1319752c115a97bf91ecfeae0e71aa51ce1deb0fe94e28",
+      "rows": 83674
+    }
+  ]
+}

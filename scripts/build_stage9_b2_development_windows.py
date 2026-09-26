@@ -52,7 +52,7 @@ def load_development(path: Path, config: dict) -> tuple[np.ndarray, np.ndarray, 
             for frame in pd.read_csv(stream, usecols=[*TIME, *TARGETS], chunksize=150_000):
                 dates = pd.to_datetime(frame[["year", "month", "day"]]).dt.strftime("%Y-%m-%d")
                 if dates.iloc[0] > hi:
-                    break  # Never parse later raw values in this script.
+                    break  # A later chunk was parsed, but its values are not processed.
                 keep = dates.between(lo, hi)
                 if not keep.any():
                     continue
