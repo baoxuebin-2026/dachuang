@@ -29,3 +29,5 @@
 **B1 已确认并一次执行：**[P1 冻结协议](stage9-b1-p1-frozen-experiment.md)先于响应读取独立提交；开发与选择的[记录](../results/stage9_b1/p1_selection.json)再提交；然后执行唯一一次[留出结果](../results/stage9_b1/p1_locked_results.json)。选择日推荐 NE 单点，但留出及时检出 0/5；最大值 1/5，两点共现 0/5。三者在 955 分钟合格背景均无新发假报警，这段背景太短不能支持长期低误报。具体延迟和失败边界见[结果报告](stage9-b1-p1-results-and-decision.md)。下一决策节点是是否制定 B2 的真实甲烷未来越限协议，现阶段不得用已看过的 B1 留出日期再次调参并声称新盲测。
 
 **B2 已选进入协议阶段：**发布者煤矿原 ZIP 已重新取得并核验；[分期来源审计](../results/stage9_b2/source_feasibility.json)确认候选日期段内均有目标越限连续段，同时识别 MM263 大量负数及 2014-03-30 一小时钟跳变。[B2 标签选项和全项目数据缺口](stage9-b2-data-gaps-and-protocol-options.md)已整理。只读统计的是测点自身越限，不是真实事故或模型成绩；下一决策是 B2-B MM256 主测点、三测点并列，或复现作者 B2-A。决定前不生成预测窗、不训练、不评价留出。
+
+**B2-B 方向已确认：**项目组确定 MM256 为主测点、MM263/MM264 分别作稳健性检查。已完成[开发期 EDA 与精确评价协议草案](stage9-b2-b-development-eda-and-protocol.md)；92 个 MM256 候选持续段起点在其前 180 秒未越限，仍须扣除分钟锚点和日期边界；[EDA 数值](../results/stage9_b2/development_eda.json)是 `diagnostic_only`。当前等待项目组确认主协议的 1.0%／30 秒／180 秒／6 分钟和事件级评分，确认前不生成预测窗口或拟合模型。
