@@ -1,0 +1,159 @@
+{
+  "source_commit": "9024cc18a9e7dc49c9eff6bc268493ca931e7d0c",
+  "source_sha256": {
+    "ADED_data_clean_SAMPLE.csv": "fb1fd21e77fef2ad508e2de2697743c1bb010b616457cde29a1480bf79d7c26b",
+    "leak_data.csv": "20792a9b8c318ff3490c47f8e071b2dd22c69caeb5ce3356a4a6f6298e048b6a"
+  },
+  "utc_splits_declared_before_daily_count_inspection": {
+    "development": [
+      "2022-05-09",
+      "2022-05-10",
+      "2022-05-11",
+      "2022-05-12"
+    ],
+    "selection": [
+      "2022-05-13"
+    ],
+    "locked_evaluation": [
+      "2022-05-14",
+      "2022-05-15"
+    ]
+  },
+  "release_rows_overlapping_sample": 17,
+  "overlapping_multisource_log_rows": 0,
+  "duplicate_sensor_minute_records": 5,
+  "wind_present_by_sensor": {
+    "E": 9846,
+    "N": 0,
+    "NE": 0,
+    "NW": 9843,
+    "S": 0,
+    "SE": 0,
+    "SW": 9854,
+    "W": 0
+  },
+  "daily": {
+    "2022-05-09": {
+      "release_starts": 3,
+      "release_minutes": 640,
+      "no_release_minutes": 799,
+      "eligible_no_release_minutes_after_30m_washout": 739,
+      "records": 11483,
+      "distinct_observation_minutes": 1439,
+      "duplicate_sensor_minute_records": 0,
+      "wind_present_records": 4227,
+      "minutes_with_fewer_than_6_sensors": 0,
+      "minutes_available_after_60m_warmup_and_6_sensor_gate": 1380,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 680
+    },
+    "2022-05-10": {
+      "release_starts": 2,
+      "release_minutes": 644,
+      "no_release_minutes": 796,
+      "eligible_no_release_minutes_after_30m_washout": 706,
+      "records": 11507,
+      "distinct_observation_minutes": 1439,
+      "duplicate_sensor_minute_records": 0,
+      "wind_present_records": 4223,
+      "minutes_with_fewer_than_6_sensors": 1,
+      "minutes_available_after_60m_warmup_and_6_sensor_gate": 1380,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 706
+    },
+    "2022-05-11": {
+      "release_starts": 1,
+      "release_minutes": 270,
+      "no_release_minutes": 1170,
+      "eligible_no_release_minutes_after_30m_washout": 1140,
+      "records": 11495,
+      "distinct_observation_minutes": 1439,
+      "duplicate_sensor_minute_records": 1,
+      "wind_present_records": 4221,
+      "minutes_with_fewer_than_6_sensors": 1,
+      "minutes_available_after_60m_warmup_and_6_sensor_gate": 1380,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 1080
+    },
+    "2022-05-12": {
+      "release_starts": 3,
+      "release_minutes": 900,
+      "no_release_minutes": 540,
+      "eligible_no_release_minutes_after_30m_washout": 450,
+      "records": 11501,
+      "distinct_observation_minutes": 1439,
+      "duplicate_sensor_minute_records": 0,
+      "wind_present_records": 4214,
+      "minutes_with_fewer_than_6_sensors": 1,
+      "minutes_available_after_60m_warmup_and_6_sensor_gate": 1380,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 390
+    },
+    "2022-05-13": {
+      "release_starts": 3,
+      "release_minutes": 930,
+      "no_release_minutes": 510,
+      "eligible_no_release_minutes_after_30m_washout": 422,
+      "records": 11491,
+      "distinct_observation_minutes": 1439,
+      "duplicate_sensor_minute_records": 0,
+      "wind_present_records": 4219,
+      "minutes_with_fewer_than_6_sensors": 1,
+      "minutes_available_after_60m_warmup_and_6_sensor_gate": 1380,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 362
+    },
+    "2022-05-14": {
+      "release_starts": 3,
+      "release_minutes": 900,
+      "no_release_minutes": 540,
+      "eligible_no_release_minutes_after_30m_washout": 448,
+      "records": 11239,
+      "distinct_observation_minutes": 1439,
+      "duplicate_sensor_minute_records": 2,
+      "wind_present_records": 4218,
+      "minutes_with_fewer_than_6_sensors": 1,
+      "minutes_available_after_60m_warmup_and_6_sensor_gate": 1380,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 390
+    },
+    "2022-05-15": {
+      "release_starts": 2,
+      "release_minutes": 750,
+      "no_release_minutes": 690,
+      "eligible_no_release_minutes_after_30m_washout": 630,
+      "records": 11291,
+      "distinct_observation_minutes": 1440,
+      "duplicate_sensor_minute_records": 2,
+      "wind_present_records": 4221,
+      "minutes_with_fewer_than_6_sensors": 1,
+      "minutes_available_after_60m_warmup_and_6_sensor_gate": 1380,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 570
+    }
+  },
+  "by_split": {
+    "development": {
+      "days": [
+        "2022-05-09",
+        "2022-05-10",
+        "2022-05-11",
+        "2022-05-12"
+      ],
+      "release_starts": 9,
+      "eligible_no_release_minutes": 3035,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 2856
+    },
+    "selection": {
+      "days": [
+        "2022-05-13"
+      ],
+      "release_starts": 3,
+      "eligible_no_release_minutes": 422,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 362
+    },
+    "locked_evaluation": {
+      "days": [
+        "2022-05-14",
+        "2022-05-15"
+      ],
+      "release_starts": 5,
+      "eligible_no_release_minutes": 1078,
+      "evaluable_no_release_minutes_after_washout_warmup_and_gate": 960
+    }
+  },
+  "scope": "Read-only release-timing and measurement-availability audit; no methane readings, trained model, predictions, or scores were read."
+}
