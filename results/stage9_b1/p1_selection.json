@@ -1,0 +1,1220 @@
+{
+  "phase": "selection_only",
+  "code_sha256": "6550847b8d38146f4ae6e63a8dbc1be9d36213ffd6b461e5903b8393b56df462",
+  "source_sha256": {
+    "ADED_data_clean_SAMPLE.csv": "fb1fd21e77fef2ad508e2de2697743c1bb010b616457cde29a1480bf79d7c26b",
+    "leak_data.csv": "20792a9b8c318ff3490c47f8e071b2dd22c69caeb5ce3356a4a6f6298e048b6a"
+  },
+  "protocol": "docs/stage9-b1-p1-frozen-experiment.md",
+  "settings": {
+    "all_candidate_settings": {
+      "single_E": {
+        "threshold_ppm": 4.450599577185392,
+        "disabled_infinite_threshold": false
+      },
+      "single_N": {
+        "threshold_ppm": 0.48051878511934365,
+        "disabled_infinite_threshold": false
+      },
+      "single_NE": {
+        "threshold_ppm": 1.3253191134737554,
+        "disabled_infinite_threshold": false
+      },
+      "single_NW": {
+        "threshold_ppm": 0.6071690775194146,
+        "disabled_infinite_threshold": false
+      },
+      "single_S": {
+        "threshold_ppm": 1.0311369353430697,
+        "disabled_infinite_threshold": false
+      },
+      "single_SE": {
+        "threshold_ppm": 9.270144990102638,
+        "disabled_infinite_threshold": false
+      },
+      "single_SW": {
+        "threshold_ppm": 1.9775682507495025,
+        "disabled_infinite_threshold": false
+      },
+      "single_W": {
+        "threshold_ppm": 0.8279223698393903,
+        "disabled_infinite_threshold": false
+      },
+      "maximum": {
+        "threshold_ppm": 10.670081537622954,
+        "disabled_infinite_threshold": false
+      },
+      "two_point_5min": {
+        "threshold_ppm": 7.556276024048626,
+        "disabled_infinite_threshold": false
+      }
+    },
+    "chosen_single_sensor": "single_NE"
+  },
+  "development_all_eight_singles_and_two_multisensor_rules": {
+    "single_E": {
+      "release_events": 9,
+      "timely_30m": 0,
+      "any_during_release": 0,
+      "median_detected_delay_minutes": null,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 0,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 2,
+      "false_alerts_per_24h": 1.01159,
+      "background_alarm_occupied_minutes": 2,
+      "background_alarm_occupancy": 0.0007025,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    },
+    "single_N": {
+      "release_events": 9,
+      "timely_30m": 2,
+      "any_during_release": 5,
+      "median_detected_delay_minutes": 179.55,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": "2022-05-09T08:38:00+00:00",
+          "delay_minutes": 379.967,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": "2022-05-10T03:16:00+00:00",
+          "delay_minutes": 326.05,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": "2022-05-10T20:33:00+00:00",
+          "delay_minutes": 4.35,
+          "within_30m": true
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": "2022-05-11T18:52:00+00:00",
+          "delay_minutes": 20.867,
+          "within_30m": true
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": "2022-05-12T15:01:00+00:00",
+          "delay_minutes": 179.55,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 6,
+      "eligible_background_minutes": 2844,
+      "false_alert_starts": 3,
+      "false_alerts_per_24h": 1.51899,
+      "background_alarm_occupied_minutes": 22,
+      "background_alarm_occupancy": 0.0077356,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5517,
+      "minutes_after_warmup": 5520
+    },
+    "single_NE": {
+      "release_events": 9,
+      "timely_30m": 2,
+      "any_during_release": 2,
+      "median_detected_delay_minutes": 7.766500000000001,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": "2022-05-09T21:56:00+00:00",
+          "delay_minutes": 6.05,
+          "within_30m": true
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": "2022-05-12T18:11:00+00:00",
+          "delay_minutes": 9.483,
+          "within_30m": true
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 9,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 2,
+      "false_alerts_per_24h": 1.01159,
+      "background_alarm_occupied_minutes": 2,
+      "background_alarm_occupancy": 0.0007025,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    },
+    "single_NW": {
+      "release_events": 9,
+      "timely_30m": 2,
+      "any_during_release": 5,
+      "median_detected_delay_minutes": 41.35,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": "2022-05-09T18:08:00+00:00",
+          "delay_minutes": 18.083,
+          "within_30m": true
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": "2022-05-10T03:14:00+00:00",
+          "delay_minutes": 324.05,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": "2022-05-10T14:37:00+00:00",
+          "delay_minutes": 77.0,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": "2022-05-10T21:10:00+00:00",
+          "delay_minutes": 41.35,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": "2022-05-12T12:24:00+00:00",
+          "delay_minutes": 22.55,
+          "within_30m": true
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 19,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 3,
+      "false_alerts_per_24h": 1.51739,
+      "background_alarm_occupied_minutes": 15,
+      "background_alarm_occupancy": 0.0052687,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    },
+    "single_S": {
+      "release_events": 9,
+      "timely_30m": 0,
+      "any_during_release": 1,
+      "median_detected_delay_minutes": 365.05,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": "2022-05-10T03:55:00+00:00",
+          "delay_minutes": 365.05,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 0,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 3,
+      "false_alerts_per_24h": 1.51739,
+      "background_alarm_occupied_minutes": 8,
+      "background_alarm_occupancy": 0.00281,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    },
+    "single_SE": {
+      "release_events": 9,
+      "timely_30m": 0,
+      "any_during_release": 0,
+      "median_detected_delay_minutes": null,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 0,
+      "eligible_background_minutes": 2825,
+      "false_alert_starts": 0,
+      "false_alerts_per_24h": 0.0,
+      "background_alarm_occupied_minutes": 0,
+      "background_alarm_occupancy": 0.0,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5467,
+      "minutes_after_warmup": 5520
+    },
+    "single_SW": {
+      "release_events": 9,
+      "timely_30m": 1,
+      "any_during_release": 1,
+      "median_detected_delay_minutes": 0.55,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": "2022-05-12T12:02:00+00:00",
+          "delay_minutes": 0.55,
+          "within_30m": true
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 1,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 1,
+      "false_alerts_per_24h": 0.5058,
+      "background_alarm_occupied_minutes": 1,
+      "background_alarm_occupancy": 0.0003512,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    },
+    "single_W": {
+      "release_events": 9,
+      "timely_30m": 1,
+      "any_during_release": 3,
+      "median_detected_delay_minutes": 47.867,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": "2022-05-09T19:40:00+00:00",
+          "delay_minutes": 110.083,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": "2022-05-11T19:19:00+00:00",
+          "delay_minutes": 47.867,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": "2022-05-12T12:07:00+00:00",
+          "delay_minutes": 5.55,
+          "within_30m": true
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 15,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 2,
+      "false_alerts_per_24h": 1.01159,
+      "background_alarm_occupied_minutes": 15,
+      "background_alarm_occupancy": 0.0052687,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    },
+    "maximum": {
+      "release_events": 9,
+      "timely_30m": 1,
+      "any_during_release": 3,
+      "median_detected_delay_minutes": 232.867,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": "2022-05-10T03:36:00+00:00",
+          "delay_minutes": 346.05,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": "2022-05-11T22:24:00+00:00",
+          "delay_minutes": 232.867,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": "2022-05-12T12:25:00+00:00",
+          "delay_minutes": 23.55,
+          "within_30m": true
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 5,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 1,
+      "false_alerts_per_24h": 0.5058,
+      "background_alarm_occupied_minutes": 1,
+      "background_alarm_occupancy": 0.0003512,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    },
+    "two_point_5min": {
+      "release_events": 9,
+      "timely_30m": 0,
+      "any_during_release": 0,
+      "median_detected_delay_minutes": null,
+      "event_details": [
+        {
+          "release_id": "5S-23",
+          "start_utc": "2022-05-09T02:18:02+00:00",
+          "end_utc": "2022-05-09T08:48:02+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4S-21",
+          "start_utc": "2022-05-09T17:49:55+00:00",
+          "end_utc": "2022-05-09T19:49:54+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-09T21:49:57+00:00",
+          "end_utc": "2022-05-10T05:49:57+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-10T13:20:00+00:00",
+          "end_utc": "2022-05-10T16:20:00+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-10T20:28:39+00:00",
+          "end_utc": "2022-05-10T22:21:19+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-11T18:31:08+00:00",
+          "end_utc": "2022-05-11T23:01:24+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "5W-13",
+          "start_utc": "2022-05-12T01:01:25+00:00",
+          "end_utc": "2022-05-12T07:31:26+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-43",
+          "start_utc": "2022-05-12T12:01:27+00:00",
+          "end_utc": "2022-05-12T16:01:27+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-12",
+          "start_utc": "2022-05-12T18:01:31+00:00",
+          "end_utc": "2022-05-12T22:31:31+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 0,
+      "eligible_background_minutes": 2847,
+      "false_alert_starts": 1,
+      "false_alerts_per_24h": 0.5058,
+      "background_alarm_occupied_minutes": 1,
+      "background_alarm_occupancy": 0.0003512,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 5520,
+      "minutes_after_warmup": 5520
+    }
+  },
+  "selection_three_prespecified_rules": {
+    "single_NE": {
+      "release_events": 3,
+      "timely_30m": 1,
+      "any_during_release": 2,
+      "median_detected_delay_minutes": 176.94199999999998,
+      "event_details": [
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-13T01:31:32+00:00",
+          "end_utc": "2022-05-13T07:31:33+00:00",
+          "first_new_alert_utc": "2022-05-13T07:21:00+00:00",
+          "delay_minutes": 349.467,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-32",
+          "start_utc": "2022-05-13T12:01:35+00:00",
+          "end_utc": "2022-05-13T18:01:35+00:00",
+          "first_new_alert_utc": "2022-05-13T12:06:00+00:00",
+          "delay_minutes": 4.417,
+          "within_30m": true
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-13T20:01:39+00:00",
+          "end_utc": "2022-05-13T23:31:39+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 5,
+      "eligible_background_minutes": 359,
+      "false_alert_starts": 0,
+      "false_alerts_per_24h": 0.0,
+      "background_alarm_occupied_minutes": 0,
+      "background_alarm_occupancy": 0.0,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 1380,
+      "minutes_after_warmup": 1380
+    },
+    "maximum": {
+      "release_events": 3,
+      "timely_30m": 0,
+      "any_during_release": 0,
+      "median_detected_delay_minutes": null,
+      "event_details": [
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-13T01:31:32+00:00",
+          "end_utc": "2022-05-13T07:31:33+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-32",
+          "start_utc": "2022-05-13T12:01:35+00:00",
+          "end_utc": "2022-05-13T18:01:35+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-13T20:01:39+00:00",
+          "end_utc": "2022-05-13T23:31:39+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 0,
+      "eligible_background_minutes": 359,
+      "false_alert_starts": 0,
+      "false_alerts_per_24h": 0.0,
+      "background_alarm_occupied_minutes": 0,
+      "background_alarm_occupancy": 0.0,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 1380,
+      "minutes_after_warmup": 1380
+    },
+    "two_point_5min": {
+      "release_events": 3,
+      "timely_30m": 0,
+      "any_during_release": 0,
+      "median_detected_delay_minutes": null,
+      "event_details": [
+        {
+          "release_id": "5S-21",
+          "start_utc": "2022-05-13T01:31:32+00:00",
+          "end_utc": "2022-05-13T07:31:33+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4T-32",
+          "start_utc": "2022-05-13T12:01:35+00:00",
+          "end_utc": "2022-05-13T18:01:35+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        },
+        {
+          "release_id": "4W-27",
+          "start_utc": "2022-05-13T20:01:39+00:00",
+          "end_utc": "2022-05-13T23:31:39+00:00",
+          "first_new_alert_utc": null,
+          "delay_minutes": null,
+          "within_30m": false
+        }
+      ],
+      "repeat_alert_starts_during_same_release": 0,
+      "eligible_background_minutes": 359,
+      "false_alert_starts": 0,
+      "false_alerts_per_24h": 0.0,
+      "background_alarm_occupied_minutes": 0,
+      "background_alarm_occupancy": 0.0,
+      "new_alerts_in_30m_prestart": 0,
+      "new_alerts_in_postrelease_30m": 0,
+      "observed_minutes_after_warmup_with_score": 1380,
+      "minutes_after_warmup": 1380
+    }
+  },
+  "selection_daily_metrics": {
+    "single_NE": {
+      "2022-05-13": {
+        "release_events": 3,
+        "timely_30m": 1,
+        "any_during_release": 2,
+        "median_detected_delay_minutes": 176.94199999999998,
+        "event_details": [
+          {
+            "release_id": "5S-21",
+            "start_utc": "2022-05-13T01:31:32+00:00",
+            "end_utc": "2022-05-13T07:31:33+00:00",
+            "first_new_alert_utc": "2022-05-13T07:21:00+00:00",
+            "delay_minutes": 349.467,
+            "within_30m": false
+          },
+          {
+            "release_id": "4T-32",
+            "start_utc": "2022-05-13T12:01:35+00:00",
+            "end_utc": "2022-05-13T18:01:35+00:00",
+            "first_new_alert_utc": "2022-05-13T12:06:00+00:00",
+            "delay_minutes": 4.417,
+            "within_30m": true
+          },
+          {
+            "release_id": "4W-27",
+            "start_utc": "2022-05-13T20:01:39+00:00",
+            "end_utc": "2022-05-13T23:31:39+00:00",
+            "first_new_alert_utc": null,
+            "delay_minutes": null,
+            "within_30m": false
+          }
+        ],
+        "repeat_alert_starts_during_same_release": 5,
+        "eligible_background_minutes": 359,
+        "false_alert_starts": 0,
+        "false_alerts_per_24h": 0.0,
+        "background_alarm_occupied_minutes": 0,
+        "background_alarm_occupancy": 0.0,
+        "new_alerts_in_30m_prestart": 0,
+        "new_alerts_in_postrelease_30m": 0,
+        "observed_minutes_after_warmup_with_score": 1380,
+        "minutes_after_warmup": 1380
+      }
+    },
+    "maximum": {
+      "2022-05-13": {
+        "release_events": 3,
+        "timely_30m": 0,
+        "any_during_release": 0,
+        "median_detected_delay_minutes": null,
+        "event_details": [
+          {
+            "release_id": "5S-21",
+            "start_utc": "2022-05-13T01:31:32+00:00",
+            "end_utc": "2022-05-13T07:31:33+00:00",
+            "first_new_alert_utc": null,
+            "delay_minutes": null,
+            "within_30m": false
+          },
+          {
+            "release_id": "4T-32",
+            "start_utc": "2022-05-13T12:01:35+00:00",
+            "end_utc": "2022-05-13T18:01:35+00:00",
+            "first_new_alert_utc": null,
+            "delay_minutes": null,
+            "within_30m": false
+          },
+          {
+            "release_id": "4W-27",
+            "start_utc": "2022-05-13T20:01:39+00:00",
+            "end_utc": "2022-05-13T23:31:39+00:00",
+            "first_new_alert_utc": null,
+            "delay_minutes": null,
+            "within_30m": false
+          }
+        ],
+        "repeat_alert_starts_during_same_release": 0,
+        "eligible_background_minutes": 359,
+        "false_alert_starts": 0,
+        "false_alerts_per_24h": 0.0,
+        "background_alarm_occupied_minutes": 0,
+        "background_alarm_occupancy": 0.0,
+        "new_alerts_in_30m_prestart": 0,
+        "new_alerts_in_postrelease_30m": 0,
+        "observed_minutes_after_warmup_with_score": 1380,
+        "minutes_after_warmup": 1380
+      }
+    },
+    "two_point_5min": {
+      "2022-05-13": {
+        "release_events": 3,
+        "timely_30m": 0,
+        "any_during_release": 0,
+        "median_detected_delay_minutes": null,
+        "event_details": [
+          {
+            "release_id": "5S-21",
+            "start_utc": "2022-05-13T01:31:32+00:00",
+            "end_utc": "2022-05-13T07:31:33+00:00",
+            "first_new_alert_utc": null,
+            "delay_minutes": null,
+            "within_30m": false
+          },
+          {
+            "release_id": "4T-32",
+            "start_utc": "2022-05-13T12:01:35+00:00",
+            "end_utc": "2022-05-13T18:01:35+00:00",
+            "first_new_alert_utc": null,
+            "delay_minutes": null,
+            "within_30m": false
+          },
+          {
+            "release_id": "4W-27",
+            "start_utc": "2022-05-13T20:01:39+00:00",
+            "end_utc": "2022-05-13T23:31:39+00:00",
+            "first_new_alert_utc": null,
+            "delay_minutes": null,
+            "within_30m": false
+          }
+        ],
+        "repeat_alert_starts_during_same_release": 0,
+        "eligible_background_minutes": 359,
+        "false_alert_starts": 0,
+        "false_alerts_per_24h": 0.0,
+        "background_alarm_occupied_minutes": 0,
+        "background_alarm_occupancy": 0.0,
+        "new_alerts_in_30m_prestart": 0,
+        "new_alerts_in_postrelease_30m": 0,
+        "observed_minutes_after_warmup_with_score": 1380,
+        "minutes_after_warmup": 1380
+      }
+    }
+  },
+  "recommended_rule_from_selection": "single_NE",
+  "locked_dates_methane_read": false
+}
