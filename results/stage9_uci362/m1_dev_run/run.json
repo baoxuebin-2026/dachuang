@@ -1,0 +1,244 @@
+{
+  "label": "post_hoc_development_only_m1_confirmed_protocol",
+  "protocol": "docs/stage9-m1-date-balanced-dev-protocol.md",
+  "protocol_sha256": "a6e958d806bca6208241de75f8fb783645418d9e0aedf4aac427e1cfb59a5469",
+  "source_sha256": "7c143b9f4402a8205ebe8072c2ce0967c25741f1865e23d650e981053294f395",
+  "manifest_sha256": "cd5aa93c00dbf7efb2ee61fe69c94d0acae9e64497e93bf76df94c15e37cfb26",
+  "code_sha256": "e8979daffbe77ead9042c867446bf1fd7a139aed7c7fe58eda5d75d628fa5d81",
+  "frozen_run_code_sha256": "561d7cb38d23656c60e49b7299b1134946e9c86c61d0e674ae2e5b19910d9bd7",
+  "retained_development_ids": 78,
+  "test_ids_scored": 0,
+  "training_dates_with_background": 33,
+  "thresholds": {
+    "pooled_frozen": 22.082579798983733,
+    "date_050": 2.134500188970159,
+    "date_075_primary": 11.070324519929471,
+    "date_090": 16.642896417025696
+  },
+  "excluded_day_sensitivity_diagnostic_only": {
+    "excluded_date": "09-03-15",
+    "excluded_q_0999": 22.429721532639253,
+    "q_0999_rank_ascending": 33,
+    "date_075_without_date": 9.187957274693678,
+    "pooled_0999_without_date": 19.849367036624212,
+    "note": "Diagnostic only; all original dates remain in primary threshold and evaluation."
+  },
+  "summary": {
+    "train": {
+      "pooled_frozen": {
+        "stimulus_total": 39,
+        "stimulus_eligible": 35,
+        "stimulus_unknown": {
+          "unknown_calibration": 2,
+          "unknown_post_coverage": 2
+        },
+        "detected_within_5min": 1,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 1,
+            "denominator": 15
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 20
+          }
+        },
+        "median_delay_s_detected_only": 101.0,
+        "pre_stimulus_trigger_records": 1,
+        "pre_stimulus_g2_events": 3,
+        "pure_background_days": 6,
+        "pure_background_eligible_days": 6,
+        "pure_background_triggered_days": 0,
+        "pure_background_g2_events": 0,
+        "pure_background_observed_hours": 14.71111111111111
+      },
+      "date_050": {
+        "stimulus_total": 39,
+        "stimulus_eligible": 35,
+        "stimulus_unknown": {
+          "unknown_calibration": 2,
+          "unknown_post_coverage": 2
+        },
+        "detected_within_5min": 24,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 9,
+            "denominator": 15
+          },
+          "banana": {
+            "numerator": 15,
+            "denominator": 20
+          }
+        },
+        "median_delay_s_detected_only": 61.0,
+        "pre_stimulus_trigger_records": 18,
+        "pre_stimulus_g2_events": 249,
+        "pure_background_days": 6,
+        "pure_background_eligible_days": 6,
+        "pure_background_triggered_days": 4,
+        "pure_background_g2_events": 39,
+        "pure_background_observed_hours": 14.71111111111111
+      },
+      "date_075_primary": {
+        "stimulus_total": 39,
+        "stimulus_eligible": 35,
+        "stimulus_unknown": {
+          "unknown_calibration": 2,
+          "unknown_post_coverage": 2
+        },
+        "detected_within_5min": 12,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 4,
+            "denominator": 15
+          },
+          "banana": {
+            "numerator": 8,
+            "denominator": 20
+          }
+        },
+        "median_delay_s_detected_only": 43.5,
+        "pre_stimulus_trigger_records": 9,
+        "pre_stimulus_g2_events": 94,
+        "pure_background_days": 6,
+        "pure_background_eligible_days": 6,
+        "pure_background_triggered_days": 0,
+        "pure_background_g2_events": 0,
+        "pure_background_observed_hours": 14.71111111111111
+      },
+      "date_090": {
+        "stimulus_total": 39,
+        "stimulus_eligible": 35,
+        "stimulus_unknown": {
+          "unknown_calibration": 2,
+          "unknown_post_coverage": 2
+        },
+        "detected_within_5min": 6,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 2,
+            "denominator": 15
+          },
+          "banana": {
+            "numerator": 4,
+            "denominator": 20
+          }
+        },
+        "median_delay_s_detected_only": 60.5,
+        "pre_stimulus_trigger_records": 6,
+        "pre_stimulus_g2_events": 43,
+        "pure_background_days": 6,
+        "pure_background_eligible_days": 6,
+        "pure_background_triggered_days": 0,
+        "pure_background_g2_events": 0,
+        "pure_background_observed_hours": 14.71111111111111
+      }
+    },
+    "validation": {
+      "pooled_frozen": {
+        "stimulus_total": 15,
+        "stimulus_eligible": 14,
+        "stimulus_unknown": {
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 0,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 0,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 6
+          }
+        },
+        "median_delay_s_detected_only": null,
+        "pre_stimulus_trigger_records": 0,
+        "pre_stimulus_g2_events": 0,
+        "pure_background_days": 2,
+        "pure_background_eligible_days": 2,
+        "pure_background_triggered_days": 0,
+        "pure_background_g2_events": 0,
+        "pure_background_observed_hours": 4.7775
+      },
+      "date_050": {
+        "stimulus_total": 15,
+        "stimulus_eligible": 14,
+        "stimulus_unknown": {
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 6,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 4,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 2,
+            "denominator": 6
+          }
+        },
+        "median_delay_s_detected_only": 67.0,
+        "pre_stimulus_trigger_records": 5,
+        "pre_stimulus_g2_events": 64,
+        "pure_background_days": 2,
+        "pure_background_eligible_days": 2,
+        "pure_background_triggered_days": 0,
+        "pure_background_g2_events": 0,
+        "pure_background_observed_hours": 4.7775
+      },
+      "date_075_primary": {
+        "stimulus_total": 15,
+        "stimulus_eligible": 14,
+        "stimulus_unknown": {
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 3,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 3,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 6
+          }
+        },
+        "median_delay_s_detected_only": 77.0,
+        "pre_stimulus_trigger_records": 3,
+        "pre_stimulus_g2_events": 12,
+        "pure_background_days": 2,
+        "pure_background_eligible_days": 2,
+        "pure_background_triggered_days": 0,
+        "pure_background_g2_events": 0,
+        "pure_background_observed_hours": 4.7775
+      },
+      "date_090": {
+        "stimulus_total": 15,
+        "stimulus_eligible": 14,
+        "stimulus_unknown": {
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 0,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 0,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 6
+          }
+        },
+        "median_delay_s_detected_only": null,
+        "pre_stimulus_trigger_records": 0,
+        "pre_stimulus_g2_events": 0,
+        "pure_background_days": 2,
+        "pure_background_eligible_days": 2,
+        "pure_background_triggered_days": 0,
+        "pure_background_g2_events": 0,
+        "pure_background_observed_hours": 4.7775
+      }
+    }
+  }
+}
