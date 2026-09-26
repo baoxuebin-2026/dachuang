@@ -1,0 +1,204 @@
+{
+  "source_sha256": "7c143b9f4402a8205ebe8072c2ce0967c25741f1865e23d650e981053294f395",
+  "manifest_sha256": "cd5aa93c00dbf7efb2ee61fe69c94d0acae9e64497e93bf76df94c15e37cfb26",
+  "code_sha256": "561d7cb38d23656c60e49b7299b1134946e9c86c61d0e674ae2e5b19910d9bd7",
+  "protocol": "docs/stage9-a1-uci362-source-audit-and-protocol.md",
+  "quantile": 0.999,
+  "aggregation": "8-channel median absolute standardized resistance, 3 consecutive valid seconds",
+  "calibration": {
+    "scale": [
+      0.1395126599999988,
+      0.2414191710000004,
+      0.24074458800000226,
+      0.2588397209999993,
+      0.9156537599999992,
+      0.185325,
+      0.10465673400000022,
+      0.14279661899999957
+    ],
+    "training_center_median": [
+      12.3704,
+      9.103729999999999,
+      9.244219999999999,
+      10.5199,
+      11.56385,
+      15.9209,
+      5.35515,
+      5.76988
+    ],
+    "training_dates": 33,
+    "training_background_bins": 128579,
+    "thresholds": {
+      "median_8": 22.082579798983733,
+      "R1": 23.191802091652672
+    }
+  },
+  "summary": {
+    "train": {
+      "median_8": {
+        "stimulus_records_total": 39,
+        "stimulus_eligible": 35,
+        "stimulus_unknown": {
+          "unknown_calibration": 2,
+          "unknown_post_coverage": 2
+        },
+        "detected_within_5min": 1,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 1,
+            "denominator": 15
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 20
+          }
+        },
+        "median_delay_s_detected_only": 101.0,
+        "pre_stimulus_trigger_records": 1,
+        "background_only_days_total": 6,
+        "background_only_days_eligible": 6,
+        "background_g2_events": 0,
+        "background_days_triggered": 0,
+        "background_observed_hours": 14.71111111111111,
+        "background_event_per_observed_hour": 0.0
+      },
+      "R1": {
+        "stimulus_records_total": 39,
+        "stimulus_eligible": 35,
+        "stimulus_unknown": {
+          "unknown_calibration": 2,
+          "unknown_post_coverage": 2
+        },
+        "detected_within_5min": 1,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 1,
+            "denominator": 15
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 20
+          }
+        },
+        "median_delay_s_detected_only": 175.0,
+        "pre_stimulus_trigger_records": 1,
+        "background_only_days_total": 6,
+        "background_only_days_eligible": 6,
+        "background_g2_events": 0,
+        "background_days_triggered": 0,
+        "background_observed_hours": 14.71111111111111,
+        "background_event_per_observed_hour": 0.0
+      }
+    },
+    "validation": {
+      "median_8": {
+        "stimulus_records_total": 15,
+        "stimulus_eligible": 14,
+        "stimulus_unknown": {
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 0,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 0,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 6
+          }
+        },
+        "median_delay_s_detected_only": null,
+        "pre_stimulus_trigger_records": 0,
+        "background_only_days_total": 2,
+        "background_only_days_eligible": 2,
+        "background_g2_events": 0,
+        "background_days_triggered": 0,
+        "background_observed_hours": 4.7775,
+        "background_event_per_observed_hour": 0.0
+      },
+      "R1": {
+        "stimulus_records_total": 15,
+        "stimulus_eligible": 14,
+        "stimulus_unknown": {
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 0,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 0,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 6
+          }
+        },
+        "median_delay_s_detected_only": null,
+        "pre_stimulus_trigger_records": 0,
+        "background_only_days_total": 2,
+        "background_only_days_eligible": 2,
+        "background_g2_events": 0,
+        "background_days_triggered": 0,
+        "background_observed_hours": 4.7775,
+        "background_event_per_observed_hour": 0.0
+      }
+    },
+    "test": {
+      "median_8": {
+        "stimulus_records_total": 15,
+        "stimulus_eligible": 13,
+        "stimulus_unknown": {
+          "unknown_post_coverage": 1,
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 0,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 0,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 5
+          }
+        },
+        "median_delay_s_detected_only": null,
+        "pre_stimulus_trigger_records": 0,
+        "background_only_days_total": 2,
+        "background_only_days_eligible": 2,
+        "background_g2_events": 0,
+        "background_days_triggered": 0,
+        "background_observed_hours": 2.973888888888889,
+        "background_event_per_observed_hour": 0.0
+      },
+      "R1": {
+        "stimulus_records_total": 15,
+        "stimulus_eligible": 13,
+        "stimulus_unknown": {
+          "unknown_post_coverage": 1,
+          "unknown_calibration": 1
+        },
+        "detected_within_5min": 1,
+        "detected_by_class": {
+          "wine": {
+            "numerator": 1,
+            "denominator": 8
+          },
+          "banana": {
+            "numerator": 0,
+            "denominator": 5
+          }
+        },
+        "median_delay_s_detected_only": 121.0,
+        "pre_stimulus_trigger_records": 0,
+        "background_only_days_total": 2,
+        "background_only_days_eligible": 2,
+        "background_g2_events": 0,
+        "background_days_triggered": 0,
+        "background_observed_hours": 2.973888888888889,
+        "background_event_per_observed_hour": 0.0
+      }
+    }
+  }
+}

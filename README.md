@@ -4,7 +4,7 @@
 
 ## 研究边界
 
-- 气体数据来自公开实验室数据集；E1 另核查了受控场地及智慧楼宇候选数据，但尚未将其用于建模；人员位置数据如由场景模拟生成，须在文件和图表中标记为“仿真”。
+- 气体数据来自公开实验室与家庭气味刺激数据集；E1 另核查了受控场地与智慧楼宇来源，其中 SB112 已用于独立背景触发检查，TADI 尚未用于建模；人员位置如由场景模拟生成，须在文件和图表中标记为“仿真”。
 - Intel RealSense D435、NVIDIA Jetson Orin Nano 和现场传感器属于**拟部署系统架构**，项目未使用这些设备采集数据或进行性能测试。
 - 实验室气体释放识别、仿真场景风险评估与焦化园区事故预警是不同结论。论文只报告由实验实际支持的结论。
 - 申报书中的烟雾遮挡、积液识别及论文发表目标须在后续阶段逐项对照完成情况，不能直接标记为已完成。
@@ -23,7 +23,7 @@
 10. 阶段 7A：项目组选择 E1 方案 A 并批准[分离验证协议](docs/stage7-a-two-source-experiment-protocol-proposal.md)，先[冻结参数](configs/stage7_a_protocol_candidate.json)，再用[程序](scripts/run_stage7_a.py)分别完成 UCI 322、SB112 [实验结果](docs/stage7-a-separate-validation-results.md)。CO 气室未来时段多通道检出 14／14，单通道 0／14；SB112 烟雾通道在未人工触发测试日有 6 次／约 24 h 背景报警；**两者都不是焦化厂现场测试**。
 11. 阶段 7B：项目组选择 A 并追问单通道漏检；先[固定事后诊断范围](configs/stage7_b_posthoc_plan.json)，后进行[事后诊断](docs/stage7-b-posthoc-diagnostic-results.md)。CO 单通道 14 个测试起点的 60 秒峰值均未达训练阈值；B1 对仅乙烯设定变化也全部报警，故不可称为 CO／甲烷气种专一检测；7B 不修改 7A 原结果。
 12. 阶段 8：已取得波恩大学[两条相似室内人员序列](docs/stage8-v1a-two-sequence-protocol-proposal.md)，完成[115 帧人工框及固定模型的二维检测](docs/stage8-v1a-a2-2d-detector-results.md)、[第二条序列深度门控与虚拟区复核](docs/stage8-v1a-a2-repeat-depth-results.md)及[拟部署系统接口与申报目标对照](docs/stage8-n1-system-evidence-map.md)。没有独立人体距离或真实禁区真值。
-13. 阶段 9：已确定[论文 T1-A 主次](docs/stage9-t1-manuscript-outline-proposal.md)、完成[证据缺口核查](docs/stage9-evidence-literature-gap-audit.md)及[正文候选证据表 v0](docs/stage9-manuscript-evidence-table-v0.md)。[独立审阅挑战 B](docs/stage9-b-independent-review-challenge-protocol-proposal.md)因目前无独立审阅者暂缓；按[进度与下一步](docs/stage9-no-reviewer-progress-and-next-steps.md)核对 Bonn 私有材料并分节写作。没有运行 B、写完论文或投稿。
+13. 阶段 9：已确定[论文 T1-A 主次](docs/stage9-t1-manuscript-outline-proposal.md)、完成[证据缺口核查](docs/stage9-evidence-literature-gap-audit.md)及[正文候选证据表 v0](docs/stage9-manuscript-evidence-table-v0.md)。[独立审阅挑战 B](docs/stage9-b-independent-review-challenge-protocol-proposal.md)因目前无独立审阅者暂缓；[UCI 362 日期分组后的一次实验](docs/stage9-a1-uci362-locked-results.md)八通道测试 0/13、R1 1/13，表明该冻结规则在家庭酒/香蕉刺激中不能证明有效跨环境检出，且非焦化气体现场数据。按[进度与下一步](docs/stage9-no-reviewer-progress-and-next-steps.md)继续阶段决策。论文未写完或投稿。
 
 数据文件不提交到 Git。数据源及归档校验记录见 [data/sources.md](data/sources.md)；UCI 下载方法见 [scripts/download_data.py](scripts/download_data.py)。**Bonn 视觉序列**运行 `python scripts/prepare_bonn_v1a.py`，缺少原包时脚本会从官网自动下载并校验；Windows 用 `py -3 scripts\prepare_bonn_v1a.py`，详见[标注操作说明](docs/stage8-v1a-a2-annotation-kit.md)。未完成的申报承诺见 [docs/commitments.md](docs/commitments.md)。代码、图表及结论追溯规范见 [本项目研究工作流](docs/research-workflow.md)，上游为 [math-modeling-ai-workflow](https://github.com/baoxuebin-2026/math-modeling-ai-workflow)。
 

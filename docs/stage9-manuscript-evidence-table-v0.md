@@ -12,6 +12,7 @@
 | UCI 322 | 乙烯＋CO、乙烯＋甲烷各一条气室时序；气体列为**供气设定值** | 独立补充：泛气体响应及干扰 | 目标气种专一识别或真实人受气体影响 |
 | UCI 487 | 13 个实验日重复相同 CO 程序，V3 留出 3 日×20 段位 | 独立补充：已完成暴露段 CO 估计 | 实时事故预警 |
 | SB112 | 单设备建筑传感器背景日，没有逐秒事故核实 | 独立补充：烟雾传感器背景触发 | 视频烟雾遮挡识别或确定的假事故报警 |
+| UCI 362 | 家庭酒/香蕉刺激与背景，共 99 条有时序的记录；按 58 日期分组 | 已确认协议的一次外部压力测试，**负结果** | CO/CH4 危险泄漏或焦化厂泛化；测试集在此次运行后不再可作新盲测 |
 
 依据：[309 报告](stage5-m1-pilot-results.md)、[Bonn 二维报告](stage8-v1a-a2-2d-detector-results.md)、[深度报告](stage8-v1a-a2-repeat-depth-results.md)、[S1 报告](stage6-s1-fixed-replay-results.md)、[322/SB112 报告](stage7-a-separate-validation-results.md)、[487 报告](stage5-uci487-v3-results.md)。
 
@@ -31,6 +32,7 @@
 | UCI 322 | B1 对后期时间块的 CO 设定点 14/14、甲烷 13/13 次在 60 s 内响应；事后诊断对仅乙烯变化仍分别 17/17 和 14/14 次响应 | [7A](stage7-a-separate-validation-results.md)、[7B](stage7-b-posthoc-diagnostic-results.md)、[汇总](../results/stage7_a/uci322_summary.csv)；支持泛气体响应，不支持气种专一率 |
 | UCI 487 | 验证先选的 14 传感器＋加热相位＋温湿度模型在 60 个留出段位 MAE 0.530 ppm | [运行记录](../results/uci487_v3/run.json)；取每段 15 min 暴露的末 300 s；测试后看到的另一模型 0.463 ppm 不回写为主结果 |
 | SB112 | 烟雾通道在 2022-03-10 的 23.978 h 覆盖内去抖合并为 6 个背景触发事件 | [汇总](../results/stage7_a/sb112_summary.csv)；无逐秒环境事故真值，不能称六次经核实的假事故 |
+| UCI 362 | 按日期锁定 12 个测试日，刺激 15 条中可评价 13 条；八通道 5 分钟检出 0/13、R1 1/13，纯背景日 0/2 日、2.974 观测小时均零触发 | [一次运行](stage9-a1-uci362-locked-results.md)、[记录](../results/stage9_uci362/locked_run/run.json)；酒/香蕉家庭气味，不支持焦化危险气体跨域检出；零背景报警的观察时长太短 |
 
 ## 投稿前仍需补的核对
 
