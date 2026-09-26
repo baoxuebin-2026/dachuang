@@ -1,0 +1,86 @@
+{
+  "dataset": "yd7vw4c5mk",
+  "source": "Mendeley Data DOI 10.17632/yd7vw4c5mk.1",
+  "archive_bytes": 58631456,
+  "archive_sha256": "405a8b27004a2e318bf213cf209398d3d58b45bb3c7a78f159e69003ff459311",
+  "attribute_sha256": "0eed822b03816dee2e437fc3fde7eb12a25b6b236c3d107cedddcb747404ee05",
+  "columns": [
+    "year",
+    "month",
+    "day",
+    "hour",
+    "minute",
+    "second",
+    "AN311",
+    "AN422",
+    "AN423",
+    "TP1721",
+    "RH1722",
+    "BA1723",
+    "TP1711",
+    "RH1712",
+    "BA1713",
+    "MM252",
+    "MM261",
+    "MM262",
+    "MM263",
+    "MM264",
+    "MM256",
+    "MM211",
+    "CM861",
+    "CR863",
+    "P_864",
+    "TC862",
+    "WM868",
+    "AMP1_IR",
+    "AMP2_IR",
+    "DMP3_IR",
+    "DMP4_IR",
+    "AMP5_IR",
+    "F_SIDE",
+    "V"
+  ],
+  "first_timestamp": [
+    2014,
+    3,
+    2,
+    0,
+    0,
+    0
+  ],
+  "last_timestamp": [
+    2014,
+    6,
+    16,
+    12,
+    32,
+    9
+  ],
+  "counts": {
+    "days": 107,
+    "rows": 9199930,
+    "duplicate_or_backward": 0,
+    "forward_gaps": 1,
+    "MM264_outside_0_30": 30,
+    "MM263_outside_0_30": 290853,
+    "timestamp_discontinuity_breaks_event_runs": 1
+  },
+  "warning_threshold_pct_ch4": 1.0,
+  "warning_rows_from_measured_target": {
+    "MM263": 18802,
+    "MM264": 77350,
+    "MM256": 114800
+  },
+  "warning_episode_starts": {
+    "MM264": 4405,
+    "MM263": 921,
+    "MM256": 3036
+  },
+  "warning_episode_runs_at_least_30_observed_seconds": {
+    "MM264": 382,
+    "MM263": 103,
+    "MM256": 584
+  },
+  "note": "Publisher-synchronised 1s time series. Crossings are defined from the same measured methane sensors, not independent release/accident truth. No train/test division, model, or risk score calculated.",
+  "audit_code_sha256": "9cf1462eb2bdc69cb484fa048e0b2360515ef75223f2efc15624e066d40882a1"
+}

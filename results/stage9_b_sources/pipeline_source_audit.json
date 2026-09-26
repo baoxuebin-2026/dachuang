@@ -1,0 +1,2090 @@
+{
+  "dataset": "sdh7x7b68d",
+  "source": "Mendeley Data DOI 10.17632/sdh7x7b68d.1",
+  "archive_bytes": 1216197,
+  "archive_sha256": "d1a863309156033ed5f5ce909f464078cca6ab247b775e66254c0db8b77dffc5",
+  "trial_files": 186,
+  "valid_rows_per_trial": {
+    "1000": 185,
+    "2000": 1
+  },
+  "trailing_blank_rows_total": 62,
+  "filename_levels_in_order": [
+    [
+      0,
+      2000,
+      4000,
+      6000,
+      8000,
+      10000
+    ],
+    [
+      0,
+      500,
+      1000,
+      1500,
+      2000,
+      2500
+    ],
+    [
+      0,
+      5,
+      10,
+      15,
+      20,
+      25
+    ]
+  ],
+  "all_zero_concentration_trials": 1,
+  "no_explicit_timestamp_column": true,
+  "files": [
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-0-0.txt",
+      "filename_concentrations": [
+        0,
+        0,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-0-10.txt",
+      "filename_concentrations": [
+        0,
+        0,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-0-15.txt",
+      "filename_concentrations": [
+        0,
+        0,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-0-20.txt",
+      "filename_concentrations": [
+        0,
+        0,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-0-25.txt",
+      "filename_concentrations": [
+        0,
+        0,
+        25
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-0-5.txt",
+      "filename_concentrations": [
+        0,
+        0,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1000-0.txt",
+      "filename_concentrations": [
+        0,
+        1000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1000-10.txt",
+      "filename_concentrations": [
+        0,
+        1000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1000-15.txt",
+      "filename_concentrations": [
+        0,
+        1000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1000-20.txt",
+      "filename_concentrations": [
+        0,
+        1000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1000-25.txt",
+      "filename_concentrations": [
+        0,
+        1000,
+        25
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1000-5.txt",
+      "filename_concentrations": [
+        0,
+        1000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1500-0.txt",
+      "filename_concentrations": [
+        0,
+        1500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1500-10.txt",
+      "filename_concentrations": [
+        0,
+        1500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1500-15.txt",
+      "filename_concentrations": [
+        0,
+        1500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1500-20.txt",
+      "filename_concentrations": [
+        0,
+        1500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1500-25.txt",
+      "filename_concentrations": [
+        0,
+        1500,
+        25
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-1500-5.txt",
+      "filename_concentrations": [
+        0,
+        1500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2000-0.txt",
+      "filename_concentrations": [
+        0,
+        2000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2000-10.txt",
+      "filename_concentrations": [
+        0,
+        2000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2000-15.txt",
+      "filename_concentrations": [
+        0,
+        2000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2000-20.txt",
+      "filename_concentrations": [
+        0,
+        2000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2000-25.txt",
+      "filename_concentrations": [
+        0,
+        2000,
+        25
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2000-5.txt",
+      "filename_concentrations": [
+        0,
+        2000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2500-0.txt",
+      "filename_concentrations": [
+        0,
+        2500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2500-10.txt",
+      "filename_concentrations": [
+        0,
+        2500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2500-15.txt",
+      "filename_concentrations": [
+        0,
+        2500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2500-20.txt",
+      "filename_concentrations": [
+        0,
+        2500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2500-25.txt",
+      "filename_concentrations": [
+        0,
+        2500,
+        25
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-2500-5.txt",
+      "filename_concentrations": [
+        0,
+        2500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-500-0.txt",
+      "filename_concentrations": [
+        0,
+        500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-500-10.txt",
+      "filename_concentrations": [
+        0,
+        500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-500-15.txt",
+      "filename_concentrations": [
+        0,
+        500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-500-20.txt",
+      "filename_concentrations": [
+        0,
+        500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-500-25.txt",
+      "filename_concentrations": [
+        0,
+        500,
+        25
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/0-500-5.txt",
+      "filename_concentrations": [
+        0,
+        500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-0-0.txt",
+      "filename_concentrations": [
+        10000,
+        0,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-0-10.txt",
+      "filename_concentrations": [
+        10000,
+        0,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-0-15.txt",
+      "filename_concentrations": [
+        10000,
+        0,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-0-20.txt",
+      "filename_concentrations": [
+        10000,
+        0,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-0-5.txt",
+      "filename_concentrations": [
+        10000,
+        0,
+        5
+      ],
+      "valid_rows": 2000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1000-0.txt",
+      "filename_concentrations": [
+        10000,
+        1000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1000-10.txt",
+      "filename_concentrations": [
+        10000,
+        1000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1000-15.txt",
+      "filename_concentrations": [
+        10000,
+        1000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1000-20.txt",
+      "filename_concentrations": [
+        10000,
+        1000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1000-5.txt",
+      "filename_concentrations": [
+        10000,
+        1000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1500-0.txt",
+      "filename_concentrations": [
+        10000,
+        1500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1500-10.txt",
+      "filename_concentrations": [
+        10000,
+        1500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1500-15.txt",
+      "filename_concentrations": [
+        10000,
+        1500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1500-20.txt",
+      "filename_concentrations": [
+        10000,
+        1500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-1500-5.txt",
+      "filename_concentrations": [
+        10000,
+        1500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2000-0.txt",
+      "filename_concentrations": [
+        10000,
+        2000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2000-10.txt",
+      "filename_concentrations": [
+        10000,
+        2000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2000-15.txt",
+      "filename_concentrations": [
+        10000,
+        2000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2000-20.txt",
+      "filename_concentrations": [
+        10000,
+        2000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2000-5.txt",
+      "filename_concentrations": [
+        10000,
+        2000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2500-0.txt",
+      "filename_concentrations": [
+        10000,
+        2500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2500-10.txt",
+      "filename_concentrations": [
+        10000,
+        2500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2500-15.txt",
+      "filename_concentrations": [
+        10000,
+        2500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2500-20.txt",
+      "filename_concentrations": [
+        10000,
+        2500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-2500-5.txt",
+      "filename_concentrations": [
+        10000,
+        2500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-500-0.txt",
+      "filename_concentrations": [
+        10000,
+        500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-500-10.txt",
+      "filename_concentrations": [
+        10000,
+        500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-500-15.txt",
+      "filename_concentrations": [
+        10000,
+        500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-500-20.txt",
+      "filename_concentrations": [
+        10000,
+        500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/10000-500-5.txt",
+      "filename_concentrations": [
+        10000,
+        500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-0-0.txt",
+      "filename_concentrations": [
+        2000,
+        0,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-0-10.txt",
+      "filename_concentrations": [
+        2000,
+        0,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-0-15.txt",
+      "filename_concentrations": [
+        2000,
+        0,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-0-20.txt",
+      "filename_concentrations": [
+        2000,
+        0,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-0-5.txt",
+      "filename_concentrations": [
+        2000,
+        0,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1000-0.txt",
+      "filename_concentrations": [
+        2000,
+        1000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1000-10.txt",
+      "filename_concentrations": [
+        2000,
+        1000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1000-15.txt",
+      "filename_concentrations": [
+        2000,
+        1000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1000-20.txt",
+      "filename_concentrations": [
+        2000,
+        1000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1000-5.txt",
+      "filename_concentrations": [
+        2000,
+        1000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1500-0.txt",
+      "filename_concentrations": [
+        2000,
+        1500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1500-10.txt",
+      "filename_concentrations": [
+        2000,
+        1500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1500-15.txt",
+      "filename_concentrations": [
+        2000,
+        1500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1500-20.txt",
+      "filename_concentrations": [
+        2000,
+        1500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-1500-5.txt",
+      "filename_concentrations": [
+        2000,
+        1500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2000-0.txt",
+      "filename_concentrations": [
+        2000,
+        2000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2000-10.txt",
+      "filename_concentrations": [
+        2000,
+        2000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2000-15.txt",
+      "filename_concentrations": [
+        2000,
+        2000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2000-20.txt",
+      "filename_concentrations": [
+        2000,
+        2000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2000-5.txt",
+      "filename_concentrations": [
+        2000,
+        2000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2500-0.txt",
+      "filename_concentrations": [
+        2000,
+        2500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2500-10.txt",
+      "filename_concentrations": [
+        2000,
+        2500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2500-15.txt",
+      "filename_concentrations": [
+        2000,
+        2500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2500-20.txt",
+      "filename_concentrations": [
+        2000,
+        2500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-2500-5.txt",
+      "filename_concentrations": [
+        2000,
+        2500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-500-0.txt",
+      "filename_concentrations": [
+        2000,
+        500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-500-10.txt",
+      "filename_concentrations": [
+        2000,
+        500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-500-15.txt",
+      "filename_concentrations": [
+        2000,
+        500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-500-20.txt",
+      "filename_concentrations": [
+        2000,
+        500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/2000-500-5.txt",
+      "filename_concentrations": [
+        2000,
+        500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-0-0.txt",
+      "filename_concentrations": [
+        4000,
+        0,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-0-10.txt",
+      "filename_concentrations": [
+        4000,
+        0,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-0-15.txt",
+      "filename_concentrations": [
+        4000,
+        0,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-0-20.txt",
+      "filename_concentrations": [
+        4000,
+        0,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-0-5.txt",
+      "filename_concentrations": [
+        4000,
+        0,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1000-0.txt",
+      "filename_concentrations": [
+        4000,
+        1000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1000-10.txt",
+      "filename_concentrations": [
+        4000,
+        1000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1000-15.txt",
+      "filename_concentrations": [
+        4000,
+        1000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1000-20.txt",
+      "filename_concentrations": [
+        4000,
+        1000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1000-5.txt",
+      "filename_concentrations": [
+        4000,
+        1000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1500-0.txt",
+      "filename_concentrations": [
+        4000,
+        1500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1500-10.txt",
+      "filename_concentrations": [
+        4000,
+        1500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1500-15.txt",
+      "filename_concentrations": [
+        4000,
+        1500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1500-20.txt",
+      "filename_concentrations": [
+        4000,
+        1500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-1500-5.txt",
+      "filename_concentrations": [
+        4000,
+        1500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2000-0.txt",
+      "filename_concentrations": [
+        4000,
+        2000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2000-10.txt",
+      "filename_concentrations": [
+        4000,
+        2000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2000-15.txt",
+      "filename_concentrations": [
+        4000,
+        2000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2000-20.txt",
+      "filename_concentrations": [
+        4000,
+        2000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2000-5.txt",
+      "filename_concentrations": [
+        4000,
+        2000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2500-0.txt",
+      "filename_concentrations": [
+        4000,
+        2500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2500-10.txt",
+      "filename_concentrations": [
+        4000,
+        2500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2500-15.txt",
+      "filename_concentrations": [
+        4000,
+        2500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2500-20.txt",
+      "filename_concentrations": [
+        4000,
+        2500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-2500-5.txt",
+      "filename_concentrations": [
+        4000,
+        2500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-500-0.txt",
+      "filename_concentrations": [
+        4000,
+        500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-500-10.txt",
+      "filename_concentrations": [
+        4000,
+        500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-500-15.txt",
+      "filename_concentrations": [
+        4000,
+        500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-500-20.txt",
+      "filename_concentrations": [
+        4000,
+        500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/4000-500-5.txt",
+      "filename_concentrations": [
+        4000,
+        500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-0-0.txt",
+      "filename_concentrations": [
+        6000,
+        0,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-0-10.txt",
+      "filename_concentrations": [
+        6000,
+        0,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-0-15.txt",
+      "filename_concentrations": [
+        6000,
+        0,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-0-20.txt",
+      "filename_concentrations": [
+        6000,
+        0,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-0-5.txt",
+      "filename_concentrations": [
+        6000,
+        0,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1000-0.txt",
+      "filename_concentrations": [
+        6000,
+        1000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1000-10.txt",
+      "filename_concentrations": [
+        6000,
+        1000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1000-15.txt",
+      "filename_concentrations": [
+        6000,
+        1000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1000-20.txt",
+      "filename_concentrations": [
+        6000,
+        1000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1000-5.txt",
+      "filename_concentrations": [
+        6000,
+        1000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1500-0.txt",
+      "filename_concentrations": [
+        6000,
+        1500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1500-10.txt",
+      "filename_concentrations": [
+        6000,
+        1500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1500-15.txt",
+      "filename_concentrations": [
+        6000,
+        1500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1500-20.txt",
+      "filename_concentrations": [
+        6000,
+        1500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-1500-5.txt",
+      "filename_concentrations": [
+        6000,
+        1500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2000-0.txt",
+      "filename_concentrations": [
+        6000,
+        2000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2000-10.txt",
+      "filename_concentrations": [
+        6000,
+        2000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2000-15.txt",
+      "filename_concentrations": [
+        6000,
+        2000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2000-20.txt",
+      "filename_concentrations": [
+        6000,
+        2000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2000-5.txt",
+      "filename_concentrations": [
+        6000,
+        2000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2500-0.txt",
+      "filename_concentrations": [
+        6000,
+        2500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2500-10.txt",
+      "filename_concentrations": [
+        6000,
+        2500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2500-15.txt",
+      "filename_concentrations": [
+        6000,
+        2500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2500-20.txt",
+      "filename_concentrations": [
+        6000,
+        2500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-2500-5.txt",
+      "filename_concentrations": [
+        6000,
+        2500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-500-0.txt",
+      "filename_concentrations": [
+        6000,
+        500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-500-10.txt",
+      "filename_concentrations": [
+        6000,
+        500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-500-15.txt",
+      "filename_concentrations": [
+        6000,
+        500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-500-20.txt",
+      "filename_concentrations": [
+        6000,
+        500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/6000-500-5.txt",
+      "filename_concentrations": [
+        6000,
+        500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 0,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-0-0.txt",
+      "filename_concentrations": [
+        8000,
+        0,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-0-10.txt",
+      "filename_concentrations": [
+        8000,
+        0,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-0-15.txt",
+      "filename_concentrations": [
+        8000,
+        0,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-0-20.txt",
+      "filename_concentrations": [
+        8000,
+        0,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-0-5.txt",
+      "filename_concentrations": [
+        8000,
+        0,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1000-0.txt",
+      "filename_concentrations": [
+        8000,
+        1000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1000-10.txt",
+      "filename_concentrations": [
+        8000,
+        1000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1000-15.txt",
+      "filename_concentrations": [
+        8000,
+        1000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1000-20.txt",
+      "filename_concentrations": [
+        8000,
+        1000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1000-5.txt",
+      "filename_concentrations": [
+        8000,
+        1000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1500-0.txt",
+      "filename_concentrations": [
+        8000,
+        1500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1500-10.txt",
+      "filename_concentrations": [
+        8000,
+        1500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1500-15.txt",
+      "filename_concentrations": [
+        8000,
+        1500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1500-20.txt",
+      "filename_concentrations": [
+        8000,
+        1500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-1500-5.txt",
+      "filename_concentrations": [
+        8000,
+        1500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2000-0.txt",
+      "filename_concentrations": [
+        8000,
+        2000,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2000-10.txt",
+      "filename_concentrations": [
+        8000,
+        2000,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2000-15.txt",
+      "filename_concentrations": [
+        8000,
+        2000,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2000-20.txt",
+      "filename_concentrations": [
+        8000,
+        2000,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2000-5.txt",
+      "filename_concentrations": [
+        8000,
+        2000,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2500-0.txt",
+      "filename_concentrations": [
+        8000,
+        2500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2500-10.txt",
+      "filename_concentrations": [
+        8000,
+        2500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2500-15.txt",
+      "filename_concentrations": [
+        8000,
+        2500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2500-20.txt",
+      "filename_concentrations": [
+        8000,
+        2500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-2500-5.txt",
+      "filename_concentrations": [
+        8000,
+        2500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-500-0.txt",
+      "filename_concentrations": [
+        8000,
+        500,
+        0
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-500-10.txt",
+      "filename_concentrations": [
+        8000,
+        500,
+        10
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-500-15.txt",
+      "filename_concentrations": [
+        8000,
+        500,
+        15
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-500-20.txt",
+      "filename_concentrations": [
+        8000,
+        500,
+        20
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    },
+    {
+      "name": "Synergetic laser-electronic sensor array dataset/8000-500-5.txt",
+      "filename_concentrations": [
+        8000,
+        500,
+        5
+      ],
+      "valid_rows": 1000,
+      "blank_rows": 2,
+      "columns": 3
+    }
+  ],
+  "note": "Three data columns are not labelled in raw TXT; file names encode three nominal concentrations. 50s clean / 200s injection / 250s purge timing comes from Mendeley description, not per-row event annotation. No sensor response or model score calculated.",
+  "audit_code_sha256": "9cf1462eb2bdc69cb484fa048e0b2360515ef75223f2efc15624e066d40882a1"
+}
