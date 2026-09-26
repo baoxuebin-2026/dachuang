@@ -1,0 +1,23 @@
+{
+  "id": "b2_b_a_development_only_v1",
+  "parent_protocol": "b2_b_first_sustained_crossing_v1",
+  "source_target": "MM256",
+  "train_dates_inclusive": ["2014-03-02", "2014-04-15"],
+  "internal_validation_dates_inclusive": ["2014-04-16", "2014-04-30"],
+  "split_guard_history_seconds": 600,
+  "split_guard_future_seconds": 389,
+  "feature_window_seconds": [60, 300],
+  "features": ["current_pct", "delta_60s_pct", "delta_300s_pct", "mean_last_60s_pct", "mean_last_300s_pct"],
+  "score_methods": {
+    "current_concentration": "current_pct",
+    "causal_slope_extrapolation": "current_pct + 360 * delta_300s_pct / 300",
+    "simple_logistic": "StandardScaler and LogisticRegression(C=1.0, class_weight=balanced, max_iter=1000, random_state=20260926)"
+  },
+  "threshold_candidates": "up to 501 fixed empirical training-score quantiles from 0 to 1 plus an always-silent threshold; no validation-score-derived thresholds",
+  "exploratory_false_new_alert_budgets_per_24_background_hours": [0, 1, 2, 4],
+  "threshold_pick_on_train": "maximize matched evaluable proxy events subject to the named training false-alarm budget; tie: fewer background false alerts, fewer duplicate or unmatched positive-window alerts, then higher score threshold",
+  "fresh_alarm": "score >= threshold and (previous eligible minute is not adjacent or was below threshold)",
+  "event_match": "each new alert matches the earliest unmatched evaluable event with onset > alert time and <= alert time + 360 s",
+  "background_denominator": "negative eligible minute windows / 60 hours; false starts only on negative eligible windows; unmatched new starts inside positive windows are reported separately",
+  "interpretation": "Internal development comparison of future sensor crossing, not final selected model, independent hazard truth, or coke-plant accident prediction."
+}
