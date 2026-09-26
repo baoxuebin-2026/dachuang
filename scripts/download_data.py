@@ -17,6 +17,10 @@ DATASETS = {
         "gas+sensor+array+under+dynamic+gas+mixtures",
         "8b6323b801363e11343ba1a5a7718e76666b715e753b3a40dbdfd1838d953fe7",
     ),
+    "361": (
+        "twin+gas+sensor+arrays",
+        "e8801de3a98d3db2b48fccf0be4d681879a1441f5732ac6fbee1c48a05b49167",
+    ),
     "362": (
         "gas+sensors+for+home+activity+monitoring",
         "7c143b9f4402a8205ebe8072c2ce0967c25741f1865e23d650e981053294f395",
@@ -43,7 +47,7 @@ def download(dataset_id: str) -> None:
     slug, expected = DATASETS[dataset_id]
     url = f"https://archive.ics.uci.edu/static/public/{dataset_id}/{slug}.zip"
     DEST.mkdir(parents=True, exist_ok=True)
-    target = (DEST / "uci362" / "uci362_original.zip" if dataset_id == "362"
+    target = (DEST / f"uci{dataset_id}" / f"uci{dataset_id}_original.zip" if dataset_id in ("361", "362")
               else DEST / f"uci_{dataset_id}_original.zip")
     target.parent.mkdir(parents=True, exist_ok=True)
     partial = target.with_suffix(".zip.part")

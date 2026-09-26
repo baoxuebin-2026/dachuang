@@ -1,6 +1,6 @@
 # 数据来源候选表（阶段 2，待项目组确定使用方案）
 
-初核日期：2026-09-24；E1 增补核查：2026-09-25；UCI 362 候选核查：2026-09-26。UCI 309、322、487、362 的压缩包已实际下载、完成 ZIP 完整性检查并记录 SHA-256；TADI 与 SB112 的公开原文件现已下载并核对发布的 MD5，结果见 [E1 源核查](../docs/stage7-e1-external-data-audit.md)；未注明者仍仅核查公开页面。本表不是焦化园区现场数据清单。
+初核日期：2026-09-24；E1 增补核查：2026-09-25；UCI 362、361 及 GreenLITE 候选核查：2026-09-26。UCI 309、322、361、362、487 的压缩包已实际下载、完成 ZIP 完整性检查并记录 SHA-256；TADI 与 SB112 的公开原文件现已下载并核对发布的 MD5，结果见 [E1 源核查](../docs/stage7-e1-external-data-audit.md)；未注明者仍仅核查公开页面。本表不是焦化园区现场数据清单。
 
 | 数据集与原始下载入口 | 规模、主要字段与时间信息 | 浓度／事故标签 | 与本项目关系及限制 | 许可与结论 |
 | --- | --- | --- | --- | --- |
@@ -8,6 +8,9 @@
 | [UCI 322：动态混合气体](https://archive.ics.uci.edu/dataset/322/gas+sensor+array+under+dynamic+gas+mixtures) · [ZIP](https://archive.ics.uci.edu/static/public/322/gas+sensor+array+under+dynamic+gas+mixtures.zip) | 官方页显示 4,178,504 行，**E1 实际文件计数**为 CO 4,208,261 行＋甲烷 4,178,504 行，共 8,386,765 行；2 条约 11.6 h 实验（乙烯＋甲烷、乙烯＋CO）；100 Hz 标称；时间、两种气体浓度设定值、16 路传感器响应。 | 有**设定浓度**，不是独立焦化现场检测值；无事故等级。甲烷与 CO 不在同一条实验序列。 | 可用于浓度变化与长序列响应的**独立辅助实验**；仅两条实验序列，样本行数不等于独立实验数；首段固定方案以及仅用两位小数记录时间造成的重复时间戳见 E1 审计。 | 页面许可栏 CC BY 4.0，但正文另写只限科研、排除商用；本项目科研使用，暂不分发原包。 |
 | [UCI 487：CO＋温湿度](https://archive.ics.uci.edu/dataset/487/gas+sensor+array+temperature+modulation) · [ZIP](https://archive.ics.uci.edu/static/public/487/gas+sensor+array+temperature+modulation.zip) | 4,095,000 行、13 天实验；时间、CO、湿度、温度、流量、加热电压、14 路传感器；气体传感器约 3.5 Hz，温湿度参考每 5 s。 | 实验室产生并记录的 CO 浓度；无事故等级。 | **推荐独立辅助实验**：检验湿度变化下的 CO 感知；设备、工况与 309 不同，不构成同步多源数据。 | CC BY 4.0。 |
 | [UCI 362：家庭活动气味监测](https://archive.ics.uci.edu/dataset/362/gas+sensors+for+home+activity+monitoring) | 元数据 100 条（酒 36、香蕉 33、背景 31）；**实际原文件只有 99 个有时序的 ID**，缺背景 `id=95`；逐行脚本计得 928,991 行，与官网 919,438 实例不符，差异原因待查；约 1 Hz，`id,time,R1–R8,Temp.,Humidity`，元数据另有日期、类别、起点和刺激时长。 | 人为酒／香蕉刺激起点和类别；背景记录未人为刺激；**无 CO／CH4 浓度、事故/危险等级标签**。 | 已按[日期分组冻结协议](../docs/stage9-a1-uci362-source-audit-and-protocol.md)做[一次外部压力测试](../docs/stage9-a1-uci362-locked-results.md)：5 分钟八通道测试 0/13、R1 1/13；不得解释为焦化危险气体外测。 | CC BY 4.0；原 ZIP 已下载并核对外/内层 CRC 和 SHA-256；测试集已查看，后续模型不可再称此集为新盲测。 |
+| [UCI 361：Twin gas sensor arrays](https://archive.ics.uci.edu/dataset/361/twin+gas+sensor+arrays) · [原作者论文](https://diposit.ub.edu/items/cdbf8b81-5888-4cd9-9270-fb6df6e4103d) | 640 条约 600 s、8 路 MOX 电阻记录；CO／甲烷／乙醇／乙烯各 160 条、5 个传感器单元；[原包时轴审计](../results/stage9_uci361/source_audit.json)显示文件行数 19,289–60,001、有重复时间戳；论文给出固定 50 s 清洁空气、100 s 目标气体、450 s 净化程序。 | 文件名有目标气体及浓度档位；无独立事故等级或长时纯阴性试次。 | 可作为 CO／甲烷跨单元校准和受控响应的**另一问题**；与 UCI 362 的 15 min 基线及家庭气味任务不同，不可直接充当同模型盲测；固定供气时刻须防止时钟捷径。**只审计来源，未算响应或模型分数。** | 204,012,393 字节 ZIP 已核对 SHA-256 与 CRC；页面 CC BY 4.0 与正文科研限用说明并存，研究使用但暂不再分发；[候选分析](../docs/stage9-a2-dev-failure-and-new-source-options.md)。 |
+| [GreenLITE EPA 2022（Zenodo）](https://zenodo.org/records/10888088) | 原 ZIP 27 个按日 HDF5；抽样核查 UTC、光路、甲烷浓度 ppmv 与天气字段。 | 下载包中未找到逐次释放起止时刻／阴性事件标签。 | 光路甲烷浓度与八路 MOX 不同；若另外找到可信释放日程，可另立监测任务，现不可作为同模型事件盲测。 | 原 ZIP 7,597,796 字节、MD5 `4d7ec7184024c16c74586e626d5b07d0` 与 CRC 已核；Zenodo 记录 CC BY 4.0；仅候选。 |
+| [METEC Curated Dataset](https://metec.colostate.edu/curated-dataset/) | 官方页描述受控释放设定、气象与甲烷参考传感器的日数据。 | 理论上可分离发布日程与观测；本项目尚未取得和核验实际日文件。 | 若下载、时轴与阴性覆盖可核实，可能成为下一独立源；目前**不能声称可用**。 | 下载入口、字段、使用条款未最终核查；条件性候选。 |
 | [UCI 1081：低浓度气体](https://archive.ics.uci.edu/dataset/1081/gas+sensor+array+low-concentration) | 90 个独立样本；六种 VOC，各 50／100／200 ppb；10 路传感器，每样本拼接 9000 点，1 Hz。 | 有气体类型与浓度档位；无事故标签。 | 不含甲烷／CO，主要验证微弱 VOC 检测，与主场景对应弱。 | CC BY 4.0；暂不使用。 |
 | [Tennessee Eastman Process 仿真数据与代码](https://github.com/camaramm/tennessee-eastman-profBraatz) | 正常与 21 类过程故障；示例训练文件各 480×52、测试文件各 960×52，变量含过程测量与控制量。 | 有**仿真过程故障类型**，不是人员暴露或园区泄漏事故标签。 | 可作为化工过程故障方法对照，但与主场景迁移跨度大。 | 原仓库附许可与署名条件；暂不使用。 |
 | [ISR RGB-D Dataset](https://github.com/hcmr-lab/ISR_RGB-D_Dataset) | 项目页面描述 10,000 帧 D435 实验室 RGB-D 序列，含 person 框标注。 | 人员类别标注；没有焦化危险区域／环境气体联合标签。 | 仅作为未来视觉模块**独立验证候选**；数据下载及再使用许可待核验。 | 暂不下载，不能写作本项目 D435 实测。 |
@@ -23,6 +26,7 @@
 | --- | ---: | --- | --- |
 | 309 | 23,403,793 | `5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e` | 180 个 raw 文件＋180 个 downsampled 文件；ZIP CRC 完整 |
 | 322 | 369,001,314 | `8b6323b801363e11343ba1a5a7718e76666b715e753b3a40dbdfd1838d953fe7` | `ethylene_CO.txt` 和 `ethylene_methane.txt`；ZIP CRC 完整 |
+| 361 | 204,012,393 | `e8801de3a98d3db2b48fccf0be4d681879a1441f5732ac6fbee1c48a05b49167` | 640 个试验文本文件；ZIP CRC 完整；[时轴审计](../results/stage9_uci361/source_audit.json) |
 | 487 | 183,298,753 | `cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4` | 外层含 README 与嵌套 ZIP；13 个 CSV 在嵌套 ZIP 中；内外层 ZIP CRC 完整 |
 | 362 | 29,055,749 | `7c143b9f4402a8205ebe8072c2ce0967c25741f1865e23d650e981053294f395` | 外层元数据和内层时序 ZIP；内外层 CRC 完整；元数据 `id=95` 在时序中缺失；原包行数与官网摘要不符 |
 | Bonn `person_tracking` | 329,482,910 | `a4810fd91ef2ea1d630b53fe0df5d76144c1b18d86ca91fb3a035debd0c9c5f5` | 580 张 RGB＋580 张深度；CRC 完整；下载自原作者站点；[脚本与 JSON](audits/bonn_person_tracking.json)可复核 |
