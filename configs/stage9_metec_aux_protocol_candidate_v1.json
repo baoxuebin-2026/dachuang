@@ -1,6 +1,8 @@
 {
-  "status": "candidate_not_approved_not_run",
+  "status": "approved_P1_frozen_before_run",
   "created_at_beijing": "2026-09-27",
+  "approved_at_utc": "2026-09-27T08:40:43Z",
+  "selected_protocol": "P1_leave_one_local_date_out_global_background_threshold",
   "decision": "A_auxiliary_only_no_large_downloads",
   "source": {
     "dataset_doi": "10.5061/dryad.hhmgqnkss",
