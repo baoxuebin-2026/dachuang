@@ -77,6 +77,8 @@ def main() -> None:
                         default=ROOT / "data/raw/mendeley_yd7vw4c5mk/methane_data.zip")
     parser.add_argument("--output", type=Path, default=OUTPUT)
     args = parser.parse_args()
+    if args.output.resolve() != OUTPUT.resolve():
+        raise ValueError("One-time selection output must use the canonical locked path")
     if args.output.exists():
         raise FileExistsError("Selection already scored; never overwrite")
     # The lock is checked BEFORE opening the archive or constructing any labels.
