@@ -1,0 +1,17 @@
+{
+  "run_id": "stage9-metec-p1-20260927-v1",
+  "recorded_at_utc": "2026-09-27T08:46:18.860691+00:00",
+  "code_commit": "2be529b07337fc8e74ea369fc4f2e141f8036743",
+  "script_sha256": "cdafd9c2a51e97473e6d1a1091e7fa016b80c9a38b01f0a74ab21dc77c33eb7b",
+  "config_path": "configs/stage9_metec_aux_protocol_candidate_v1.json",
+  "config_sha256": "25ba64780b6e0c9b2feb1b86601103a2fa22721ee205daf54d0c12c44b089574",
+  "command": "scripts/run_stage9_metec_p1.py --config configs/stage9_metec_aux_protocol_candidate_v1.json --releases /workspace/scratch/89fc5cf3852d/upload/Releases_Information.csv --observations /workspace/scratch/89fc5cf3852d/upload/CH4_MGGA_8hz.csv --out results/stage9_metec_p1 --code-commit 2be529b07337fc8e74ea369fc4f2e141f8036743",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5"
+  },
+  "random_seed": 20260927,
+  "bootstrap_replicates": 5000,
+  "output_path": "results/stage9_metec_p1",
+  "status": "completed_auxiliary_only"
+}

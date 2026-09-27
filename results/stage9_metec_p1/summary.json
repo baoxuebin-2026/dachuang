@@ -1,0 +1,135 @@
+{
+  "status": "completed_auxiliary_date_grouped_diagnostic",
+  "claim_scope": "Controlled-release state versus sparse single-point methane observations; not continuous event detection, warning lead time, or coking-park validation.",
+  "frozen_config_sha256": "25ba64780b6e0c9b2feb1b86601103a2fa22721ee205daf54d0c12c44b089574",
+  "source_sha256": {
+    "releases": "626d4e114514cb44edd854225f26518669516112c8714b24cf1de9d8cab13363",
+    "observations": "20d1da0adb5da3d60c3317b88fefd5a301adfe7f80aa46830791f1fdd0bf7a1e"
+  },
+  "second_level_observations": 197863,
+  "merged_site_release_intervals": 265,
+  "results": {
+    "fixed_mst": {
+      "all_dates_with_observations": 44,
+      "eligible_dates": 43,
+      "metrics": {
+        "p95_release_fraction": {
+          "macro_median": 0.18042428061331653,
+          "macro_q25": 0.04670570603907638,
+          "macro_q75": 0.4144181473418077,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.09455587392550144,
+            "high": 0.3330860534124629
+          }
+        },
+        "p95_outside_fraction": {
+          "macro_median": 0.018469656992084433,
+          "macro_q25": 0.0009863496467430882,
+          "macro_q75": 0.0925265384471695,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.0032938076416337285,
+            "high": 0.052039381153305204
+          }
+        },
+        "p99_release_fraction": {
+          "macro_median": 0.009272997032640949,
+          "macro_q25": 0.0,
+          "macro_q75": 0.0910561744880994,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.0004957858205255329,
+            "high": 0.04142011834319527
+          }
+        },
+        "p99_outside_fraction": {
+          "macro_median": 0.0,
+          "macro_q25": 0.0,
+          "macro_q75": 0.0,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.0,
+            "high": 0.0
+          }
+        },
+        "rank_auc": {
+          "macro_median": 0.6337508428035388,
+          "macro_q25": 0.5430755145434741,
+          "macro_q75": 0.7836531749333355,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.5847141146286445,
+            "high": 0.7325826481949815
+          }
+        }
+      },
+      "p95_threshold_ppm": {
+        "min": 2.7034540000000007,
+        "median": 2.7585624999999987,
+        "max": 2.8002049999999983
+      },
+      "p99_threshold_ppm": {
+        "min": 5.14780040000003,
+        "median": 8.690226199999973,
+        "max": 9.100681599999982
+      }
+    },
+    "america_denver": {
+      "all_dates_with_observations": 44,
+      "eligible_dates": 43,
+      "metrics": {
+        "p95_release_fraction": {
+          "macro_median": 0.2785800240673887,
+          "macro_q25": 0.08764626013637694,
+          "macro_q75": 0.4978116000426067,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.16602528862012095,
+            "high": 0.43066884176182707
+          }
+        },
+        "p95_outside_fraction": {
+          "macro_median": 0.018469656992084433,
+          "macro_q25": 0.0,
+          "macro_q75": 0.08923638225555759,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.00461133069828722,
+            "high": 0.04845505617977528
+          }
+        },
+        "p99_release_fraction": {
+          "macro_median": 0.05167674546454096,
+          "macro_q25": 0.01212053316044392,
+          "macro_q75": 0.28792498041774484,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.025602409638554216,
+            "high": 0.17270194986072424
+          }
+        },
+        "p99_outside_fraction": {
+          "macro_median": 0.0,
+          "macro_q25": 0.0,
+          "macro_q75": 0.012076803666469543,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.0,
+            "high": 0.006721433905899925
+          }
+        },
+        "rank_auc": {
+          "macro_median": 0.7125285315908092,
+          "macro_q25": 0.5684645950129578,
+          "macro_q75": 0.7984096855975761,
+          "date_cluster_bootstrap_median_95_interval": {
+            "low": 0.6337508428035388,
+            "high": 0.7731121563818013
+          }
+        }
+      },
+      "p95_threshold_ppm": {
+        "min": 2.49663625,
+        "median": 2.55169375,
+        "max": 2.5739187500000003
+      },
+      "p99_threshold_ppm": {
+        "min": 3.791496500000053,
+        "median": 4.103107650000001,
+        "max": 4.157952200000005
+      }
+    }
+  }
+}

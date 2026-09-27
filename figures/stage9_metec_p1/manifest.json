@@ -1,0 +1,24 @@
+{
+  "run_id": "stage9-metec-p1-20260927-v1",
+  "source_table": "results/stage9_metec_p1/per_date_fixed_mst.csv",
+  "plot_script": "scripts/plot_stage9_metec_p1.py",
+  "plot_script_sha256": "773c1807099b7a16f54cad0eef2b64fa26dd1ddf23f3f990d8bb09ce04997083",
+  "figures": [
+    {
+      "id": "metec-p1-threshold-by-date",
+      "svg": "figures/stage9_metec_p1/per_date_threshold_tradeoff.svg",
+      "svg_sha256": "56c16914cfe64739854424e1d9c1474a892eb1d0327bd8220e71da6c89de6532",
+      "png": "figures/stage9_metec_p1/per_date_threshold_tradeoff.png",
+      "png_sha256": "ccf5f1685770903dc9ffa60c20e0dd25355cce69dabb73391fac2895e4e2273d",
+      "render_check": "viewed; labels legible; no clipping; all 43 date points retained"
+    },
+    {
+      "id": "metec-p1-auc-by-date",
+      "svg": "figures/stage9_metec_p1/per_date_auc.svg",
+      "svg_sha256": "a1d4b09e498a249d07dc4059ede39f080864d7b7a1e9957f3c173b2cfc05a084",
+      "png": "figures/stage9_metec_p1/per_date_auc.png",
+      "png_sha256": "0b21d3792b28b74b186cea264e3facd89ecbb26dede61c84492d48a21f491adb",
+      "render_check": "viewed; labels legible; no clipping; all 43 date points retained"
+    }
+  ]
+}
