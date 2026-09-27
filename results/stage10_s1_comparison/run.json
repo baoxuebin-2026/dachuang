@@ -1,0 +1,25 @@
+{
+  "run_id": "stage10-s1-comparison-20260927-v1",
+  "status": "completed_software_behavior_comparison_not_independent_safety_validation",
+  "protocol_sha256": "20fc3d5630c224ffea260ed083cd95aae0af84bd2f7751cbd9fbdc83ef1cf844",
+  "stage6_config_sha256": "f43a465afd48861643588691a86dc47504341844ddd074ffa7d9277e4b5b532e",
+  "uci309_archive_sha256": "5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e",
+  "script_sha256": "8c48512585438893dd35f39a6da48963f15eee619f35ecead76656f5e28c54e4",
+  "python": "3.12.14",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "gas_files": 60,
+  "scenario_count": 8,
+  "strategies": [
+    "S1_full",
+    "gas_only",
+    "simple_OR",
+    "simple_AND",
+    "no_zone_gate",
+    "no_age_gate",
+    "hold_missing_gas_10s",
+    "hold_missing_person_10s"
+  ],
+  "registered_stage6_aggregates_match": true,
+  "limitation": "One reused artificial path per scenario and already viewed gas test files; no independent risk, accident or same-site camera truth"
+}
