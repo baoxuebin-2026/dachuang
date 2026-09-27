@@ -14,6 +14,7 @@ TADI 数据来自法国 TotalEnergies 的受控甲烷释放活动，而不是山
 
 - 原作者资料：[Zenodo 记录](https://zenodo.org/records/8399829)，DOI `10.5281/zenodo.8399829`；对应论文 [Atmospheric Measurement Techniques 17 (2024), 4257–4290](https://doi.org/10.5194/amt-17-4257-2024)。记录 API `https://zenodo.org/api/records/8399829` 的许可字段为 `cc-by-4.0`。九个原数据文件合计 4,687,937 字节，页面约 4.7 MB。
 - 已下载至 Git 忽略目录 `data/raw/tadi_2019/`，不随仓库发布原件。下载文件：`Logger_A.csv`、`Logger_C.csv`、`Logger_D.csv`、`Logger_E.csv`、`Logger_F.csv`、`Logger_H.csv`、`Loggers_COLUMNS.txt`、`sonic3d_anemometer.csv`、`sonic3d_anemometer_COLUMNS.txt`。原始文件链接形式为 `https://zenodo.org/records/8399829/files/文件名?download=1`，目前无需组员下载。
+- 任何人重新克隆仓库后，可在仓库根目录运行 `python scripts/download_tadi_source.py`；该脚本下载约 4.7 MB 并逐个比对 Zenodo 页面公示的 MD5，原件仍保存在被忽略的 `data/raw/tadi_2019/`。
 - 六份 Logger 合计 **38,826 行**；33 个不同的 `Release` 编号是 33 次活动在多个记录器上的重复观察，**不是 38,826 次泄漏**。实际行数分别为 A 7431、C 5742、D 2542、E 7126、F 7110、H 8875；风速仪文件另有 1782 行。每份日志包含时间、`CH4` 参考浓度、MOX 电压、部分温湿度/气压和 `Release`；不同记录器的环境列不完全相同。
 - `Release` 在每行都是 1–33 中的某个正整数，**没有 0/无释放标签**。各日志的时间区间相隔较大，文件是所选试次的观测片段，不能把相邻两行的跨试次间隔当作完整阴性时长，也不能把某试次首行直接当作阀门真实开启时刻。部分温湿度记录含 `-9999.0` 缺失哨兵。论文指出低成本电压与参考浓度对齐需要处理管路与设备的约 2–3 分钟时间偏移，且低成本传感器在高峰值会饱和；开发协议前须检查原文件是否已经对齐，避免再对齐一次或使用未来信息。
 
