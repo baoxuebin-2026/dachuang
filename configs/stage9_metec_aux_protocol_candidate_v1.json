@@ -1,0 +1,78 @@
+{
+  "status": "candidate_not_approved_not_run",
+  "created_at_beijing": "2026-09-27",
+  "decision": "A_auxiliary_only_no_large_downloads",
+  "source": {
+    "dataset_doi": "10.5061/dryad.hhmgqnkss",
+    "releases_file": {
+      "name": "Releases_Information.csv",
+      "sha256": "626d4e114514cb44edd854225f26518669516112c8714b24cf1de9d8cab13363"
+    },
+    "observations_file": {
+      "name": "CH4_MGGA_8hz.csv",
+      "sha256": "20d1da0adb5da3d60c3317b88fefd5a301adfe7f80aa46830791f1fdd0bf7a1e"
+    }
+  },
+  "time": {
+    "primary_observation_basis": "fixed_mst_utc_minus_7",
+    "sensitivity_observation_basis": "america_denver",
+    "release_basis": "utc"
+  },
+  "analysis_unit": {
+    "row": "median_dry_ch4_ppm_per_observed_second",
+    "independent_cluster": "local_calendar_date",
+    "label": "any_site_release_active",
+    "eligible_day_min_release_seconds": 30,
+    "eligible_day_min_outside_release_seconds": 30
+  },
+  "validation": {
+    "scheme": "leave_one_local_date_out",
+    "expected_eligible_days_from_source_audit": 43,
+    "threshold_fit_data": "outside_release_seconds_from_training_dates_only",
+    "test_date_never_used_to_fit_threshold": true
+  },
+  "methods": {
+    "primary": {
+      "id": "global_train_background_p95",
+      "score": "dry_ch4_ppm",
+      "threshold_quantile": 0.95
+    },
+    "sensitivity": {
+      "id": "global_train_background_p99",
+      "score": "dry_ch4_ppm",
+      "threshold_quantile": 0.99
+    },
+    "no_machine_learning_model": true,
+    "reason": "The downloaded 8 Hz file is highly discontinuous and supplies no additional deployable predictor beyond methane concentration."
+  },
+  "metrics": {
+    "per_date": [
+      "release_seconds_above_threshold_fraction",
+      "outside_release_seconds_above_threshold_fraction",
+      "rank_auc"
+    ],
+    "summary": [
+      "macro_median",
+      "macro_interquartile_range",
+      "date_cluster_bootstrap_95_percent_interval"
+    ],
+    "bootstrap": {
+      "seed": 20260927,
+      "replicates": 5000,
+      "resampling_unit": "local_calendar_date"
+    }
+  },
+  "sensitivity_checks": [
+    "america_denver_time_interpretation",
+    "p99_operating_point",
+    "report_each_date_without_pooled_second_level_confidence_intervals"
+  ],
+  "forbidden_claims": [
+    "continuous_false_alarms_per_hour",
+    "event_detection_rate",
+    "warning_lead_time",
+    "coking_park_field_accuracy",
+    "jetson_or_d435_measured_performance",
+    "synchronous_fusion_with_bonn_rgbd"
+  ]
+}
