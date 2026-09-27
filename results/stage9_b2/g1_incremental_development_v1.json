@@ -1,0 +1,1594 @@
+{
+  "status": "post_F1_exploratory_development_only; already_viewed_internal_validation; no external generalization",
+  "protocol_sha256": "3841c3551f2d6a2f38f7ed5ee0afa9ccd7a725a023f8835c2a1f200fdd7505ed",
+  "source_archive_sha256": "405a8b27004a2e318bf213cf209398d3d58b45bb3c7a78f159e69003ff459311",
+  "parent_baseline_result_sha256": "9de2a4731ebab274f58c5d1767cd603d022bc5bad6ffba8ac202e744ff0ae227",
+  "derived_input_sha256": {
+    "data/processed/stage9_b2/development_MM256_windows.csv.gz": "77e64e32baef4d2776e22bdcb13fc3369d421581d30c90a31b327442ce8c65e4",
+    "data/processed/stage9_b2/development_MM256_events.csv.gz": "83098d1eb22f8e93d927c5f4ce56a5ab4160264c69e8dfece69d8c797742c664"
+  },
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "partitions": {
+    "train": {
+      "eligible_windows": 62900,
+      "proxy_events": 64,
+      "input_quality": {
+        "MM264": {
+          "train_only_median": 0.30000001192092896,
+          "current_invalid_anchors": 1,
+          "delta_invalid_anchors": 2
+        },
+        "AN422": {
+          "train_only_median": 1.600000023841858,
+          "current_invalid_anchors": 0,
+          "delta_invalid_anchors": 0
+        }
+      }
+    },
+    "internal_validation": {
+      "eligible_windows": 20955,
+      "proxy_events": 28,
+      "input_quality": {
+        "MM264": {
+          "train_only_median": 0.30000001192092896,
+          "current_invalid_anchors": 0,
+          "delta_invalid_anchors": 0
+        },
+        "AN422": {
+          "train_only_median": 1.600000023841858,
+          "current_invalid_anchors": 0,
+          "delta_invalid_anchors": 0
+        }
+      }
+    }
+  },
+  "variants": {
+    "MM256_only": {
+      "feature_count": 5,
+      "threshold_candidates": 283,
+      "coefficients_scaled": [
+        0.22084559951668925,
+        0.02324182916648329,
+        -0.022504272711644704,
+        1.117090863405097,
+        0.576839414775618
+      ],
+      "budget_comparisons": {
+        "2": {
+          "training_threshold": 0.9692224293428037,
+          "traces": {
+            "train": {
+              "evaluable_events": 64,
+              "matched_events_any_lead": 8,
+              "matched_events_at_least_lead_seconds": {
+                "60": 7,
+                "180": 3
+              },
+              "new_alert_episodes": 89,
+              "false_new_alerts_background": 81,
+              "duplicate_or_unmatched_positive_new_alerts": 0,
+              "new_alert_reason": {
+                "nonadjacent_eligible_anchor": 35,
+                "score_crossing": 54
+              },
+              "false_alarm_reason": {
+                "nonadjacent_eligible_anchor": 29,
+                "score_crossing": 52
+              },
+              "background_false_by_date": {
+                "2014-03-04": 1,
+                "2014-03-25": 1,
+                "2014-03-26": 3,
+                "2014-03-28": 1,
+                "2014-04-02": 1,
+                "2014-04-03": 23,
+                "2014-04-04": 36,
+                "2014-04-05": 2,
+                "2014-04-09": 1,
+                "2014-04-11": 4,
+                "2014-04-12": 7,
+                "2014-04-15": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-04-04T10:45:22",
+                  "alarm_local_naive": "2014-04-04T10:41:59",
+                  "lead_seconds": 203,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:01:04",
+                  "alarm_local_naive": "2014-04-04T18:00:59",
+                  "lead_seconds": 5,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:24:50",
+                  "alarm_local_naive": "2014-04-04T18:19:59",
+                  "lead_seconds": 291,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:56:00",
+                  "alarm_local_naive": "2014-04-04T18:54:59",
+                  "lead_seconds": 61,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T20:17:18",
+                  "alarm_local_naive": "2014-04-04T20:15:59",
+                  "lead_seconds": 79,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:12:48",
+                  "alarm_local_naive": "2014-04-11T12:09:59",
+                  "lead_seconds": 169,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:44:11",
+                  "alarm_local_naive": "2014-04-12T01:41:59",
+                  "lead_seconds": 132,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:49:27",
+                  "alarm_local_naive": "2014-04-12T01:43:59",
+                  "lead_seconds": 328,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 1.8637053607094352
+            },
+            "internal_validation": {
+              "evaluable_events": 27,
+              "matched_events_any_lead": 2,
+              "matched_events_at_least_lead_seconds": {
+                "60": 0,
+                "180": 0
+              },
+              "new_alert_episodes": 18,
+              "false_new_alerts_background": 16,
+              "duplicate_or_unmatched_positive_new_alerts": 0,
+              "new_alert_reason": {
+                "score_crossing": 12,
+                "nonadjacent_eligible_anchor": 6
+              },
+              "false_alarm_reason": {
+                "score_crossing": 10,
+                "nonadjacent_eligible_anchor": 6
+              },
+              "background_false_by_date": {
+                "2014-04-17": 2,
+                "2014-04-18": 8,
+                "2014-04-19": 2,
+                "2014-04-20": 3,
+                "2014-04-28": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-04-18T07:49:49",
+                  "alarm_local_naive": "2014-04-18T07:48:59",
+                  "lead_seconds": 50,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-20T01:53:47",
+                  "alarm_local_naive": "2014-04-20T01:52:59",
+                  "lead_seconds": 48,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 1.107160019221528
+            }
+          }
+        },
+        "4": {
+          "training_threshold": 0.9447215350811312,
+          "traces": {
+            "train": {
+              "evaluable_events": 64,
+              "matched_events_any_lead": 30,
+              "matched_events_at_least_lead_seconds": {
+                "60": 15,
+                "180": 4
+              },
+              "new_alert_episodes": 203,
+              "false_new_alerts_background": 171,
+              "duplicate_or_unmatched_positive_new_alerts": 2,
+              "new_alert_reason": {
+                "nonadjacent_eligible_anchor": 76,
+                "score_crossing": 127
+              },
+              "false_alarm_reason": {
+                "nonadjacent_eligible_anchor": 64,
+                "score_crossing": 107
+              },
+              "background_false_by_date": {
+                "2014-03-04": 1,
+                "2014-03-21": 1,
+                "2014-03-25": 2,
+                "2014-03-26": 6,
+                "2014-03-27": 10,
+                "2014-03-28": 10,
+                "2014-04-01": 1,
+                "2014-04-02": 3,
+                "2014-04-03": 31,
+                "2014-04-04": 33,
+                "2014-04-05": 8,
+                "2014-04-09": 14,
+                "2014-04-10": 2,
+                "2014-04-11": 16,
+                "2014-04-12": 25,
+                "2014-04-14": 2,
+                "2014-04-15": 6
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-03-26T19:52:33",
+                  "alarm_local_naive": "2014-03-26T19:50:59",
+                  "lead_seconds": 94,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T06:49:39",
+                  "alarm_local_naive": "2014-03-27T06:47:59",
+                  "lead_seconds": 100,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T19:41:17",
+                  "alarm_local_naive": "2014-03-27T19:40:59",
+                  "lead_seconds": 18,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T04:20:01",
+                  "alarm_local_naive": "2014-04-04T04:17:59",
+                  "lead_seconds": 122,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T05:08:45",
+                  "alarm_local_naive": "2014-04-04T05:07:59",
+                  "lead_seconds": 46,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T10:45:22",
+                  "alarm_local_naive": "2014-04-04T10:41:59",
+                  "lead_seconds": 203,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T17:56:10",
+                  "alarm_local_naive": "2014-04-04T17:55:59",
+                  "lead_seconds": 11,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:01:04",
+                  "alarm_local_naive": "2014-04-04T18:00:59",
+                  "lead_seconds": 5,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:24:50",
+                  "alarm_local_naive": "2014-04-04T18:19:59",
+                  "lead_seconds": 291,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:56:00",
+                  "alarm_local_naive": "2014-04-04T18:51:59",
+                  "lead_seconds": 241,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T19:20:12",
+                  "alarm_local_naive": "2014-04-04T19:19:59",
+                  "lead_seconds": 13,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T19:26:40",
+                  "alarm_local_naive": "2014-04-04T19:25:59",
+                  "lead_seconds": 41,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T20:17:18",
+                  "alarm_local_naive": "2014-04-04T20:15:59",
+                  "lead_seconds": 79,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T05:03:55",
+                  "alarm_local_naive": "2014-04-05T05:00:59",
+                  "lead_seconds": 176,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T07:23:30",
+                  "alarm_local_naive": "2014-04-05T07:22:59",
+                  "lead_seconds": 31,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:31:03",
+                  "alarm_local_naive": "2014-04-11T04:30:59",
+                  "lead_seconds": 4,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T07:51:45",
+                  "alarm_local_naive": "2014-04-11T07:50:59",
+                  "lead_seconds": 46,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:02:48",
+                  "alarm_local_naive": "2014-04-11T12:01:59",
+                  "lead_seconds": 49,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:12:48",
+                  "alarm_local_naive": "2014-04-11T12:09:59",
+                  "lead_seconds": 169,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T18:50:47",
+                  "alarm_local_naive": "2014-04-11T18:47:59",
+                  "lead_seconds": 168,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T20:02:43",
+                  "alarm_local_naive": "2014-04-11T20:00:59",
+                  "lead_seconds": 104,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:34:33",
+                  "alarm_local_naive": "2014-04-12T01:33:59",
+                  "lead_seconds": 34,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:44:11",
+                  "alarm_local_naive": "2014-04-12T01:41:59",
+                  "lead_seconds": 132,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:49:27",
+                  "alarm_local_naive": "2014-04-12T01:48:59",
+                  "lead_seconds": 28,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T05:10:03",
+                  "alarm_local_naive": "2014-04-12T05:09:59",
+                  "lead_seconds": 4,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T06:09:47",
+                  "alarm_local_naive": "2014-04-12T06:05:59",
+                  "lead_seconds": 228,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T06:29:37",
+                  "alarm_local_naive": "2014-04-12T06:28:59",
+                  "lead_seconds": 38,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T07:37:29",
+                  "alarm_local_naive": "2014-04-12T07:34:59",
+                  "lead_seconds": 150,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T07:43:31",
+                  "alarm_local_naive": "2014-04-12T07:42:59",
+                  "lead_seconds": 32,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T08:00:43",
+                  "alarm_local_naive": "2014-04-12T07:58:59",
+                  "lead_seconds": 104,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 3.93448909483103
+            },
+            "internal_validation": {
+              "evaluable_events": 27,
+              "matched_events_any_lead": 9,
+              "matched_events_at_least_lead_seconds": {
+                "60": 6,
+                "180": 4
+              },
+              "new_alert_episodes": 59,
+              "false_new_alerts_background": 48,
+              "duplicate_or_unmatched_positive_new_alerts": 2,
+              "new_alert_reason": {
+                "score_crossing": 41,
+                "nonadjacent_eligible_anchor": 18
+              },
+              "false_alarm_reason": {
+                "score_crossing": 32,
+                "nonadjacent_eligible_anchor": 16
+              },
+              "background_false_by_date": {
+                "2014-04-16": 4,
+                "2014-04-17": 6,
+                "2014-04-18": 26,
+                "2014-04-19": 7,
+                "2014-04-20": 3,
+                "2014-04-22": 1,
+                "2014-04-28": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-04-16T07:11:29",
+                  "alarm_local_naive": "2014-04-16T07:10:59",
+                  "lead_seconds": 30,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-18T06:29:53",
+                  "alarm_local_naive": "2014-04-18T06:23:59",
+                  "lead_seconds": 354,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-18T07:21:05",
+                  "alarm_local_naive": "2014-04-18T07:17:59",
+                  "lead_seconds": 186,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-18T07:49:49",
+                  "alarm_local_naive": "2014-04-18T07:47:59",
+                  "lead_seconds": 110,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T04:32:38",
+                  "alarm_local_naive": "2014-04-19T04:31:59",
+                  "lead_seconds": 39,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T05:34:58",
+                  "alarm_local_naive": "2014-04-19T05:30:59",
+                  "lead_seconds": 239,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T07:02:04",
+                  "alarm_local_naive": "2014-04-19T07:01:59",
+                  "lead_seconds": 5,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T07:53:42",
+                  "alarm_local_naive": "2014-04-19T07:48:59",
+                  "lead_seconds": 283,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-20T01:53:47",
+                  "alarm_local_naive": "2014-04-20T01:50:59",
+                  "lead_seconds": 168,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 3.3214800576645844
+            }
+          }
+        }
+      }
+    },
+    "MM256_plus_MM264": {
+      "feature_count": 9,
+      "threshold_candidates": 354,
+      "coefficients_scaled": [
+        0.10542720276720707,
+        0.019324186166199377,
+        -0.009983813391683694,
+        1.1127191732192443,
+        0.46372700849282716,
+        0.4796427728326624,
+        -0.024283010220839694,
+        -0.028190473839692802,
+        -0.04277453196683053
+      ],
+      "budget_comparisons": {
+        "2": {
+          "training_threshold": 0.960932607870536,
+          "traces": {
+            "train": {
+              "evaluable_events": 64,
+              "matched_events_any_lead": 23,
+              "matched_events_at_least_lead_seconds": {
+                "60": 13,
+                "180": 4
+              },
+              "new_alert_episodes": 110,
+              "false_new_alerts_background": 84,
+              "duplicate_or_unmatched_positive_new_alerts": 3,
+              "new_alert_reason": {
+                "nonadjacent_eligible_anchor": 31,
+                "score_crossing": 79
+              },
+              "false_alarm_reason": {
+                "nonadjacent_eligible_anchor": 21,
+                "score_crossing": 63
+              },
+              "background_false_by_date": {
+                "2014-03-04": 1,
+                "2014-03-15": 3,
+                "2014-03-25": 1,
+                "2014-03-26": 3,
+                "2014-03-27": 8,
+                "2014-03-28": 3,
+                "2014-04-01": 1,
+                "2014-04-03": 8,
+                "2014-04-04": 5,
+                "2014-04-05": 6,
+                "2014-04-11": 18,
+                "2014-04-12": 21,
+                "2014-04-14": 1,
+                "2014-04-15": 5
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-03-21T20:06:48",
+                  "alarm_local_naive": "2014-03-21T20:05:59",
+                  "lead_seconds": 49,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-26T19:52:33",
+                  "alarm_local_naive": "2014-03-26T19:50:59",
+                  "lead_seconds": 94,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T06:49:39",
+                  "alarm_local_naive": "2014-03-27T06:47:59",
+                  "lead_seconds": 100,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:01:04",
+                  "alarm_local_naive": "2014-04-04T18:00:59",
+                  "lead_seconds": 5,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:24:50",
+                  "alarm_local_naive": "2014-04-04T18:19:59",
+                  "lead_seconds": 291,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T19:20:12",
+                  "alarm_local_naive": "2014-04-04T19:19:59",
+                  "lead_seconds": 13,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T20:17:18",
+                  "alarm_local_naive": "2014-04-04T20:15:59",
+                  "lead_seconds": 79,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T05:03:55",
+                  "alarm_local_naive": "2014-04-05T05:00:59",
+                  "lead_seconds": 176,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T07:23:30",
+                  "alarm_local_naive": "2014-04-05T07:22:59",
+                  "lead_seconds": 31,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:31:03",
+                  "alarm_local_naive": "2014-04-11T04:26:59",
+                  "lead_seconds": 244,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:50:36",
+                  "alarm_local_naive": "2014-04-11T04:49:59",
+                  "lead_seconds": 37,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T07:51:45",
+                  "alarm_local_naive": "2014-04-11T07:50:59",
+                  "lead_seconds": 46,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:02:48",
+                  "alarm_local_naive": "2014-04-11T11:57:59",
+                  "lead_seconds": 289,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:12:48",
+                  "alarm_local_naive": "2014-04-11T12:09:59",
+                  "lead_seconds": 169,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T18:50:47",
+                  "alarm_local_naive": "2014-04-11T18:47:59",
+                  "lead_seconds": 168,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T20:02:43",
+                  "alarm_local_naive": "2014-04-11T20:00:59",
+                  "lead_seconds": 104,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:34:33",
+                  "alarm_local_naive": "2014-04-12T01:33:59",
+                  "lead_seconds": 34,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:44:11",
+                  "alarm_local_naive": "2014-04-12T01:41:59",
+                  "lead_seconds": 132,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T05:10:03",
+                  "alarm_local_naive": "2014-04-12T05:09:59",
+                  "lead_seconds": 4,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T06:09:47",
+                  "alarm_local_naive": "2014-04-12T06:05:59",
+                  "lead_seconds": 228,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T07:43:31",
+                  "alarm_local_naive": "2014-04-12T07:42:59",
+                  "lead_seconds": 32,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T08:00:43",
+                  "alarm_local_naive": "2014-04-12T07:59:59",
+                  "lead_seconds": 44,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-15T09:41:51",
+                  "alarm_local_naive": "2014-04-15T09:39:59",
+                  "lead_seconds": 112,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 1.932731485180155
+            },
+            "internal_validation": {
+              "evaluable_events": 27,
+              "matched_events_any_lead": 3,
+              "matched_events_at_least_lead_seconds": {
+                "60": 2,
+                "180": 1
+              },
+              "new_alert_episodes": 17,
+              "false_new_alerts_background": 14,
+              "duplicate_or_unmatched_positive_new_alerts": 0,
+              "new_alert_reason": {
+                "score_crossing": 14,
+                "nonadjacent_eligible_anchor": 3
+              },
+              "false_alarm_reason": {
+                "score_crossing": 11,
+                "nonadjacent_eligible_anchor": 3
+              },
+              "background_false_by_date": {
+                "2014-04-16": 1,
+                "2014-04-17": 2,
+                "2014-04-18": 3,
+                "2014-04-19": 4,
+                "2014-04-23": 1,
+                "2014-04-25": 2,
+                "2014-04-28": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-04-18T07:49:49",
+                  "alarm_local_naive": "2014-04-18T07:48:59",
+                  "lead_seconds": 50,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T05:34:58",
+                  "alarm_local_naive": "2014-04-19T05:30:59",
+                  "lead_seconds": 239,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-28T08:07:54",
+                  "alarm_local_naive": "2014-04-28T08:05:59",
+                  "lead_seconds": 115,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 0.9687650168188371
+            }
+          }
+        },
+        "4": {
+          "training_threshold": 0.9443729465004438,
+          "traces": {
+            "train": {
+              "evaluable_events": 64,
+              "matched_events_any_lead": 35,
+              "matched_events_at_least_lead_seconds": {
+                "60": 22,
+                "180": 9
+              },
+              "new_alert_episodes": 192,
+              "false_new_alerts_background": 153,
+              "duplicate_or_unmatched_positive_new_alerts": 4,
+              "new_alert_reason": {
+                "nonadjacent_eligible_anchor": 55,
+                "score_crossing": 137
+              },
+              "false_alarm_reason": {
+                "nonadjacent_eligible_anchor": 41,
+                "score_crossing": 112
+              },
+              "background_false_by_date": {
+                "2014-03-04": 1,
+                "2014-03-15": 8,
+                "2014-03-25": 2,
+                "2014-03-26": 4,
+                "2014-03-27": 11,
+                "2014-03-28": 3,
+                "2014-04-01": 1,
+                "2014-04-02": 1,
+                "2014-04-03": 27,
+                "2014-04-04": 12,
+                "2014-04-05": 11,
+                "2014-04-10": 1,
+                "2014-04-11": 34,
+                "2014-04-12": 29,
+                "2014-04-14": 1,
+                "2014-04-15": 7
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-03-21T20:06:48",
+                  "alarm_local_naive": "2014-03-21T20:05:59",
+                  "lead_seconds": 49,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-26T19:52:33",
+                  "alarm_local_naive": "2014-03-26T19:50:59",
+                  "lead_seconds": 94,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T06:49:39",
+                  "alarm_local_naive": "2014-03-27T06:46:59",
+                  "lead_seconds": 160,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T06:58:13",
+                  "alarm_local_naive": "2014-03-27T06:53:59",
+                  "lead_seconds": 254,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T19:25:07",
+                  "alarm_local_naive": "2014-03-27T19:24:59",
+                  "lead_seconds": 8,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T19:41:17",
+                  "alarm_local_naive": "2014-03-27T19:40:59",
+                  "lead_seconds": 18,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:01:04",
+                  "alarm_local_naive": "2014-04-04T18:00:59",
+                  "lead_seconds": 5,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:24:50",
+                  "alarm_local_naive": "2014-04-04T18:19:59",
+                  "lead_seconds": 291,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:56:00",
+                  "alarm_local_naive": "2014-04-04T18:53:59",
+                  "lead_seconds": 121,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T19:20:12",
+                  "alarm_local_naive": "2014-04-04T19:19:59",
+                  "lead_seconds": 13,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T19:26:40",
+                  "alarm_local_naive": "2014-04-04T19:25:59",
+                  "lead_seconds": 41,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T20:17:18",
+                  "alarm_local_naive": "2014-04-04T20:15:59",
+                  "lead_seconds": 79,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T05:03:55",
+                  "alarm_local_naive": "2014-04-05T05:00:59",
+                  "lead_seconds": 176,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T05:11:13",
+                  "alarm_local_naive": "2014-04-05T05:10:59",
+                  "lead_seconds": 14,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T07:23:30",
+                  "alarm_local_naive": "2014-04-05T07:19:59",
+                  "lead_seconds": 211,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:31:03",
+                  "alarm_local_naive": "2014-04-11T04:26:59",
+                  "lead_seconds": 244,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:50:36",
+                  "alarm_local_naive": "2014-04-11T04:48:59",
+                  "lead_seconds": 97,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T05:40:25",
+                  "alarm_local_naive": "2014-04-11T05:39:59",
+                  "lead_seconds": 26,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T07:51:45",
+                  "alarm_local_naive": "2014-04-11T07:48:59",
+                  "lead_seconds": 166,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T11:53:04",
+                  "alarm_local_naive": "2014-04-11T11:47:59",
+                  "lead_seconds": 305,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:02:48",
+                  "alarm_local_naive": "2014-04-11T11:57:59",
+                  "lead_seconds": 289,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:12:48",
+                  "alarm_local_naive": "2014-04-11T12:09:59",
+                  "lead_seconds": 169,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T18:50:47",
+                  "alarm_local_naive": "2014-04-11T18:47:59",
+                  "lead_seconds": 168,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T20:02:43",
+                  "alarm_local_naive": "2014-04-11T20:00:59",
+                  "lead_seconds": 104,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:34:33",
+                  "alarm_local_naive": "2014-04-12T01:33:59",
+                  "lead_seconds": 34,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:44:11",
+                  "alarm_local_naive": "2014-04-12T01:41:59",
+                  "lead_seconds": 132,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:49:27",
+                  "alarm_local_naive": "2014-04-12T01:48:59",
+                  "lead_seconds": 28,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T05:10:03",
+                  "alarm_local_naive": "2014-04-12T05:09:59",
+                  "lead_seconds": 4,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T06:09:47",
+                  "alarm_local_naive": "2014-04-12T06:05:59",
+                  "lead_seconds": 228,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T06:29:37",
+                  "alarm_local_naive": "2014-04-12T06:28:59",
+                  "lead_seconds": 38,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T07:37:29",
+                  "alarm_local_naive": "2014-04-12T07:34:59",
+                  "lead_seconds": 150,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T07:43:31",
+                  "alarm_local_naive": "2014-04-12T07:42:59",
+                  "lead_seconds": 32,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T08:00:43",
+                  "alarm_local_naive": "2014-04-12T07:55:59",
+                  "lead_seconds": 284,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-14T09:29:59",
+                  "alarm_local_naive": "2014-04-14T09:25:59",
+                  "lead_seconds": 240,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-15T09:41:51",
+                  "alarm_local_naive": "2014-04-15T09:39:59",
+                  "lead_seconds": 112,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 3.520332348006711
+            },
+            "internal_validation": {
+              "evaluable_events": 27,
+              "matched_events_any_lead": 8,
+              "matched_events_at_least_lead_seconds": {
+                "60": 5,
+                "180": 3
+              },
+              "new_alert_episodes": 51,
+              "false_new_alerts_background": 41,
+              "duplicate_or_unmatched_positive_new_alerts": 2,
+              "new_alert_reason": {
+                "score_crossing": 40,
+                "nonadjacent_eligible_anchor": 11
+              },
+              "false_alarm_reason": {
+                "score_crossing": 31,
+                "nonadjacent_eligible_anchor": 10
+              },
+              "background_false_by_date": {
+                "2014-04-16": 4,
+                "2014-04-17": 6,
+                "2014-04-18": 15,
+                "2014-04-19": 6,
+                "2014-04-20": 1,
+                "2014-04-22": 1,
+                "2014-04-23": 1,
+                "2014-04-25": 6,
+                "2014-04-28": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-04-16T07:11:29",
+                  "alarm_local_naive": "2014-04-16T07:10:59",
+                  "lead_seconds": 30,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-18T06:29:53",
+                  "alarm_local_naive": "2014-04-18T06:24:59",
+                  "lead_seconds": 294,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-18T07:49:49",
+                  "alarm_local_naive": "2014-04-18T07:47:59",
+                  "lead_seconds": 110,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T04:32:38",
+                  "alarm_local_naive": "2014-04-19T04:31:59",
+                  "lead_seconds": 39,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T05:34:58",
+                  "alarm_local_naive": "2014-04-19T05:29:59",
+                  "lead_seconds": 299,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T07:02:04",
+                  "alarm_local_naive": "2014-04-19T06:58:59",
+                  "lead_seconds": 185,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-20T01:53:47",
+                  "alarm_local_naive": "2014-04-20T01:52:59",
+                  "lead_seconds": 48,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-28T08:07:54",
+                  "alarm_local_naive": "2014-04-28T08:05:59",
+                  "lead_seconds": 115,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 2.8370975492551658
+            }
+          }
+        }
+      }
+    },
+    "MM256_plus_MM264_plus_AN422": {
+      "feature_count": 13,
+      "threshold_candidates": 456,
+      "coefficients_scaled": [
+        0.09601956779703669,
+        0.016846368229716743,
+        -0.005918143775950992,
+        1.081863125513385,
+        0.5267661577506065,
+        0.4831773600250687,
+        -0.025637087383935383,
+        -0.025612935302948395,
+        -0.039588078336483284,
+        0.04047914067852738,
+        -0.15415231346963212,
+        0.0,
+        0.0
+      ],
+      "budget_comparisons": {
+        "2": {
+          "training_threshold": 0.9730285782412752,
+          "traces": {
+            "train": {
+              "evaluable_events": 64,
+              "matched_events_any_lead": 17,
+              "matched_events_at_least_lead_seconds": {
+                "60": 10,
+                "180": 4
+              },
+              "new_alert_episodes": 63,
+              "false_new_alerts_background": 43,
+              "duplicate_or_unmatched_positive_new_alerts": 3,
+              "new_alert_reason": {
+                "nonadjacent_eligible_anchor": 18,
+                "score_crossing": 45
+              },
+              "false_alarm_reason": {
+                "nonadjacent_eligible_anchor": 11,
+                "score_crossing": 32
+              },
+              "background_false_by_date": {
+                "2014-03-04": 1,
+                "2014-03-15": 1,
+                "2014-03-27": 4,
+                "2014-03-28": 2,
+                "2014-04-03": 2,
+                "2014-04-04": 4,
+                "2014-04-05": 3,
+                "2014-04-11": 12,
+                "2014-04-12": 13,
+                "2014-04-15": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-03-21T20:06:48",
+                  "alarm_local_naive": "2014-03-21T20:05:59",
+                  "lead_seconds": 49,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T06:49:39",
+                  "alarm_local_naive": "2014-03-27T06:47:59",
+                  "lead_seconds": 100,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:24:50",
+                  "alarm_local_naive": "2014-04-04T18:19:59",
+                  "lead_seconds": 291,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T19:20:12",
+                  "alarm_local_naive": "2014-04-04T19:19:59",
+                  "lead_seconds": 13,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T20:17:18",
+                  "alarm_local_naive": "2014-04-04T20:15:59",
+                  "lead_seconds": 79,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T20:44:58",
+                  "alarm_local_naive": "2014-04-04T20:39:59",
+                  "lead_seconds": 299,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T07:23:30",
+                  "alarm_local_naive": "2014-04-05T07:22:59",
+                  "lead_seconds": 31,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:50:36",
+                  "alarm_local_naive": "2014-04-11T04:49:59",
+                  "lead_seconds": 37,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T07:51:45",
+                  "alarm_local_naive": "2014-04-11T07:50:59",
+                  "lead_seconds": 46,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T08:31:19",
+                  "alarm_local_naive": "2014-04-11T08:25:59",
+                  "lead_seconds": 320,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:02:48",
+                  "alarm_local_naive": "2014-04-11T11:57:59",
+                  "lead_seconds": 289,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:12:48",
+                  "alarm_local_naive": "2014-04-11T12:09:59",
+                  "lead_seconds": 169,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T20:02:43",
+                  "alarm_local_naive": "2014-04-11T20:00:59",
+                  "lead_seconds": 104,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:44:11",
+                  "alarm_local_naive": "2014-04-12T01:41:59",
+                  "lead_seconds": 132,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T05:10:03",
+                  "alarm_local_naive": "2014-04-12T05:09:59",
+                  "lead_seconds": 4,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T07:43:31",
+                  "alarm_local_naive": "2014-04-12T07:42:59",
+                  "lead_seconds": 32,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-15T09:41:51",
+                  "alarm_local_naive": "2014-04-15T09:39:59",
+                  "lead_seconds": 112,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 0.989374450746984
+            },
+            "internal_validation": {
+              "evaluable_events": 27,
+              "matched_events_any_lead": 2,
+              "matched_events_at_least_lead_seconds": {
+                "60": 2,
+                "180": 0
+              },
+              "new_alert_episodes": 11,
+              "false_new_alerts_background": 9,
+              "duplicate_or_unmatched_positive_new_alerts": 0,
+              "new_alert_reason": {
+                "score_crossing": 8,
+                "nonadjacent_eligible_anchor": 3
+              },
+              "false_alarm_reason": {
+                "score_crossing": 6,
+                "nonadjacent_eligible_anchor": 3
+              },
+              "background_false_by_date": {
+                "2014-04-17": 3,
+                "2014-04-18": 1,
+                "2014-04-19": 2,
+                "2014-04-23": 1,
+                "2014-04-25": 1,
+                "2014-04-28": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-04-19T05:34:58",
+                  "alarm_local_naive": "2014-04-19T05:31:59",
+                  "lead_seconds": 179,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-28T08:07:54",
+                  "alarm_local_naive": "2014-04-28T08:05:59",
+                  "lead_seconds": 115,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 0.6227775108121095
+            }
+          }
+        },
+        "4": {
+          "training_threshold": 0.9533642847931786,
+          "traces": {
+            "train": {
+              "evaluable_events": 64,
+              "matched_events_any_lead": 31,
+              "matched_events_at_least_lead_seconds": {
+                "60": 17,
+                "180": 5
+              },
+              "new_alert_episodes": 166,
+              "false_new_alerts_background": 134,
+              "duplicate_or_unmatched_positive_new_alerts": 1,
+              "new_alert_reason": {
+                "nonadjacent_eligible_anchor": 42,
+                "score_crossing": 124
+              },
+              "false_alarm_reason": {
+                "nonadjacent_eligible_anchor": 31,
+                "score_crossing": 103
+              },
+              "background_false_by_date": {
+                "2014-03-04": 1,
+                "2014-03-15": 6,
+                "2014-03-21": 1,
+                "2014-03-25": 2,
+                "2014-03-26": 2,
+                "2014-03-27": 9,
+                "2014-03-28": 4,
+                "2014-04-01": 1,
+                "2014-04-02": 1,
+                "2014-04-03": 28,
+                "2014-04-04": 8,
+                "2014-04-05": 9,
+                "2014-04-10": 1,
+                "2014-04-11": 27,
+                "2014-04-12": 26,
+                "2014-04-14": 1,
+                "2014-04-15": 7
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-03-21T20:06:48",
+                  "alarm_local_naive": "2014-03-21T20:05:59",
+                  "lead_seconds": 49,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-26T19:52:33",
+                  "alarm_local_naive": "2014-03-26T19:50:59",
+                  "lead_seconds": 94,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T06:49:39",
+                  "alarm_local_naive": "2014-03-27T06:47:59",
+                  "lead_seconds": 100,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T06:58:13",
+                  "alarm_local_naive": "2014-03-27T06:57:59",
+                  "lead_seconds": 14,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-03-27T19:41:17",
+                  "alarm_local_naive": "2014-03-27T19:40:59",
+                  "lead_seconds": 18,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:01:04",
+                  "alarm_local_naive": "2014-04-04T18:00:59",
+                  "lead_seconds": 5,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:24:50",
+                  "alarm_local_naive": "2014-04-04T18:19:59",
+                  "lead_seconds": 291,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T18:56:00",
+                  "alarm_local_naive": "2014-04-04T18:54:59",
+                  "lead_seconds": 61,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T19:20:12",
+                  "alarm_local_naive": "2014-04-04T19:19:59",
+                  "lead_seconds": 13,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-04T20:17:18",
+                  "alarm_local_naive": "2014-04-04T20:15:59",
+                  "lead_seconds": 79,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T05:03:55",
+                  "alarm_local_naive": "2014-04-05T05:00:59",
+                  "lead_seconds": 176,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T05:11:13",
+                  "alarm_local_naive": "2014-04-05T05:10:59",
+                  "lead_seconds": 14,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-05T07:23:30",
+                  "alarm_local_naive": "2014-04-05T07:22:59",
+                  "lead_seconds": 31,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:31:03",
+                  "alarm_local_naive": "2014-04-11T04:26:59",
+                  "lead_seconds": 244,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T04:50:36",
+                  "alarm_local_naive": "2014-04-11T04:48:59",
+                  "lead_seconds": 97,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T05:40:25",
+                  "alarm_local_naive": "2014-04-11T05:39:59",
+                  "lead_seconds": 26,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T07:51:45",
+                  "alarm_local_naive": "2014-04-11T07:50:59",
+                  "lead_seconds": 46,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T11:53:04",
+                  "alarm_local_naive": "2014-04-11T11:47:59",
+                  "lead_seconds": 305,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:02:48",
+                  "alarm_local_naive": "2014-04-11T11:57:59",
+                  "lead_seconds": 289,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T12:12:48",
+                  "alarm_local_naive": "2014-04-11T12:09:59",
+                  "lead_seconds": 169,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T18:50:47",
+                  "alarm_local_naive": "2014-04-11T18:47:59",
+                  "lead_seconds": 168,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-11T20:02:43",
+                  "alarm_local_naive": "2014-04-11T20:00:59",
+                  "lead_seconds": 104,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:34:33",
+                  "alarm_local_naive": "2014-04-12T01:33:59",
+                  "lead_seconds": 34,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:44:11",
+                  "alarm_local_naive": "2014-04-12T01:41:59",
+                  "lead_seconds": 132,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T01:49:27",
+                  "alarm_local_naive": "2014-04-12T01:48:59",
+                  "lead_seconds": 28,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T05:10:03",
+                  "alarm_local_naive": "2014-04-12T05:09:59",
+                  "lead_seconds": 4,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T06:29:37",
+                  "alarm_local_naive": "2014-04-12T06:28:59",
+                  "lead_seconds": 38,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T07:43:31",
+                  "alarm_local_naive": "2014-04-12T07:42:59",
+                  "lead_seconds": 32,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-12T08:00:43",
+                  "alarm_local_naive": "2014-04-12T07:58:59",
+                  "lead_seconds": 104,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-14T09:29:59",
+                  "alarm_local_naive": "2014-04-14T09:26:59",
+                  "lead_seconds": 180,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-15T09:41:51",
+                  "alarm_local_naive": "2014-04-15T09:39:59",
+                  "lead_seconds": 112,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 3.0831668930254854
+            },
+            "internal_validation": {
+              "evaluable_events": 27,
+              "matched_events_any_lead": 6,
+              "matched_events_at_least_lead_seconds": {
+                "60": 5,
+                "180": 3
+              },
+              "new_alert_episodes": 39,
+              "false_new_alerts_background": 32,
+              "duplicate_or_unmatched_positive_new_alerts": 1,
+              "new_alert_reason": {
+                "score_crossing": 30,
+                "nonadjacent_eligible_anchor": 9
+              },
+              "false_alarm_reason": {
+                "score_crossing": 24,
+                "nonadjacent_eligible_anchor": 8
+              },
+              "background_false_by_date": {
+                "2014-04-16": 4,
+                "2014-04-17": 6,
+                "2014-04-18": 9,
+                "2014-04-19": 6,
+                "2014-04-20": 1,
+                "2014-04-22": 1,
+                "2014-04-23": 1,
+                "2014-04-25": 3,
+                "2014-04-28": 1
+              },
+              "event_records": [
+                {
+                  "onset_local_naive": "2014-04-16T07:11:29",
+                  "alarm_local_naive": "2014-04-16T07:10:59",
+                  "lead_seconds": 30,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-18T06:29:53",
+                  "alarm_local_naive": "2014-04-18T06:24:59",
+                  "lead_seconds": 294,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-18T07:49:49",
+                  "alarm_local_naive": "2014-04-18T07:47:59",
+                  "lead_seconds": 110,
+                  "new_alert_reason": "nonadjacent_eligible_anchor"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T05:34:58",
+                  "alarm_local_naive": "2014-04-19T05:29:59",
+                  "lead_seconds": 299,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-19T07:02:04",
+                  "alarm_local_naive": "2014-04-19T06:58:59",
+                  "lead_seconds": 185,
+                  "new_alert_reason": "score_crossing"
+                },
+                {
+                  "onset_local_naive": "2014-04-28T08:07:54",
+                  "alarm_local_naive": "2014-04-28T08:05:59",
+                  "lead_seconds": 115,
+                  "new_alert_reason": "score_crossing"
+                }
+              ],
+              "false_per_24_background_hours": 2.214320038443056
+            }
+          }
+        }
+      }
+    }
+  }
+}
