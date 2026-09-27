@@ -22,6 +22,8 @@
 
 阶段 10 的写作基础件已经完成第一版：核准[现行标准、数据原始论文与评价文献](stage10-formal-literature-and-standard-audit.md)，生成并人工检查[拟部署系统／实际证据边界图](../figures/stage10_architecture/proposed_vs_evidence_boundary.svg)，从正式结果整理[论文级表格 v1](stage10-manuscript-tables-v1.md)，并形成[第 2—4 节连续初稿](manuscript-sections-2-4-v1.md)。架构图是设计与来源图，不登记为性能实验；下方四条证据支路保持分离。后续写作从正式结果和主张账本继续，不重新定义指标。
 
+同日继续完成[引言 v1](manuscript-section-1-v1.md)、[结果／讨论／结论 v1](manuscript-sections-5-7-v1.md)，并由 [`scripts/build_manuscript_v1.py`](../scripts/build_manuscript_v1.py)生成[完整论文工作稿 v1](manuscript-full-v1.md)。完整稿是内部投稿工作稿；作者、单位、项目编号、英文信息与具体期刊格式仍待项目组和指导教师填写，未提交期刊。
+
 2026-09-25 晚项目组补充论文成果条件：若以该项成果方式申报，期刊为“本校认定 E 类以上”或“其他能被知网检索的期刊”，项目负责人必须列作者前五并标注大创资助；落实、候选和文章级检索凭证的具体要求见[更新后的选刊调查](stage9-publication-venue-options.md)。这不能代替指导教师与项目组核对实际发表、署名贡献、编号和结题认定。
 
 - `data/raw/` 保留原包、文件名、来源网址、版本／访问日期、SHA-256；不改写原始文件，也不提交原始大文件。解析后写入 `data/processed/` 并记录参数、单位、采样率和排除规则。
