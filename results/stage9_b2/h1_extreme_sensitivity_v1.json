@@ -1,0 +1,551 @@
+{
+  "status": "posthoc_fixed_model_fixed_threshold_input_stress_development_only",
+  "protocol_sha256": "c03819534a620d1b859663624f53a15b196507b3b0bfc75a1b7036c12949b537",
+  "parent_result_sha256": "dfff0c42ce809f7d1779c88035b9239f6988565842b365c69ec89caec34d986c",
+  "source_archive_sha256": "405a8b27004a2e318bf213cf209398d3d58b45bb3c7a78f159e69003ff459311",
+  "environment": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit_learn": "1.8.0"
+  },
+  "affected_internal_validation_anchors": {
+    "new_extreme_current_anchors": 1,
+    "new_extreme_lag_anchors": 0,
+    "distinct_anchors_with_either_extreme": 1,
+    "first_affected_local_naive": "2014-04-28T08:05:59"
+  },
+  "same_eligible_windows": 20955,
+  "variants": {
+    "MM256_plus_MM264": {
+      "score_changed_anchors": 1,
+      "budget_comparisons": {
+        "2": {
+          "unchanged_training_threshold": 0.960932607870536,
+          "original": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 3,
+            "matched_events_at_least_lead_seconds": {
+              "60": 2,
+              "180": 1
+            },
+            "new_alert_episodes": 17,
+            "false_new_alerts_background": 14,
+            "duplicate_or_unmatched_positive_new_alerts": 0,
+            "new_alert_reason": {
+              "score_crossing": 14,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "false_alarm_reason": {
+              "score_crossing": 11,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "background_false_by_date": {
+              "2014-04-16": 1,
+              "2014-04-17": 2,
+              "2014-04-18": 3,
+              "2014-04-19": 4,
+              "2014-04-23": 1,
+              "2014-04-25": 2,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-18T07:49:49",
+                "alarm_local_naive": "2014-04-18T07:48:59",
+                "lead_seconds": 50,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:30:59",
+                "lead_seconds": 239,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-28T08:07:54",
+                "alarm_local_naive": "2014-04-28T08:05:59",
+                "lead_seconds": 115,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 0.9687650168188371
+          },
+          "stressed": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 2,
+            "matched_events_at_least_lead_seconds": {
+              "60": 1,
+              "180": 1
+            },
+            "new_alert_episodes": 16,
+            "false_new_alerts_background": 14,
+            "duplicate_or_unmatched_positive_new_alerts": 0,
+            "new_alert_reason": {
+              "score_crossing": 13,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "false_alarm_reason": {
+              "score_crossing": 11,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "background_false_by_date": {
+              "2014-04-16": 1,
+              "2014-04-17": 2,
+              "2014-04-18": 3,
+              "2014-04-19": 4,
+              "2014-04-23": 1,
+              "2014-04-25": 2,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-18T07:49:49",
+                "alarm_local_naive": "2014-04-18T07:48:59",
+                "lead_seconds": 50,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:30:59",
+                "lead_seconds": 239,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 0.9687650168188371
+          },
+          "original_matched_event_onsets": [
+            "2014-04-18T07:49:49",
+            "2014-04-19T05:34:58",
+            "2014-04-28T08:07:54"
+          ],
+          "stressed_matched_event_onsets": [
+            "2014-04-18T07:49:49",
+            "2014-04-19T05:34:58"
+          ]
+        },
+        "4": {
+          "unchanged_training_threshold": 0.9443729465004438,
+          "original": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 8,
+            "matched_events_at_least_lead_seconds": {
+              "60": 5,
+              "180": 3
+            },
+            "new_alert_episodes": 51,
+            "false_new_alerts_background": 41,
+            "duplicate_or_unmatched_positive_new_alerts": 2,
+            "new_alert_reason": {
+              "score_crossing": 40,
+              "nonadjacent_eligible_anchor": 11
+            },
+            "false_alarm_reason": {
+              "score_crossing": 31,
+              "nonadjacent_eligible_anchor": 10
+            },
+            "background_false_by_date": {
+              "2014-04-16": 4,
+              "2014-04-17": 6,
+              "2014-04-18": 15,
+              "2014-04-19": 6,
+              "2014-04-20": 1,
+              "2014-04-22": 1,
+              "2014-04-23": 1,
+              "2014-04-25": 6,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-16T07:11:29",
+                "alarm_local_naive": "2014-04-16T07:10:59",
+                "lead_seconds": 30,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T06:29:53",
+                "alarm_local_naive": "2014-04-18T06:24:59",
+                "lead_seconds": 294,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T07:49:49",
+                "alarm_local_naive": "2014-04-18T07:47:59",
+                "lead_seconds": 110,
+                "new_alert_reason": "nonadjacent_eligible_anchor"
+              },
+              {
+                "onset_local_naive": "2014-04-19T04:32:38",
+                "alarm_local_naive": "2014-04-19T04:31:59",
+                "lead_seconds": 39,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:29:59",
+                "lead_seconds": 299,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T07:02:04",
+                "alarm_local_naive": "2014-04-19T06:58:59",
+                "lead_seconds": 185,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-20T01:53:47",
+                "alarm_local_naive": "2014-04-20T01:52:59",
+                "lead_seconds": 48,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-28T08:07:54",
+                "alarm_local_naive": "2014-04-28T08:05:59",
+                "lead_seconds": 115,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 2.8370975492551658
+          },
+          "stressed": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 7,
+            "matched_events_at_least_lead_seconds": {
+              "60": 4,
+              "180": 3
+            },
+            "new_alert_episodes": 50,
+            "false_new_alerts_background": 41,
+            "duplicate_or_unmatched_positive_new_alerts": 2,
+            "new_alert_reason": {
+              "score_crossing": 39,
+              "nonadjacent_eligible_anchor": 11
+            },
+            "false_alarm_reason": {
+              "score_crossing": 31,
+              "nonadjacent_eligible_anchor": 10
+            },
+            "background_false_by_date": {
+              "2014-04-16": 4,
+              "2014-04-17": 6,
+              "2014-04-18": 15,
+              "2014-04-19": 6,
+              "2014-04-20": 1,
+              "2014-04-22": 1,
+              "2014-04-23": 1,
+              "2014-04-25": 6,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-16T07:11:29",
+                "alarm_local_naive": "2014-04-16T07:10:59",
+                "lead_seconds": 30,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T06:29:53",
+                "alarm_local_naive": "2014-04-18T06:24:59",
+                "lead_seconds": 294,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T07:49:49",
+                "alarm_local_naive": "2014-04-18T07:47:59",
+                "lead_seconds": 110,
+                "new_alert_reason": "nonadjacent_eligible_anchor"
+              },
+              {
+                "onset_local_naive": "2014-04-19T04:32:38",
+                "alarm_local_naive": "2014-04-19T04:31:59",
+                "lead_seconds": 39,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:29:59",
+                "lead_seconds": 299,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T07:02:04",
+                "alarm_local_naive": "2014-04-19T06:58:59",
+                "lead_seconds": 185,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-20T01:53:47",
+                "alarm_local_naive": "2014-04-20T01:52:59",
+                "lead_seconds": 48,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 2.8370975492551658
+          },
+          "original_matched_event_onsets": [
+            "2014-04-16T07:11:29",
+            "2014-04-18T06:29:53",
+            "2014-04-18T07:49:49",
+            "2014-04-19T04:32:38",
+            "2014-04-19T05:34:58",
+            "2014-04-19T07:02:04",
+            "2014-04-20T01:53:47",
+            "2014-04-28T08:07:54"
+          ],
+          "stressed_matched_event_onsets": [
+            "2014-04-16T07:11:29",
+            "2014-04-18T06:29:53",
+            "2014-04-18T07:49:49",
+            "2014-04-19T04:32:38",
+            "2014-04-19T05:34:58",
+            "2014-04-19T07:02:04",
+            "2014-04-20T01:53:47"
+          ]
+        }
+      }
+    },
+    "MM256_plus_MM264_plus_AN422": {
+      "score_changed_anchors": 1,
+      "budget_comparisons": {
+        "2": {
+          "unchanged_training_threshold": 0.9730285782412752,
+          "original": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 2,
+            "matched_events_at_least_lead_seconds": {
+              "60": 2,
+              "180": 0
+            },
+            "new_alert_episodes": 11,
+            "false_new_alerts_background": 9,
+            "duplicate_or_unmatched_positive_new_alerts": 0,
+            "new_alert_reason": {
+              "score_crossing": 8,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "false_alarm_reason": {
+              "score_crossing": 6,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "background_false_by_date": {
+              "2014-04-17": 3,
+              "2014-04-18": 1,
+              "2014-04-19": 2,
+              "2014-04-23": 1,
+              "2014-04-25": 1,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:31:59",
+                "lead_seconds": 179,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-28T08:07:54",
+                "alarm_local_naive": "2014-04-28T08:05:59",
+                "lead_seconds": 115,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 0.6227775108121095
+          },
+          "stressed": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 1,
+            "matched_events_at_least_lead_seconds": {
+              "60": 1,
+              "180": 0
+            },
+            "new_alert_episodes": 10,
+            "false_new_alerts_background": 9,
+            "duplicate_or_unmatched_positive_new_alerts": 0,
+            "new_alert_reason": {
+              "score_crossing": 7,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "false_alarm_reason": {
+              "score_crossing": 6,
+              "nonadjacent_eligible_anchor": 3
+            },
+            "background_false_by_date": {
+              "2014-04-17": 3,
+              "2014-04-18": 1,
+              "2014-04-19": 2,
+              "2014-04-23": 1,
+              "2014-04-25": 1,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:31:59",
+                "lead_seconds": 179,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 0.6227775108121095
+          },
+          "original_matched_event_onsets": [
+            "2014-04-19T05:34:58",
+            "2014-04-28T08:07:54"
+          ],
+          "stressed_matched_event_onsets": [
+            "2014-04-19T05:34:58"
+          ]
+        },
+        "4": {
+          "unchanged_training_threshold": 0.9533642847931786,
+          "original": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 6,
+            "matched_events_at_least_lead_seconds": {
+              "60": 5,
+              "180": 3
+            },
+            "new_alert_episodes": 39,
+            "false_new_alerts_background": 32,
+            "duplicate_or_unmatched_positive_new_alerts": 1,
+            "new_alert_reason": {
+              "score_crossing": 30,
+              "nonadjacent_eligible_anchor": 9
+            },
+            "false_alarm_reason": {
+              "score_crossing": 24,
+              "nonadjacent_eligible_anchor": 8
+            },
+            "background_false_by_date": {
+              "2014-04-16": 4,
+              "2014-04-17": 6,
+              "2014-04-18": 9,
+              "2014-04-19": 6,
+              "2014-04-20": 1,
+              "2014-04-22": 1,
+              "2014-04-23": 1,
+              "2014-04-25": 3,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-16T07:11:29",
+                "alarm_local_naive": "2014-04-16T07:10:59",
+                "lead_seconds": 30,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T06:29:53",
+                "alarm_local_naive": "2014-04-18T06:24:59",
+                "lead_seconds": 294,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T07:49:49",
+                "alarm_local_naive": "2014-04-18T07:47:59",
+                "lead_seconds": 110,
+                "new_alert_reason": "nonadjacent_eligible_anchor"
+              },
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:29:59",
+                "lead_seconds": 299,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T07:02:04",
+                "alarm_local_naive": "2014-04-19T06:58:59",
+                "lead_seconds": 185,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-28T08:07:54",
+                "alarm_local_naive": "2014-04-28T08:05:59",
+                "lead_seconds": 115,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 2.214320038443056
+          },
+          "stressed": {
+            "evaluable_events": 27,
+            "matched_events_any_lead": 5,
+            "matched_events_at_least_lead_seconds": {
+              "60": 4,
+              "180": 3
+            },
+            "new_alert_episodes": 38,
+            "false_new_alerts_background": 32,
+            "duplicate_or_unmatched_positive_new_alerts": 1,
+            "new_alert_reason": {
+              "score_crossing": 29,
+              "nonadjacent_eligible_anchor": 9
+            },
+            "false_alarm_reason": {
+              "score_crossing": 24,
+              "nonadjacent_eligible_anchor": 8
+            },
+            "background_false_by_date": {
+              "2014-04-16": 4,
+              "2014-04-17": 6,
+              "2014-04-18": 9,
+              "2014-04-19": 6,
+              "2014-04-20": 1,
+              "2014-04-22": 1,
+              "2014-04-23": 1,
+              "2014-04-25": 3,
+              "2014-04-28": 1
+            },
+            "event_records": [
+              {
+                "onset_local_naive": "2014-04-16T07:11:29",
+                "alarm_local_naive": "2014-04-16T07:10:59",
+                "lead_seconds": 30,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T06:29:53",
+                "alarm_local_naive": "2014-04-18T06:24:59",
+                "lead_seconds": 294,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-18T07:49:49",
+                "alarm_local_naive": "2014-04-18T07:47:59",
+                "lead_seconds": 110,
+                "new_alert_reason": "nonadjacent_eligible_anchor"
+              },
+              {
+                "onset_local_naive": "2014-04-19T05:34:58",
+                "alarm_local_naive": "2014-04-19T05:29:59",
+                "lead_seconds": 299,
+                "new_alert_reason": "score_crossing"
+              },
+              {
+                "onset_local_naive": "2014-04-19T07:02:04",
+                "alarm_local_naive": "2014-04-19T06:58:59",
+                "lead_seconds": 185,
+                "new_alert_reason": "score_crossing"
+              }
+            ],
+            "false_per_24_background_hours": 2.214320038443056
+          },
+          "original_matched_event_onsets": [
+            "2014-04-16T07:11:29",
+            "2014-04-18T06:29:53",
+            "2014-04-18T07:49:49",
+            "2014-04-19T05:34:58",
+            "2014-04-19T07:02:04",
+            "2014-04-28T08:07:54"
+          ],
+          "stressed_matched_event_onsets": [
+            "2014-04-16T07:11:29",
+            "2014-04-18T06:29:53",
+            "2014-04-18T07:49:49",
+            "2014-04-19T05:34:58",
+            "2014-04-19T07:02:04"
+          ]
+        }
+      }
+    }
+  }
+}
