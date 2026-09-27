@@ -1,6 +1,6 @@
 # 阶段 10：S1 质量门控的模拟行为对照
 
-运行日期：2026-09-27（北京时间）。[对比协议](stage10-s1-comparison-protocol.md)已在结果出现前以提交 `f5681b5` 冻结；正式计算见[脚本](../scripts/run_stage10_s1_comparison.py)、[逐文件结果](../results/stage10_s1_comparison/per_file.csv)、[完整汇总](../results/stage10_s1_comparison/summary.csv)及[运行记录](../results/stage10_s1_comparison/run.json)。本结果复用了 UCI 309 原有的 60 个**已经查看过**的气体文件与固定人工轨迹。没有新增视觉或现场联合数据，也没有独立事故／处置标签。
+运行日期：2026-09-27（北京时间）。[对比协议](stage10-s1-comparison-protocol.md)已在结果出现前冻结，远端提交 `3638caa`；正式计算见[脚本](../scripts/run_stage10_s1_comparison.py)、[逐文件结果](../results/stage10_s1_comparison/per_file.csv)、[完整汇总](../results/stage10_s1_comparison/summary.csv)及[运行记录](../results/stage10_s1_comparison/run.json)。本结果复用了 UCI 309 原有的 60 个**已经查看过**的气体文件与固定人工轨迹。没有新增视觉或现场联合数据，也没有独立事故／处置标签。
 
 ## 模型与检验对象
 

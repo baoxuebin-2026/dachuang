@@ -25,6 +25,7 @@
 | `stage8-a2-indoor-2d` | 115 帧、66 个人工框，IoU≥0.5 得 TP 62、FP 0、FN 4 | [二维报告](stage8-v1a-a2-2d-detector-results.md)、[重跑报告](stage9-bonn-rerun-20260926.md) | 第二段曾用于人工质检；标注和新运行的逐帧输出私有保存；旧逐帧预测 CSV 的 SHA 与重跑不同，原文件未找回 |
 | `stage8-a1-repeat-depth-availability`、`stage8-g1-virtual-only` | 第二段 57 帧中 34 帧人工有人，32/34 自动框有有效深度；G1 inside 2、near 1、outside 29、unknown 2 | [深度报告](stage8-v1a-a2-repeat-depth-results.md)、[私有结果索引](../results/stage8_n1_evidence_index.json) | unknown 两例因二维漏检；30/30 相同虚拟区判断只是两框定义的内部一致性；G1 相机横向区不等于 S1 地面区 |
 | `stage6-s2-conditional-joint`、`stage6-s4-unknown-zone` | S2 预设模拟重叠 58/60 个已有文件出现 L3；S0、S1、S3 为 0/60；错区、过期和 10 s 缺测各 600 个**重放秒**不可配对 | [场景汇总 CSV](../results/stage6_s1_a/scenario_aggregate.csv)、[运行记录](../results/stage6_s1_a/run.json)、[登记图](../figures/stage6_s1_a/illustrative_s2_timeline.svg) | 同一仿真轨迹复用，L3 来自研究者规则；58/60 不是事故检出率，600=10 s×60 次重放 |
+| `stage10-s1-injected-gates` | 各 600 个故障注入重放秒中，完整 S1 联合 `unknown` 600／600、违规 L3 为 0；去掉相应门控后，气体缺秒持有旧值为 550，其余人员缺秒、错区和过期各为 553 个违规 L3 重放秒 | [冻结协议](stage10-s1-comparison-protocol.md)、[结果表](../results/stage10_s1_comparison/summary.csv)、[分析报告](stage10-s1-comparison-results.md) | 约束与轨迹由本项目定义，60 文件反复使用相同人工路径；这是软件行为检查，不能当事故误报降低或优于单源的独立证据 |
 
 ## 补充结果：单独报告
 
