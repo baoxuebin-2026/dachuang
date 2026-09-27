@@ -1,0 +1,14 @@
+{
+  "id": "b2_b_d1_posthoc_development_trace_v1",
+  "parent_result_sha256": "9de2a4731ebab274f58c5d1767cd603d022bc5bad6ffba8ac202e744ff0ae227",
+  "source_target": "MM256",
+  "diagnosed_methods_and_training_budgets": [
+    ["current_concentration", 4],
+    ["causal_slope_extrapolation", 4],
+    ["simple_logistic", 2],
+    ["simple_logistic", 4]
+  ],
+  "null_control": "Constant score 1 at every eligible anchor, threshold 0.5; eligibility gaps initiate a new alert under the original scoring rule.",
+  "additional_lead_time_cutoffs_seconds": [60, 180],
+  "metric_status": "Posthoc supplementary diagnostic on already inspected development/internal validation dates. Original any-lead primary outcome and frozen thresholds are preserved. No selection/reserved data."
+}
