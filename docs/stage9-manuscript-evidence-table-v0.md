@@ -1,6 +1,6 @@
 # 阶段 9：论文正文证据表 v0（工作稿）
 
-日期：2026-09-26（北京时间）。基于[既定 T1-A 提纲](stage9-t1-manuscript-outline-proposal.md)和[无审阅者时的工作路径](stage9-no-reviewer-progress-and-next-steps.md)整理。Bonn 人工标注已恢复并与原冻结 SHA 一致，二维与深度结果已[另行重跑复核](stage9-bonn-rerun-20260926.md)；**这是相同数据上的再现，不是新独立实验。**正式写作前逐项对应[主张账本](../registries/claim_ledger.csv)。
+日期：2026-09-27（北京时间）。基于[既定 T1-A 提纲](stage9-t1-manuscript-outline-proposal.md)和[无审阅者时的工作路径](stage9-no-reviewer-progress-and-next-steps.md)整理。Bonn 人工标注已恢复并与原冻结 SHA 一致，二维与深度结果已[另行重跑复核](stage9-bonn-rerun-20260926.md)；**这是相同数据上的再现，不是新独立实验。**METEC 按日期留一辅助分析已经按预先冻结的 P1 协议完成，定位为受控释放辅助证据，不改变 UCI 309＋Bonn＋S1 的正文主线。正式写作前逐项对应[主张账本](../registries/claim_ledger.csv)。
 
 ## 数据来源与评价对象
 
@@ -9,12 +9,13 @@
 | UCI 309 | 风洞 180 个试验文件，M1 按文件 90/30/60 切分；每次 60 s 开始供气，GC-MS 给的是平均浓度 | 主文气体传感器变化 | 实际事故提前预警、长期阴性表现、逐秒人员暴露浓度 |
 | Bonn 两段 `person_tracking` | 相似室内 RGB-D；抽样 58＋57＝115 帧，66 个人工二维框；第二段 34 帧人工有人 | 主文人员框与相机相对空间接口 | D435 精度、禁区越界真值、与 309 同址同步 |
 | S1 | 原 309 的 60 个 test 文件与同一套模拟路径及故障反例反复配对 | 主文分级处置规则及质量门控 | 真实联合准确率或独立事故等级真值 |
+| METEC | 模拟油气设施的独立释放日志与稀疏单点甲烷浓度；43 个合格日期按日期留一 | 正文辅助验证：跨日期固定阈值不稳定、时间基准敏感 | 完整事件检出率、每小时误报、提前量、焦化现场性能 |
 | UCI 322 | 乙烯＋CO、乙烯＋甲烷各一条气室时序；气体列为**供气设定值** | 独立补充：泛气体响应及干扰 | 目标气种专一识别或真实人受气体影响 |
 | UCI 487 | 13 个实验日重复相同 CO 程序，V3 留出 3 日×20 段位 | 独立补充：已完成暴露段 CO 估计 | 实时事故预警 |
 | SB112 | 单设备建筑传感器背景日，没有逐秒事故核实 | 独立补充：烟雾传感器背景触发 | 视频烟雾遮挡识别或确定的假事故报警 |
 | UCI 362 | 家庭酒/香蕉刺激与背景，共 99 条有时序的记录；按 58 日期分组 | 已确认协议的一次外部压力测试，**负结果** | CO/CH4 危险泄漏或焦化厂泛化；测试集在此次运行后不再可作新盲测 |
 
-依据：[309 报告](stage5-m1-pilot-results.md)、[Bonn 二维报告](stage8-v1a-a2-2d-detector-results.md)、[深度报告](stage8-v1a-a2-repeat-depth-results.md)、[S1 报告](stage6-s1-fixed-replay-results.md)、[322/SB112 报告](stage7-a-separate-validation-results.md)、[487 报告](stage5-uci487-v3-results.md)。
+依据：[309 报告](stage5-m1-pilot-results.md)、[Bonn 二维报告](stage8-v1a-a2-2d-detector-results.md)、[深度报告](stage8-v1a-a2-repeat-depth-results.md)、[S1 报告](stage6-s1-fixed-replay-results.md)、[METEC P1 报告](stage9-metec-p1-results.md)、[322/SB112 报告](stage7-a-separate-validation-results.md)、[487 报告](stage5-uci487-v3-results.md)。
 
 ## 正文主张与结果路径
 
@@ -34,6 +35,7 @@
 | SB112 | 烟雾通道在 2022-03-10 的 23.978 h 覆盖内去抖合并为 6 个背景触发事件 | [汇总](../results/stage7_a/sb112_summary.csv)；无逐秒环境事故真值，不能称六次经核实的假事故 |
 | UCI 362 | 按日期锁定 12 个测试日，刺激 15 条中可评价 13 条；八通道 5 分钟检出 0/13、R1 1/13，纯背景日 0/2 日、2.974 观测小时均零触发 | [一次运行](stage9-a1-uci362-locked-results.md)、[记录](../results/stage9_uci362/locked_run/run.json)；酒/香蕉家庭气味，不支持焦化危险气体跨域检出；零背景报警的观察时长太短 |
 | UCI 362 M1（事后开发集） | 训练 12/35、验证 3/14 触发；验证三条新增触发记录在名义刺激前均已触发；未计算新测试成绩 | [M1 结果](stage9-m1-date-balanced-dev-results.md)、[运行记录](../results/stage9_uci362/m1_dev_run/run.json)；不能当刺激特异性提高或新的独立外测 |
+| METEC P1（正文辅助） | 固定 MST 下，43 个日期的日期内 AUC 中位数 0.634（四分位 0.543–0.784）；按训练日期无记录释放观测拟合的 P95 阈值，在留出日期的释放／无记录释放观测秒超阈值比例中位数分别为 18.0%／1.85%；时区敏感性 AUC 中位数为 0.713 | [P1 报告](stage9-metec-p1-results.md)、[汇总](../results/stage9_metec_p1/summary.json)；观测高度间断，比例不是事件检出率或每小时误报；全场释放标签不保证单测点处于羽流下风向；主结果保留固定 MST，不择优采用夏令时解释 |
 
 ## 投稿前仍需补的核对
 
@@ -41,5 +43,6 @@
 2. 原始研究全文、背景事实及阈值依据逐条核实；1 m 是仿真缓冲假设，不是法定距离。
 3. 用[图表登记](../registries/figure_evidence.csv)核图注、图像尺寸和单位；气体实验、室内视觉与仿真规则各自成表成图。
 4. 与导师核对原申报尚缺功能的中期/结题表述和论文资助编号；完整论文尚未写完、投稿或发表。
+5. METEC 只保留 P1；不继续下载完整 MGGA 或 6.34 GB 气象文件，也不在该数据上继续训练复杂模型。若以后取得发布者对“Mountain Time”的澄清，只更新时区敏感性说明，不把事后较高结果替换为原主结果。
 
-**下一步：**以本表为来源，先起草“研究问题及数据与方法”章节供项目组审查，再写实验结果；不得预造现场效果。
+**下一步：**按[最终研究结构冻结候选](stage9-final-research-structure-freeze-proposal.md)确认主张、正文／附录位置和最小剩余工作；冻结前不开始整篇论文，冻结后先写“问题定义、数据来源与方法”，不得预造现场效果。
