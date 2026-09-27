@@ -1,0 +1,20 @@
+{
+  "id": "b2_g1_dev_incremental_v1",
+  "parent_label_protocol": "configs/stage9_b2_protocol_v1.json",
+  "parent_method_protocol": "configs/stage9_b2_a_dev_methods_v1.json",
+  "parent_baseline_result_sha256": "9de2a4731ebab274f58c5d1767cd603d022bc5bad6ffba8ac202e744ff0ae227",
+  "dates_and_guards": "Identical to parent method; training March 2-April 15, internal validation April 16-30, 389 s future and 600 s history guards",
+  "variants": ["MM256_only", "MM256_plus_MM264", "MM256_plus_MM264_plus_AN422"],
+  "frozen_base_features": ["MM256_current", "MM256_delta60", "MM256_delta300", "MM256_mean60", "MM256_mean300"],
+  "additional_features_per_channel": ["value_at_t", "delta_from_t_minus_300_seconds", "current_invalid_indicator", "delta_invalid_indicator"],
+  "auxiliary_validity": {"MM264": [0, 30], "AN422": [-5, 5]},
+  "invalid_input_handling": "Keep every original MM256 eligible window. An invalid auxiliary current value is replaced with the training-only median of valid anchor currents; its current_invalid_indicator is one. An invalid current or lag makes delta 0 and delta_invalid_indicator one. No future or bidirectional fill, no new gate. The 10% exploratory screen from F1 is not used.",
+  "learner": "Identical StandardScaler and LogisticRegression(C=1.0,class_weight=balanced,max_iter=1000,random_state=20260926) to parent A",
+  "threshold_selection": "Same 501 training-score quantiles plus always silent, maximize matched events within training false-new-alert budget, same parent ties; no validation threshold tuning",
+  "primary_training_false_new_alert_budget_per_24_background_hours": 2,
+  "secondary_training_budget": 4,
+  "comparison": "Same MM256 windows and event set for all three variants; compare internal-validation matched event counts with lead >=60 s, any lead, false new episodes and nonadjacent gate restarts. No significance or coke-plant transfer claim.",
+  "exploratory_stop_rule": "If neither incremental variant gains at least one internal-validation >=60 s matched proxy event without increasing false new episodes relative to MM256-only at the same training budget, do not pursue additional B2 channels on this evidence; even a gain does not authorize selection/reserved-period repeated scoring.",
+  "selection_reserved_period": "Do not open or score during G1 development experiment",
+  "interpretation": "Post-F1 exploratory development extension after internal validation was already inspected; not an independent generalization estimate"
+}
