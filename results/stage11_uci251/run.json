@@ -1,0 +1,290 @@
+{
+  "run_id": "stage11-uci251-methane-20261001-v1",
+  "archive_sha256": "11a89338cc921b7f48a423341f987596855ed1507e0ebe571fcce44d36d02864",
+  "script_sha256": "1716d51658ac76105aeb75e6a1c788a30438cfd78276528296b0575497946a49",
+  "protocol_git_head_before_results": "3834e3638e24deeb03e717267e129a2460601d95",
+  "runtime": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  },
+  "inventory": {
+    "all_archive_file_count": 18151,
+    "selected_file_count": 360
+  },
+  "analyses": {
+    "position": {
+      "split_counts": {
+        "train": 240,
+        "validation": 60,
+        "test": 60
+      },
+      "train_background_seconds": 1067,
+      "scales": [
+        0.368,
+        0.7413,
+        0.7413,
+        1.4826,
+        0.7413,
+        0.7413,
+        0.7413,
+        0.559
+      ],
+      "candidates": [
+        {
+          "quantile": 0.95,
+          "threshold": 2.023472278429786,
+          "validation": {
+            "n_files": 60,
+            "valid_calibration_files": 60,
+            "pre_release_trigger_files": 0,
+            "within_60s_files": 60,
+            "during_release_detected_files": 60,
+            "detected_median_observed_delay_s": 13.0,
+            "median_valid_monitor_seconds": 0.0
+          }
+        },
+        {
+          "quantile": 0.99,
+          "threshold": 2.697963037906381,
+          "validation": {
+            "n_files": 60,
+            "valid_calibration_files": 60,
+            "pre_release_trigger_files": 0,
+            "within_60s_files": 56,
+            "during_release_detected_files": 60,
+            "detected_median_observed_delay_s": 21.0,
+            "median_valid_monitor_seconds": 0.0
+          }
+        },
+        {
+          "quantile": 0.995,
+          "threshold": 2.7076771711271035,
+          "validation": {
+            "n_files": 60,
+            "valid_calibration_files": 60,
+            "pre_release_trigger_files": 0,
+            "within_60s_files": 55,
+            "during_release_detected_files": 60,
+            "detected_median_observed_delay_s": 24.0,
+            "median_valid_monitor_seconds": 0.0
+          }
+        },
+        {
+          "quantile": 0.999,
+          "threshold": 3.382167930603699,
+          "validation": {
+            "n_files": 60,
+            "valid_calibration_files": 60,
+            "pre_release_trigger_files": 0,
+            "within_60s_files": 50,
+            "during_release_detected_files": 60,
+            "detected_median_observed_delay_s": 28.0,
+            "median_valid_monitor_seconds": 0.0
+          }
+        }
+      ],
+      "selected_quantile": 0.95,
+      "selected_threshold": 2.023472278429786,
+      "test": {
+        "n_files": 60,
+        "valid_calibration_files": 60,
+        "pre_release_trigger_files": 1,
+        "within_60s_files": 58,
+        "during_release_detected_files": 60,
+        "detected_median_observed_delay_s": 12.0,
+        "median_valid_monitor_seconds": 180.0
+      },
+      "test_by_condition": {
+        "000": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 1,
+          "within_60s_files": 20,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 12.0,
+          "median_valid_monitor_seconds": 181.0
+        },
+        "060": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 19,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 22.0,
+          "median_valid_monitor_seconds": 179.5
+        },
+        "100": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 19,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 6.5,
+          "median_valid_monitor_seconds": 180.0
+        }
+      },
+      "training_test_date_overlap_days": 0,
+      "test_unique_days": 2,
+      "training_test_date_overlap_by_position": {
+        "L1": 0,
+        "L2": 0,
+        "L3": 0,
+        "L4": 0,
+        "L5": 0,
+        "L6": 0
+      },
+      "frozen_gas_negative_control_test_triggers": 0
+    },
+    "wind": {
+      "split_counts": {
+        "train": 120,
+        "validation": 120,
+        "test": 120
+      },
+      "train_background_seconds": 548,
+      "scales": [
+        0.364,
+        0.417,
+        0.561,
+        1.4826,
+        0.7413,
+        0.5745,
+        0.7413,
+        0.5660000000000001
+      ],
+      "candidates": [
+        {
+          "quantile": 0.95,
+          "threshold": 2.2402471161011404,
+          "validation": {
+            "n_files": 120,
+            "valid_calibration_files": 120,
+            "pre_release_trigger_files": 2,
+            "within_60s_files": 120,
+            "during_release_detected_files": 120,
+            "detected_median_observed_delay_s": 15.0,
+            "median_valid_monitor_seconds": 0.0
+          }
+        },
+        {
+          "quantile": 0.99,
+          "threshold": 3.059853272317862,
+          "validation": {
+            "n_files": 120,
+            "valid_calibration_files": 120,
+            "pre_release_trigger_files": 0,
+            "within_60s_files": 118,
+            "during_release_detected_files": 120,
+            "detected_median_observed_delay_s": 20.0,
+            "median_valid_monitor_seconds": 0.0
+          }
+        },
+        {
+          "quantile": 0.995,
+          "threshold": 3.567561109009904,
+          "validation": {
+            "n_files": 120,
+            "valid_calibration_files": 120,
+            "pre_release_trigger_files": 0,
+            "within_60s_files": 117,
+            "during_release_detected_files": 120,
+            "detected_median_observed_delay_s": 22.5,
+            "median_valid_monitor_seconds": 0.0
+          }
+        },
+        {
+          "quantile": 0.999,
+          "threshold": 4.362008104003053,
+          "validation": {
+            "n_files": 120,
+            "valid_calibration_files": 120,
+            "pre_release_trigger_files": 0,
+            "within_60s_files": 114,
+            "during_release_detected_files": 120,
+            "detected_median_observed_delay_s": 25.0,
+            "median_valid_monitor_seconds": 0.0
+          }
+        }
+      ],
+      "selected_quantile": 0.99,
+      "selected_threshold": 3.059853272317862,
+      "test": {
+        "n_files": 120,
+        "valid_calibration_files": 120,
+        "pre_release_trigger_files": 0,
+        "within_60s_files": 120,
+        "during_release_detected_files": 120,
+        "detected_median_observed_delay_s": 11.0,
+        "median_valid_monitor_seconds": 174.5
+      },
+      "test_by_condition": {
+        "L1": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 20,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 4.0,
+          "median_valid_monitor_seconds": 173.0
+        },
+        "L2": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 20,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 13.0,
+          "median_valid_monitor_seconds": 177.5
+        },
+        "L3": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 20,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 13.0,
+          "median_valid_monitor_seconds": 170.0
+        },
+        "L4": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 20,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 16.0,
+          "median_valid_monitor_seconds": 173.5
+        },
+        "L5": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 20,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 14.0,
+          "median_valid_monitor_seconds": 182.0
+        },
+        "L6": {
+          "n_files": 20,
+          "valid_calibration_files": 20,
+          "pre_release_trigger_files": 0,
+          "within_60s_files": 20,
+          "during_release_detected_files": 20,
+          "detected_median_observed_delay_s": 8.0,
+          "median_valid_monitor_seconds": 180.0
+        }
+      },
+      "training_test_date_overlap_days": 10,
+      "test_unique_days": 10,
+      "training_test_date_overlap_by_position": {
+        "L1": 2,
+        "L2": 2,
+        "L3": 2,
+        "L4": 2,
+        "L5": 3,
+        "L6": 2
+      },
+      "frozen_gas_negative_control_test_triggers": 0
+    }
+  }
+}

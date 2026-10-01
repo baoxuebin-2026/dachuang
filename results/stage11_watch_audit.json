@@ -1,0 +1,88 @@
+{
+  "source": "data/raw/watch4ers/Riddick_WATCH4ERS_-_Data.xlsx",
+  "source_sha256": "331677b23555e58dc9e081e7f13fe0b18a7915b7194a95cc53db37e8fe872730",
+  "workbook_sheets": [
+    "Sheet1"
+  ],
+  "data_rows": 138,
+  "elapsed_s": 590.0,
+  "sample_interval_s": {
+    "min": 4.0,
+    "median": 4.0,
+    "max": 5.0,
+    "rounded_counts": {
+      "4": 95,
+      "5": 42
+    }
+  },
+  "gas_switch_values": {
+    "0": 105,
+    "10": 33
+  },
+  "pulse_count": 15,
+  "pulse_onsets_elapsed_s": [
+    5.0,
+    61.0,
+    121.0,
+    185.0,
+    250.0,
+    302.0,
+    332.0,
+    362.0,
+    392.0,
+    422.0,
+    439.0,
+    457.0,
+    470.0,
+    483.0,
+    495.0
+  ],
+  "pulse_offsets_elapsed_s": [
+    18.0,
+    74.0,
+    134.0,
+    194.0,
+    259.0,
+    310.0,
+    340.0,
+    371.0,
+    401.0,
+    431.0,
+    448.0,
+    465.0,
+    478.0,
+    491.0,
+    504.0
+  ],
+  "onsets_by_published_triple": [
+    [
+      5.0,
+      61.0,
+      121.0
+    ],
+    [
+      185.0,
+      250.0,
+      302.0
+    ],
+    [
+      332.0,
+      362.0,
+      392.0
+    ],
+    [
+      422.0,
+      439.0,
+      457.0
+    ],
+    [
+      470.0,
+      483.0,
+      495.0
+    ]
+  ],
+  "initial_clean_air_observations_before_first_pulse": 1,
+  "observed_experiment_id_column": false,
+  "protocol_watch_alarm_evaluation": "stop_insufficient_first_group_baseline",
+  "reason": "First pulse follows only one recorded clean-air observation, whereas the frozen protocol requires at least three for a within-group threshold. Other groups are concatenated without an experiment-ID or reset marker; preceding gas-off rows may contain residual methane."
+}

@@ -36,3 +36,12 @@
 | Bonn `person_tracking2` | 324,262,783 | `d3ef7898529c60dc39919ea699d00490d98a2c6ae4b165610f2955b235b939b5` | 567 张 RGB＋567 张深度；CRC 完整；下载自原作者站点；[脚本与 JSON](audits/bonn_person_tracking2.json)可复核 |
 
 下载与校验：`python scripts/download_data.py 309`；其余编号同理。原始数据始终保存在 `data/raw/`，不提交 Git。
+
+## 阶段 11 新增来源（2026-10-01）
+
+| 来源 | 原始入口与存放位置 | 完整性与使用边界 |
+| --- | --- | --- |
+| [UCI 251 Gas sensor arrays in open sampling settings](https://archive.ics.uci.edu/dataset/251/gas+sensor+arrays+in+open+sampling+settings) · [官方 ZIP](https://archive.ics.uci.edu/static/public/251/gas+sensor+arrays+in+open+sampling+settings.zip) | `data/raw/uci251/gas_sensor_arrays_open_sampling_settings.zip` | ZIP 8,368,611,437 字节，SHA-256 `11a89338cc921b7f48a423341f987596855ed1507e0ebe571fcce44d36d02864`；选中 360 个试次各自解压时核 CRC，原文件 SHA-256 在 [`file_results.csv`](../results/stage11_uci251/file_results.csv)。只对单一甲烷、固定加热做风速／位置留出，不能证明气种专一或焦化现场效果；[完整报告](../docs/stage11-targeted-supplement-results.md)。 |
+| [WATCH₄ERS Dryad](https://doi.org/10.5061/dryad.gf1vhhn0j) · [该版本 ZIP](https://datadryad.org/api/v2/versions/350892/download) | 解包 `Riddick_WATCH4ERS_-_Data.xlsx` 存为 `data/raw/watch4ers/Riddick_WATCH4ERS_-_Data.xlsx` | 13,925 字节，SHA-256 `331677b23555e58dc9e081e7f13fe0b18a7915b7194a95cc53db37e8fe872730`，与 Dryad API 一致；**首次开阀前仅一行洁净记录，按冻结阈值协议停止本项目独立检测实验**。保留[原件审计](../results/stage11_watch_audit.json)与原论文引用，不抄原作者结果充当自有分数。 |
+
+此前表中的 `METEC Curated Dataset` 是另一套尚未取得的整理数据；阶段 9 正文辅助的 [Dryad 受控释放日志和固定点观测](https://doi.org/10.5061/dryad.hhmgqnkss) 已另行取得并分析，两者不能混称。
