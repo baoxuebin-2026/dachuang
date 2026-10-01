@@ -37,6 +37,7 @@ class Trial:
     fan: str
     raw_sha256: str
     n_rows: int
+    dropped_invalid_sensor_rows: int
     valid: np.ndarray
     values: np.ndarray
     first_mfc_on_s: float | None
@@ -77,9 +78,10 @@ def load(archive: Path) -> tuple[list[Trial], dict]:
             if seconds.min() != 0 or seconds.max() < 259 or seconds.max() > 261:
                 raise ValueError(f"Unexpected recording duration: {member.filename}")
             raw = frame[list(BOARD_COLS)].to_numpy()
-            if not np.isfinite(raw).all() or (raw <= 0).any() or (raw >= 4096).any():
-                raise ValueError(f"Invalid gas raw values: {member.filename}")
-            grouped = frame.groupby(seconds, sort=True)[list(BOARD_COLS)]
+            complete = np.isfinite(raw).all(axis=1) & (raw > 0).all(axis=1) & (raw < 4096).all(axis=1)
+            # A corrupt sensor value invalidates its entire sample, never the
+            # independent trial; second validity is still gated on >=50 samples.
+            grouped = frame.loc[complete].groupby(seconds[complete], sort=True)[list(BOARD_COLS)]
             counts = grouped.size().reindex(range(260), fill_value=0).to_numpy()
             medians = grouped.median().reindex(range(260)).to_numpy()
             valid = (counts >= 50) & np.isfinite(medians).all(axis=1)
@@ -88,7 +90,7 @@ def load(archive: Path) -> tuple[list[Trial], dict]:
             ends = np.flatnonzero(~mfc_active & np.r_[False, mfc_active[:-1]])
             trials.append(Trial(
                 member.filename, location, timestamp[:8], fan,
-                hashlib.sha256(original).hexdigest(), len(frame), valid, medians,
+                hashlib.sha256(original).hexdigest(), len(frame), int((~complete).sum()), valid, medians,
                 float(time_ms[starts[0]] / 1000) if len(starts) else None,
                 float(time_ms[ends[0]] / 1000) if len(ends) else None,
                 int(valid[5:15].sum()),
@@ -213,6 +215,7 @@ def rows_for(trials: list[Trial], experiment: str, scores: dict[str, np.ndarray]
                      "split": split(trial, experiment),
                      "source_sha256": trial.raw_sha256,
                      "source_rows": trial.n_rows,
+                     "dropped_invalid_sensor_rows": trial.dropped_invalid_sensor_rows,
                      "first_mfc_on_s_audit_only": trial.first_mfc_on_s,
                      "first_mfc_off_s_audit_only": trial.first_mfc_off_s,
                      "calibration_seconds": trial.calibration_seconds,
