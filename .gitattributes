@@ -1,1 +1,2 @@
 results/stage11_uci251/*.csv whitespace=cr-at-eol
+*.part* filter=lfs diff=lfs merge=lfs -text
