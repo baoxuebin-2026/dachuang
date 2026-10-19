@@ -92,7 +92,7 @@ def gradient_check():
         if abs(delta-grad[idx])>1e-4:raise AssertionError((idx,delta,grad[idx]))
 
 
-def train_predict(train_x,train_y,test_x,seed=2026):
+def train_predict(train_x,train_y,test_x,seed=2026,return_logits=False):
     # Channel-wise standardization is fitted only on training devices.
     mu=train_x.mean(axis=(0,1),keepdims=True)
     sd=np.maximum(train_x.std(axis=(0,1),keepdims=True),.03)
@@ -107,7 +107,9 @@ def train_predict(train_x,train_y,test_x,seed=2026):
     w,bias,v,c=unpack(res.x)
     h=np.maximum(b@w+bias,0)
     pooling=np.concatenate((h[:,:9].mean(axis=1),h[:,9:].mean(axis=1)),axis=1)
-    return (pooling@v+c).argmax(axis=1),{'iterations':res.nit,'converged':res.success,'train_loss':float(res.fun)}
+    logits=pooling@v+c
+    output=logits if return_logits else logits.argmax(axis=1)
+    return output,{'iterations':res.nit,'converged':res.success,'train_loss':float(res.fun)}
 
 
 def main():
