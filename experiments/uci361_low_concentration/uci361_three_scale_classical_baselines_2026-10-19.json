@@ -1,0 +1,90 @@
+{
+  "protocol": "Exploratory fixed-parameter, identical three-scale augmentation and per-device low-concentration holdout; test data previously inspected.",
+  "factors": [
+    0.5,
+    0.75,
+    1.0
+  ],
+  "results": {
+    "temporal_logistic": {
+      "n": 192,
+      "macro_f1": 0.9421490761779687,
+      "co_recall": 1.0,
+      "methane_recall": 1.0,
+      "co_false_positive_count": 2,
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          41,
+          6
+        ],
+        [
+          1,
+          3,
+          0,
+          44
+        ]
+      ],
+      "per_board_f1": {
+        "1": 0.9791304347826086,
+        "2": 0.9791304347826086,
+        "3": 0.9365079365079365,
+        "4": 1.0,
+        "5": 0.6666666666666666
+      }
+    },
+    "temporal_rbf_svm": {
+      "n": 192,
+      "macro_f1": 0.9632332966600112,
+      "co_recall": 1.0,
+      "methane_recall": 1.0,
+      "co_false_positive_count": 3,
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          46,
+          1
+        ],
+        [
+          2,
+          0,
+          3,
+          43
+        ]
+      ],
+      "per_board_f1": {
+        "1": 0.9791304347826086,
+        "2": 0.9580419580419581,
+        "3": 0.9365079365079365,
+        "4": 1.0,
+        "5": 0.9580419580419581
+      }
+    }
+  }
+}
