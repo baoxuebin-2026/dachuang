@@ -1,0 +1,127 @@
+{
+  "status": "Exploratory after seeing unaugmented model performance; 1D log-response amplitude factors 0.25,0.5,0.75,1 for train devices only; training set ranks >=4; test on held device ranks <=3.",
+  "results": {
+    "augmented_logreg": {
+      "n": 192,
+      "macro_f1": 0.9266862170087977,
+      "co_recall": 0.9166666666666666,
+      "methane_recall": 1.0,
+      "per_board": {
+        "1": 0.8941798941798942,
+        "2": 1.0,
+        "3": 0.9365079365079365,
+        "4": 1.0,
+        "5": 0.6666666666666666
+      },
+      "confusion": [
+        [
+          44,
+          0,
+          4,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          41,
+          6
+        ],
+        [
+          0,
+          3,
+          0,
+          45
+        ]
+      ],
+      "training": {
+        "1": {
+          "training_examples": 1344
+        },
+        "2": {
+          "training_examples": 1344
+        },
+        "3": {
+          "training_examples": 1344
+        },
+        "4": {
+          "training_examples": 1568
+        },
+        "5": {
+          "training_examples": 1568
+        }
+      }
+    },
+    "augmented_cnn": {
+      "n": 192,
+      "macro_f1": 0.9843716433941997,
+      "co_recall": 0.9583333333333334,
+      "methane_recall": 1.0,
+      "per_board": {
+        "1": 0.9580419580419581,
+        "2": 0.9791304347826086,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "confusion": [
+        [
+          46,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          48,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          47
+        ]
+      ],
+      "training": {
+        "1": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.2775221757058876
+        },
+        "2": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.29102047980366397
+        },
+        "3": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.29435601110950893
+        },
+        "4": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.28669782335500293
+        },
+        "5": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.27064428620041736
+        }
+      }
+    }
+  }
+}

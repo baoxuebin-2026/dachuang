@@ -1,0 +1,158 @@
+{
+  "status": "Post hoc sensitivity on already inspected five devices. No independent holdout remains.",
+  "settings": {
+    "four_factors_seed2025": {
+      "factors": [
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "seed": 2025,
+      "macro_f1": 0.9843716433941997,
+      "co_recall": 0.9583333333333334,
+      "methane_recall": 1.0,
+      "worst_device_f1": 0.9580419580419581,
+      "confusion": [
+        [
+          46,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          48,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          47
+        ]
+      ]
+    },
+    "four_factors_seed2027": {
+      "factors": [
+        0.25,
+        0.5,
+        0.75,
+        1.0
+      ],
+      "seed": 2027,
+      "macro_f1": 0.9843716433941997,
+      "co_recall": 0.9583333333333334,
+      "methane_recall": 1.0,
+      "worst_device_f1": 0.9580419580419581,
+      "confusion": [
+        [
+          46,
+          0,
+          2,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          48,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          47
+        ]
+      ]
+    },
+    "three_factors_seed2026": {
+      "factors": [
+        0.5,
+        0.75,
+        1.0
+      ],
+      "seed": 2026,
+      "macro_f1": 0.9741226182114779,
+      "co_recall": 1.0,
+      "methane_recall": 1.0,
+      "worst_device_f1": 0.9386253842775583,
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          44
+        ]
+      ]
+    },
+    "two_factors_seed2026": {
+      "factors": [
+        0.5,
+        1.0
+      ],
+      "seed": 2026,
+      "macro_f1": 0.9741226182114779,
+      "co_recall": 1.0,
+      "methane_recall": 1.0,
+      "worst_device_f1": 0.9386253842775583,
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          44
+        ]
+      ]
+    }
+  }
+}

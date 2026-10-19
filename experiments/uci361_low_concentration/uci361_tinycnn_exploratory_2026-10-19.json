@@ -1,0 +1,138 @@
+{
+  "method": "Trainable 1D conv: 16 kernels length 3, two-half mean pooling, softmax; fixed weight decay 0.02, max 160 L-BFGS steps; train-only scaling. Exploration on previously inspected UCI361 dataset.",
+  "source_sha256": "e8801de3a98d3db2b48fccf0be4d681879a1441f5732ac6fbee1c48a05b49167",
+  "result": {
+    "low_held_board": {
+      "n": 192,
+      "macro_f1": 0.6910287081339712,
+      "co_recall": 1.0,
+      "methane_recall": 0.5833333333333334,
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          28,
+          0,
+          20
+        ],
+        [
+          12,
+          0,
+          32,
+          4
+        ],
+        [
+          24,
+          0,
+          0,
+          24
+        ]
+      ],
+      "per_board": {
+        "1": 0.6785243741765482,
+        "2": 0.5760061919504644,
+        "3": 0.793939393939394,
+        "4": 0.8730769230769231,
+        "5": 0.4236111111111111
+      },
+      "fitting": {
+        "1": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.13096846555768585
+        },
+        "2": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.1346125238331442
+        },
+        "3": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.13504150851627716
+        },
+        "4": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.131177446390806
+        },
+        "5": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.11346617105599899
+        }
+      }
+    },
+    "all_held_board": {
+      "n": 640,
+      "macro_f1": 0.9529459917401117,
+      "co_recall": 0.99375,
+      "methane_recall": 0.99375,
+      "confusion": [
+        [
+          159,
+          0,
+          1,
+          0
+        ],
+        [
+          1,
+          159,
+          0,
+          0
+        ],
+        [
+          2,
+          0,
+          139,
+          19
+        ],
+        [
+          7,
+          0,
+          0,
+          153
+        ]
+      ],
+      "per_board": {
+        "1": 0.9689494992958849,
+        "2": 0.9751904213929531,
+        "3": 0.9937490232848882,
+        "4": 1.0,
+        "5": 0.6807932318473865
+      },
+      "fitting": {
+        "1": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.17468536498462908
+        },
+        "2": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.18543210763382384
+        },
+        "3": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.19115249104036652
+        },
+        "4": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.18397855925785978
+        },
+        "5": {
+          "iterations": 160,
+          "converged": false,
+          "train_loss": 0.17145087583176374
+        }
+      }
+    }
+  }
+}
