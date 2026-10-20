@@ -1,0 +1,34 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.4264224",
+  "source_md5": "7e5e62d12a7a3f3d751634aa36e0633d",
+  "fields": [
+    "measurement",
+    "range",
+    "carbon_monoxide",
+    "hydrogen",
+    "water",
+    "tvoc_ppb"
+  ],
+  "phase_rows": [
+    500,
+    1233,
+    1966,
+    2700,
+    3433,
+    4166,
+    4900,
+    5633,
+    6366,
+    7100,
+    7833,
+    8566,
+    9300,
+    10033,
+    10766,
+    11500
+  ],
+  "exposures": {
+    "as_mlv_x": 1074,
+    "as_mlv_p2_x": 1115
+  }
+}

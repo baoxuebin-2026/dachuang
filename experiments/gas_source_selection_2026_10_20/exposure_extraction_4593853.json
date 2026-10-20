@@ -1,0 +1,34 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.4593853",
+  "md5": "eea034a6cc1881b0988cb1dc99c2799e",
+  "fields": [
+    "range",
+    "lab",
+    "carbon_monoxide",
+    "TVOCppb",
+    "water",
+    "hydrogen"
+  ],
+  "rows": [
+    100,
+    246,
+    393,
+    540,
+    686,
+    833,
+    980,
+    1126,
+    1273,
+    1420,
+    1566,
+    1713,
+    1860,
+    2006,
+    2153,
+    2300
+  ],
+  "exposure_counts": {
+    "sensor0": 1200,
+    "sensor1": 1200
+  }
+}

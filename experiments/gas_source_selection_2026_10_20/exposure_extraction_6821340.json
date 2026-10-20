@@ -1,0 +1,38 @@
+{
+  "source": "https://doi.org/10.5281/zenodo.6821340",
+  "md5": "6ce3fefe1852219e1a66b3fcc24db045",
+  "features": "16 phase points x 4 pixels; median all stable cycles per exposure",
+  "fields": [
+    "range",
+    "carbon_monoxide",
+    "hydrogen",
+    "water",
+    "VOCsum"
+  ],
+  "rows": [
+    60,
+    148,
+    236,
+    324,
+    412,
+    500,
+    588,
+    676,
+    764,
+    852,
+    940,
+    1028,
+    1116,
+    1204,
+    1292,
+    1380
+  ],
+  "counts": {
+    "A_train_x": 700,
+    "B_train_x": 700,
+    "C_train_x": 700,
+    "A_test_x": 200,
+    "B_test_x": 200,
+    "C_test_x": 200
+  }
+}

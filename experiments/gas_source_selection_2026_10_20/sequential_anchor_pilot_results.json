@@ -1,0 +1,132 @@
+{
+  "as_mlv": {
+    "5": {
+      "calibration_exposures": 20,
+      "raw_mae": 107.25,
+      "sequential_mae": 107.25,
+      "fixed20_mae": 107.25,
+      "b5": 58.9,
+      "b10": 52.5,
+      "b20": 36.0
+    },
+    "6": {
+      "calibration_exposures": 20,
+      "raw_mae": 96.49,
+      "sequential_mae": 81.54,
+      "fixed20_mae": 81.54,
+      "b5": 102.7,
+      "b10": 57.5,
+      "b20": 79.3
+    },
+    "7": {
+      "calibration_exposures": 10,
+      "raw_mae": 131.84,
+      "sequential_mae": 124.95,
+      "fixed20_mae": 111.08,
+      "b5": 192.0,
+      "b10": 160.8,
+      "b20": 114.6
+    },
+    "8": {
+      "calibration_exposures": 20,
+      "raw_mae": 111.22,
+      "sequential_mae": 111.22,
+      "fixed20_mae": 111.22,
+      "b5": -3.7,
+      "b10": -3.2,
+      "b20": 36.6
+    },
+    "10": {
+      "calibration_exposures": 20,
+      "raw_mae": 130.2,
+      "sequential_mae": 130.2,
+      "fixed20_mae": 130.2,
+      "b5": 106.1,
+      "b10": 33.5,
+      "b20": 40.5
+    },
+    "11": {
+      "calibration_exposures": 20,
+      "raw_mae": 143.09,
+      "sequential_mae": 123.01,
+      "fixed20_mae": 123.01,
+      "b5": 84.4,
+      "b10": 64.4,
+      "b20": 103.2
+    },
+    "12": {
+      "calibration_exposures": 20,
+      "raw_mae": 149.41,
+      "sequential_mae": 118.03,
+      "fixed20_mae": 118.03,
+      "b5": 50.3,
+      "b10": 59.8,
+      "b20": 83.7
+    }
+  },
+  "as_mlv_p2": {
+    "5": {
+      "calibration_exposures": 20,
+      "raw_mae": 131.69,
+      "sequential_mae": 92.16,
+      "fixed20_mae": 92.16,
+      "b5": 85.9,
+      "b10": 68.4,
+      "b20": 59.1
+    },
+    "6": {
+      "calibration_exposures": 10,
+      "raw_mae": 153.24,
+      "sequential_mae": 68.87,
+      "fixed20_mae": 70.9,
+      "b5": 137.4,
+      "b10": 112.3,
+      "b20": 107.6
+    },
+    "7": {
+      "calibration_exposures": 10,
+      "raw_mae": 175.04,
+      "sequential_mae": 68.91,
+      "fixed20_mae": 67.03,
+      "b5": 154.4,
+      "b10": 194.6,
+      "b20": 172.7
+    },
+    "8": {
+      "calibration_exposures": 20,
+      "raw_mae": 95.12,
+      "sequential_mae": 95.12,
+      "fixed20_mae": 95.12,
+      "b5": -19.4,
+      "b10": 2.9,
+      "b20": 28.7
+    },
+    "10": {
+      "calibration_exposures": 10,
+      "raw_mae": 127.43,
+      "sequential_mae": 115.82,
+      "fixed20_mae": 112.95,
+      "b5": -37.7,
+      "b10": -134.3,
+      "b20": -125.3
+    },
+    "11": {
+      "calibration_exposures": 20,
+      "raw_mae": 87.18,
+      "sequential_mae": 87.18,
+      "fixed20_mae": 87.18,
+      "b5": -47.2,
+      "b10": -33.0,
+      "b20": 2.8
+    },
+    "12": {
+      "calibration_exposures": 20,
+      "raw_mae": 82.91,
+      "sequential_mae": 82.91,
+      "fixed20_mae": 82.91,
+      "b5": -70.9,
+      "b10": -28.2,
+      "b20": -13.0
+    }
+  }
+}

@@ -1,0 +1,160 @@
+{
+  "as_mlv": {
+    "5": {
+      "n_test": 79,
+      "choice": "defer",
+      "difference_ppb": 9.14,
+      "se_ppb": 7.89,
+      "test_mae": {
+        "batch3": 112.2,
+        "batch3_4": 91.98
+      },
+      "wrong_by_10pct": false
+    },
+    "6": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 22.02,
+      "se_ppb": 9.14,
+      "test_mae": {
+        "batch3": 69.1,
+        "batch3_4": 63.49
+      },
+      "wrong_by_10pct": false
+    },
+    "7": {
+      "n_test": 79,
+      "choice": "defer",
+      "difference_ppb": 8.13,
+      "se_ppb": 9.35,
+      "test_mae": {
+        "batch3": 118.87,
+        "batch3_4": 104.52
+      },
+      "wrong_by_10pct": false
+    },
+    "8": {
+      "n_test": 73,
+      "choice": "defer",
+      "difference_ppb": 6.43,
+      "se_ppb": 5.97,
+      "test_mae": {
+        "batch3": 120.09,
+        "batch3_4": 101.06
+      },
+      "wrong_by_10pct": false
+    },
+    "10": {
+      "n_test": 79,
+      "choice": "defer",
+      "difference_ppb": 10.77,
+      "se_ppb": 11.24,
+      "test_mae": {
+        "batch3": 170.77,
+        "batch3_4": 127.16
+      },
+      "wrong_by_10pct": false
+    },
+    "11": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 15.93,
+      "se_ppb": 7.24,
+      "test_mae": {
+        "batch3": 124.46,
+        "batch3_4": 107.55
+      },
+      "wrong_by_10pct": false
+    },
+    "12": {
+      "n_test": 79,
+      "choice": "defer",
+      "difference_ppb": 14.66,
+      "se_ppb": 8.97,
+      "test_mae": {
+        "batch3": 127.25,
+        "batch3_4": 113.34
+      },
+      "wrong_by_10pct": false
+    }
+  },
+  "as_mlv_p2": {
+    "5": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 18.99,
+      "se_ppb": 4.22,
+      "test_mae": {
+        "batch3": 110.87,
+        "batch3_4": 103.43
+      },
+      "wrong_by_10pct": false
+    },
+    "6": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 14.85,
+      "se_ppb": 3.98,
+      "test_mae": {
+        "batch3": 72.85,
+        "batch3_4": 65.32
+      },
+      "wrong_by_10pct": false
+    },
+    "7": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 17.79,
+      "se_ppb": 5.08,
+      "test_mae": {
+        "batch3": 82.02,
+        "batch3_4": 65.93
+      },
+      "wrong_by_10pct": false
+    },
+    "8": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 12.55,
+      "se_ppb": 3.33,
+      "test_mae": {
+        "batch3": 86.91,
+        "batch3_4": 81.07
+      },
+      "wrong_by_10pct": false
+    },
+    "10": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 18.53,
+      "se_ppb": 6.34,
+      "test_mae": {
+        "batch3": 104.25,
+        "batch3_4": 108.51
+      },
+      "wrong_by_10pct": false
+    },
+    "11": {
+      "n_test": 79,
+      "choice": "batch3_4",
+      "difference_ppb": 16.3,
+      "se_ppb": 5.7,
+      "test_mae": {
+        "batch3": 91.57,
+        "batch3_4": 85.5
+      },
+      "wrong_by_10pct": false
+    },
+    "12": {
+      "n_test": 79,
+      "choice": "defer",
+      "difference_ppb": 11.79,
+      "se_ppb": 6.11,
+      "test_mae": {
+        "batch3": 95.04,
+        "batch3_4": 84.59
+      },
+      "wrong_by_10pct": false
+    }
+  }
+}

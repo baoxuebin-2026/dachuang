@@ -1,0 +1,174 @@
+{
+  "as_mlv": {
+    "5": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 107.251,
+      "centered_mae": 107.983,
+      "delta": 0.732,
+      "cov_ratio": 0.094,
+      "split_prediction_difference": 410.145,
+      "target_to_source_pred_spread": 0.983,
+      "warm_co_mean": 1051.8,
+      "late_co_mean": 975.38
+    },
+    "6": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 96.492,
+      "centered_mae": 83.894,
+      "delta": -12.598,
+      "cov_ratio": 0.151,
+      "split_prediction_difference": 139.952,
+      "target_to_source_pred_spread": 0.816,
+      "warm_co_mean": 994.3,
+      "late_co_mean": 978.19
+    },
+    "7": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 131.843,
+      "centered_mae": 115.249,
+      "delta": -16.594,
+      "cov_ratio": 0.211,
+      "split_prediction_difference": 165.798,
+      "target_to_source_pred_spread": 0.926,
+      "warm_co_mean": 996.95,
+      "late_co_mean": 979.41
+    },
+    "8": {
+      "n_warm": 20,
+      "n_test": 73,
+      "raw_mae": 111.221,
+      "centered_mae": 159.914,
+      "delta": 48.693,
+      "cov_ratio": 0.156,
+      "split_prediction_difference": 331.616,
+      "target_to_source_pred_spread": 1.009,
+      "warm_co_mean": 1142.1,
+      "late_co_mean": 1066.58
+    },
+    "10": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 130.199,
+      "centered_mae": 123.633,
+      "delta": -6.566,
+      "cov_ratio": 0.108,
+      "split_prediction_difference": 75.619,
+      "target_to_source_pred_spread": 0.985,
+      "warm_co_mean": 1025.85,
+      "late_co_mean": 1089.87
+    },
+    "11": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 143.092,
+      "centered_mae": 199.098,
+      "delta": 56.006,
+      "cov_ratio": 0.113,
+      "split_prediction_difference": 82.966,
+      "target_to_source_pred_spread": 0.964,
+      "warm_co_mean": 1205.05,
+      "late_co_mean": 1094.48
+    },
+    "12": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 149.41,
+      "centered_mae": 187.401,
+      "delta": 37.991,
+      "cov_ratio": 0.17,
+      "split_prediction_difference": 411.232,
+      "target_to_source_pred_spread": 0.985,
+      "warm_co_mean": 820.4,
+      "late_co_mean": 1067.97
+    }
+  },
+  "as_mlv_p2": {
+    "5": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 131.688,
+      "centered_mae": 116.523,
+      "delta": -15.164,
+      "cov_ratio": 0.108,
+      "split_prediction_difference": 395.717,
+      "target_to_source_pred_spread": 1.018,
+      "warm_co_mean": 1051.8,
+      "late_co_mean": 975.38
+    },
+    "6": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 153.237,
+      "centered_mae": 64.36,
+      "delta": -88.876,
+      "cov_ratio": 0.123,
+      "split_prediction_difference": 86.791,
+      "target_to_source_pred_spread": 0.874,
+      "warm_co_mean": 994.3,
+      "late_co_mean": 978.19
+    },
+    "7": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 175.039,
+      "centered_mae": 67.883,
+      "delta": -107.156,
+      "cov_ratio": 0.28,
+      "split_prediction_difference": 214.548,
+      "target_to_source_pred_spread": 1.007,
+      "warm_co_mean": 996.95,
+      "late_co_mean": 979.41
+    },
+    "8": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 95.115,
+      "centered_mae": 156.163,
+      "delta": 61.047,
+      "cov_ratio": 0.136,
+      "split_prediction_difference": 359.532,
+      "target_to_source_pred_spread": 0.962,
+      "warm_co_mean": 1142.1,
+      "late_co_mean": 1063.28
+    },
+    "10": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 127.427,
+      "centered_mae": 117.155,
+      "delta": -10.272,
+      "cov_ratio": 0.111,
+      "split_prediction_difference": 71.854,
+      "target_to_source_pred_spread": 0.95,
+      "warm_co_mean": 1025.85,
+      "late_co_mean": 1089.87
+    },
+    "11": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 87.179,
+      "centered_mae": 172.21,
+      "delta": 85.031,
+      "cov_ratio": 0.184,
+      "split_prediction_difference": 89.113,
+      "target_to_source_pred_spread": 0.96,
+      "warm_co_mean": 1205.05,
+      "late_co_mean": 1094.48
+    },
+    "12": {
+      "n_warm": 20,
+      "n_test": 79,
+      "raw_mae": 82.91,
+      "centered_mae": 168.902,
+      "delta": 85.992,
+      "cov_ratio": 0.203,
+      "split_prediction_difference": 393.882,
+      "target_to_source_pred_spread": 1.009,
+      "warm_co_mean": 820.4,
+      "late_co_mean": 1067.97
+    }
+  }
+}

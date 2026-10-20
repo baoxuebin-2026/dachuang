@@ -1,0 +1,374 @@
+{
+  "4264224": {
+    "as_mlv": {
+      "5": {
+        "n_test": 79,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 111.61,
+          "offset": 113.7,
+          "residual": 110.68
+        },
+        "test_mae": {
+          "none": 107.25,
+          "offset": 98.78,
+          "residual": 91.98
+        },
+        "chosen_mae": 107.25
+      },
+      "6": {
+        "n_test": 79,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 117.52,
+          "offset": 124.7,
+          "residual": 108.16
+        },
+        "test_mae": {
+          "none": 96.49,
+          "offset": 81.54,
+          "residual": 63.49
+        },
+        "chosen_mae": 96.49
+      },
+      "7": {
+        "n_test": 79,
+        "choice": "offset",
+        "pilot_loo_mae": {
+          "none": 117.04,
+          "offset": 88.94,
+          "residual": 96.97
+        },
+        "test_mae": {
+          "none": 131.84,
+          "offset": 111.08,
+          "residual": 104.52
+        },
+        "chosen_mae": 111.08
+      },
+      "8": {
+        "n_test": 73,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 82.91,
+          "offset": 85.89,
+          "residual": 91.63
+        },
+        "test_mae": {
+          "none": 111.22,
+          "offset": 106.58,
+          "residual": 101.06
+        },
+        "chosen_mae": 111.22
+      },
+      "10": {
+        "n_test": 79,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 113.21,
+          "offset": 116.45,
+          "residual": 85.63
+        },
+        "test_mae": {
+          "none": 130.2,
+          "offset": 121.82,
+          "residual": 127.16
+        },
+        "chosen_mae": 127.16
+      },
+      "11": {
+        "n_test": 79,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 138.74,
+          "offset": 121.47,
+          "residual": 118.71
+        },
+        "test_mae": {
+          "none": 143.09,
+          "offset": 123.01,
+          "residual": 107.55
+        },
+        "chosen_mae": 143.09
+      },
+      "12": {
+        "n_test": 79,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 136.74,
+          "offset": 119.89,
+          "residual": 127.44
+        },
+        "test_mae": {
+          "none": 149.41,
+          "offset": 118.03,
+          "residual": 113.34
+        },
+        "chosen_mae": 149.41
+      }
+    },
+    "as_mlv_p2": {
+      "5": {
+        "n_test": 79,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 104.41,
+          "offset": 111.33,
+          "residual": 102.27
+        },
+        "test_mae": {
+          "none": 131.69,
+          "offset": 92.16,
+          "residual": 103.43
+        },
+        "chosen_mae": 131.69
+      },
+      "6": {
+        "n_test": 79,
+        "choice": "offset",
+        "pilot_loo_mae": {
+          "none": 120.38,
+          "offset": 86.07,
+          "residual": 82.22
+        },
+        "test_mae": {
+          "none": 153.24,
+          "offset": 70.9,
+          "residual": 65.32
+        },
+        "chosen_mae": 70.9
+      },
+      "7": {
+        "n_test": 79,
+        "choice": "offset",
+        "pilot_loo_mae": {
+          "none": 172.75,
+          "offset": 66.7,
+          "residual": 67.17
+        },
+        "test_mae": {
+          "none": 175.04,
+          "offset": 67.03,
+          "residual": 65.93
+        },
+        "chosen_mae": 67.03
+      },
+      "8": {
+        "n_test": 79,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 108.82,
+          "offset": 111.66,
+          "residual": 70.42
+        },
+        "test_mae": {
+          "none": 95.12,
+          "offset": 87.6,
+          "residual": 81.07
+        },
+        "chosen_mae": 81.07
+      },
+      "10": {
+        "n_test": 79,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 165.55,
+          "offset": 121.26,
+          "residual": 103.57
+        },
+        "test_mae": {
+          "none": 127.43,
+          "offset": 112.95,
+          "residual": 108.51
+        },
+        "chosen_mae": 108.51
+      },
+      "11": {
+        "n_test": 79,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 127.42,
+          "offset": 134.42,
+          "residual": 105.55
+        },
+        "test_mae": {
+          "none": 87.18,
+          "offset": 87.92,
+          "residual": 85.5
+        },
+        "chosen_mae": 85.5
+      },
+      "12": {
+        "n_test": 79,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 72.91,
+          "offset": 73.09,
+          "residual": 78.3
+        },
+        "test_mae": {
+          "none": 82.91,
+          "offset": 85.03,
+          "residual": 84.59
+        },
+        "chosen_mae": 82.91
+      }
+    }
+  },
+  "4593853": {
+    "sensor0": {
+      "2": {
+        "n_test": 80,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 1596.88,
+          "offset": 157.09,
+          "residual": 93.45
+        },
+        "test_mae": {
+          "none": 1644.36,
+          "offset": 142.76,
+          "residual": 77.89
+        },
+        "chosen_mae": 77.89
+      },
+      "3": {
+        "n_test": 380,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 1805.01,
+          "offset": 213.67,
+          "residual": 151.55
+        },
+        "test_mae": {
+          "none": 1812.31,
+          "offset": 210.96,
+          "residual": 207.49
+        },
+        "chosen_mae": 207.49
+      },
+      "4": {
+        "n_test": 80,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 3060.65,
+          "offset": 279.62,
+          "residual": 102.36
+        },
+        "test_mae": {
+          "none": 3101.61,
+          "offset": 215.65,
+          "residual": 110.33
+        },
+        "chosen_mae": 110.33
+      },
+      "5": {
+        "n_test": 30,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 3319.88,
+          "offset": 302.68,
+          "residual": 157.67
+        },
+        "test_mae": {
+          "none": 3335.73,
+          "offset": 318.72,
+          "residual": 148.29
+        },
+        "chosen_mae": 148.29
+      },
+      "6": {
+        "n_test": 30,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 3296.26,
+          "offset": 228.66,
+          "residual": 110.38
+        },
+        "test_mae": {
+          "none": 3224.9,
+          "offset": 268.65,
+          "residual": 133.42
+        },
+        "chosen_mae": 133.42
+      }
+    },
+    "sensor1": {
+      "2": {
+        "n_test": 80,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 508.31,
+          "offset": 535.07,
+          "residual": 425.33
+        },
+        "test_mae": {
+          "none": 444.91,
+          "offset": 389.34,
+          "residual": 370.98
+        },
+        "chosen_mae": 370.98
+      },
+      "3": {
+        "n_test": 380,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 489.15,
+          "offset": 501.81,
+          "residual": 555.94
+        },
+        "test_mae": {
+          "none": 406.87,
+          "offset": 422.91,
+          "residual": 492.11
+        },
+        "chosen_mae": 406.87
+      },
+      "4": {
+        "n_test": 80,
+        "choice": "offset",
+        "pilot_loo_mae": {
+          "none": 460.98,
+          "offset": 429.49,
+          "residual": 477.3
+        },
+        "test_mae": {
+          "none": 414.14,
+          "offset": 466.79,
+          "residual": 495.23
+        },
+        "chosen_mae": 466.79
+      },
+      "5": {
+        "n_test": 30,
+        "choice": "none",
+        "pilot_loo_mae": {
+          "none": 456.48,
+          "offset": 480.06,
+          "residual": 435.86
+        },
+        "test_mae": {
+          "none": 384.63,
+          "offset": 385.2,
+          "residual": 373.63
+        },
+        "chosen_mae": 384.63
+      },
+      "6": {
+        "n_test": 30,
+        "choice": "residual",
+        "pilot_loo_mae": {
+          "none": 588.15,
+          "offset": 534.54,
+          "residual": 462.18
+        },
+        "test_mae": {
+          "none": 811.7,
+          "offset": 520.39,
+          "residual": 466.72
+        },
+        "chosen_mae": 466.72
+      }
+    }
+  }
+}
