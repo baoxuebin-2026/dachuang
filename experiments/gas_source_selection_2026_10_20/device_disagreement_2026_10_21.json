@@ -1,0 +1,40 @@
+{
+  "protocol": "Frozen multi-device CO disagreement pilot on two independent data sources.\n\n6821340: three devices, 700 training recipes, official 200 test recipes.\n15423482: seven devices, recipe state <=100 train, >=160 test, others omitted.\nFit separate ExtraTrees(200, leaf3, .8 features) per device on log signals;\nCO ppm/ppb units follow original labels. Clip at [0, source train max].\nSame-recipe median prediction and median absolute deviation across devices.\nTop 25% disagreement is a fixed-capacity inspection queue; evaluate its\ncoverage of top 20% median-ensemble errors and mean-error enrichment.\nSuccess requires >=40% top-error capture and >=1.5 mean-error enrichment in\neach independent source. Compare random 25% queue (20% capture, 1x mean).\nNo learning/tuning from test labels. Do not count simultaneous devices as\nindependent gas exposures. A successful ranking would warrant further checks\nagainst OOD and within-model uncertainty, not prove originality or safety.\n",
+  "datasets": {
+    "6821340": {
+      "n_test_exposures": 200,
+      "devices": 3,
+      "individual_mae": [
+        197.687,
+        253.136,
+        296.519
+      ],
+      "median_mae": 250.993,
+      "mean_prediction_mae": 239.751,
+      "disagreement_top_quarter_hard_error_capture": 0.5,
+      "disagreement_top_quarter_error_enrichment": 1.741,
+      "hard_error_cut": 441.066,
+      "co_zero_false": null
+    },
+    "15423482_first": {
+      "n_test_exposures": 40,
+      "devices": 7,
+      "individual_mae": [
+        331.275,
+        333.195,
+        306.986,
+        282.633,
+        287.055,
+        263.682,
+        277.292
+      ],
+      "median_mae": 300.82,
+      "mean_prediction_mae": 289.499,
+      "disagreement_top_quarter_hard_error_capture": 0.125,
+      "disagreement_top_quarter_error_enrichment": 0.85,
+      "hard_error_cut": 560.664,
+      "co_zero_false": null
+    }
+  },
+  "pass": false
+}

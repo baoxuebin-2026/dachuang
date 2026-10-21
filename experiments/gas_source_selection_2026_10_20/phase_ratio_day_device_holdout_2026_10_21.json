@@ -1,0 +1,249 @@
+{
+  "protocol": "Frozen after UCI487 device-only phase-ratio signal was observed.\n\nStronger UCI487 transfer: first 10 days on six same-type source devices\nonly; evaluate last 3 days on the seventh (new device AND later dates).\nRepeat for seven FIGARO and seven FIS targets. No target labels or test-day\ndata used by training. Baselines raw log phases+humidity Ridge(10), ET(150,\nleaf2), and simple 50/50. Candidate within-cycle difference (log high minus\nlog low)+humidity with same ET. Each held-out device has 300 exposures; same\ngas schedule across devices and days, so independent test units are 3 days\nand 14 hardware units, not 4200 independent recipes. Success requires ratio\nET pooled MAE >=10% below best fixed raw model, at least 10% below best fixed\nraw in EACH manufacturer family, worst target MAE no worse, and pooled highCO\n>=15ppm positive underestimation no worse. This stress test is independent in\ntime from training but representation choice was motivated by UCI487 itself.\n",
+  "days_train": [
+    "20160930_203718",
+    "20161001_231809",
+    "20161003_085624",
+    "20161004_104124",
+    "20161005_140846",
+    "20161006_182224",
+    "20161007_210049",
+    "20161008_234508",
+    "20161010_095046",
+    "20161011_113032"
+  ],
+  "days_test": [
+    "20161013_143355",
+    "20161014_184659",
+    "20161016_053656"
+  ],
+  "targets": {
+    "1": {
+      "mae": {
+        "raw_ridge": 7.141,
+        "raw_extra_trees": 7.763,
+        "raw_half": 7.424,
+        "ratio_extra_trees": 5.503
+      },
+      "high_under": {
+        "raw_ridge": 1.981,
+        "raw_extra_trees": 1.063,
+        "raw_half": 1.475,
+        "ratio_extra_trees": 5.74
+      }
+    },
+    "2": {
+      "mae": {
+        "raw_ridge": 5.77,
+        "raw_extra_trees": 6.445,
+        "raw_half": 5.545,
+        "ratio_extra_trees": 6.18
+      },
+      "high_under": {
+        "raw_ridge": 5.796,
+        "raw_extra_trees": 11.954,
+        "raw_half": 8.875,
+        "ratio_extra_trees": 4.064
+      }
+    },
+    "3": {
+      "mae": {
+        "raw_ridge": 5.523,
+        "raw_extra_trees": 7.163,
+        "raw_half": 5.852,
+        "ratio_extra_trees": 5.918
+      },
+      "high_under": {
+        "raw_ridge": 7.566,
+        "raw_extra_trees": 1.769,
+        "raw_half": 4.355,
+        "ratio_extra_trees": 7.109
+      }
+    },
+    "4": {
+      "mae": {
+        "raw_ridge": 5.512,
+        "raw_extra_trees": 5.669,
+        "raw_half": 5.479,
+        "ratio_extra_trees": 5.215
+      },
+      "high_under": {
+        "raw_ridge": 7.701,
+        "raw_extra_trees": 3.987,
+        "raw_half": 5.833,
+        "ratio_extra_trees": 6.019
+      }
+    },
+    "5": {
+      "mae": {
+        "raw_ridge": 5.506,
+        "raw_extra_trees": 5.717,
+        "raw_half": 5.552,
+        "ratio_extra_trees": 5.335
+      },
+      "high_under": {
+        "raw_ridge": 8.21,
+        "raw_extra_trees": 6.275,
+        "raw_half": 7.242,
+        "ratio_extra_trees": 7.304
+      }
+    },
+    "6": {
+      "mae": {
+        "raw_ridge": 5.485,
+        "raw_extra_trees": 4.714,
+        "raw_half": 5.051,
+        "ratio_extra_trees": 5.173
+      },
+      "high_under": {
+        "raw_ridge": 8.14,
+        "raw_extra_trees": 6.197,
+        "raw_half": 7.169,
+        "ratio_extra_trees": 6.489
+      }
+    },
+    "7": {
+      "mae": {
+        "raw_ridge": 5.512,
+        "raw_extra_trees": 5.155,
+        "raw_half": 5.227,
+        "ratio_extra_trees": 5.051
+      },
+      "high_under": {
+        "raw_ridge": 8.422,
+        "raw_extra_trees": 9.991,
+        "raw_half": 9.207,
+        "ratio_extra_trees": 6.783
+      }
+    },
+    "8": {
+      "mae": {
+        "raw_ridge": 2.485,
+        "raw_extra_trees": 2.952,
+        "raw_half": 2.707,
+        "ratio_extra_trees": 2.748
+      },
+      "high_under": {
+        "raw_ridge": 3.516,
+        "raw_extra_trees": 4.092,
+        "raw_half": 3.804,
+        "ratio_extra_trees": 3.825
+      }
+    },
+    "9": {
+      "mae": {
+        "raw_ridge": 2.682,
+        "raw_extra_trees": 3.656,
+        "raw_half": 3.162,
+        "ratio_extra_trees": 1.557
+      },
+      "high_under": {
+        "raw_ridge": 0.001,
+        "raw_extra_trees": 0.072,
+        "raw_half": 0.033,
+        "ratio_extra_trees": 0.41
+      }
+    },
+    "10": {
+      "mae": {
+        "raw_ridge": 1.892,
+        "raw_extra_trees": 1.946,
+        "raw_half": 1.247,
+        "ratio_extra_trees": 2.037
+      },
+      "high_under": {
+        "raw_ridge": 0.024,
+        "raw_extra_trees": 1.605,
+        "raw_half": 0.568,
+        "ratio_extra_trees": 0.038
+      }
+    },
+    "11": {
+      "mae": {
+        "raw_ridge": 1.976,
+        "raw_extra_trees": 1.289,
+        "raw_half": 1.587,
+        "ratio_extra_trees": 1.497
+      },
+      "high_under": {
+        "raw_ridge": 2.947,
+        "raw_extra_trees": 1.402,
+        "raw_half": 2.166,
+        "ratio_extra_trees": 1.738
+      }
+    },
+    "12": {
+      "mae": {
+        "raw_ridge": 1.792,
+        "raw_extra_trees": 1.45,
+        "raw_half": 1.502,
+        "ratio_extra_trees": 1.581
+      },
+      "high_under": {
+        "raw_ridge": 1.509,
+        "raw_extra_trees": 0.26,
+        "raw_half": 0.852,
+        "ratio_extra_trees": 0.886
+      }
+    },
+    "13": {
+      "mae": {
+        "raw_ridge": 2.037,
+        "raw_extra_trees": 2.514,
+        "raw_half": 2.235,
+        "ratio_extra_trees": 1.758
+      },
+      "high_under": {
+        "raw_ridge": 0.095,
+        "raw_extra_trees": 0.046,
+        "raw_half": 0.035,
+        "ratio_extra_trees": 0.278
+      }
+    },
+    "14": {
+      "mae": {
+        "raw_ridge": 1.755,
+        "raw_extra_trees": 1.279,
+        "raw_half": 1.498,
+        "ratio_extra_trees": 1.472
+      },
+      "high_under": {
+        "raw_ridge": 1.844,
+        "raw_extra_trees": 0.622,
+        "raw_half": 1.23,
+        "ratio_extra_trees": 0.897
+      }
+    }
+  },
+  "summary": {
+    "raw_ridge": {
+      "all": 3.933,
+      "figaro": 5.778,
+      "fis": 2.088,
+      "worst": 7.141,
+      "high_under": 4.125
+    },
+    "raw_extra_trees": {
+      "all": 4.122,
+      "figaro": 6.089,
+      "fis": 2.155,
+      "worst": 7.763,
+      "high_under": 3.524
+    },
+    "raw_half": {
+      "all": 3.862,
+      "figaro": 5.733,
+      "fis": 1.991,
+      "worst": 7.424,
+      "high_under": 3.775
+    },
+    "ratio_extra_trees": {
+      "all": 3.645,
+      "figaro": 5.482,
+      "fis": 1.807,
+      "worst": 6.18,
+      "high_under": 3.684
+    }
+  },
+  "pass": false
+}

@@ -1,0 +1,158 @@
+{
+  "protocol": "Frozen 14-device Ridge/ExtraTrees blend before evaluation.\n\nTarget device is wholly held out. Six remaining same-type devices are source.\nInner threefold device-group CV picks Ridge weight in {0,.25,.5,.75,1}\nminimizing worst source-device MAE. Compare with fixed Ridge, ExtraTrees,\nand 50/50, all using same features and model settings as earlier UCI487 audit.\nSuccess: pooled selected MAE at least 10% lower than best fixed, at least 5%\nlower in each hardware family, and worst-device MAE no worse. Shared physical\ngas exposures mean 14 sensors are not 14 independent mixture datasets.\n",
+  "devices": {
+    "1": {
+      "ridge_weight": 0.5,
+      "mae": {
+        "ridge": 7.081,
+        "extra_trees": 6.753,
+        "half": 6.84,
+        "selected": 6.84
+      }
+    },
+    "2": {
+      "ridge_weight": 0.75,
+      "mae": {
+        "ridge": 5.73,
+        "extra_trees": 6.117,
+        "half": 5.524,
+        "selected": 5.556
+      }
+    },
+    "3": {
+      "ridge_weight": 0.5,
+      "mae": {
+        "ridge": 5.523,
+        "extra_trees": 6.105,
+        "half": 5.539,
+        "selected": 5.539
+      }
+    },
+    "4": {
+      "ridge_weight": 0.0,
+      "mae": {
+        "ridge": 5.519,
+        "extra_trees": 5.547,
+        "half": 5.435,
+        "selected": 5.547
+      }
+    },
+    "5": {
+      "ridge_weight": 0.0,
+      "mae": {
+        "ridge": 5.513,
+        "extra_trees": 5.162,
+        "half": 5.206,
+        "selected": 5.162
+      }
+    },
+    "6": {
+      "ridge_weight": 0.0,
+      "mae": {
+        "ridge": 5.49,
+        "extra_trees": 4.167,
+        "half": 4.733,
+        "selected": 4.167
+      }
+    },
+    "7": {
+      "ridge_weight": 0.25,
+      "mae": {
+        "ridge": 5.517,
+        "extra_trees": 4.876,
+        "half": 4.993,
+        "selected": 4.876
+      }
+    },
+    "8": {
+      "ridge_weight": 0.5,
+      "mae": {
+        "ridge": 2.145,
+        "extra_trees": 2.876,
+        "half": 2.495,
+        "selected": 2.495
+      }
+    },
+    "9": {
+      "ridge_weight": 0.5,
+      "mae": {
+        "ridge": 2.313,
+        "extra_trees": 2.947,
+        "half": 2.591,
+        "selected": 2.591
+      }
+    },
+    "10": {
+      "ridge_weight": 0.0,
+      "mae": {
+        "ridge": 1.579,
+        "extra_trees": 3.54,
+        "half": 1.42,
+        "selected": 3.54
+      }
+    },
+    "11": {
+      "ridge_weight": 0.5,
+      "mae": {
+        "ridge": 1.569,
+        "extra_trees": 0.856,
+        "half": 1.099,
+        "selected": 1.099
+      }
+    },
+    "12": {
+      "ridge_weight": 0.0,
+      "mae": {
+        "ridge": 1.423,
+        "extra_trees": 1.151,
+        "half": 1.094,
+        "selected": 1.151
+      }
+    },
+    "13": {
+      "ridge_weight": 0.25,
+      "mae": {
+        "ridge": 1.888,
+        "extra_trees": 2.282,
+        "half": 2.068,
+        "selected": 2.172
+      }
+    },
+    "14": {
+      "ridge_weight": 1.0,
+      "mae": {
+        "ridge": 1.593,
+        "extra_trees": 1.16,
+        "half": 1.364,
+        "selected": 1.593
+      }
+    }
+  },
+  "summary": {
+    "ridge": {
+      "all": 3.777,
+      "figaro": 5.768,
+      "fis": 1.787,
+      "worst": 7.081
+    },
+    "extra_trees": {
+      "all": 3.824,
+      "figaro": 5.532,
+      "fis": 2.116,
+      "worst": 6.753
+    },
+    "half": {
+      "all": 3.6,
+      "figaro": 5.467,
+      "fis": 1.733,
+      "worst": 6.84
+    },
+    "selected": {
+      "all": 3.738,
+      "figaro": 5.384,
+      "fis": 2.092,
+      "worst": 6.84
+    }
+  },
+  "pass": false
+}

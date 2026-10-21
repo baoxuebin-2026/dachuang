@@ -1,0 +1,30 @@
+{
+  "protocol": "Frozen response-distance error audit, independent 3/7-device datasets.\n\nProtocol/source/test and ExtraTrees identical to device_disagreement. For\neach unit, scale 64 signed-log responses by training median and robust\ninterquartile span (floor 0.1), use Euclidean distance to fifth nearest\ntraining recipe; aggregate seven/three unit distances by median. Rank official\nheldout exposures by distance. Primary score: top 25% queue captures at\nleast 40% of top 20% absolute error from the cross-device mean prediction,\nand has >=1.5x mean error vs bottom 75%, on BOTH datasets. No label-based\nthreshold/parameter selection. Compare against device-disagreement ranking\nusing same strong mean ensemble prediction. Success justifies next blind test\nand does not imply novel mathematics, guaranteed CO detection, or transfer.\n",
+  "datasets": {
+    "6821340": {
+      "n_test": 200,
+      "ensemble_mean_mae": 239.751,
+      "distance": {
+        "hard_capture": 0.25,
+        "enrichment": 0.975
+      },
+      "device_disagreement": {
+        "hard_capture": 0.475,
+        "enrichment": 1.656
+      }
+    },
+    "15423482_first": {
+      "n_test": 40,
+      "ensemble_mean_mae": 289.499,
+      "distance": {
+        "hard_capture": 0.5,
+        "enrichment": 1.27
+      },
+      "device_disagreement": {
+        "hard_capture": 0.125,
+        "enrichment": 0.762
+      }
+    }
+  },
+  "pass": false
+}

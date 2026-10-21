@@ -1,0 +1,194 @@
+{
+  "protocol": "Frozen external test of heater-response shape for new CO hardware.\n\nMotivation fixed after observing UCI487 (14 sensors): subtraction of heater\nphase log responses followed by ExtraTrees was promising. Two DIFFERENT\ndatasets with four sensor pixels x sixteen phases (64 measurements) are now\ntested without seeing this exact representation's results:\n\n6821340: for each A/B/C target, train on all 700 official training recipes\nfrom the other two physical devices; evaluate target's 200 official heldout\nrecipes. 15423482: for each of seven target devices, train on source six at\nstate<=100 (100 recipes), test target at state>=160 (40 recipes). Shared\nrecipe readings from source devices count as one gas exposure. The input is\nsigned_log(sensor reading) only; no humidity/CO target labels as features.\nShape subtracts each pixel's median across its 16 temperature-phase samples;\nraw retains 64 signed-log readings. ExtraTrees(150,leaf2,max_features=1)\nand raw Ridge(10) are fixed. Strong baselines: raw ET, raw Ridge, their\nfixed 50/50 mean. Pool device MAE separately per dataset; high CO>=1500 ppb\npositive underestimation. Success: shape ET is at least 10% better than the\nBEST raw baseline in BOTH datasets, no target device worsens >10% against\nthat dataset's best raw baseline on that device, highCO underestimation does\nnot worsen on either dataset. Target labels never enter training. This is\nnot a new blinded dataset because both corpora were used in earlier projects.\n",
+  "datasets": {
+    "6821340": {
+      "devices": {
+        "A": {
+          "mae": {
+            "raw_et": 482.71,
+            "raw_ridge": 793.32,
+            "shape_et": 530.04,
+            "raw_half": 586.87
+          },
+          "high_under": {
+            "raw_et": 285.23,
+            "raw_ridge": 0.0,
+            "shape_et": 932.18,
+            "raw_half": 71.3
+          }
+        },
+        "B": {
+          "mae": {
+            "raw_et": 433.09,
+            "raw_ridge": 276.5,
+            "shape_et": 442.65,
+            "raw_half": 347.58
+          },
+          "high_under": {
+            "raw_et": 344.69,
+            "raw_ridge": 173.63,
+            "shape_et": 203.58,
+            "raw_half": 254.58
+          }
+        },
+        "C": {
+          "mae": {
+            "raw_et": 510.45,
+            "raw_ridge": 923.48,
+            "shape_et": 520.16,
+            "raw_half": 650.0
+          },
+          "high_under": {
+            "raw_et": 822.06,
+            "raw_ridge": 1415.12,
+            "shape_et": 884.84,
+            "raw_half": 1118.59
+          }
+        }
+      },
+      "mean": {
+        "raw_et": {
+          "mae": 475.42,
+          "high_under": 483.99
+        },
+        "raw_ridge": {
+          "mae": 664.43,
+          "high_under": 529.58
+        },
+        "raw_half": {
+          "mae": 528.15,
+          "high_under": 481.49
+        },
+        "shape_et": {
+          "mae": 497.62,
+          "high_under": 673.53
+        }
+      },
+      "best_raw_method": "raw_et",
+      "pass": false
+    },
+    "15423482_first": {
+      "devices": {
+        "54118801": {
+          "mae": {
+            "raw_et": 291.53,
+            "raw_ridge": 145.39,
+            "shape_et": 157.19,
+            "raw_half": 211.42
+          },
+          "high_under": {
+            "raw_et": 384.68,
+            "raw_ridge": 162.24,
+            "shape_et": 146.52,
+            "raw_half": 270.74
+          }
+        },
+        "54120037": {
+          "mae": {
+            "raw_et": 421.49,
+            "raw_ridge": 357.06,
+            "shape_et": 272.37,
+            "raw_half": 382.85
+          },
+          "high_under": {
+            "raw_et": 562.43,
+            "raw_ridge": 401.27,
+            "shape_et": 259.83,
+            "raw_half": 481.85
+          }
+        },
+        "54120457": {
+          "mae": {
+            "raw_et": 290.72,
+            "raw_ridge": 100.71,
+            "shape_et": 224.8,
+            "raw_half": 173.73
+          },
+          "high_under": {
+            "raw_et": 388.35,
+            "raw_ridge": 71.5,
+            "shape_et": 244.08,
+            "raw_half": 219.93
+          }
+        },
+        "54156953": {
+          "mae": {
+            "raw_et": 213.74,
+            "raw_ridge": 274.99,
+            "shape_et": 284.8,
+            "raw_half": 165.59
+          },
+          "high_under": {
+            "raw_et": 214.5,
+            "raw_ridge": 3.95,
+            "shape_et": 52.14,
+            "raw_half": 37.03
+          }
+        },
+        "84746449": {
+          "mae": {
+            "raw_et": 301.78,
+            "raw_ridge": 158.0,
+            "shape_et": 198.52,
+            "raw_half": 224.37
+          },
+          "high_under": {
+            "raw_et": 406.5,
+            "raw_ridge": 195.29,
+            "shape_et": 194.35,
+            "raw_half": 300.89
+          }
+        },
+        "84748697": {
+          "mae": {
+            "raw_et": 191.33,
+            "raw_ridge": 290.58,
+            "shape_et": 143.7,
+            "raw_half": 211.78
+          },
+          "high_under": {
+            "raw_et": 79.32,
+            "raw_ridge": 0.0,
+            "shape_et": 51.64,
+            "raw_half": 8.01
+          }
+        },
+        "84749569": {
+          "mae": {
+            "raw_et": 243.6,
+            "raw_ridge": 234.19,
+            "shape_et": 161.02,
+            "raw_half": 222.77
+          },
+          "high_under": {
+            "raw_et": 306.53,
+            "raw_ridge": 267.3,
+            "shape_et": 122.63,
+            "raw_half": 283.81
+          }
+        }
+      },
+      "mean": {
+        "raw_et": {
+          "mae": 279.17,
+          "high_under": 334.62
+        },
+        "raw_ridge": {
+          "mae": 222.99,
+          "high_under": 157.36
+        },
+        "raw_half": {
+          "mae": 227.5,
+          "high_under": 228.89
+        },
+        "shape_et": {
+          "mae": 206.06,
+          "high_under": 153.03
+        }
+      },
+      "best_raw_method": "raw_ridge",
+      "pass": false
+    }
+  },
+  "pass": false
+}

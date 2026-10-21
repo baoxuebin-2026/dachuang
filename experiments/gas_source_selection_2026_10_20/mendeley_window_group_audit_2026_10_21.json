@@ -1,0 +1,26 @@
+{
+  "protocol": "Frozen source-file unit audit on 186 CH4/CO/H2S controlled mixtures.\n\nMendeley 10.17632/2mpx85xt6g.1 supplies one recording per concentration\nrecipe and three response channels; each recording contributes four disjoint\n100-sample gas windows. Train ExtraTrees(300,leaf1,.8) on response/delta,\nwithout explicit baseline feature. Compare random 5-fold windows against\nStratifiedGroupKFold 5-fold holding out entire physical files. Three seeds\n(11,21,37) fixed. Target is filename's middle concentration (CO, 0..2500).\nPhysical-file MAE uses mean of four out-of-fold window predictions. Success:\ngroup MAE >2 times random in every seed. No inference to field CO sensing or\nclaim that data authors used leakage. Independent recipe count is 186.\n\nUsage: python mendeley_window_group_audit_2026_10_21.py /path/to/extracted\nRAR sha256 bc5acaf07f7560a78aa302e2c37627e073b25fa45c3175c70fd67e8ce10efc19.\n",
+  "n_files": 186,
+  "n_windows": 744,
+  "results": {
+    "11": {
+      "seed": 11,
+      "random_window_mae": 243.07,
+      "file_group_mae": 594.51,
+      "ratio": 2.446
+    },
+    "21": {
+      "seed": 21,
+      "random_window_mae": 249.84,
+      "file_group_mae": 551.94,
+      "ratio": 2.209
+    },
+    "37": {
+      "seed": 37,
+      "random_window_mae": 240.7,
+      "file_group_mae": 604.5,
+      "ratio": 2.511
+    }
+  },
+  "pass": true
+}
