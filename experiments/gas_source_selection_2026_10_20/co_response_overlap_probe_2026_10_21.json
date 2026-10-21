@@ -1,0 +1,79 @@
+{
+  "protocol": "Frozen diagnostic: high/low CO response overlap under mixture interference.\n\nUnit is a complete independent gas-mixture exposure. On two already seen\ndevelopment datasets, use each target device's early exposures as a labeled\nreference and later exposures as test. A high test exposure is called locally\nambiguous if its closest low-CO reference response is closer than its closest\nhigh-CO reference response. Low means CO <=500 ppb, high means >=1500 ppb;\nmiddle concentrations are excluded from the reference. Signals are signed-log\ntransformed and standardized from the reference, then Euclidean distance is\nused. This descriptive statistic is NOT an identifiability proof, classifier,\nalgorithm result, or independent confirmation. It cannot determine overlap\nbelow instrument noise without response replicate measurements.\n",
+  "datasets": {
+    "6821340": {
+      "A": {
+        "n_low_ref": 147,
+        "n_high_ref": 181,
+        "n_high_test": 57,
+        "fraction_high_closer_to_low": 0.14,
+        "median_low_to_high_distance_ratio": 1.592
+      },
+      "B": {
+        "n_low_ref": 147,
+        "n_high_ref": 181,
+        "n_high_test": 57,
+        "fraction_high_closer_to_low": 0.211,
+        "median_low_to_high_distance_ratio": 1.58
+      },
+      "C": {
+        "n_low_ref": 147,
+        "n_high_ref": 181,
+        "n_high_test": 57,
+        "fraction_high_closer_to_low": 0.193,
+        "median_low_to_high_distance_ratio": 1.401
+      }
+    },
+    "15423482": {
+      "54118801": {
+        "n_low_ref": 39,
+        "n_high_ref": 36,
+        "n_high_test": 16,
+        "fraction_high_closer_to_low": 0.25,
+        "median_low_to_high_distance_ratio": 1.201
+      },
+      "54120037": {
+        "n_low_ref": 39,
+        "n_high_ref": 36,
+        "n_high_test": 16,
+        "fraction_high_closer_to_low": 0.375,
+        "median_low_to_high_distance_ratio": 1.297
+      },
+      "54120457": {
+        "n_low_ref": 39,
+        "n_high_ref": 36,
+        "n_high_test": 16,
+        "fraction_high_closer_to_low": 0.188,
+        "median_low_to_high_distance_ratio": 1.274
+      },
+      "54156953": {
+        "n_low_ref": 39,
+        "n_high_ref": 36,
+        "n_high_test": 16,
+        "fraction_high_closer_to_low": 0.188,
+        "median_low_to_high_distance_ratio": 1.315
+      },
+      "84746449": {
+        "n_low_ref": 39,
+        "n_high_ref": 36,
+        "n_high_test": 16,
+        "fraction_high_closer_to_low": 0.25,
+        "median_low_to_high_distance_ratio": 1.07
+      },
+      "84748697": {
+        "n_low_ref": 39,
+        "n_high_ref": 36,
+        "n_high_test": 16,
+        "fraction_high_closer_to_low": 0.188,
+        "median_low_to_high_distance_ratio": 1.11
+      },
+      "84749569": {
+        "n_low_ref": 39,
+        "n_high_ref": 36,
+        "n_high_test": 16,
+        "fraction_high_closer_to_low": 0.25,
+        "median_low_to_high_distance_ratio": 1.179
+      }
+    }
+  }
+}
