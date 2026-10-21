@@ -1,0 +1,64 @@
+{
+  "protocol": "Frozen file-unit test of response/recovery kinetics in CO/CH4/H2S.\n\nEach of 186 physical mixture recordings is one independent unit. First 50\nsamples are baseline; gas is supplied at 50..250, recovery at 250..500.\nBaseline and three exposure medians form the existing 12D static reference.\nCandidate: baseline and ten signed-log response/recovery bin medians (33D),\nalso response minus recovery summaries for each sensor (36D). Both use the\nsame ExtraTrees(300, max_features=.8), and SVR(C=100) as sensitivity.\nThree prechosen shuffled stratified fivefold complete-file splits (11,21,37).\nPrimary CO MAE; high CO >=2000 ppm positive underestimation is secondary.\nPass only if richer kinetics improves MAE >=10% and high underestimation is\nnot worse in EVERY split seed versus static ExtraTrees. This is an\nexploratory method test, not independent confirmation or novelty evidence.\n",
+  "n_files": 186,
+  "results": {
+    "11": {
+      "static_et": {
+        "mae": 534.37,
+        "high_under": 560.54
+      },
+      "kinetics_et": {
+        "mae": 609.44,
+        "high_under": 708.16
+      },
+      "static_svr": {
+        "mae": 586.65,
+        "high_under": 572.52
+      },
+      "kinetics_svr": {
+        "mae": 670.21,
+        "high_under": 735.74
+      },
+      "pass": false
+    },
+    "21": {
+      "static_et": {
+        "mae": 541.94,
+        "high_under": 643.59
+      },
+      "kinetics_et": {
+        "mae": 612.26,
+        "high_under": 748.41
+      },
+      "static_svr": {
+        "mae": 585.31,
+        "high_under": 624.29
+      },
+      "kinetics_svr": {
+        "mae": 703.66,
+        "high_under": 742.45
+      },
+      "pass": false
+    },
+    "37": {
+      "static_et": {
+        "mae": 558.93,
+        "high_under": 634.8
+      },
+      "kinetics_et": {
+        "mae": 632.96,
+        "high_under": 783.92
+      },
+      "static_svr": {
+        "mae": 659.18,
+        "high_under": 771.83
+      },
+      "kinetics_svr": {
+        "mae": 722.01,
+        "high_under": 907.08
+      },
+      "pass": false
+    }
+  },
+  "pass": false
+}
