@@ -1,0 +1,938 @@
+{
+  "protocol": "Frozen exploratory test of CO-confounding-pair pilot recipe selection.\n\nUnit: one complete gas-mixture exposure. Budget: 20 target-device labeled\nrecipes; source response and all intended gas concentrations are known before\nselecting recipes. Select 8 distinct high/low CO recipe pairs (CO>=1500,\nCO<=500 ppb), using source-signal proximity to expose interference. The first\npair is closest; subsequent pairs are the most separated from earlier pairs'\nmidpoints among the closest quartile of still-eligible pairs. Fill the remaining\nfour slots by source-signal farthest-first coverage. No target response or\ntarget CO result is consulted to design the 20 experiments.\n\nComparators: random VOC-stratified selection (10+10), random high/low balanced\nselection (8+8 and 4 middle), and all-feature farthest-first selection. Each\nuses the same Ridge(10) source model and 20-label Ridge(10) target residual;\ndirect 20-label Ridge(10) is also evaluated. Random baselines use fixed seeds\n21,37,59; mean over these three repeats is only sensitivity, not independent\nreplication. Test periods are held out by exposure/state/day/batch. Primary\nmetrics are exposure-weighted CO MAE and mean positive underestimation at\nCO>=1500. Exploratory success: on each of four already seen datasets design\nreduces both primary metrics >=10% compared to the best random design, with\nno target device worsening >10% on MAE. These datasets have been used for\nearlier hypotheses, so any success would require independent confirmation.\n",
+  "datasets": {
+    "6821340": {
+      "reference_n": 500,
+      "pilot_pool_n": 200,
+      "selected_recipes": [
+        618,
+        610,
+        562,
+        583,
+        529,
+        501,
+        581,
+        579,
+        684,
+        638,
+        661,
+        505,
+        528,
+        670,
+        571,
+        647,
+        512,
+        627,
+        559,
+        506
+      ],
+      "per_target": {
+        "B": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 277.221,
+              "high_under": 316.593,
+              "high_miss": 0.018,
+              "low_false_alarm": 0.024
+            },
+            "direct": {
+              "mae": 437.297,
+              "high_under": 303.169,
+              "high_miss": 0.018,
+              "low_false_alarm": 0.463
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 345.318,
+              "high_under": 345.025,
+              "high_miss": 0.018,
+              "low_false_alarm": 0.098
+            },
+            "direct": {
+              "mae": 475.36,
+              "high_under": 392.935,
+              "high_miss": 0.018,
+              "low_false_alarm": 0.537
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 303.178,
+              "high_under": 419.758,
+              "high_miss": 0.088,
+              "low_false_alarm": 0.041
+            },
+            "direct": {
+              "mae": 428.084,
+              "high_under": 361.347,
+              "high_miss": 0.082,
+              "low_false_alarm": 0.285
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 321.366,
+              "high_under": 404.223,
+              "high_miss": 0.053,
+              "low_false_alarm": 0.138
+            },
+            "direct": {
+              "mae": 406.585,
+              "high_under": 361.625,
+              "high_miss": 0.047,
+              "low_false_alarm": 0.382
+            }
+          }
+        },
+        "C": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 360.552,
+              "high_under": 413.204,
+              "high_miss": 0.053,
+              "low_false_alarm": 0.22
+            },
+            "direct": {
+              "mae": 451.973,
+              "high_under": 408.912,
+              "high_miss": 0.07,
+              "low_false_alarm": 0.659
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 384.564,
+              "high_under": 449.478,
+              "high_miss": 0.088,
+              "low_false_alarm": 0.22
+            },
+            "direct": {
+              "mae": 464.63,
+              "high_under": 494.195,
+              "high_miss": 0.088,
+              "low_false_alarm": 0.634
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 380.239,
+              "high_under": 525.41,
+              "high_miss": 0.158,
+              "low_false_alarm": 0.146
+            },
+            "direct": {
+              "mae": 420.133,
+              "high_under": 522.13,
+              "high_miss": 0.164,
+              "low_false_alarm": 0.26
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 384.984,
+              "high_under": 501.907,
+              "high_miss": 0.146,
+              "low_false_alarm": 0.26
+            },
+            "direct": {
+              "mae": 426.851,
+              "high_under": 505.985,
+              "high_miss": 0.175,
+              "low_false_alarm": 0.439
+            }
+          }
+        }
+      },
+      "mean": {
+        "confounding_pairs": {
+          "residual": {
+            "mae": 318.887,
+            "high_under": 364.899,
+            "high_miss": 0.035,
+            "low_false_alarm": 0.122
+          },
+          "direct": {
+            "mae": 444.635,
+            "high_under": 356.04,
+            "high_miss": 0.044,
+            "low_false_alarm": 0.561
+          }
+        },
+        "farthest_first": {
+          "residual": {
+            "mae": 364.941,
+            "high_under": 397.251,
+            "high_miss": 0.053,
+            "low_false_alarm": 0.159
+          },
+          "direct": {
+            "mae": 469.995,
+            "high_under": 443.565,
+            "high_miss": 0.053,
+            "low_false_alarm": 0.586
+          }
+        },
+        "random_high_low": {
+          "residual": {
+            "mae": 341.708,
+            "high_under": 472.584,
+            "high_miss": 0.123,
+            "low_false_alarm": 0.093
+          },
+          "direct": {
+            "mae": 424.108,
+            "high_under": 441.738,
+            "high_miss": 0.123,
+            "low_false_alarm": 0.272
+          }
+        },
+        "random_voc": {
+          "residual": {
+            "mae": 353.175,
+            "high_under": 453.065,
+            "high_miss": 0.099,
+            "low_false_alarm": 0.199
+          },
+          "direct": {
+            "mae": 416.718,
+            "high_under": 433.805,
+            "high_miss": 0.111,
+            "low_false_alarm": 0.41
+          }
+        }
+      },
+      "best_random": "random_high_low",
+      "pass": false
+    },
+    "15423482": {
+      "reference_n": 100,
+      "pilot_pool_n": 59,
+      "selected_recipes": [
+        137,
+        155,
+        149,
+        141,
+        103,
+        133,
+        118,
+        151,
+        122,
+        123,
+        116,
+        132,
+        125,
+        139,
+        152,
+        120,
+        117,
+        112,
+        134,
+        150
+      ],
+      "per_target": {
+        "54120037": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 146.018,
+              "high_under": 139.341,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 259.447,
+              "high_under": 291.224,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 170.605,
+              "high_under": 215.372,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 355.986,
+              "high_under": 474.569,
+              "high_miss": 0.062,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 133.315,
+              "high_under": 119.06,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 229.892,
+              "high_under": 244.151,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 156.231,
+              "high_under": 139.13,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 302.528,
+              "high_under": 326.393,
+              "high_miss": 0.021,
+              "low_false_alarm": 0.0
+            }
+          }
+        },
+        "54120457": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 130.568,
+              "high_under": 112.2,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 230.218,
+              "high_under": 227.327,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 160.34,
+              "high_under": 190.083,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 341.811,
+              "high_under": 440.433,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 122.607,
+              "high_under": 93.643,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 201.281,
+              "high_under": 187.017,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 148.648,
+              "high_under": 117.36,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 269.928,
+              "high_under": 264.247,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          }
+        },
+        "54156953": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 133.555,
+              "high_under": 94.488,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 225.972,
+              "high_under": 224.166,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 149.385,
+              "high_under": 160.304,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 323.377,
+              "high_under": 418.454,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 130.589,
+              "high_under": 82.933,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 195.549,
+              "high_under": 179.233,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 155.282,
+              "high_under": 109.666,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 268.561,
+              "high_under": 275.339,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          }
+        },
+        "84746449": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 134.461,
+              "high_under": 144.894,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 234.698,
+              "high_under": 278.496,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 163.368,
+              "high_under": 215.612,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 335.829,
+              "high_under": 441.754,
+              "high_miss": 0.062,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 121.167,
+              "high_under": 114.644,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 203.116,
+              "high_under": 204.737,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 146.545,
+              "high_under": 132.912,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 275.151,
+              "high_under": 278.082,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          }
+        },
+        "84748697": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 128.96,
+              "high_under": 140.951,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 230.087,
+              "high_under": 273.808,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 158.702,
+              "high_under": 214.39,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 331.656,
+              "high_under": 438.632,
+              "high_miss": 0.062,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 115.886,
+              "high_under": 114.109,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 197.086,
+              "high_under": 202.65,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 143.047,
+              "high_under": 132.596,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 270.772,
+              "high_under": 277.359,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          }
+        },
+        "84749569": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 132.659,
+              "high_under": 138.525,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 221.128,
+              "high_under": 256.467,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 160.699,
+              "high_under": 214.095,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 325.464,
+              "high_under": 427.842,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 122.322,
+              "high_under": 117.42,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 189.997,
+              "high_under": 190.27,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 149.424,
+              "high_under": 137.064,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 264.151,
+              "high_under": 267.35,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          }
+        }
+      },
+      "mean": {
+        "confounding_pairs": {
+          "residual": {
+            "mae": 134.37,
+            "high_under": 128.4,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          },
+          "direct": {
+            "mae": 233.592,
+            "high_under": 258.581,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          }
+        },
+        "farthest_first": {
+          "residual": {
+            "mae": 160.516,
+            "high_under": 201.643,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          },
+          "direct": {
+            "mae": 335.687,
+            "high_under": 440.281,
+            "high_miss": 0.031,
+            "low_false_alarm": 0.0
+          }
+        },
+        "random_high_low": {
+          "residual": {
+            "mae": 124.314,
+            "high_under": 106.968,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          },
+          "direct": {
+            "mae": 202.82,
+            "high_under": 201.343,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          }
+        },
+        "random_voc": {
+          "residual": {
+            "mae": 149.863,
+            "high_under": 128.121,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          },
+          "direct": {
+            "mae": 275.182,
+            "high_under": 281.462,
+            "high_miss": 0.004,
+            "low_false_alarm": 0.0
+          }
+        }
+      },
+      "best_random": "random_high_low",
+      "pass": false
+    },
+    "4593853": {
+      "reference_n": 1100,
+      "pilot_pool_n": 50,
+      "selected_recipes": [
+        1127,
+        1106,
+        1108,
+        1141,
+        1110,
+        1128,
+        1146,
+        1123,
+        1117,
+        1112,
+        1149,
+        1122,
+        1137,
+        1126,
+        1134,
+        1105,
+        1120,
+        1132,
+        1107,
+        1144
+      ],
+      "per_target": {
+        "sensor1": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 844.451,
+              "high_under": 7.381,
+              "high_miss": 0.0,
+              "low_false_alarm": 1.0
+            },
+            "direct": {
+              "mae": 736.263,
+              "high_under": 125.411,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.889
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 822.136,
+              "high_under": 32.268,
+              "high_miss": 0.0,
+              "low_false_alarm": 1.0
+            },
+            "direct": {
+              "mae": 590.121,
+              "high_under": 240.111,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.889
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 845.782,
+              "high_under": 20.751,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.963
+            },
+            "direct": {
+              "mae": 779.317,
+              "high_under": 85.642,
+              "high_miss": 0.024,
+              "low_false_alarm": 0.889
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 816.257,
+              "high_under": 62.501,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.963
+            },
+            "direct": {
+              "mae": 595.099,
+              "high_under": 455.766,
+              "high_miss": 0.238,
+              "low_false_alarm": 0.852
+            }
+          }
+        }
+      },
+      "mean": {
+        "confounding_pairs": {
+          "residual": {
+            "mae": 844.451,
+            "high_under": 7.381,
+            "high_miss": 0.0,
+            "low_false_alarm": 1.0
+          },
+          "direct": {
+            "mae": 736.263,
+            "high_under": 125.411,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.889
+          }
+        },
+        "farthest_first": {
+          "residual": {
+            "mae": 822.136,
+            "high_under": 32.268,
+            "high_miss": 0.0,
+            "low_false_alarm": 1.0
+          },
+          "direct": {
+            "mae": 590.121,
+            "high_under": 240.111,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.889
+          }
+        },
+        "random_high_low": {
+          "residual": {
+            "mae": 845.782,
+            "high_under": 20.751,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.963
+          },
+          "direct": {
+            "mae": 779.317,
+            "high_under": 85.642,
+            "high_miss": 0.024,
+            "low_false_alarm": 0.889
+          }
+        },
+        "random_voc": {
+          "residual": {
+            "mae": 816.257,
+            "high_under": 62.501,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.963
+          },
+          "direct": {
+            "mae": 595.099,
+            "high_under": 455.766,
+            "high_miss": 0.238,
+            "low_false_alarm": 0.852
+          }
+        }
+      },
+      "best_random": "random_voc",
+      "pass": false
+    },
+    "4264224": {
+      "reference_n": 361,
+      "pilot_pool_n": 99,
+      "selected_recipes": [
+        383,
+        439,
+        364,
+        443,
+        387,
+        453,
+        363,
+        442,
+        371,
+        449,
+        382,
+        455,
+        372,
+        444,
+        384,
+        440,
+        374,
+        430,
+        361,
+        393
+      ],
+      "per_target": {
+        "as_mlv_p2": {
+          "confounding_pairs": {
+            "residual": {
+              "mae": 166.814,
+              "high_under": 184.719,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 204.603,
+              "high_under": 256.787,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "farthest_first": {
+            "residual": {
+              "mae": 186.879,
+              "high_under": 254.406,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 247.667,
+              "high_under": 339.507,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            }
+          },
+          "random_high_low": {
+            "residual": {
+              "mae": 179.591,
+              "high_under": 135.282,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.005
+            },
+            "direct": {
+              "mae": 242.594,
+              "high_under": 299.06,
+              "high_miss": 0.035,
+              "low_false_alarm": 0.063
+            }
+          },
+          "random_voc": {
+            "residual": {
+              "mae": 178.254,
+              "high_under": 242.643,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.0
+            },
+            "direct": {
+              "mae": 232.269,
+              "high_under": 329.746,
+              "high_miss": 0.0,
+              "low_false_alarm": 0.022
+            }
+          }
+        }
+      },
+      "mean": {
+        "confounding_pairs": {
+          "residual": {
+            "mae": 166.814,
+            "high_under": 184.719,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          },
+          "direct": {
+            "mae": 204.603,
+            "high_under": 256.787,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          }
+        },
+        "farthest_first": {
+          "residual": {
+            "mae": 186.879,
+            "high_under": 254.406,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          },
+          "direct": {
+            "mae": 247.667,
+            "high_under": 339.507,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          }
+        },
+        "random_high_low": {
+          "residual": {
+            "mae": 179.591,
+            "high_under": 135.282,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.005
+          },
+          "direct": {
+            "mae": 242.594,
+            "high_under": 299.06,
+            "high_miss": 0.035,
+            "low_false_alarm": 0.063
+          }
+        },
+        "random_voc": {
+          "residual": {
+            "mae": 178.254,
+            "high_under": 242.643,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.0
+          },
+          "direct": {
+            "mae": 232.269,
+            "high_under": 329.746,
+            "high_miss": 0.0,
+            "low_false_alarm": 0.022
+          }
+        }
+      },
+      "best_random": "random_voc",
+      "pass": false
+    }
+  },
+  "pass": false
+}
