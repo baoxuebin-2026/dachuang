@@ -1,0 +1,198 @@
+{
+  "protocol": "Pre-run frozen paired-response transfer pilot for 20 known CO mixtures.\n\nSource A on 6821340 uses first 500 training mixtures; heldout test is\nofficial 200 mixtures, B/C targets use pilots from source+target train\nmixtures 500:700. 15423482 uses device 54118801 source <=100, six other\ntargets use pilots from states 101:159, test state >=160. Same pilot budget:\n10 below/10 above median VOC among available pilot mixtures. Three fixed\nseeds (21,37,59) are sensitivity repeats, not new independent datasets.\n\nSource Ridge(10) is trained on signed-log signals and its own train scaler.\nStrong target baselines: supervised Ridge(10) on 20 target mixtures, and\nsource Ridge plus target 20-label residual Ridge(10), the latter identical\nto prior work's calibration. Proposed paired map estimates target->source\nresponse correction from the 20 physically matched mixtures. Two FIXED\nversions: median per-feature displacement (global) and 5-nearest target\nresponse neighbors' inverse-distance weighted displacements (local). No\ntest labels or target test feature distribution used to fit. Predeclared\npass for LOCAL map: median MAE across B/C and all 6 154 targets >=10% below\nthe best target baseline on each dataset, no individual target degrades\n>10%, and highCO>=1500 ppb positive underestimation no worse on either.\nThis local paired map is related to known calibration-transfer techniques;\nsuccess would not alone prove mathematical originality.\n",
+  "datasets": {
+    "6821340": {
+      "per_target": {
+        "B": {
+          "direct20": {
+            "mae": 515.03,
+            "high_under": 688.68
+          },
+          "residual20": {
+            "mae": 394.53,
+            "high_under": 674.17
+          },
+          "global_paired": {
+            "mae": 324.51,
+            "high_under": 368.83
+          },
+          "local_paired": {
+            "mae": 328.42,
+            "high_under": 397.37
+          }
+        },
+        "C": {
+          "direct20": {
+            "mae": 666.74,
+            "high_under": 1009.83
+          },
+          "residual20": {
+            "mae": 560.53,
+            "high_under": 923.55
+          },
+          "global_paired": {
+            "mae": 393.04,
+            "high_under": 385.11
+          },
+          "local_paired": {
+            "mae": 393.27,
+            "high_under": 401.74
+          }
+        }
+      },
+      "mean": {
+        "direct20": {
+          "mae": 590.88,
+          "high_under": 849.25
+        },
+        "residual20": {
+          "mae": 477.53,
+          "high_under": 798.86
+        },
+        "global_paired": {
+          "mae": 358.77,
+          "high_under": 376.97
+        },
+        "local_paired": {
+          "mae": 360.85,
+          "high_under": 399.56
+        }
+      },
+      "best_target_baseline": "residual20",
+      "pass": true
+    },
+    "15423482": {
+      "per_target": {
+        "54120037": {
+          "direct20": {
+            "mae": 282.24,
+            "high_under": 334.05
+          },
+          "residual20": {
+            "mae": 143.63,
+            "high_under": 151.49
+          },
+          "global_paired": {
+            "mae": 169.54,
+            "high_under": 222.95
+          },
+          "local_paired": {
+            "mae": 167.82,
+            "high_under": 217.23
+          }
+        },
+        "54120457": {
+          "direct20": {
+            "mae": 270.84,
+            "high_under": 298.4
+          },
+          "residual20": {
+            "mae": 140.31,
+            "high_under": 136.68
+          },
+          "global_paired": {
+            "mae": 155.2,
+            "high_under": 184.79
+          },
+          "local_paired": {
+            "mae": 160.15,
+            "high_under": 193.76
+          }
+        },
+        "54156953": {
+          "direct20": {
+            "mae": 256.49,
+            "high_under": 272.76
+          },
+          "residual20": {
+            "mae": 141.56,
+            "high_under": 110.33
+          },
+          "global_paired": {
+            "mae": 152.26,
+            "high_under": 147.15
+          },
+          "local_paired": {
+            "mae": 150.68,
+            "high_under": 151.31
+          }
+        },
+        "84746449": {
+          "direct20": {
+            "mae": 271.19,
+            "high_under": 308.71
+          },
+          "residual20": {
+            "mae": 139.88,
+            "high_under": 152.99
+          },
+          "global_paired": {
+            "mae": 188.16,
+            "high_under": 234.62
+          },
+          "local_paired": {
+            "mae": 176.59,
+            "high_under": 219.53
+          }
+        },
+        "84748697": {
+          "direct20": {
+            "mae": 269.32,
+            "high_under": 301.59
+          },
+          "residual20": {
+            "mae": 134.03,
+            "high_under": 148.05
+          },
+          "global_paired": {
+            "mae": 198.23,
+            "high_under": 237.94
+          },
+          "local_paired": {
+            "mae": 180.71,
+            "high_under": 219.7
+          }
+        },
+        "84749569": {
+          "direct20": {
+            "mae": 263.43,
+            "high_under": 283.74
+          },
+          "residual20": {
+            "mae": 138.01,
+            "high_under": 145.85
+          },
+          "global_paired": {
+            "mae": 196.48,
+            "high_under": 220.74
+          },
+          "local_paired": {
+            "mae": 189.33,
+            "high_under": 231.55
+          }
+        }
+      },
+      "mean": {
+        "direct20": {
+          "mae": 268.92,
+          "high_under": 299.88
+        },
+        "residual20": {
+          "mae": 139.57,
+          "high_under": 140.9
+        },
+        "global_paired": {
+          "mae": 176.64,
+          "high_under": 208.03
+        },
+        "local_paired": {
+          "mae": 170.88,
+          "high_under": 205.51
+        }
+      },
+      "best_target_baseline": "residual20",
+      "pass": false
+    }
+  },
+  "pass": false
+}

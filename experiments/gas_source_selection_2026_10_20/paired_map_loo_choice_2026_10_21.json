@@ -1,0 +1,290 @@
+{
+  "protocol": "Development-only gate, frozen before scoring this candidate gate.\n\nMethods as paired_response_map_pilot_2026_10_21.py. Twenty paired source/\ntarget recipes, stratified 10/10 VOC; seeds 21/37/59. Compare paired-map\nand residual-Ridge using leave-one-recipe-out: for each held recipe, rebuild\nmedian source-target response displacement on other 19 or residual Ridge on\nother 19. Paired errors d = abs(residual error)-abs(map error). Choose paired\nmap only if mean(d)>one standard error of d; else default to residual Ridge.\nThen train chosen method on all 20 and evaluate official / state test.\nPredeclared development criterion: map selected for BOTH B and C in >=2/3\nseeds, residual selected for >=5 of 6 devices in >=2/3 seeds, and per-source\nheldout averaged MAE at least 10% below always-residual on 682 while no\nmore than 10% above always-residual on 154. Repeated seeds not independent.\nThis experiment is not blind: gate constructed after viewing both datasets'\nungated performances. Any success needs a third untouched paired CO dataset.\n",
+  "datasets": {
+    "6821340": {
+      "targets": {
+        "B": [
+          {
+            "seed": 21,
+            "choice": "residual",
+            "loo_delta": -132.5,
+            "loo_se": 58.77,
+            "test_mae": {
+              "paired_map": 324.51,
+              "residual": 605.85
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "residual",
+            "loo_delta": 10.05,
+            "loo_se": 34.45,
+            "test_mae": {
+              "paired_map": 333.64,
+              "residual": 394.53
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -56.91,
+            "loo_se": 54.76,
+            "test_mae": {
+              "paired_map": 324.39,
+              "residual": 382.63
+            }
+          }
+        ],
+        "C": [
+          {
+            "seed": 21,
+            "choice": "residual",
+            "loo_delta": -111.63,
+            "loo_se": 64.88,
+            "test_mae": {
+              "paired_map": 393.04,
+              "residual": 615.69
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "paired_map",
+            "loo_delta": 50.72,
+            "loo_se": 40.92,
+            "test_mae": {
+              "paired_map": 396.58,
+              "residual": 397.13
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -53.59,
+            "loo_se": 58.34,
+            "test_mae": {
+              "paired_map": 392.27,
+              "residual": 560.53
+            }
+          }
+        ]
+      },
+      "summary": {
+        "selected_map_counts": {
+          "B": 0,
+          "C": 1
+        },
+        "chosen_mae": 492.64,
+        "residual_mae": 492.73
+      }
+    },
+    "15423482": {
+      "targets": {
+        "54120037": [
+          {
+            "seed": 21,
+            "choice": "paired_map",
+            "loo_delta": 33.09,
+            "loo_se": 21.66,
+            "test_mae": {
+              "paired_map": 169.54,
+              "residual": 143.63
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "residual",
+            "loo_delta": -2.14,
+            "loo_se": 23.13,
+            "test_mae": {
+              "paired_map": 179.07,
+              "residual": 199.72
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -11.73,
+            "loo_se": 23.65,
+            "test_mae": {
+              "paired_map": 169.39,
+              "residual": 143.48
+            }
+          }
+        ],
+        "54120457": [
+          {
+            "seed": 21,
+            "choice": "residual",
+            "loo_delta": 17.03,
+            "loo_se": 19.24,
+            "test_mae": {
+              "paired_map": 157.79,
+              "residual": 136.5
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "residual",
+            "loo_delta": -17.02,
+            "loo_se": 23.03,
+            "test_mae": {
+              "paired_map": 154.9,
+              "residual": 190.27
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -13.13,
+            "loo_se": 23.46,
+            "test_mae": {
+              "paired_map": 155.2,
+              "residual": 140.31
+            }
+          }
+        ],
+        "54156953": [
+          {
+            "seed": 21,
+            "choice": "paired_map",
+            "loo_delta": 32.48,
+            "loo_se": 21.24,
+            "test_mae": {
+              "paired_map": 144.96,
+              "residual": 141.56
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "residual",
+            "loo_delta": -8.08,
+            "loo_se": 26.7,
+            "test_mae": {
+              "paired_map": 152.26,
+              "residual": 179.47
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -4.07,
+            "loo_se": 19.88,
+            "test_mae": {
+              "paired_map": 159.44,
+              "residual": 133.61
+            }
+          }
+        ],
+        "84746449": [
+          {
+            "seed": 21,
+            "choice": "residual",
+            "loo_delta": 0.13,
+            "loo_se": 20.54,
+            "test_mae": {
+              "paired_map": 179.93,
+              "residual": 139.88
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "residual",
+            "loo_delta": -43.08,
+            "loo_se": 22.29,
+            "test_mae": {
+              "paired_map": 190.97,
+              "residual": 185.91
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -31.92,
+            "loo_se": 21.63,
+            "test_mae": {
+              "paired_map": 188.16,
+              "residual": 136.68
+            }
+          }
+        ],
+        "84748697": [
+          {
+            "seed": 21,
+            "choice": "residual",
+            "loo_delta": -13.27,
+            "loo_se": 21.39,
+            "test_mae": {
+              "paired_map": 189.89,
+              "residual": 134.03
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "residual",
+            "loo_delta": -55.51,
+            "loo_se": 21.49,
+            "test_mae": {
+              "paired_map": 198.23,
+              "residual": 181.9
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -42.97,
+            "loo_se": 24.1,
+            "test_mae": {
+              "paired_map": 200.93,
+              "residual": 133.54
+            }
+          }
+        ],
+        "84749569": [
+          {
+            "seed": 21,
+            "choice": "residual",
+            "loo_delta": -12.38,
+            "loo_se": 19.77,
+            "test_mae": {
+              "paired_map": 186.34,
+              "residual": 138.01
+            }
+          },
+          {
+            "seed": 37,
+            "choice": "residual",
+            "loo_delta": -66.7,
+            "loo_se": 23.3,
+            "test_mae": {
+              "paired_map": 196.48,
+              "residual": 185.38
+            }
+          },
+          {
+            "seed": 59,
+            "choice": "residual",
+            "loo_delta": -45.21,
+            "loo_se": 24.37,
+            "test_mae": {
+              "paired_map": 205.68,
+              "residual": 135.04
+            }
+          }
+        ]
+      },
+      "summary": {
+        "selected_map_counts": {
+          "54120037": 1,
+          "54120457": 0,
+          "54156953": 1,
+          "84746449": 0,
+          "84748697": 0,
+          "84749569": 0
+        },
+        "chosen_mae": 156.01,
+        "residual_mae": 154.38
+      }
+    }
+  },
+  "pass": false
+}

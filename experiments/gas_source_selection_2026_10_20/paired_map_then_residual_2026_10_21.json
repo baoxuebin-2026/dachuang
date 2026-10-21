@@ -1,0 +1,158 @@
+{
+  "protocol": "Frozen paired-response alignment followed by 20-CO-residual fit.\n\nData, source Ridge(10), training/test and 20 stratified pilot recipes follow\npaired_response_map_pilot_2026_10_21.py. For each source/target physically\nmatched recipe, source-target signed-log response difference is computed.\nFeaturewise median of 20 paired differences aligns target features to the\nsource sensor. Then fit Ridge(10) residuals from 20 target CO labels to the\naligned source model predictions. Holdout test only once; three fixed seeds\n(21,37,59) describe pilot sampling variation, not independent test data.\nCompare raw-source residual Ridge20, map-only, direct target Ridge20. Primary\nsuccess: map-then-residual mean MAE <=90% of BEST raw-residual/map-only\nbaseline on each dataset, no individual target >10% worse than its own best\nbaseline, and mean CO>=1500ppb positive underestimation not worse. 6821340\nand 15423482 datasets already seen in ideation, so even success is not blind.\n",
+  "datasets": {
+    "6821340": {
+      "devices": {
+        "B": {
+          "raw_residual": {
+            "mae": 394.53,
+            "high_under": 674.17
+          },
+          "paired_map": {
+            "mae": 324.51,
+            "high_under": 368.83
+          },
+          "mapped_residual": {
+            "mae": 394.53,
+            "high_under": 674.17
+          }
+        },
+        "C": {
+          "raw_residual": {
+            "mae": 560.53,
+            "high_under": 923.55
+          },
+          "paired_map": {
+            "mae": 393.04,
+            "high_under": 385.11
+          },
+          "mapped_residual": {
+            "mae": 560.53,
+            "high_under": 923.55
+          }
+        }
+      },
+      "mean": {
+        "raw_residual": {
+          "mae": 477.53,
+          "high_under": 798.86
+        },
+        "paired_map": {
+          "mae": 358.77,
+          "high_under": 376.97
+        },
+        "mapped_residual": {
+          "mae": 477.53,
+          "high_under": 798.86
+        }
+      },
+      "best_baseline": "paired_map",
+      "pass": false
+    },
+    "15423482": {
+      "devices": {
+        "54120037": {
+          "raw_residual": {
+            "mae": 143.63,
+            "high_under": 151.49
+          },
+          "paired_map": {
+            "mae": 169.54,
+            "high_under": 222.95
+          },
+          "mapped_residual": {
+            "mae": 143.63,
+            "high_under": 151.51
+          }
+        },
+        "54120457": {
+          "raw_residual": {
+            "mae": 140.31,
+            "high_under": 136.68
+          },
+          "paired_map": {
+            "mae": 155.2,
+            "high_under": 184.79
+          },
+          "mapped_residual": {
+            "mae": 140.31,
+            "high_under": 136.68
+          }
+        },
+        "54156953": {
+          "raw_residual": {
+            "mae": 141.56,
+            "high_under": 110.33
+          },
+          "paired_map": {
+            "mae": 152.26,
+            "high_under": 147.15
+          },
+          "mapped_residual": {
+            "mae": 141.56,
+            "high_under": 110.32
+          }
+        },
+        "84746449": {
+          "raw_residual": {
+            "mae": 139.88,
+            "high_under": 152.99
+          },
+          "paired_map": {
+            "mae": 188.16,
+            "high_under": 234.62
+          },
+          "mapped_residual": {
+            "mae": 139.88,
+            "high_under": 152.99
+          }
+        },
+        "84748697": {
+          "raw_residual": {
+            "mae": 134.03,
+            "high_under": 148.05
+          },
+          "paired_map": {
+            "mae": 198.23,
+            "high_under": 237.94
+          },
+          "mapped_residual": {
+            "mae": 134.03,
+            "high_under": 148.05
+          }
+        },
+        "84749569": {
+          "raw_residual": {
+            "mae": 138.01,
+            "high_under": 145.85
+          },
+          "paired_map": {
+            "mae": 196.48,
+            "high_under": 220.74
+          },
+          "mapped_residual": {
+            "mae": 138.01,
+            "high_under": 145.85
+          }
+        }
+      },
+      "mean": {
+        "raw_residual": {
+          "mae": 139.57,
+          "high_under": 140.9
+        },
+        "paired_map": {
+          "mae": 176.64,
+          "high_under": 208.03
+        },
+        "mapped_residual": {
+          "mae": 139.57,
+          "high_under": 140.9
+        }
+      },
+      "best_baseline": "raw_residual",
+      "pass": false
+    }
+  },
+  "pass": false
+}

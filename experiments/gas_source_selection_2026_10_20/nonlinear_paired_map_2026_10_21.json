@@ -1,0 +1,198 @@
+{
+  "protocol": "Frozen nonlinear paired-alignment + target calibration experiment.\n\nData, source ranges, 20 pilots, source->target paired signal alignment from\npaired_response_map_pilot_2026_10_21.py. Source model now fixed HGB(150,\nleaf15,minleaf10,l2=10) on source-standardized signed-log response. Fit\n20-label Ridge(alpha10) residuals on raw or globally mapped target features.\nBaselines: raw HGB residual and previously measured raw Ridge residual,\nrecomputed here with identical pilot choices. Map-only HGB diagnostic.\nThree seeds 21/37/59 share one held-out set; report per-device median.\nSuccess: mapped HGB residual >=10% lower MAE than best raw residual method\non BOTH 6821340 and 15423482, no target device worse >10%, and high CO\n>=1500 ppb underestimation no worse on each dataset. The two data sources\nhave already guided method design, so success still requires external data.\n",
+  "datasets": {
+    "6821340": {
+      "devices": {
+        "B": {
+          "ridge_residual": {
+            "mae": 394.53,
+            "high_under": 674.17
+          },
+          "hgb_residual": {
+            "mae": 526.7,
+            "high_under": 624.85
+          },
+          "hgb_map_only": {
+            "mae": 491.91,
+            "high_under": 817.59
+          },
+          "hgb_map_residual": {
+            "mae": 479.08,
+            "high_under": 771.3
+          }
+        },
+        "C": {
+          "ridge_residual": {
+            "mae": 560.53,
+            "high_under": 923.55
+          },
+          "hgb_residual": {
+            "mae": 557.7,
+            "high_under": 945.56
+          },
+          "hgb_map_only": {
+            "mae": 457.91,
+            "high_under": 747.98
+          },
+          "hgb_map_residual": {
+            "mae": 608.19,
+            "high_under": 931.17
+          }
+        }
+      },
+      "mean": {
+        "ridge_residual": {
+          "mae": 477.53,
+          "high_under": 798.86
+        },
+        "hgb_residual": {
+          "mae": 542.2,
+          "high_under": 785.2
+        },
+        "hgb_map_only": {
+          "mae": 474.91,
+          "high_under": 782.79
+        },
+        "hgb_map_residual": {
+          "mae": 543.63,
+          "high_under": 851.23
+        }
+      },
+      "best_baseline": "ridge_residual",
+      "pass": false
+    },
+    "15423482": {
+      "devices": {
+        "54120037": {
+          "ridge_residual": {
+            "mae": 143.63,
+            "high_under": 151.49
+          },
+          "hgb_residual": {
+            "mae": 215.02,
+            "high_under": 205.98
+          },
+          "hgb_map_only": {
+            "mae": 284.42,
+            "high_under": 322.59
+          },
+          "hgb_map_residual": {
+            "mae": 254.73,
+            "high_under": 187.2
+          }
+        },
+        "54120457": {
+          "ridge_residual": {
+            "mae": 140.31,
+            "high_under": 136.68
+          },
+          "hgb_residual": {
+            "mae": 185.8,
+            "high_under": 79.87
+          },
+          "hgb_map_only": {
+            "mae": 254.25,
+            "high_under": 283.95
+          },
+          "hgb_map_residual": {
+            "mae": 226.97,
+            "high_under": 173.95
+          }
+        },
+        "54156953": {
+          "ridge_residual": {
+            "mae": 141.56,
+            "high_under": 110.33
+          },
+          "hgb_residual": {
+            "mae": 191.08,
+            "high_under": 116.01
+          },
+          "hgb_map_only": {
+            "mae": 229.15,
+            "high_under": 213.25
+          },
+          "hgb_map_residual": {
+            "mae": 204.53,
+            "high_under": 104.96
+          }
+        },
+        "84746449": {
+          "ridge_residual": {
+            "mae": 139.88,
+            "high_under": 152.99
+          },
+          "hgb_residual": {
+            "mae": 246.01,
+            "high_under": 209.14
+          },
+          "hgb_map_only": {
+            "mae": 287.73,
+            "high_under": 337.32
+          },
+          "hgb_map_residual": {
+            "mae": 219.62,
+            "high_under": 142.75
+          }
+        },
+        "84748697": {
+          "ridge_residual": {
+            "mae": 134.03,
+            "high_under": 148.05
+          },
+          "hgb_residual": {
+            "mae": 317.82,
+            "high_under": 258.7
+          },
+          "hgb_map_only": {
+            "mae": 286.5,
+            "high_under": 355.65
+          },
+          "hgb_map_residual": {
+            "mae": 234.7,
+            "high_under": 178.58
+          }
+        },
+        "84749569": {
+          "ridge_residual": {
+            "mae": 138.01,
+            "high_under": 145.85
+          },
+          "hgb_residual": {
+            "mae": 279.93,
+            "high_under": 255.7
+          },
+          "hgb_map_only": {
+            "mae": 275.94,
+            "high_under": 305.37
+          },
+          "hgb_map_residual": {
+            "mae": 226.84,
+            "high_under": 138.95
+          }
+        }
+      },
+      "mean": {
+        "ridge_residual": {
+          "mae": 139.57,
+          "high_under": 140.9
+        },
+        "hgb_residual": {
+          "mae": 239.28,
+          "high_under": 187.57
+        },
+        "hgb_map_only": {
+          "mae": 269.67,
+          "high_under": 303.02
+        },
+        "hgb_map_residual": {
+          "mae": 227.9,
+          "high_under": 154.4
+        }
+      },
+      "best_baseline": "ridge_residual",
+      "pass": false
+    }
+  },
+  "pass": false
+}

@@ -1,0 +1,166 @@
+{
+  "protocol": "FROZEN external decision test of paired-shift gate after 682/154 ideation.\n\nDevice offset ratio = RMS over features of median paired source-target\nstandardized signed-log response displacement / RMS of source response\nvariation over eligible pilot pool. Rule before reading these outcomes:\nif ratio > 1.5 choose GLOBAL paired median response alignment; otherwise\nchoose 20-CO-label residual Ridge(alpha10). Source Ridge(alpha10) trained\non source-only earlier lab/batches. 20 target pilot recipes stratified\n10/10 by TVOC, seeds 21/37/59, each test set scored once per seed.\n\nDataset 4593853: sensor0 source labs1-4, matched pilot lab5, target sensor1\nlab6 test. Dataset 4264224: source as_mlv batches1-4, matched pilot batch5,\ntarget as_mlv_p2 batches6-12 test. Match independent exposures by batch and\ngas composition CO/H2/water/TVOC (unique keys only). These data sources had\nother analyses but not this pairing/shrinkage rule. Source device is never\ntrained on target test labels. Benchmark always-residual, always-map, target\ndirect20. Success requires gated mean MAE >=10% below always-residual across\nboth datasets combined, neither dataset worsens >10%, high CO>=1500 positive\nunderestimation does not worsen pooled, and at least one dataset chooses map.\n3 pilot seeds are repeat sensitivity, NOT three independent validations.\nDo not adjust threshold after results.\n",
+  "datasets": {
+    "4593853": {
+      "n_source_train": 1100,
+      "n_pilot_pool": 50,
+      "n_test": 50,
+      "shift_ratio": 76.715,
+      "decision": "paired_map",
+      "metrics": {
+        "paired_map": {
+          "mae": 979.05,
+          "high_under": 1339.0
+        },
+        "residual": {
+          "mae": 833.86,
+          "high_under": 22.33
+        },
+        "direct20": {
+          "mae": 685.83,
+          "high_under": 191.68
+        }
+      },
+      "runs": [
+        {
+          "seed": 21,
+          "decision": "paired_map",
+          "scores": {
+            "paired_map": {
+              "mae": 1000.92,
+              "high_under": 1366.29
+            },
+            "residual": {
+              "mae": 849.94,
+              "high_under": 0.0
+            },
+            "direct20": {
+              "mae": 800.7,
+              "high_under": 28.94
+            }
+          }
+        },
+        {
+          "seed": 37,
+          "decision": "paired_map",
+          "scores": {
+            "paired_map": {
+              "mae": 918.02,
+              "high_under": 1121.81
+            },
+            "residual": {
+              "mae": 869.79,
+              "high_under": 0.0
+            },
+            "direct20": {
+              "mae": 783.65,
+              "high_under": 47.74
+            }
+          }
+        },
+        {
+          "seed": 59,
+          "decision": "paired_map",
+          "scores": {
+            "paired_map": {
+              "mae": 1018.22,
+              "high_under": 1528.9
+            },
+            "residual": {
+              "mae": 781.84,
+              "high_under": 67.0
+            },
+            "direct20": {
+              "mae": 473.13,
+              "high_under": 498.37
+            }
+          }
+        }
+      ]
+    },
+    "4264224": {
+      "n_source_train": 361,
+      "n_pilot_pool": 99,
+      "n_test": 614,
+      "shift_ratio": 4.079,
+      "decision": "paired_map",
+      "metrics": {
+        "paired_map": {
+          "mae": 232.9,
+          "high_under": 351.99
+        },
+        "residual": {
+          "mae": 171.85,
+          "high_under": 217.47
+        },
+        "direct20": {
+          "mae": 211.37,
+          "high_under": 289.31
+        }
+      },
+      "runs": [
+        {
+          "seed": 21,
+          "decision": "paired_map",
+          "scores": {
+            "paired_map": {
+              "mae": 232.26,
+              "high_under": 325.72
+            },
+            "residual": {
+              "mae": 167.21,
+              "high_under": 201.0
+            },
+            "direct20": {
+              "mae": 194.64,
+              "high_under": 220.53
+            }
+          }
+        },
+        {
+          "seed": 37,
+          "decision": "paired_map",
+          "scores": {
+            "paired_map": {
+              "mae": 233.9,
+              "high_under": 407.92
+            },
+            "residual": {
+              "mae": 174.72,
+              "high_under": 192.04
+            },
+            "direct20": {
+              "mae": 221.27,
+              "high_under": 293.23
+            }
+          }
+        },
+        {
+          "seed": 59,
+          "decision": "paired_map",
+          "scores": {
+            "paired_map": {
+              "mae": 232.53,
+              "high_under": 322.32
+            },
+            "residual": {
+              "mae": 173.63,
+              "high_under": 259.36
+            },
+            "direct20": {
+              "mae": 218.2,
+              "high_under": 354.18
+            }
+          }
+        }
+      ]
+    }
+  },
+  "pass": false,
+  "pooled": {
+    "baseline_mae": 502.86,
+    "selected_mae": 605.98,
+    "baseline_high_under": 119.9,
+    "selected_high_under": 845.5
+  }
+}
