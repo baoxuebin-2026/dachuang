@@ -1,0 +1,67 @@
+{
+  "protocol": "Frozen exploratory factorial forward/inverse model of CO+CH4+H2S.\n\nData: Mendeley 10.17632/2mpx85xt6g.1, 186 complete mixture recordings,\nnever window-split. From each complete recording use 3 channels' baseline,\nand signed-log deltas of three disjoint exposure periods. Forward kernel\nridge maps known (CH4,CO,H2S) compositions onto standardized sensor response;\nat test, among 216 candidate gas compositions, select the one with smallest\nnoise-scaled sensor response distance. Fixed RBF gamma=1/3, alpha=0.1.\nCompare ExtraTrees(300), RBF SVR(C=100,epsilon=.1), and Ridge(10) direct CO\nregression on exactly the same file features. Three fixed shuffled 5-fold\nfile splits seeds11/21/37. Evaluate file-level CO MAE and high>=2000 ppm\npositive underestimation. Pass only if both metrics improve >=10% against\nthe BEST of ET/SVR in each seed; no held-out recipe labels enter fitting.\nThis is a new hypothesis, not an independent test or a claim of novelty.\n",
+  "n_files": 186,
+  "results": {
+    "11": {
+      "forward_inverse": {
+        "mae": 908.6,
+        "high_under": 1104.84
+      },
+      "extra_trees": {
+        "mae": 534.37,
+        "high_under": 560.54
+      },
+      "svr": {
+        "mae": 586.65,
+        "high_under": 572.52
+      },
+      "ridge": {
+        "mae": 724.83,
+        "high_under": 972.54
+      },
+      "best_nonlinear": "extra_trees",
+      "pass": false
+    },
+    "21": {
+      "forward_inverse": {
+        "mae": 870.97,
+        "high_under": 975.81
+      },
+      "extra_trees": {
+        "mae": 541.94,
+        "high_under": 643.59
+      },
+      "svr": {
+        "mae": 585.31,
+        "high_under": 624.29
+      },
+      "ridge": {
+        "mae": 724.26,
+        "high_under": 970.08
+      },
+      "best_nonlinear": "extra_trees",
+      "pass": false
+    },
+    "37": {
+      "forward_inverse": {
+        "mae": 876.34,
+        "high_under": 1145.16
+      },
+      "extra_trees": {
+        "mae": 558.93,
+        "high_under": 634.8
+      },
+      "svr": {
+        "mae": 659.18,
+        "high_under": 771.83
+      },
+      "ridge": {
+        "mae": 723.47,
+        "high_under": 964.6
+      },
+      "best_nonlinear": "extra_trees",
+      "pass": false
+    }
+  },
+  "pass": false
+}
