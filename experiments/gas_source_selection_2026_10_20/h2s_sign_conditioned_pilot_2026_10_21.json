@@ -1,0 +1,61 @@
+{
+  "protocol": "Frozen pilot: sign-conditioned CO mixture regression, one file per sample.\n\nMatched CO=0 vs 2500 ppm at identical CH4/H2S shows that H2S=0 has\nnegative MOX-channel CO response while many H2S>0 cells reverse direction.\nTrain a probabilistic H2S-presence classifier, two ExtraTrees CO experts on\nthe H2S=0 and H2S>0 subsets, then blend their CO predictions with predicted\nprobability. No test H2S label is used. Baselines: one global ExtraTrees(300)\nCO model on the same 12 response features, and an oracle known-H2S switch\nreported only as an upper bound (not a deployable competitor). Three fixed\ncomplete-file stratified 5-fold splits (11,21,37); score per-file CO MAE,\nhigh CO>=2000 ppm underestimation, and H2S=0 subset MAE. Pass only if\nnon-oracle mixture improves overall MAE >=10% and high underestimation does\nnot worsen in every seed, with no H2S=0 MAE degradation >10%. This is\nexploratory reuse of 186 recipes, not blinded validation or originality.\n",
+  "n_files": 186,
+  "results": {
+    "11": {
+      "global": {
+        "mae": 534.38,
+        "high_under": 560.48,
+        "h2s_zero_mae": 492.41
+      },
+      "sign_conditioned": {
+        "mae": 541.55,
+        "high_under": 552.81,
+        "h2s_zero_mae": 487.99
+      },
+      "oracle_switch": {
+        "mae": 508.49,
+        "high_under": 484.72,
+        "h2s_zero_mae": 386.67
+      },
+      "pass": false
+    },
+    "21": {
+      "global": {
+        "mae": 541.91,
+        "high_under": 643.59,
+        "h2s_zero_mae": 563.17
+      },
+      "sign_conditioned": {
+        "mae": 559.09,
+        "high_under": 653.1,
+        "h2s_zero_mae": 582.84
+      },
+      "oracle_switch": {
+        "mae": 520.88,
+        "high_under": 580.52,
+        "h2s_zero_mae": 463.24
+      },
+      "pass": false
+    },
+    "37": {
+      "global": {
+        "mae": 558.91,
+        "high_under": 634.65,
+        "h2s_zero_mae": 527.69
+      },
+      "sign_conditioned": {
+        "mae": 562.27,
+        "high_under": 637.49,
+        "h2s_zero_mae": 518.68
+      },
+      "oracle_switch": {
+        "mae": 515.17,
+        "high_under": 555.3,
+        "h2s_zero_mae": 393.29
+      },
+      "pass": false
+    }
+  },
+  "pass": false
+}
