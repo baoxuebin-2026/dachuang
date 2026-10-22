@@ -1,0 +1,45 @@
+{
+  "question": "Train on high gas concentrations from other devices, identify low-concentration CO and alternative gases on unseen device",
+  "screening_date": "2026-10-22",
+  "datasets": [
+    {
+      "name": "UCI 251, Gas sensor arrays in open sampling settings",
+      "url": "https://archive.ics.uci.edu/dataset/251/gas+sensor+arrays+in+open+sampling+settings",
+      "archive_size": "7.8 GB compressed",
+      "has_co": true,
+      "nominal_co_source_levels_ppm": [1000, 4000],
+      "sensor_modules": 9,
+      "decision": "Reject as independent CO gas-identification confirmation",
+      "reason": "An independent audit found gas species measured in temporally clustered batches; even the pre-release sensor response predicts the gas. Its minimally drift-contaminated subset contains methanol, ethylene and butanol, not CO. The low nominal source level is 1000 ppm and is not a low ambient concentration at the sensor.",
+      "audit": "https://arxiv.org/abs/2108.08793",
+      "note": "An earlier project stage used only a methane subset for an unrelated task; this is not the entire UCI 251 archive."
+    },
+    {
+      "name": "Chongqing University E-nose drift analysis dataset",
+      "url": "https://doi.org/10.5281/zenodo.13854443",
+      "archive_md5": "bba2d8537aef4617acfc3598a6bb86db",
+      "board_shift": true,
+      "features": 37,
+      "odor_classes": 14,
+      "board_exposure_counts": [211, 210],
+      "decision": "Independent cross-board mechanism stress only",
+      "reason": "Published archive maps label integers to neither named gases nor sample concentrations; CO and high-to-low transfer cannot be asserted. Frozen amplitude stress test failed in both board directions.",
+      "experiment": "chongqing_board_amplitude_stress_2026_10_22.json"
+    },
+    {
+      "name": "Solorzano et al., Multi-unit calibration rejects inherent device variability",
+      "url": "https://doi.org/10.1016/j.snb.2018.02.188",
+      "device_count": 5,
+      "has_co_and_three_concentrations": true,
+      "decision": "Ideal independent design, raw measurements not located in public publication/repository record",
+      "reason": "The paper describes five devices exposed to six named gases and air across concentration and humidity settings, but the accessible university repository lists only the paper PDF."
+    },
+    {
+      "name": "UCI gas sensor array low-concentration (Chinese group)",
+      "url": "https://archive.ics.uci.edu/dataset/1081/gas+sensor+array+low-concentration",
+      "decision": "Ineligible for cross-device CO validation",
+      "reason": "Single sensor array; six VOCs do not include CO; levels are all 50-200 ppb."
+    }
+  ],
+  "conclusion": "No independent public dataset screened here simultaneously establishes CO identity, a new device, and high-to-low concentration transfer with reliable gas labels. Do not treat the negative cross-board stress or the confounded 7.8 GB archive as positive validation."
+}
