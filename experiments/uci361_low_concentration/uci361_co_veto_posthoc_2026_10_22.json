@@ -1,0 +1,221 @@
+{
+  "protocol": "Retrospective CO-specific arbitration on the already inspected UCI361 pilot.\n\nThe rule was conceived after looking at held-device low-concentration errors.\nIts score is exploratory and cannot count as an independent or blind test.\nFor an unseen future dataset, freeze a full classifier and a concentration-law\nclassifier using source devices only. Keep the full classifier's prediction\nexcept when it calls CO and the law classifier calls a different gas; in that\ncase use the law classifier's gas. A strong negative control applies precisely\nthe same arbitration using the fixed-amplitude SVM. The independent-data\nfailure criterion is an improvement of at least 0.01 in macro F1 over the\nstronger of the full classifier and fixed-amplitude control, unchanged CO\nrecall, and fewer false CO alerts, with no worse per-device F1 on 4/5 devices.\nNever silently retune the rule using this retrospective dataset.\n",
+  "dataset": "https://doi.org/10.24432/C5MW3K",
+  "test_exposures": 192,
+  "already_inspected_test_labels": true,
+  "independent_confirmation": false,
+  "results": {
+    "fixed_cnn": {
+      "macro_f1": 0.9741226182114779,
+      "correct": 187,
+      "co_recall_numerator": 48,
+      "co_recall_denominator": 48,
+      "non_co_called_co": 5,
+      "per_device_f1": {
+        "1": 0.9386253842775583,
+        "2": 0.9580419580419581,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          44
+        ]
+      ]
+    },
+    "fixed_svm": {
+      "macro_f1": 0.9632332966600112,
+      "correct": 185,
+      "co_recall_numerator": 48,
+      "co_recall_denominator": 48,
+      "non_co_called_co": 3,
+      "per_device_f1": {
+        "1": 0.9791304347826086,
+        "2": 0.9580419580419581,
+        "3": 0.9365079365079365,
+        "4": 1.0,
+        "5": 0.9580419580419581
+      },
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          46,
+          1
+        ],
+        [
+          2,
+          0,
+          3,
+          43
+        ]
+      ]
+    },
+    "law_svm": {
+      "macro_f1": 0.9421612436996314,
+      "correct": 181,
+      "co_recall_numerator": 48,
+      "co_recall_denominator": 48,
+      "non_co_called_co": 1,
+      "per_device_f1": {
+        "1": 0.9791304347826086,
+        "2": 0.9791304347826086,
+        "3": 0.9365079365079365,
+        "4": 1.0,
+        "5": 0.6666666666666666
+      },
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          41,
+          6
+        ],
+        [
+          1,
+          0,
+          3,
+          44
+        ]
+      ]
+    },
+    "law_co_veto": {
+      "macro_f1": 0.9947911014650027,
+      "correct": 191,
+      "co_recall_numerator": 48,
+      "co_recall_denominator": 48,
+      "non_co_called_co": 1,
+      "per_device_f1": {
+        "1": 1.0,
+        "2": 0.9791304347826086,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          48,
+          0
+        ],
+        [
+          1,
+          0,
+          0,
+          47
+        ]
+      ]
+    },
+    "fixed_co_veto": {
+      "macro_f1": 0.9844735145407038,
+      "correct": 189,
+      "co_recall_numerator": 48,
+      "co_recall_denominator": 48,
+      "non_co_called_co": 3,
+      "per_device_f1": {
+        "1": 0.9791304347826086,
+        "2": 0.9580419580419581,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          2,
+          0,
+          0,
+          46
+        ]
+      ]
+    }
+  },
+  "changed_files": {
+    "law_co_veto": [
+      "data1/B1_GEa_F020_R4.txt",
+      "data1/B1_GEy_F010_R2.txt",
+      "data1/B1_GEy_F010_R3.txt",
+      "data1/B2_GEy_F010_R4.txt"
+    ],
+    "fixed_co_veto": [
+      "data1/B1_GEy_F010_R2.txt",
+      "data1/B1_GEy_F010_R3.txt"
+    ]
+  }
+}
