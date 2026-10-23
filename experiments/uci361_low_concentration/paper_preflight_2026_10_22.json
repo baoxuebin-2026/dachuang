@@ -1,0 +1,263 @@
+{
+  "status": "Retrospective audit of previously inspected UCI361 observations; no new blind test.",
+  "paper_task": "Four pure-gas classes on an unseen board at concentration ranks 1-3; source boards use ranks 4-10.",
+  "source_dataset": "UCI 361 Twin gas sensor arrays; 640 physical trials, five boards.",
+  "scoring_unit": "One complete exposure file; 192 unique held-board test files.",
+  "class_counts": {
+    "CO": 48,
+    "Ea": 48,
+    "Ey": 48,
+    "Me": 48
+  },
+  "board_counts": {
+    "1": 48,
+    "2": 48,
+    "3": 48,
+    "4": 24,
+    "5": 24
+  },
+  "methods": {
+    "svm_no_augmentation": {
+      "macro_f1": 0.7358720487433359,
+      "correct": 141,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          30,
+          0,
+          18
+        ],
+        [
+          8,
+          0,
+          34,
+          6
+        ],
+        [
+          16,
+          0,
+          3,
+          29
+        ]
+      ],
+      "non_co_as_co": 24,
+      "per_board_macro_f1": {
+        "1": 0.7243454885460495,
+        "2": 0.6478764478764478,
+        "3": 0.785934596804162,
+        "4": 0.9142857142857143,
+        "5": 0.5623481781376518
+      }
+    },
+    "svm_three_scale": {
+      "macro_f1": 0.9632332966600111,
+      "correct": 185,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          46,
+          1
+        ],
+        [
+          2,
+          0,
+          3,
+          43
+        ]
+      ],
+      "non_co_as_co": 3,
+      "per_board_macro_f1": {
+        "1": 0.9791304347826086,
+        "2": 0.958041958041958,
+        "3": 0.9365079365079365,
+        "4": 1.0,
+        "5": 0.958041958041958
+      }
+    },
+    "cnn_no_augmentation": {
+      "macro_f1": 0.6910287081339713,
+      "correct": 132,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          28,
+          0,
+          20
+        ],
+        [
+          12,
+          0,
+          32,
+          4
+        ],
+        [
+          24,
+          0,
+          0,
+          24
+        ]
+      ],
+      "non_co_as_co": 36,
+      "per_board_macro_f1": {
+        "1": 0.6785243741765481,
+        "2": 0.5760061919504644,
+        "3": 0.793939393939394,
+        "4": 0.8730769230769231,
+        "5": 0.4236111111111111
+      }
+    },
+    "cnn_per_record_rms": {
+      "macro_f1": 0.9585298086846075,
+      "correct": 184,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          42,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          47
+        ]
+      ],
+      "non_co_as_co": 1,
+      "per_board_macro_f1": {
+        "1": 0.8303585049580473,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      }
+    },
+    "cnn_three_scale": {
+      "macro_f1": 0.9741226182114779,
+      "correct": 187,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          44
+        ]
+      ],
+      "non_co_as_co": 5,
+      "per_board_macro_f1": {
+        "1": 0.9386253842775582,
+        "2": 0.958041958041958,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      }
+    }
+  },
+  "paired_svm_correctness": {
+    "corrected_by_augmentation": 44,
+    "new_errors_after_augmentation": 0,
+    "both_correct": 141,
+    "both_wrong": 7
+  },
+  "augmented_svm_vs_normalized_cnn_paired": {
+    "normalized_cnn_errors_fixed_by_augmented_svm": 7,
+    "new_errors_relative_to_normalized_cnn": 6
+  },
+  "paper_claim_boundary": "Factors were selected after earlier UCI361 outcomes; no mixture recognition or prospective external replication is claimed.",
+  "comparison_note": "Per-record RMS-normalized CNN is a close four-class F1 baseline; it misses 6/48 CO trials, while the augmented SVM misses 0/48. It must not be omitted from the manuscript comparison.",
+  "pending_before_final_manuscript": [
+    "Run a source-only per-record normalized SVM on the exact same 192 files if the verified original archive is available.",
+    "Verify the final numerical table by rerunning the original archive; this audit checks saved predictions only.",
+    "Confirm author names, project funding number, and journal formatting from actual editorial instructions."
+  ],
+  "provenance": [
+    "uci361_temporal_mlp_predictions_2026-10-19.csv",
+    "uci361_three_scale_classical_predictions_2026-10-19.csv",
+    "uci361_recovered_predictions_2026-10-20.csv"
+  ]
+}

@@ -1,0 +1,516 @@
+{
+  "scope": "Retrospective UCI361 control",
+  "frozen_seeds": [
+    21,
+    37,
+    59
+  ],
+  "per_class_target_calibration": 5,
+  "runs": {
+    "21": {
+      "pilot_files": {
+        "1": [
+          "data1/B1_GCO_F050_R4.txt",
+          "data1/B1_GCO_F060_R3.txt",
+          "data1/B1_GCO_F070_R2.txt",
+          "data1/B1_GCO_F080_R1.txt",
+          "data1/B1_GCO_F080_R4.txt",
+          "data1/B1_GEa_F050_R2.txt",
+          "data1/B1_GEa_F080_R1.txt",
+          "data1/B1_GEa_F090_R2.txt",
+          "data1/B1_GEa_F090_R3.txt",
+          "data1/B1_GEa_F090_R4.txt",
+          "data1/B1_GEy_F050_R2.txt",
+          "data1/B1_GEy_F060_R3.txt",
+          "data1/B1_GEy_F080_R4.txt",
+          "data1/B1_GEy_F090_R3.txt",
+          "data1/B1_GEy_F100_R1.txt",
+          "data1/B1_GMe_F050_R3.txt",
+          "data1/B1_GMe_F060_R4.txt",
+          "data1/B1_GMe_F070_R4.txt",
+          "data1/B1_GMe_F100_R1.txt",
+          "data1/B1_GMe_F100_R2.txt"
+        ],
+        "2": [
+          "data1/B2_GCO_F060_R2.txt",
+          "data1/B2_GCO_F060_R3.txt",
+          "data1/B2_GCO_F060_R4.txt",
+          "data1/B2_GCO_F090_R4.txt",
+          "data1/B2_GCO_F100_R2.txt",
+          "data1/B2_GEa_F040_R2.txt",
+          "data1/B2_GEa_F060_R4.txt",
+          "data1/B2_GEa_F070_R4.txt",
+          "data1/B2_GEa_F080_R1.txt",
+          "data1/B2_GEa_F090_R2.txt",
+          "data1/B2_GEy_F050_R1.txt",
+          "data1/B2_GEy_F050_R2.txt",
+          "data1/B2_GEy_F060_R1.txt",
+          "data1/B2_GEy_F070_R2.txt",
+          "data1/B2_GEy_F080_R3.txt",
+          "data1/B2_GMe_F040_R1.txt",
+          "data1/B2_GMe_F050_R4.txt",
+          "data1/B2_GMe_F060_R3.txt",
+          "data1/B2_GMe_F090_R4.txt",
+          "data1/B2_GMe_F100_R3.txt"
+        ],
+        "3": [
+          "data1/B3_GCO_F050_R1.txt",
+          "data1/B3_GCO_F050_R2.txt",
+          "data1/B3_GCO_F070_R2.txt",
+          "data1/B3_GCO_F090_R1.txt",
+          "data1/B3_GCO_F090_R3.txt",
+          "data1/B3_GEa_F040_R4.txt",
+          "data1/B3_GEa_F060_R3.txt",
+          "data1/B3_GEa_F090_R3.txt",
+          "data1/B3_GEa_F090_R4.txt",
+          "data1/B3_GEa_F100_R1.txt",
+          "data1/B3_GEy_F040_R1.txt",
+          "data1/B3_GEy_F080_R1.txt",
+          "data1/B3_GEy_F100_R1.txt",
+          "data1/B3_GEy_F100_R3.txt",
+          "data1/B3_GEy_F100_R4.txt",
+          "data1/B3_GMe_F040_R1.txt",
+          "data1/B3_GMe_F050_R2.txt",
+          "data1/B3_GMe_F050_R3.txt",
+          "data1/B3_GMe_F080_R2.txt",
+          "data1/B3_GMe_F100_R2.txt"
+        ],
+        "4": [
+          "data1/B4_GCO_F040_R2.txt",
+          "data1/B4_GCO_F050_R2.txt",
+          "data1/B4_GCO_F060_R1.txt",
+          "data1/B4_GCO_F070_R1.txt",
+          "data1/B4_GCO_F080_R1.txt",
+          "data1/B4_GEa_F040_R1.txt",
+          "data1/B4_GEa_F050_R1.txt",
+          "data1/B4_GEa_F070_R2.txt",
+          "data1/B4_GEa_F080_R1.txt",
+          "data1/B4_GEa_F100_R2.txt",
+          "data1/B4_GEy_F060_R1.txt",
+          "data1/B4_GEy_F070_R1.txt",
+          "data1/B4_GEy_F080_R1.txt",
+          "data1/B4_GEy_F080_R2.txt",
+          "data1/B4_GEy_F090_R2.txt",
+          "data1/B4_GMe_F040_R1.txt",
+          "data1/B4_GMe_F040_R2.txt",
+          "data1/B4_GMe_F060_R1.txt",
+          "data1/B4_GMe_F070_R2.txt",
+          "data1/B4_GMe_F100_R2.txt"
+        ],
+        "5": [
+          "data1/B5_GCO_F050_R2.txt",
+          "data1/B5_GCO_F060_R1.txt",
+          "data1/B5_GCO_F070_R1.txt",
+          "data1/B5_GCO_F090_R1.txt",
+          "data1/B5_GCO_F100_R2.txt",
+          "data1/B5_GEa_F060_R1.txt",
+          "data1/B5_GEa_F070_R2.txt",
+          "data1/B5_GEa_F080_R1.txt",
+          "data1/B5_GEa_F100_R1.txt",
+          "data1/B5_GEa_F100_R2.txt",
+          "data1/B5_GEy_F050_R1.txt",
+          "data1/B5_GEy_F070_R1.txt",
+          "data1/B5_GEy_F070_R2.txt",
+          "data1/B5_GEy_F090_R2.txt",
+          "data1/B5_GEy_F100_R1.txt",
+          "data1/B5_GMe_F040_R2.txt",
+          "data1/B5_GMe_F080_R1.txt",
+          "data1/B5_GMe_F090_R1.txt",
+          "data1/B5_GMe_F090_R2.txt",
+          "data1/B5_GMe_F100_R1.txt"
+        ]
+      },
+      "methods": {
+        "source_augmented": {
+          "macro_f1": 0.9632332966600112,
+          "correct": 185,
+          "co_correct": 48,
+          "non_co_as_co": 3,
+          "per_board_macro_f1": {
+            "1": 0.9791304347826086,
+            "2": 0.9580419580419581,
+            "3": 0.9365079365079365,
+            "4": 1.0,
+            "5": 0.9580419580419581
+          }
+        },
+        "source_plus_target20_raw": {
+          "macro_f1": 0.745211969380198,
+          "correct": 143,
+          "co_correct": 48,
+          "non_co_as_co": 25,
+          "per_board_macro_f1": {
+            "1": 0.7243454885460496,
+            "2": 0.6478764478764479,
+            "3": 0.785934596804162,
+            "4": 0.9142857142857143,
+            "5": 0.7142857142857142
+          }
+        },
+        "source_plus_target20_augmented": {
+          "macro_f1": 0.9684838970553256,
+          "correct": 186,
+          "co_correct": 48,
+          "non_co_as_co": 3,
+          "per_board_macro_f1": {
+            "1": 0.9791304347826086,
+            "2": 0.9580419580419581,
+            "3": 0.9365079365079365,
+            "4": 1.0,
+            "5": 1.0
+          }
+        },
+        "target20_augmented": {
+          "macro_f1": 0.9102060054398405,
+          "correct": 175,
+          "co_correct": 47,
+          "non_co_as_co": 6,
+          "per_board_macro_f1": {
+            "1": 0.877987012987013,
+            "2": 0.9171723928245668,
+            "3": 0.8872019793072424,
+            "4": 1.0,
+            "5": 0.9160839160839161
+          }
+        }
+      }
+    },
+    "37": {
+      "pilot_files": {
+        "1": [
+          "data1/B1_GCO_F040_R4.txt",
+          "data1/B1_GCO_F050_R4.txt",
+          "data1/B1_GCO_F080_R1.txt",
+          "data1/B1_GCO_F080_R2.txt",
+          "data1/B1_GCO_F100_R3.txt",
+          "data1/B1_GEa_F040_R3.txt",
+          "data1/B1_GEa_F070_R2.txt",
+          "data1/B1_GEa_F080_R4.txt",
+          "data1/B1_GEa_F090_R3.txt",
+          "data1/B1_GEa_F100_R3.txt",
+          "data1/B1_GEy_F040_R4.txt",
+          "data1/B1_GEy_F050_R2.txt",
+          "data1/B1_GEy_F080_R2.txt",
+          "data1/B1_GEy_F080_R3.txt",
+          "data1/B1_GEy_F090_R3.txt",
+          "data1/B1_GMe_F050_R4.txt",
+          "data1/B1_GMe_F060_R4.txt",
+          "data1/B1_GMe_F090_R1.txt",
+          "data1/B1_GMe_F100_R2.txt",
+          "data1/B1_GMe_F100_R4.txt"
+        ],
+        "2": [
+          "data1/B2_GCO_F040_R2.txt",
+          "data1/B2_GCO_F050_R2.txt",
+          "data1/B2_GCO_F050_R4.txt",
+          "data1/B2_GCO_F060_R1.txt",
+          "data1/B2_GCO_F070_R2.txt",
+          "data1/B2_GEa_F040_R1.txt",
+          "data1/B2_GEa_F050_R3.txt",
+          "data1/B2_GEa_F050_R4.txt",
+          "data1/B2_GEa_F060_R2.txt",
+          "data1/B2_GEa_F090_R3.txt",
+          "data1/B2_GEy_F040_R1.txt",
+          "data1/B2_GEy_F060_R2.txt",
+          "data1/B2_GEy_F070_R1.txt",
+          "data1/B2_GEy_F080_R4.txt",
+          "data1/B2_GEy_F090_R1.txt",
+          "data1/B2_GMe_F050_R4.txt",
+          "data1/B2_GMe_F060_R2.txt",
+          "data1/B2_GMe_F080_R1.txt",
+          "data1/B2_GMe_F090_R2.txt",
+          "data1/B2_GMe_F100_R2.txt"
+        ],
+        "3": [
+          "data1/B3_GCO_F060_R4.txt",
+          "data1/B3_GCO_F070_R3.txt",
+          "data1/B3_GCO_F090_R1.txt",
+          "data1/B3_GCO_F100_R2.txt",
+          "data1/B3_GCO_F100_R3.txt",
+          "data1/B3_GEa_F050_R1.txt",
+          "data1/B3_GEa_F050_R4.txt",
+          "data1/B3_GEa_F060_R1.txt",
+          "data1/B3_GEa_F090_R2.txt",
+          "data1/B3_GEa_F090_R4.txt",
+          "data1/B3_GEy_F040_R1.txt",
+          "data1/B3_GEy_F050_R3.txt",
+          "data1/B3_GEy_F080_R3.txt",
+          "data1/B3_GEy_F080_R4.txt",
+          "data1/B3_GEy_F100_R2.txt",
+          "data1/B3_GMe_F060_R3.txt",
+          "data1/B3_GMe_F080_R3.txt",
+          "data1/B3_GMe_F090_R1.txt",
+          "data1/B3_GMe_F090_R2.txt",
+          "data1/B3_GMe_F100_R2.txt"
+        ],
+        "4": [
+          "data1/B4_GCO_F040_R2.txt",
+          "data1/B4_GCO_F050_R1.txt",
+          "data1/B4_GCO_F060_R2.txt",
+          "data1/B4_GCO_F070_R2.txt",
+          "data1/B4_GCO_F100_R2.txt",
+          "data1/B4_GEa_F050_R1.txt",
+          "data1/B4_GEa_F060_R2.txt",
+          "data1/B4_GEa_F070_R2.txt",
+          "data1/B4_GEa_F080_R2.txt",
+          "data1/B4_GEa_F090_R2.txt",
+          "data1/B4_GEy_F040_R1.txt",
+          "data1/B4_GEy_F050_R1.txt",
+          "data1/B4_GEy_F050_R2.txt",
+          "data1/B4_GEy_F060_R1.txt",
+          "data1/B4_GEy_F090_R1.txt",
+          "data1/B4_GMe_F070_R1.txt",
+          "data1/B4_GMe_F080_R1.txt",
+          "data1/B4_GMe_F080_R2.txt",
+          "data1/B4_GMe_F090_R1.txt",
+          "data1/B4_GMe_F100_R2.txt"
+        ],
+        "5": [
+          "data1/B5_GCO_F050_R1.txt",
+          "data1/B5_GCO_F050_R2.txt",
+          "data1/B5_GCO_F060_R2.txt",
+          "data1/B5_GCO_F070_R1.txt",
+          "data1/B5_GCO_F080_R1.txt",
+          "data1/B5_GEa_F050_R1.txt",
+          "data1/B5_GEa_F060_R2.txt",
+          "data1/B5_GEa_F070_R1.txt",
+          "data1/B5_GEa_F090_R1.txt",
+          "data1/B5_GEa_F100_R1.txt",
+          "data1/B5_GEy_F040_R1.txt",
+          "data1/B5_GEy_F040_R2.txt",
+          "data1/B5_GEy_F060_R1.txt",
+          "data1/B5_GEy_F060_R2.txt",
+          "data1/B5_GEy_F090_R2.txt",
+          "data1/B5_GMe_F050_R2.txt",
+          "data1/B5_GMe_F060_R2.txt",
+          "data1/B5_GMe_F070_R1.txt",
+          "data1/B5_GMe_F080_R1.txt",
+          "data1/B5_GMe_F080_R2.txt"
+        ]
+      },
+      "methods": {
+        "source_augmented": {
+          "macro_f1": 0.9632332966600112,
+          "correct": 185,
+          "co_correct": 48,
+          "non_co_as_co": 3,
+          "per_board_macro_f1": {
+            "1": 0.9791304347826086,
+            "2": 0.9580419580419581,
+            "3": 0.9365079365079365,
+            "4": 1.0,
+            "5": 0.9580419580419581
+          }
+        },
+        "source_plus_target20_raw": {
+          "macro_f1": 0.7392106619350458,
+          "correct": 142,
+          "co_correct": 48,
+          "non_co_as_co": 27,
+          "per_board_macro_f1": {
+            "1": 0.7243454885460496,
+            "2": 0.6463726884779516,
+            "3": 0.7621878121878122,
+            "4": 0.9142857142857143,
+            "5": 0.7095238095238094
+          }
+        },
+        "source_plus_target20_augmented": {
+          "macro_f1": 0.9896348012889365,
+          "correct": 190,
+          "co_correct": 48,
+          "non_co_as_co": 2,
+          "per_board_macro_f1": {
+            "1": 0.9791304347826086,
+            "2": 0.9791304347826086,
+            "3": 1.0,
+            "4": 1.0,
+            "5": 1.0
+          }
+        },
+        "target20_augmented": {
+          "macro_f1": 0.9427780388168662,
+          "correct": 181,
+          "co_correct": 46,
+          "non_co_as_co": 5,
+          "per_board_macro_f1": {
+            "1": 0.8964393939393939,
+            "2": 0.937463768115942,
+            "3": 0.9580419580419581,
+            "4": 0.9580419580419581,
+            "5": 1.0
+          }
+        }
+      }
+    },
+    "59": {
+      "pilot_files": {
+        "1": [
+          "data1/B1_GCO_F070_R3.txt",
+          "data1/B1_GCO_F080_R2.txt",
+          "data1/B1_GCO_F080_R3.txt",
+          "data1/B1_GCO_F080_R4.txt",
+          "data1/B1_GCO_F090_R3.txt",
+          "data1/B1_GEa_F060_R4.txt",
+          "data1/B1_GEa_F070_R1.txt",
+          "data1/B1_GEa_F080_R1.txt",
+          "data1/B1_GEa_F080_R4.txt",
+          "data1/B1_GEa_F090_R4.txt",
+          "data1/B1_GEy_F040_R1.txt",
+          "data1/B1_GEy_F040_R3.txt",
+          "data1/B1_GEy_F070_R1.txt",
+          "data1/B1_GEy_F090_R1.txt",
+          "data1/B1_GEy_F100_R4.txt",
+          "data1/B1_GMe_F040_R1.txt",
+          "data1/B1_GMe_F040_R2.txt",
+          "data1/B1_GMe_F050_R1.txt",
+          "data1/B1_GMe_F100_R1.txt",
+          "data1/B1_GMe_F100_R2.txt"
+        ],
+        "2": [
+          "data1/B2_GCO_F060_R1.txt",
+          "data1/B2_GCO_F060_R2.txt",
+          "data1/B2_GCO_F070_R1.txt",
+          "data1/B2_GCO_F070_R2.txt",
+          "data1/B2_GCO_F090_R1.txt",
+          "data1/B2_GEa_F040_R2.txt",
+          "data1/B2_GEa_F060_R1.txt",
+          "data1/B2_GEa_F080_R1.txt",
+          "data1/B2_GEa_F100_R2.txt",
+          "data1/B2_GEa_F100_R4.txt",
+          "data1/B2_GEy_F040_R1.txt",
+          "data1/B2_GEy_F060_R1.txt",
+          "data1/B2_GEy_F090_R4.txt",
+          "data1/B2_GEy_F100_R1.txt",
+          "data1/B2_GEy_F100_R4.txt",
+          "data1/B2_GMe_F080_R2.txt",
+          "data1/B2_GMe_F080_R3.txt",
+          "data1/B2_GMe_F090_R1.txt",
+          "data1/B2_GMe_F090_R2.txt",
+          "data1/B2_GMe_F100_R3.txt"
+        ],
+        "3": [
+          "data1/B3_GCO_F070_R1.txt",
+          "data1/B3_GCO_F070_R2.txt",
+          "data1/B3_GCO_F070_R4.txt",
+          "data1/B3_GCO_F100_R1.txt",
+          "data1/B3_GCO_F100_R3.txt",
+          "data1/B3_GEa_F040_R1.txt",
+          "data1/B3_GEa_F070_R4.txt",
+          "data1/B3_GEa_F080_R2.txt",
+          "data1/B3_GEa_F080_R4.txt",
+          "data1/B3_GEa_F090_R1.txt",
+          "data1/B3_GEy_F040_R3.txt",
+          "data1/B3_GEy_F050_R3.txt",
+          "data1/B3_GEy_F060_R1.txt",
+          "data1/B3_GEy_F070_R4.txt",
+          "data1/B3_GEy_F100_R4.txt",
+          "data1/B3_GMe_F050_R1.txt",
+          "data1/B3_GMe_F050_R3.txt",
+          "data1/B3_GMe_F050_R4.txt",
+          "data1/B3_GMe_F090_R4.txt",
+          "data1/B3_GMe_F100_R1.txt"
+        ],
+        "4": [
+          "data1/B4_GCO_F040_R1.txt",
+          "data1/B4_GCO_F060_R1.txt",
+          "data1/B4_GCO_F070_R1.txt",
+          "data1/B4_GCO_F080_R2.txt",
+          "data1/B4_GCO_F100_R2.txt",
+          "data1/B4_GEa_F040_R2.txt",
+          "data1/B4_GEa_F050_R2.txt",
+          "data1/B4_GEa_F080_R1.txt",
+          "data1/B4_GEa_F090_R1.txt",
+          "data1/B4_GEa_F100_R1.txt",
+          "data1/B4_GEy_F050_R1.txt",
+          "data1/B4_GEy_F060_R2.txt",
+          "data1/B4_GEy_F070_R1.txt",
+          "data1/B4_GEy_F070_R2.txt",
+          "data1/B4_GEy_F080_R1.txt",
+          "data1/B4_GMe_F040_R1.txt",
+          "data1/B4_GMe_F060_R2.txt",
+          "data1/B4_GMe_F070_R2.txt",
+          "data1/B4_GMe_F090_R1.txt",
+          "data1/B4_GMe_F100_R1.txt"
+        ],
+        "5": [
+          "data1/B5_GCO_F050_R1.txt",
+          "data1/B5_GCO_F050_R2.txt",
+          "data1/B5_GCO_F060_R1.txt",
+          "data1/B5_GCO_F070_R1.txt",
+          "data1/B5_GCO_F100_R2.txt",
+          "data1/B5_GEa_F040_R1.txt",
+          "data1/B5_GEa_F060_R1.txt",
+          "data1/B5_GEa_F070_R2.txt",
+          "data1/B5_GEa_F090_R1.txt",
+          "data1/B5_GEa_F100_R2.txt",
+          "data1/B5_GEy_F040_R1.txt",
+          "data1/B5_GEy_F040_R2.txt",
+          "data1/B5_GEy_F060_R1.txt",
+          "data1/B5_GEy_F070_R1.txt",
+          "data1/B5_GEy_F100_R2.txt",
+          "data1/B5_GMe_F040_R1.txt",
+          "data1/B5_GMe_F060_R1.txt",
+          "data1/B5_GMe_F070_R2.txt",
+          "data1/B5_GMe_F090_R1.txt",
+          "data1/B5_GMe_F100_R2.txt"
+        ]
+      },
+      "methods": {
+        "source_augmented": {
+          "macro_f1": 0.9632332966600112,
+          "correct": 185,
+          "co_correct": 48,
+          "non_co_as_co": 3,
+          "per_board_macro_f1": {
+            "1": 0.9791304347826086,
+            "2": 0.9580419580419581,
+            "3": 0.9365079365079365,
+            "4": 1.0,
+            "5": 0.9580419580419581
+          }
+        },
+        "source_plus_target20_raw": {
+          "macro_f1": 0.7452563790061469,
+          "correct": 143,
+          "co_correct": 48,
+          "non_co_as_co": 26,
+          "per_board_macro_f1": {
+            "1": 0.747324130803868,
+            "2": 0.6245614035087719,
+            "3": 0.785934596804162,
+            "4": 0.9142857142857143,
+            "5": 0.7142857142857142
+          }
+        },
+        "source_plus_target20_augmented": {
+          "macro_f1": 0.9684838970553256,
+          "correct": 186,
+          "co_correct": 48,
+          "non_co_as_co": 3,
+          "per_board_macro_f1": {
+            "1": 0.9791304347826086,
+            "2": 0.9580419580419581,
+            "3": 0.9365079365079365,
+            "4": 1.0,
+            "5": 1.0
+          }
+        },
+        "target20_augmented": {
+          "macro_f1": 0.8758918075430373,
+          "correct": 168,
+          "co_correct": 46,
+          "non_co_as_co": 7,
+          "per_board_macro_f1": {
+            "1": 0.8122769043821676,
+            "2": 0.8582608695652174,
+            "3": 0.8742236024844721,
+            "4": 1.0,
+            "5": 0.9160839160839161
+          }
+        }
+      }
+    }
+  },
+  "meaningful_no_label_advantage": false
+}

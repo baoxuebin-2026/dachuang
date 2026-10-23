@@ -1,0 +1,140 @@
+{
+  "scope": "Retrospective UCI361; not independent validation",
+  "iteration_cap": 400,
+  "source_sha256": "e8801de3a98d3db2b48fccf0be4d681879a1441f5732ac6fbee1c48a05b49167",
+  "models": {
+    "three_scale": {
+      "macro_f1": 0.9741226182114779,
+      "correct": 187,
+      "co_correct": 48,
+      "non_co_as_co": 5,
+      "per_board_macro_f1": {
+        "1": 0.9386253842775583,
+        "2": 0.9580419580419581,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "confusion": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          4,
+          0,
+          0,
+          44
+        ]
+      ],
+      "fit": {
+        "1": {
+          "iterations": 223,
+          "converged": true,
+          "train_loss": 0.17783045356674093
+        },
+        "2": {
+          "iterations": 219,
+          "converged": true,
+          "train_loss": 0.18427144129026557
+        },
+        "3": {
+          "iterations": 180,
+          "converged": true,
+          "train_loss": 0.18773388970606425
+        },
+        "4": {
+          "iterations": 239,
+          "converged": true,
+          "train_loss": 0.18117353762915012
+        },
+        "5": {
+          "iterations": 144,
+          "converged": true,
+          "train_loss": 0.16619214318225814
+        }
+      }
+    },
+    "per_record_rms": {
+      "macro_f1": 0.9585298086846075,
+      "correct": 184,
+      "co_correct": 42,
+      "non_co_as_co": 1,
+      "per_board_macro_f1": {
+        "1": 0.8303585049580473,
+        "2": 1.0,
+        "3": 1.0,
+        "4": 1.0,
+        "5": 1.0
+      },
+      "confusion": [
+        [
+          42,
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          47,
+          0
+        ],
+        [
+          0,
+          0,
+          1,
+          47
+        ]
+      ],
+      "fit": {
+        "1": {
+          "iterations": 242,
+          "converged": true,
+          "train_loss": 0.14000577451513452
+        },
+        "2": {
+          "iterations": 322,
+          "converged": true,
+          "train_loss": 0.15098464522913874
+        },
+        "3": {
+          "iterations": 255,
+          "converged": true,
+          "train_loss": 0.15081235870616153
+        },
+        "4": {
+          "iterations": 216,
+          "converged": true,
+          "train_loss": 0.14687832919992044
+        },
+        "5": {
+          "iterations": 281,
+          "converged": true,
+          "train_loss": 0.13585164649937043
+        }
+      }
+    }
+  },
+  "draft_ordering_robust": true
+}

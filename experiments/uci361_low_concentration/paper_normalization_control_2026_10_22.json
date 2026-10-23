@@ -1,0 +1,144 @@
+{
+  "status": "Retrospective normalized SVM control on previously inspected UCI361 device folds.",
+  "protocol": "Retrospective same-SVM normalization control on the verified UCI361 ZIP.\n\nFrozen before viewing this control's results: a complete gas-exposure file is\nthe scoring unit; leave one entire device out, train only on the other devices'\nranks 4-10, test ranks 1-3. StandardScaler and SVC(C=1, gamma='scale') are fit\non source devices only. Compare unaugmented log responses, three-scale response\naugmentation (0.5, 0.75, 1), and per-file RMS-normalized responses with the\nsame stabilizer 0.05 as the existing CNN control. No target labels, calibration\ndata, or parameter choices enter training. This is not a new blind dataset.\n\nThe amplitude claim loses its strong-baseline advantage if normalized SVM\nachieves at least its four-class macro F1 without a higher CO miss count.\nReport all outcomes, including a negative result, without retuning.\n",
+  "source_sha256": "e8801de3a98d3db2b48fccf0be4d681879a1441f5732ac6fbee1c48a05b49167",
+  "methods": {
+    "raw": {
+      "macro_f1": 0.7358720487433359,
+      "correct": 141,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          30,
+          0,
+          18
+        ],
+        [
+          8,
+          0,
+          34,
+          6
+        ],
+        [
+          16,
+          0,
+          3,
+          29
+        ]
+      ],
+      "non_co_as_co": 24,
+      "per_board_macro_f1": {
+        "1": 0.7243454885460495,
+        "2": 0.6478764478764478,
+        "3": 0.785934596804162,
+        "4": 0.9142857142857143,
+        "5": 0.5623481781376518
+      }
+    },
+    "normalized": {
+      "macro_f1": 0.9177735610373181,
+      "correct": 176,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          40,
+          0,
+          8,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          5,
+          0,
+          43,
+          0
+        ],
+        [
+          0,
+          0,
+          3,
+          45
+        ]
+      ],
+      "non_co_as_co": 5,
+      "per_board_macro_f1": {
+        "1": 0.8666666666666667,
+        "2": 0.9791304347826086,
+        "3": 0.9177018633540373,
+        "4": 1.0,
+        "5": 0.7478991596638656
+      }
+    },
+    "three_scale": {
+      "macro_f1": 0.9632332966600111,
+      "correct": 185,
+      "confusion_labels": [
+        "CO",
+        "Me",
+        "Ea",
+        "Ey"
+      ],
+      "confusion_matrix": [
+        [
+          48,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          48,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          46,
+          1
+        ],
+        [
+          2,
+          0,
+          3,
+          43
+        ]
+      ],
+      "non_co_as_co": 3,
+      "per_board_macro_f1": {
+        "1": 0.9791304347826086,
+        "2": 0.958041958041958,
+        "3": 0.9365079365079365,
+        "4": 1.0,
+        "5": 0.958041958041958
+      }
+    }
+  },
+  "normalized_to_three_scale_paired": {
+    "corrected_by_three_scale": 12,
+    "new_errors_with_three_scale": 3
+  },
+  "decision": "Augmentation retains four-class and CO-miss advantage"
+}

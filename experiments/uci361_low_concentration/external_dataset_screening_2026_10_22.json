@@ -7,7 +7,10 @@
       "url": "https://archive.ics.uci.edu/dataset/251/gas+sensor+arrays+in+open+sampling+settings",
       "archive_size": "7.8 GB compressed",
       "has_co": true,
-      "nominal_co_source_levels_ppm": [1000, 4000],
+      "nominal_co_source_levels_ppm": [
+        1000,
+        4000
+      ],
       "sensor_modules": 9,
       "decision": "Reject as independent CO gas-identification confirmation",
       "reason": "An independent audit found gas species measured in temporally clustered batches; even the pre-release sensor response predicts the gas. Its minimally drift-contaminated subset contains methanol, ethylene and butanol, not CO. The low nominal source level is 1000 ppm and is not a low ambient concentration at the sensor.",
@@ -21,7 +24,10 @@
       "board_shift": true,
       "features": 37,
       "odor_classes": 14,
-      "board_exposure_counts": [211, 210],
+      "board_exposure_counts": [
+        211,
+        210
+      ],
       "decision": "Independent cross-board mechanism stress only",
       "reason": "Published archive maps label integers to neither named gases nor sample concentrations; CO and high-to-low transfer cannot be asserted. Frozen amplitude stress test failed in both board directions.",
       "experiment": "chongqing_board_amplitude_stress_2026_10_22.json"
@@ -39,7 +45,168 @@
       "url": "https://archive.ics.uci.edu/dataset/1081/gas+sensor+array+low-concentration",
       "decision": "Ineligible for cross-device CO validation",
       "reason": "Single sensor array; six VOCs do not include CO; levels are all 50-200 ppb."
+    },
+    {
+      "name": "Zenodo 6821340 Transfer Learning Dataset for Metal Oxide Semiconductor Gas Sensors",
+      "url": "https://doi.org/10.5281/zenodo.6821340",
+      "released": "2022-07-12",
+      "sensor_units": 3,
+      "unique_gas_mixtures": 900,
+      "has_carbon_monoxide": true,
+      "nominal_co_ppb": [
+        100,
+        2000
+      ],
+      "co_absent_cases": false,
+      "decision": "Independent paired cross-sensor CO concentration regression stress only; ineligible for CO present versus absent identification",
+      "reason": "Zenodo metadata gives the CO range as 100–2000 ppb for every one of three mixture batches; all samples contain CO. Sensors A/B/C were measured simultaneously with aligned targets, but the classification target CO versus no CO is unidentifiable."
+    },
+    {
+      "name": "DS-PS pure substances, Zenodo 19557093",
+      "url": "https://zenodo.org/records/19557093",
+      "release_date": "2026-04-13",
+      "decision": "Not eligible for CO cross-device validation",
+      "reason": "Three analytes are ethanol, acetone and butanone; the 12 sensor replicas are redundant channels of a single array, and no CO exposure class is documented. Seven concentrations and randomized repetitions do not create independent devices."
+    },
+    {
+      "name": "Dalian Maritime University synergetic laser-electronic sensor array, Mendeley 2mpx85xt6g and sdh7x7b68d",
+      "urls": [
+        "https://data.mendeley.com/datasets/2mpx85xt6g/1",
+        "https://data.mendeley.com/datasets/sdh7x7b68d/1"
+      ],
+      "decision": "Not an independent additional dataset and not multi-device",
+      "reason": "Same six listed authors, experimental schedule 50 s baseline + 200 s gas + recovery, CH4/CO/H2S ranges, and exactly 186 data points as the already tested mixture pilot. A second Mendeley record does not add 186 independent experiments; the data describe one sensor array, not physical target devices."
+    },
+    {
+      "name": "Chinese bionic olfaction CO/H2 dataset (Acta Automatica Sinica 2024)",
+      "url": "https://aas.net.cn/cn/article/doi/10.16383/j.aas.c220689?viewType=HTML",
+      "decision": "Paper identified, no eligible publicly downloadable multi-device dataset confirmed",
+      "reason": "Paper reports 352 response recordings including 117 CO, 115 H2 and 120 CO+H2; no independent devices or public raw-download link established from source."
+    },
+    {
+      "name": "Rapid Detection of Mixed Gases from Lithium Battery Thermal Runaway (Batteries 2026)",
+      "url": "https://doi.org/10.3390/batteries12060188",
+      "decision": "Cannot be used as public independent validation",
+      "reason": "Authors state data can be shared upon request, not a public raw download; their UCI Twin external experiment reuses the inspected original archive."
+    },
+    {
+      "name": "Indoor Fire Dataset with Distributed Multi-Sensor Nodes, Mendeley npk2zcm85h",
+      "url": "https://doi.org/10.17632/npk2zcm85h.1",
+      "sensor_nodes": "multiple positions",
+      "decision": "Ineligible for controlled CO gas identity and high-to-low validation",
+      "reason": "Public data contain repeated fire and nuisance events with distributed nodes and a CO sensor reading, but labels are scenario/fire/nuisance, not independently measured CO-present/absent gas identity or controlled CO concentration. A row is a 10-second node reading; 305304 rows are not independent gas exposures."
+    },
+    {
+      "name": "MetaSense multi-site multi-unit ambient pollution dataset",
+      "url": "https://github.com/metasenseorg/MetaSense",
+      "sensor_nodes": 9,
+      "decision": "Ineligible for CO response target validation",
+      "reason": "Boards record CO electrochemical voltage, but the accompanying 2019 transfer study supplies reference concentrations and fits targets only for NO2 and O3. The authors state reference data were minute-averaged NO2 and O3; CO voltage is an input feature, not a CO ground truth."
+    },
+    {
+      "name": "UCI 487 Gas sensor array temperature modulation",
+      "url": "https://archive.ics.uci.edu/dataset/487/gas+sensor+array+temperature+modulation",
+      "sensor_units": 14,
+      "exposures": 1300,
+      "decision": "Not independent blind data or CO versus other gas experiment",
+      "reason": "This project already fitted CO regression on this archive. It has seven physical replicas per sensor type and 0-20 ppm CO, but the only other variable is humidity, not alternative gases."
+    },
+    {
+      "name": "UCI 322 gas sensor array under dynamic gas mixtures",
+      "url": "https://archive.ics.uci.edu/dataset/322/gas+sensor+array+under+dynamic+gas+mixtures",
+      "decision": "Not independent device-level experimental replication",
+      "reason": "Four units per sensor type are channels on a single array, recorded in one continuous 12-hour run per mixture. Arbitrary windows cannot constitute independent gas exposure trials."
+    },
+    {
+      "name": "Indoor Fire Dataset with Distributed Multi-Sensor Nodes",
+      "url": "https://doi.org/10.17632/npk2zcm85h.1",
+      "decision": "Ineligible for CO species validation",
+      "reason": "Distributed sensor nodes measure CO alongside CO2, H2, humidity, PM, temperature and UV, but labels are fire/nuisance/background events, with no controlled CO concentrations or CO-present versus other-gas ground truth. Time rows are not independent exposures."
+    },
+    {
+      "name": "MetaSense multi-site air pollution network",
+      "url": "https://github.com/metasenseorg/MetaSense",
+      "decision": "Ineligible for CO response target",
+      "reason": "Multiple devices include CO electrode signals, but the published colocation references and regression targets are NO2 and O3 only. CO voltage is an input feature, not a reference CO label."
+    },
+    {
+      "name": "UCI 322 dynamic gas mixtures",
+      "url": "https://archive.ics.uci.edu/dataset/322/gas+sensor+array+under+dynamic+gas+mixtures",
+      "decision": "No independent exposure replication",
+      "reason": "Four units per sensor type are channels in one array; each mixture is one continuous approximately 12-hour run. Window rows cannot support independent-device/exposure inference."
+    },
+    {
+      "name": "RED:Vapor wind tunnel dataset (Scientific Data 2026)",
+      "url": "https://www.nature.com/articles/s41597-026-06927-8",
+      "decision": "No CO exposure",
+      "reason": "39 runs use an ethanol/propylene glycol/triethylene glycol/water fog source and purging periods; physical multiple sensors cannot yield CO present-versus-absent ground truth."
+    },
+    {
+      "name": "Kang et al. 2022 batch-uniform gas sensor array supplementary data",
+      "url": "https://acs.figshare.com/articles/journal_contribution/High_Accuracy_Real-Time_Multi-Gas_Identification_by_a_Batch-Uniform_Gas_Sensor_Array_and_Deep_Learning_Algorithm/18637014",
+      "decision": "No eligible public held-device mixed-gas exposure dataset confirmed",
+      "reason": "Article covers CO, NH3, NO2, CH4, acetone, and air classification on fabricated arrays, but the public Figshare item is article supporting information, not an indexed raw held-device CO/no-CO mixture dataset. The 2022 CNN result is prior art for multi-gas recognition."
+    },
+    {
+      "name": "Samsung DS2 Kaggle gas sensor competition",
+      "url": "https://www.kaggle.com/c/ds2-ds5-competition-1/data",
+      "decision": "Duplicate UCI dynamic-mixture source",
+      "reason": "Competition description identifies the 16-channel ethylene/CO time series already present in the UCI dynamic gas mixtures family; no separate target devices."
+    },
+    {
+      "name": "Solorzano et al. 2022 early-fire dataset Zenodo 5707399",
+      "url": "https://zenodo.org/records/5707399",
+      "decision": "No controlled CO species label",
+      "reason": "Public raw array data are from fire and nuisance experiments in a standard fire room. Exposure labels are fire/nuisance scenarios, not independently dosed CO present/absent and concentration pairs across devices."
+    },
+    {
+      "name": "2010 Montoliu et al. CO/CH4 MCR-ALS mixture study",
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925400509010041",
+      "decision": "No public raw held-device dataset located",
+      "reason": "CO and methane mixtures in dry air were measured for curve resolution, but neither replicated target devices nor downloadable raw trials were identified."
     }
   ],
-  "conclusion": "No independent public dataset screened here simultaneously establishes CO identity, a new device, and high-to-low concentration transfer with reliable gas labels. Do not treat the negative cross-board stress or the confounded 7.8 GB archive as positive validation."
+  "conclusion": "No independent public dataset screened here simultaneously establishes CO identity, a new device, and high-to-low concentration transfer with reliable gas labels. Do not treat the negative cross-board stress or the confounded 7.8 GB archive as positive validation.",
+  "related_work_screening": [
+    {
+      "name": "Rapid Detection of Mixed Gases from Lithium Battery Thermal Runaway Based on ISA-LSTM-TCN",
+      "url": "https://doi.org/10.3390/batteries12060188",
+      "relevance": "2026 paper uses the same UCI Twin archive for external assessment with augmentation and discusses low-concentration response; it does not establish the identical leave-one-device-out high-to-low protocol. Check protocol before novelty wording."
+    },
+    {
+      "name": "A comprehensive gas recognition algorithm with label-free drift compensation based on domain adversarial network",
+      "url": "https://www.sciencedirect.com/science/article/pii/S0925400523004240",
+      "relevance": "Prior domain adaptation and calibration-transfer method also evaluates UCI Twin; using CNN on Twin is not by itself new."
+    },
+    {
+      "name": "Global calibration models for temperature-modulated metal oxide gas sensors (2022)",
+      "url": "https://doi.org/10.1016/j.snb.2021.130769",
+      "relevance": "Six FIS sensor replicas, low CO with humidity; pooled cross-unit calibration and few-target-sample baselines are prior art."
+    },
+    {
+      "name": "An Optimized Generic Framework for Multi-Gas Classification in Electronic Nose Applications (2026)",
+      "url": "https://doi.org/10.1007/s12559-026-10571-0",
+      "relevance": "The nine-array and mixture benchmarks reuse UCI 251 and UCI 322, respectively, and add no independent CO mixture measurements."
+    },
+    {
+      "name": "A Dual-Model Framework with Gramian Angular Field and Multi-Branch Spatiotemporal Attention (2026)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13211005/",
+      "relevance": "Reuses UCI 309, 487, and Twin for mixed gas, low CO, and cross-device claims. Its Dataset IV has NO2/SO2/benzene and no CO. Its reported fivefold random split on UCI 309 cannot be equated to held-device high-to-low validation."
+    },
+    {
+      "name": "Arendes et al. 2024, Transfer Learning Between Two Different Datasets of MOS Gas Sensors",
+      "url": "https://epapers2.org/isoen2024/ESR/paper_details.php?paper_id=4019",
+      "relevance": "Prior art for deep-learning calibration transfer across environmental scenarios; conference abstract reports 6 h target calibration RMSE 16.4 ppb versus 80 h 14.8 ppb, but does not provide a new public held-device CO/no-CO mixture test set."
+    },
+    {
+      "name": "Wang et al. 2024, Graph-Driven Models for Gas Mixture Identification and Concentration Estimation",
+      "url": "https://arxiv.org/html/2412.13891v1",
+      "relevance": "Chinese-led comparison reuses UCI dynamic gas mixtures for CO/ethylene versus methane/ethylene, plus one new H2/ethylene array; confirms this UCI family is heavily used and does not create independent device evidence."
+    },
+    {
+      "name": "Kang et al. 2022, High Accuracy Real-Time Multi-Gas Identification by a Batch-Uniform Gas Sensor Array and Deep Learning Algorithm",
+      "url": "https://acs.figshare.com/articles/journal_contribution/High_Accuracy_Real-Time_Multi-Gas_Identification_by_a_Batch-Uniform_Gas_Sensor_Array_and_Deep_Learning_Algorithm/18637014",
+      "relevance": "CNN recognition of CO, NH3, NO2, CH4 and acetone from batch-uniform array is established; any new claim must target the high-to-low held-device mechanism with credible independent evaluation."
+    }
+  ]
 }

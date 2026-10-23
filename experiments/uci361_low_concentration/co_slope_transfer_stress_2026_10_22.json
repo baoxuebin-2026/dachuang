@@ -1,0 +1,331 @@
+{
+  "6821340": {
+    "devices": {
+      "A": {
+        "n_high_source": 582,
+        "n_pilot": 20,
+        "n_low_test": 67,
+        "scores": {
+          "target20_ridge": {
+            "mae": 514.5397292629201,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 168.99701492537312,
+            "underprediction": 70.26223880597014
+          },
+          "slope_synthesis": {
+            "mae": 228.25923670951872,
+            "underprediction": 109.2340639959245
+          },
+          "raw_ridge": {
+            "mae": 345.34569773147894,
+            "underprediction": 0.6958588510686685
+          },
+          "raw_hgb": {
+            "mae": 458.8101450704158,
+            "underprediction": 0.6488405457988093
+          }
+        }
+      },
+      "B": {
+        "n_high_source": 582,
+        "n_pilot": 20,
+        "n_low_test": 67,
+        "scores": {
+          "target20_ridge": {
+            "mae": 537.4065690985047,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 168.99701492537312,
+            "underprediction": 70.26223880597014
+          },
+          "slope_synthesis": {
+            "mae": 238.5711716447788,
+            "underprediction": 32.649747941317095
+          },
+          "raw_ridge": {
+            "mae": 440.38213803945723,
+            "underprediction": 0.7097408064723788
+          },
+          "raw_hgb": {
+            "mae": 418.930334041966,
+            "underprediction": 1.1586940686265395
+          }
+        }
+      },
+      "C": {
+        "n_high_source": 582,
+        "n_pilot": 20,
+        "n_low_test": 67,
+        "scores": {
+          "target20_ridge": {
+            "mae": 538.3264330776008,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 168.99701492537312,
+            "underprediction": 70.26223880597014
+          },
+          "slope_synthesis": {
+            "mae": 319.5533818859512,
+            "underprediction": 12.564290704051619
+          },
+          "raw_ridge": {
+            "mae": 461.4221099409019,
+            "underprediction": 0.0
+          },
+          "raw_hgb": {
+            "mae": 560.8865609523416,
+            "underprediction": 0.0
+          }
+        }
+      }
+    },
+    "means": {
+      "target20_ridge": {
+        "mae": 530.0909104796752,
+        "underprediction": 0.0
+      },
+      "constant_midpoint": {
+        "mae": 168.99701492537312,
+        "underprediction": 70.26223880597014
+      },
+      "slope_synthesis": {
+        "mae": 262.1279300800829,
+        "underprediction": 51.482700880431075
+      },
+      "raw_ridge": {
+        "mae": 415.7166485706127,
+        "underprediction": 0.4685332191803491
+      },
+      "raw_hgb": {
+        "mae": 479.54234668824114,
+        "underprediction": 0.6025115381417829
+      }
+    },
+    "best_baseline": "constant_midpoint",
+    "device_pass": false,
+    "archive_pass": false
+  },
+  "15423482_first": {
+    "devices": {
+      "54118801": {
+        "n_high_source": 498,
+        "n_pilot": 20,
+        "n_low_test": 74,
+        "scores": {
+          "target20_ridge": {
+            "mae": 513.0358649176519,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 175.74999999999997,
+            "underprediction": 88.64999999999998
+          },
+          "slope_synthesis": {
+            "mae": 131.96721248927923,
+            "underprediction": 91.13554006999584
+          },
+          "raw_ridge": {
+            "mae": 258.4992691452439,
+            "underprediction": 1.8009615511507584
+          },
+          "raw_hgb": {
+            "mae": 445.83455588086184,
+            "underprediction": 0.0
+          }
+        }
+      },
+      "54120037": {
+        "n_high_source": 498,
+        "n_pilot": 20,
+        "n_low_test": 74,
+        "scores": {
+          "target20_ridge": {
+            "mae": 514.3036022289377,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 175.74999999999997,
+            "underprediction": 88.64999999999998
+          },
+          "slope_synthesis": {
+            "mae": 125.3476485046238,
+            "underprediction": 66.7066124456687
+          },
+          "raw_ridge": {
+            "mae": 263.5073389826594,
+            "underprediction": 1.0871545740075994
+          },
+          "raw_hgb": {
+            "mae": 469.0801331065715,
+            "underprediction": 0.0
+          }
+        }
+      },
+      "54120457": {
+        "n_high_source": 498,
+        "n_pilot": 20,
+        "n_low_test": 74,
+        "scores": {
+          "target20_ridge": {
+            "mae": 511.0904971560915,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 175.74999999999997,
+            "underprediction": 88.64999999999998
+          },
+          "slope_synthesis": {
+            "mae": 124.44567058061683,
+            "underprediction": 61.70875777553785
+          },
+          "raw_ridge": {
+            "mae": 274.0082920383762,
+            "underprediction": 1.1947612040751672
+          },
+          "raw_hgb": {
+            "mae": 415.6839430526516,
+            "underprediction": 0.0
+          }
+        }
+      },
+      "54156953": {
+        "n_high_source": 498,
+        "n_pilot": 20,
+        "n_low_test": 74,
+        "scores": {
+          "target20_ridge": {
+            "mae": 510.33735467034404,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 175.74999999999997,
+            "underprediction": 88.64999999999998
+          },
+          "slope_synthesis": {
+            "mae": 156.38160101262068,
+            "underprediction": 127.16740756966468
+          },
+          "raw_ridge": {
+            "mae": 234.3373064195788,
+            "underprediction": 5.0254512477565445
+          },
+          "raw_hgb": {
+            "mae": 428.845989873922,
+            "underprediction": 0.0
+          }
+        }
+      },
+      "84746449": {
+        "n_high_source": 498,
+        "n_pilot": 20,
+        "n_low_test": 74,
+        "scores": {
+          "target20_ridge": {
+            "mae": 517.9802074535471,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 175.74999999999997,
+            "underprediction": 88.64999999999998
+          },
+          "slope_synthesis": {
+            "mae": 109.65142213419428,
+            "underprediction": 58.315652715217055
+          },
+          "raw_ridge": {
+            "mae": 278.6957191261086,
+            "underprediction": 0.8990927206503366
+          },
+          "raw_hgb": {
+            "mae": 435.5406737728383,
+            "underprediction": 0.0
+          }
+        }
+      },
+      "84748697": {
+        "n_high_source": 498,
+        "n_pilot": 20,
+        "n_low_test": 74,
+        "scores": {
+          "target20_ridge": {
+            "mae": 518.42276759792,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 175.74999999999997,
+            "underprediction": 88.64999999999998
+          },
+          "slope_synthesis": {
+            "mae": 119.14519543112215,
+            "underprediction": 99.88925787683051
+          },
+          "raw_ridge": {
+            "mae": 225.09392559979415,
+            "underprediction": 1.6609988650760124
+          },
+          "raw_hgb": {
+            "mae": 388.4297285837797,
+            "underprediction": 0.030485149179682865
+          }
+        }
+      },
+      "84749569": {
+        "n_high_source": 498,
+        "n_pilot": 20,
+        "n_low_test": 74,
+        "scores": {
+          "target20_ridge": {
+            "mae": 517.9623010583824,
+            "underprediction": 0.0
+          },
+          "constant_midpoint": {
+            "mae": 175.74999999999997,
+            "underprediction": 88.64999999999998
+          },
+          "slope_synthesis": {
+            "mae": 111.5411370913592,
+            "underprediction": 67.45674577473861
+          },
+          "raw_ridge": {
+            "mae": 269.65825962375953,
+            "underprediction": 0.9439147949218738
+          },
+          "raw_hgb": {
+            "mae": 441.06589654018694,
+            "underprediction": 0.0
+          }
+        }
+      }
+    },
+    "means": {
+      "target20_ridge": {
+        "mae": 514.7332278689821,
+        "underprediction": 0.0
+      },
+      "constant_midpoint": {
+        "mae": 175.74999999999997,
+        "underprediction": 88.64999999999998
+      },
+      "slope_synthesis": {
+        "mae": 125.49712674911659,
+        "underprediction": 81.76856774680762
+      },
+      "raw_ridge": {
+        "mae": 257.6857301336458,
+        "underprediction": 1.8017621368054701
+      },
+      "raw_hgb": {
+        "mae": 432.0687029729731,
+        "underprediction": 0.004355021311383266
+      }
+    },
+    "best_baseline": "constant_midpoint",
+    "device_pass": true,
+    "archive_pass": true
+  },
+  "overall_pass": false
+}
