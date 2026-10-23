@@ -1,0 +1,14 @@
+{
+  "status": "frozen_before_any_new_classifier_fit_or_score",
+  "archive_sha256": "5e9b707e7a44b3dcaf39b62bb46597403fcdd98ec89814b15e4876694db5f41e",
+  "question": "Within one wind-tunnel eight-sensor array, can source-medium/high CO and methane trials recognize low-flow CO versus methane despite zero-to-high ethylene interference?",
+  "scope": "Independent dataset and previously unrun CO identity task, but not an independent physical-device experiment and not an untouched dataset: this repository previously evaluated gas-onset detection on UCI309.",
+  "unit": "one complete exposure file, one vote; raw and downsampled duplicates count once",
+  "input": "Use only the 180 downsampled records. Convert ADC A to resistance 10*(3110-A)/A, then log. Baseline: median signal at 25<=time<45 s. Response: 20 successive 2 s medians over 60<=time<100 s, minus baseline. Keep eight channels; exclude temperature and humidity.",
+  "inclusion": "Only trials whose second-gas flow is L, M or H; omit zero-flow records, including duplicate ethylene-only recipes. Label CO positive for CO branch, negative for methane branch. Include all ethylene flow settings n/L/M/H.",
+  "split": "Train second-gas flow M/H (CO 397/460 ppm; methane 115/131 ppm); test flow L (CO 270 ppm; methane 51 ppm). Ethylene flows in both sets. All six repeats of any complete flow recipe stay in the same split. Expected 96 train, 48 test, balanced CO labels in both.",
+  "models": "Same 16-filter, length-3, two-half-pooled lightweight CNN as the Twin study, adapted to two output labels, fixed L2=.02, L-BFGS maxiter=400, seed=2026. Compare raw, 0.5/0.75/1.0 source-only amplitude augmented, and per-trial RMS normalized CNN. Also source-only StandardScaler+RBF SVM C=1 gamma=scale on each raw, amplitude augmented and RMS-normalized flattened input. No target trial labels in fitting or selection.",
+  "control": "Pre-release-only eight-channel median log resistance at 25-45 s on same split, StandardScaler+RBF SVM C=1 gamma=scale. If this yields balanced accuracy >=0.65, gas-identity evidence is potentially confounded by pre-release information and is not suitable as a positive corroboration.",
+  "metrics": "CO-present precision, recall, binary macro F1, 48-trial accuracy, 24 CO false negatives, 24 methane false positives; additionally report four ethylene-flow strata, each based on six CO and six methane test files.",
+  "decision": "Only consider this a useful complementary CO mixture result if amplitude-CNN macro F1 >=0.80, CO recall >=0.90, false CO <=4/24, and its F1 is at most 0.05 below the strongest RMS-CNN or amplitude-SVM; pre-release control must be below 0.65 balanced accuracy. If any condition fails, report the negative result and do not use UCI309 as a positive confirmation of the manuscript method. This can never confirm cross-device transfer."
+}
