@@ -1,6 +1,6 @@
 {
   "question": "Train on high gas concentrations from other devices, identify low-concentration CO and alternative gases on unseen device",
-  "screening_date": "2026-10-22",
+  "screening_date": "2026-10-23",
   "datasets": [
     {
       "name": "UCI 251, Gas sensor arrays in open sampling settings",
@@ -164,6 +164,14 @@
       "url": "https://www.sciencedirect.com/science/article/abs/pii/S0925400509010041",
       "decision": "No public raw held-device dataset located",
       "reason": "CO and methane mixtures in dry air were measured for curve resolution, but neither replicated target devices nor downloadable raw trials were identified."
+    },
+    {
+      "name": "国家基础学科公共科学数据中心：气体传感器芯片设计模拟数据和制造工艺试验数据和测试实验数据",
+      "url": "https://www.nbsdc.cn/general/dataDetail?id=6a6cc6a5f175603b25c44000&type=1",
+      "release_date": "2026-07-31",
+      "archive_size": "15.16 GB, 4702 files",
+      "decision": "中文公开来源，当前不纳入独立跨设备气体识别实验",
+      "reason": "公开目录可确认包含H2、CO、CO2测试以及MEMS阵列半导体CO精度/湿度文件，CO目录出现9、10、12号通道和1、10、100、500 ppm等浓度；但元数据未证明这些通道是独立电子鼻设备，也未证明存在同协议CO缺失或其他气体类别配对。下载还需登录，且大包混有模拟、工艺和CAD资料。"
     }
   ],
   "conclusion": "No independent public dataset screened here simultaneously establishes CO identity, a new device, and high-to-low concentration transfer with reliable gas labels. Do not treat the negative cross-board stress or the confounded 7.8 GB archive as positive validation.",
@@ -207,6 +215,21 @@
       "name": "Kang et al. 2022, High Accuracy Real-Time Multi-Gas Identification by a Batch-Uniform Gas Sensor Array and Deep Learning Algorithm",
       "url": "https://acs.figshare.com/articles/journal_contribution/High_Accuracy_Real-Time_Multi-Gas_Identification_by_a_Batch-Uniform_Gas_Sensor_Array_and_Deep_Learning_Algorithm/18637014",
       "relevance": "CNN recognition of CO, NH3, NO2, CH4 and acetone from batch-uniform array is established; any new claim must target the high-to-low held-device mechanism with credible independent evaluation."
+    },
+    {
+      "name": "MDFE-Net: A Meta-Learning Driven Dual-Branch Feature Extraction Network for E-Nose Sensor Drift Adaptation (2026)",
+      "url": "https://pubs.acs.org/doi/abs/10.1021/acssensors.6c00538",
+      "relevance": "Uses the UCI Twin benchmark for cross-device evaluation and reports 97.89% accuracy. This establishes that cross-device deep learning on Twin is not new. Available descriptions train with the ordinary concentration coverage; they do not establish the stricter source-high/target-low split used here."
+    },
+    {
+      "name": "Are Time-Series Foundation Models Ready for E-Nose Data? (2026)",
+      "url": "https://arxiv.org/abs/2606.27672",
+      "relevance": "Holds out B1-B4 in turn but trains on all concentration levels of the remaining devices. Its best reported weighted F1 is 0.876, so it is a useful protocol contrast, not a directly comparable score to the frozen high-to-low task."
+    },
+    {
+      "name": "A Dual-Model Framework with Gramian Angular Field and Spatio-Temporal Attention (2026)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC13211005/",
+      "relevance": "Uses UCI Twin with an 8:1:1 sample split after sliding-window expansion, not a held-device high-to-low split. The reported perfect classification therefore does not answer the same deployment question and should not be used as a numerical baseline for this task."
     }
   ]
 }

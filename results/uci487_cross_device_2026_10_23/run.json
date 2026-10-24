@@ -1,0 +1,38 @@
+{
+  "protocol": "experiments/uci361_low_concentration/uci487_cross_device_protocol_2026_10_23.json",
+  "source_sha256": "cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4",
+  "rows": 9100,
+  "train_days": [
+    "20160930_203718",
+    "20161001_231809",
+    "20161003_085624",
+    "20161004_104124",
+    "20161005_140846",
+    "20161006_182224",
+    "20161007_210049",
+    "20161008_234508",
+    "20161010_095046",
+    "20161011_113032"
+  ],
+  "test_days": [
+    "20161013_143355",
+    "20161014_184659",
+    "20161016_053656"
+  ],
+  "paired_gain": {
+    "positive_blocks": 15,
+    "zero_blocks": 5,
+    "negative_blocks": 1,
+    "median_macro_f1_gain": 0.054029304029304004,
+    "mean_macro_f1_gain": 0.0642070231014227
+  },
+  "checks": {
+    "mean_macro_f1_ge_0_80": false,
+    "mean_co_recall_ge_0_80": false,
+    "positive_blocks_ge_15": true,
+    "median_gain_ge_0_05": true,
+    "within_0_03_of_strongest": true,
+    "all_devices_mean_f1_ge_0_70": false
+  },
+  "passes_frozen_success_rule": false
+}

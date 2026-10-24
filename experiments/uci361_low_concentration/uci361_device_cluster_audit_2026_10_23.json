@@ -1,0 +1,56 @@
+{
+  "status": "Retrospective device-clustered audit of frozen saved predictions; not a new blind test.",
+  "evaluation_unit": "One complete gas exposure file.",
+  "independence_cluster": "Physical e-nose device (five devices).",
+  "comparison": "Three-scale source-only amplitude augmentation versus the same unaugmented RBF-SVM.",
+  "per_device": {
+    "1": {
+      "exposure_files": 48,
+      "raw_correct": 35,
+      "augmented_correct": 47,
+      "raw_accuracy": 0.7291666666666666,
+      "augmented_accuracy": 0.9791666666666666,
+      "accuracy_gain": 0.25
+    },
+    "2": {
+      "exposure_files": 48,
+      "raw_correct": 31,
+      "augmented_correct": 46,
+      "raw_accuracy": 0.6458333333333334,
+      "augmented_accuracy": 0.9583333333333334,
+      "accuracy_gain": 0.3125
+    },
+    "3": {
+      "exposure_files": 48,
+      "raw_correct": 38,
+      "augmented_correct": 45,
+      "raw_accuracy": 0.7916666666666666,
+      "augmented_accuracy": 0.9375,
+      "accuracy_gain": 0.14583333333333337
+    },
+    "4": {
+      "exposure_files": 24,
+      "raw_correct": 22,
+      "augmented_correct": 24,
+      "raw_accuracy": 0.9166666666666666,
+      "augmented_accuracy": 1.0,
+      "accuracy_gain": 0.08333333333333337
+    },
+    "5": {
+      "exposure_files": 24,
+      "raw_correct": 15,
+      "augmented_correct": 23,
+      "raw_accuracy": 0.625,
+      "augmented_accuracy": 0.9583333333333334,
+      "accuracy_gain": 0.33333333333333337
+    }
+  },
+  "equal_weight_mean_device_accuracy_gain": 0.225,
+  "devices_improved": 5,
+  "devices_total": 5,
+  "exact_cluster_sign_flip_one_sided_p": 0.03125,
+  "exact_cluster_sign_flip_two_sided_p": 0.0625,
+  "paired_exposure_files_corrected": 44,
+  "paired_exposure_files_newly_wrong": 0,
+  "interpretation": "The gain has the same direction on all five physical devices. In this retrospective audit, the one-sided exact sign-flip value is 1/32; because the directional test was added after the main result, it is descriptive rather than confirmatory. The two-sided value is 2/32 and must not be described as conventionally significant."
+}

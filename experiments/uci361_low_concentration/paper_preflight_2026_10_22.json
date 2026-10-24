@@ -250,9 +250,11 @@
   },
   "paper_claim_boundary": "Factors were selected after earlier UCI361 outcomes; no mixture recognition or prospective external replication is claimed.",
   "comparison_note": "Per-record RMS-normalized CNN is a close four-class F1 baseline; it misses 6/48 CO trials, while the augmented SVM misses 0/48. It must not be omitted from the manuscript comparison.",
-  "pending_before_final_manuscript": [
-    "Run a source-only per-record normalized SVM on the exact same 192 files if the verified original archive is available.",
-    "Verify the final numerical table by rerunning the original archive; this audit checks saved predictions only.",
+  "resolved_after_this_audit": [
+    "paper_normalization_control_2026_10_22.py reran the verified archive, reproduced raw and three-scale predictions exactly, and added the same-SVM RMS-normalized control.",
+    "The RMS-normalized SVM reached macro-F1 0.917774 and missed 8/48 CO files; the three-scale SVM retained macro-F1 0.963233 and missed 0/48 CO files."
+  ],
+  "pending_before_submission": [
     "Confirm author names, project funding number, and journal formatting from actual editorial instructions."
   ],
   "provenance": [

@@ -1,0 +1,21 @@
+{
+  "status": "frozen_before_cross_device_fit_or_score",
+  "frozen_at": "2026-10-23",
+  "source_sha256": "cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4",
+  "question": "Can a classifier trained on other physical replicas at 0 or 6.67-20 ppm CO detect 2.22-4.44 ppm CO on a held-out replica under humidity variation?",
+  "scope": "Independent task on a previously used public dataset. It tests cross-replica low-concentration CO detection, not four-gas identity or field deployment.",
+  "devices": "Use only the seven same-model FIS SB-500-12 replicas R8-R14. Hold out each replica once; the other six are source devices.",
+  "unit": "One physical replica in one complete 15-minute concentration-humidity condition on one day. Primary paired evaluation unit is held-out-replica x test-day (7 x 3 = 21 blocks). Simultaneous replicas and repeated samples within a condition are not independent units.",
+  "features": "For each day and replica, take median log resistance separately in low- and high-heater states during the final 300 seconds of each condition. Subtract the corresponding medians from the final 300 seconds of the initial 0-900 second clean-air period. Use the resulting two-component response vector only; exclude CO, humidity, temperature, flow, clock, segment index and device identity from model inputs.",
+  "split": "Chronological days 1-10 are source training days. Days 11-13 are held-device test days. Train negatives are 0 ppm and train positives are 6.67, 8.89, 11.11, 13.33, 15.56, 17.78 and 20 ppm. Test negatives are 0 ppm and test positives are 2.22 and 4.44 ppm. No target-device exposure condition is used for fitting or selection; only its initial clean-air baseline is used.",
+  "models": {
+    "svm_raw": "StandardScaler then RBF SVM, C=1, gamma=scale, class_weight=balanced.",
+    "svm_amplitude": "Duplicate source training responses at fixed factors 0.5, 0.75 and 1.0, then the same SVM. Labels are duplicated; augmentation is source-only.",
+    "svm_rms": "Normalize each response vector by its RMS, then the same SVM.",
+    "logistic_amplitude": "Source-only 0.5, 0.75 and 1.0 augmentation, StandardScaler, balanced logistic regression C=1."
+  },
+  "metrics": "For every held-replica x test-day block report balanced accuracy, binary macro F1, CO recall, CO precision, false negatives and false positives. Aggregate by the unweighted mean and median over 21 blocks. Also report separate 2.22 and 4.44 ppm recalls and humidity quartiles defined from source training humidity.",
+  "success_rule": "Useful external support requires amplitude-SVM mean block macro F1 >= 0.80, mean block CO recall >= 0.80, improvement over raw SVM in at least 15 of 21 blocks, median paired macro-F1 gain over raw >= 0.05, and amplitude-SVM mean macro F1 no more than 0.03 below the strongest predeclared comparator. All seven held replicas must have mean macro F1 >= 0.70.",
+  "failure_rule": "If any success condition fails, retain the result as a negative stress test and do not use UCI487 as positive confirmation of the amplitude-augmentation claim.",
+  "independence_note": "The factors and models were fixed from the earlier UCI361 work. UCI487 has already been used elsewhere in this repository for a different blocked CO regression task, so this is not an untouched blind dataset. The cross-device high-to-low classification and its failure rule are frozen before running this experiment."
+}

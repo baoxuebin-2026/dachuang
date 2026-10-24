@@ -1,0 +1,28 @@
+name: Publish paper datasets
+
+on:
+  push:
+    tags:
+      - "paper-datasets-v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify UCI archives
+        run: python scripts/download_paper_datasets.py --output release-assets
+      - name: Create GitHub release with the three verified archives
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: >-
+          gh release create "$GITHUB_REF_NAME"
+          release-assets/uci_361_twin_gas_sensor_arrays.zip
+          release-assets/uci_270_gas_sensor_array_drift.zip
+          release-assets/uci_487_gas_sensor_array_temperature_modulation.zip
+          --repo "$GITHUB_REPOSITORY"
+          --title "论文公开数据集（UCI 361、270、487）"
+          --notes "三个公开原始数据包由工作流从 UCI 官方地址下载，并按 data/public_datasets_manifest.json 校验 SHA-256。数据作为 Release 附件保存，不进入 Git 历史，普通 clone/pull 不会下载大文件。"

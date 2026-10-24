@@ -1,0 +1,33 @@
+{
+  "generated": "2026-10-23",
+  "note": "Raw archives are distributed as GitHub release assets and are not tracked in Git, so a normal clone does not download them.",
+  "datasets": [
+    {
+      "uci_id": 361,
+      "name": "Twin gas sensor arrays",
+      "doi": "10.24432/C5MW3K",
+      "url": "https://archive.ics.uci.edu/static/public/361/twin+gas+sensor+arrays.zip",
+      "filename": "uci_361_twin_gas_sensor_arrays.zip",
+      "bytes": 204012393,
+      "sha256": "e8801de3a98d3db2b48fccf0be4d681879a1441f5732ac6fbee1c48a05b49167"
+    },
+    {
+      "uci_id": 270,
+      "name": "Gas Sensor Array Drift at Different Concentrations",
+      "doi": "10.24432/C5MK6M",
+      "url": "https://archive.ics.uci.edu/static/public/270/gas+sensor+array+drift+dataset+at+different+concentrations.zip",
+      "filename": "uci_270_gas_sensor_array_drift.zip",
+      "bytes": 10118308,
+      "sha256": "98fe3a30981a222dd4518fbcc3dddd45d5c0ce9b03ef6dc6fe5cf7a04cfbff5e"
+    },
+    {
+      "uci_id": 487,
+      "name": "Gas sensor array temperature modulation",
+      "doi": "10.24432/C5S302",
+      "url": "https://archive.ics.uci.edu/static/public/487/gas+sensor+array+temperature+modulation.zip",
+      "filename": "uci_487_gas_sensor_array_temperature_modulation.zip",
+      "bytes": 183298753,
+      "sha256": "cb5ce4a6af1a51b933d1979952d7845f0e9baac54e15a81a1e3599e8b85905d4"
+    }
+  ]
+}
